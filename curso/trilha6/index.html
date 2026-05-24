@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 6 - MCPs, Automacao e Integracao | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 6 - MCPs, Automation and Integration | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
 
@@ -49,393 +49,330 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">&#129504;</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Inicio</a>
-      <span>/</span>
-      <span class="text-rose-400">Trilha 6</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">
-        TRILHA 6
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#128268; MCPs, Automacao e Integracao</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        USB ports pro Claude - conecte tudo. Domine MCPs (Model Context Protocol), gerencie o Token Tax, integre GitHub, Browser, Database, Google Sheets e automatize pipelines CI/CD.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">8</div>
-          <div class="text-xs text-neutral-400">Modulos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">48</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">~3h</div>
-          <div class="text-xs text-neutral-400">Duracao</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">8</div>
-          <div class="text-xs text-neutral-400">Exercicios</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO - MODULE CARDS -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <!-- Modulo 6.1 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.1</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">O que sao MCPs e o Token Tax</h3>
-          <p class="text-neutral-400 text-sm mb-4">Entenda o Model Context Protocol, a analogia USB, o custo de contexto por MCP ativo e quando usar Skills vs MCPs.</p>
-          <button onclick="toggleTopics('m61')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m61-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m61-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que sao MCPs (Model Context Protocol)</li>
-              <li>2. MCPs = USB ports para o Claude</li>
-              <li>3. O Token Tax (context overhead por MCP)</li>
-              <li>4. Tabela de overhead por quantidade de MCPs</li>
-              <li>5. Skills vs MCPs (decision framework)</li>
-              <li>6. A mentalidade de CEO</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-1.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-1.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.2 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.2</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">MCP Filesystem e GitHub</h3>
-          <p class="text-neutral-400 text-sm mb-4">Instale e configure os dois MCPs essenciais: Filesystem para acesso cross-projeto e GitHub para issues, PRs e CI.</p>
-          <button onclick="toggleTopics('m62')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m62-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m62-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. MCP Filesystem (acesso a arquivos fora do repo)</li>
-              <li>2. Instalando Filesystem (claude mcp add)</li>
-              <li>3. Casos de uso do Filesystem</li>
-              <li>4. MCP GitHub (issues, PRs, search, CI)</li>
-              <li>5. Instalando GitHub (command + GITHUB_TOKEN)</li>
-              <li>6. Workflow cross-repo com ambos</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-2.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-2.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.3 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.3</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">MCP Browser e Chrome DevTools</h3>
-          <p class="text-neutral-400 text-sm mb-4">Navegue, tire screenshots e interaja com paginas web. Aprenda o loop de verificacao visual e o impacto alto em tokens.</p>
-          <button onclick="toggleTopics('m63')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m63-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m63-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que o MCP Browser faz</li>
-              <li>2. Instalando Browser MCP</li>
-              <li>3. Screenshot + comparacao visual</li>
-              <li>4. Web scraping com Claude</li>
-              <li>5. Token impact ALTO</li>
-              <li>6. Regra do operador: desconectar quando nao usar UI</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-3.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-3.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.4 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.4</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">MCP Database (Postgres/Supabase)</h3>
-          <p class="text-neutral-400 text-sm mb-4">Conecte bancos de dados diretamente ao Claude. Postgres, Supabase, debug de dados, verificacao de migrations e seguranca.</p>
-          <button onclick="toggleTopics('m64')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m64-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m64-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. MCP Postgres (acesso direto ao banco)</li>
-              <li>2. Instalando Postgres MCP</li>
-              <li>3. MCP Supabase (managed database)</li>
-              <li>4. Instalando Supabase MCP</li>
-              <li>5. Casos de uso (debug, migrations, schema)</li>
-              <li>6. Seguranca: credenciais read-only em producao</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-4.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-4.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.5 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.5</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">MCP Google Sheets e Outros</h3>
-          <p class="text-neutral-400 text-sm mb-4">Leia e escreva planilhas, integre Notion, Slack, Linear e outros. Aprenda quando instalar cada MCP e como gerencia-los.</p>
-          <button onclick="toggleTopics('m65')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m65-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m65-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. MCP Google Sheets (read/write planilhas)</li>
-              <li>2. Instalando Google Sheets</li>
-              <li>3. Casos de uso (export, dashboards, CRM)</li>
-              <li>4. Outros MCPs uteis (Notion, Slack, Linear)</li>
-              <li>5. Quando instalar cada um</li>
-              <li>6. Gerenciando MCPs (list, remove, re-add)</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-5.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-5.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.6 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.6</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Estrategia de Rotacao Ativa</h3>
-          <p class="text-neutral-400 text-sm mb-4">Nao rode todos os MCPs ao mesmo tempo. Aprenda a rotacao por tarefa, setup minimo e monitoramento de custo.</p>
-          <button onclick="toggleTopics('m66')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m66-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m66-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. Por que nao rodar todos os MCPs</li>
-              <li>2. Tabela de rotacao por tarefa</li>
-              <li>3. Setup minimo por contexto</li>
-              <li>4. Automatizando rotacao (scripts)</li>
-              <li>5. Monitorando custo com /cost</li>
-              <li>6. Criando sua tabela pessoal</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-6.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-6.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.7 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.7</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Pipelines CI/CD com Claude Headless</h3>
-          <p class="text-neutral-400 text-sm mb-4">Use Claude em GitHub Actions com claude -p, --allowedTools, code review automatico e deployment checks.</p>
-          <button onclick="toggleTopics('m67')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m67-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m67-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. Claude em CI/CD (automated code quality)</li>
-              <li>2. GitHub Actions com claude -p</li>
-              <li>3. --allowedTools para seguranca</li>
-              <li>4. Code review automatico em PRs</li>
-              <li>5. Deployment checks com Claude</li>
-              <li>6. Pipeline completo de exemplo</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-7.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-7.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 6.8 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULO 6.8</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Claude Cowork e Desktop Agent (2026)</h3>
-          <p class="text-neutral-400 text-sm mb-4">O agente de desktop da Anthropic: skills nativas, scheduling, connectors e o futuro da automacao desktop.</p>
-          <button onclick="toggleTopics('m68')" class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center">
-            <span id="m68-arrow" class="mr-1 transition-transform">&#9654;</span> Ver topicos
-          </button>
-          <div id="m68-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que e Claude Cowork</li>
-              <li>2. Skills nativas do Cowork</li>
-              <li>3. Scheduling e tarefas agendadas</li>
-              <li>4. Connectors e integracoes</li>
-              <li>5. Sincronizando skills Code e Cowork</li>
-              <li>6. O futuro da automacao desktop</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-6-8.html" class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-6-8.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <!-- MODAL -->
-  <div id="module-modal" class="modal-overlay" onclick="closeModal(event)">
-    <div class="modal-content">
-      <button class="modal-close bg-dark-700 hover:bg-dark-600 text-neutral-300 rounded-lg p-2" onclick="closeModalBtn()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <iframe id="modal-iframe" class="w-full h-full border-0"></iframe>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a>
+<span>/</span>
+<span class="text-rose-400">Track 6</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">TRACK 6</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔌 MCPs, Automation and Integration</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">USB ports pro Claude - connect everything. Master MCPs (Model Context Protocol), manage Token Tax, integrate GitHub, Browser, Database, Google Sheets and automate CI/CD pipelines.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">8</div>
+<div class="text-xs text-neutral-400">Modules</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">48</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">~3h</div>
+<div class="text-xs text-neutral-400">Duration</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">8</div>
+<div class="text-xs text-neutral-400">Exercises</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT - MODULE CARDS
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+Module 6.1
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.1</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">What are MCPs and Token Tax</h3>
+<p class="text-neutral-400 text-sm mb-4">Understand the Model Context Protocol, the USB analogy, the context cost per active MCP, and when to use Skills vs MCPs.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m61')">
+<span class="mr-1 transition-transform" id="m61-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m61-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What are MCPs (Model Context Protocol)</li>
+<li>2. MCPs = USB ports for Claude</li>
+<li>3. The Token Tax (context overhead by MCP)</li>
+<li>4. Overhead table by number of MCPs</li>
+<li>5. Skills vs MCPs (decision framework)</li>
+<li>6. The CEO mindset</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-1.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-1.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.2
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.2</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">MCP Filesystem and GitHub</h3>
+<p class="text-neutral-400 text-sm mb-4">Install and configure the two essential MCPs: Filesystem for cross-project access and GitHub for issues, PRs and CI.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m62')">
+<span class="mr-1 transition-transform" id="m62-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m62-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. MCP Filesystem (access to files outside the repo)</li>
+<li>2. Installing Filesystem (claude mcp add)</li>
+<li>3. Filesystem use cases</li>
+<li>4. MCP GitHub (issues, PRs, search, CI)</li>
+<li>5. Installing GitHub (command + GITHUB_TOKEN)</li>
+<li>6. Cross-repo workflow with both</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-2.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-2.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.3
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.3</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">MCP Browser and Chrome DevTools</h3>
+<p class="text-neutral-400 text-sm mb-4">Browse, take screenshots and interact with web pages. Learn the visual verification loop and high impact on tokens.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m63')">
+<span class="mr-1 transition-transform" id="m63-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m63-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What MCP Browser does</li>
+<li>2. Installing MCP Browser</li>
+<li>3. Screenshot + visual comparison</li>
+<li>4. Web scraping with Claude</li>
+<li>5. Token impact HIGH</li>
+<li>6. Operator rule: disconnect when not using UI</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-3.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-3.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.4
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.4</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">MCP Database (Postgres/Supabase)</h3>
+<p class="text-neutral-400 text-sm mb-4">Connect databases directly to Claude. Postgres, Supabase, data debugging, checking migrations and security.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m64')">
+<span class="mr-1 transition-transform" id="m64-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m64-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. MCP Postgres (direct bank access)</li>
+<li>2. Installing Postgres MCP</li>
+<li>3. MCP Supabase (managed database)</li>
+<li>4. Installing Supabase MCP</li>
+<li>5. Use cases (debug, migrations, schema)</li>
+<li>6. Security: read-only credentials in production</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-4.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-4.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.5
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.5</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">MCP Google Sheets and Others</h3>
+<p class="text-neutral-400 text-sm mb-4">Read and write spreadsheets, integrate Notion, Slack, Linear and others. Learn when to install each MCP and how to manage them.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m65')">
+<span class="mr-1 transition-transform" id="m65-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m65-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. MCP Google Sheets (read/write spreadsheets)</li>
+<li>2. Installing Google Sheets</li>
+<li>3. Use cases (export, dashboards, CRM)</li>
+<li>4. Other useful MCPs (Notion, Slack, Linear)</li>
+<li>5. When to install each</li>
+<li>6. Managing MCPs (list, remove, re-add)</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-5.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-5.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.6
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.6</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Active Rotation Strategy</h3>
+<p class="text-neutral-400 text-sm mb-4">Do not run all MCPs at the same time. Learn task rotation, minimum setup and cost monitoring.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m66')">
+<span class="mr-1 transition-transform" id="m66-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m66-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. Why not run all MCPs</li>
+<li>2. Rotation table per task</li>
+<li>3. Minimum setup per context</li>
+<li>4. Automating rotation (scripts)</li>
+<li>5. Monitoring cost with /cost</li>
+<li>6. Creating your personal table</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-6.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-6.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.7
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.7</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">CI/CD Pipelines with Claude Headless</h3>
+<p class="text-neutral-400 text-sm mb-4">Use Claude in GitHub Actions with claude -p, --allowedTools, automatic code review and deployment checks.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m67')">
+<span class="mr-1 transition-transform" id="m67-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m67-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. Claude on CI/CD (automated code quality)</li>
+<li>2. GitHub Actions with claude -p</li>
+<li>3. --allowedTools for security</li>
+<li>4. Automatic code review in PRs</li>
+<li>5. Deployment checks with Claude</li>
+<li>6. Complete example pipeline</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-7.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-7.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 6.8
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-rose-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full">MODULE 6.8</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Claude Cowork and Desktop Agent (2026)</h3>
+<p class="text-neutral-400 text-sm mb-4">The Anthropic desktop agent: native skills, scheduling, connectors and the future of desktop automation.</p>
+<button class="text-rose-400 text-sm hover:text-rose-300 mb-3 flex items-center" onclick="toggleTopics('m68')">
+<span class="mr-1 transition-transform" id="m68-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m68-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What is Claude Cowork</li>
+<li>2. Cowork native skills</li>
+<li>3. Scheduling and scheduled tasks</li>
+<li>4. Connectors and integrations</li>
+<li>5. Synchronizing Code and Cowork skills</li>
+<li>6. The future of desktop automation</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-rose-600/30 text-rose-300 rounded-lg text-sm font-semibold hover:bg-rose-600/50 transition-colors" href="modulo-6-8.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-6-8.html')">Preview</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+MODAL
+<div class="modal-overlay" id="module-modal" onclick="closeModal(event)">
+<div class="modal-content">
+<button class="modal-close bg-dark-700 hover:bg-dark-600 text-neutral-300 rounded-lg p-2" onclick="closeModalBtn()">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<iframe class="w-full h-full border-0" id="modal-iframe"></iframe>
+</div>
+</div>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -481,6 +418,5 @@
       document.body.style.overflow = '';
     }
   </script>
-
 </body>
 </html>
