@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 3.6 - Workflow: Code Review e Pull Request | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 3.6 - Workflow: Code Review and Pull Request | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,711 +42,589 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a>
-      <span>/</span>
-      <span class="text-purple-400">Modulo 3.6</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 3.6
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔍 Workflow: Code Review e Pull Request</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Aprenda o workflow completo de code review e criacao de pull requests com Claude Code. Do /review que identifica problemas por severidade ao /pr que gera PRs profissionais automaticamente.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">30</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Intermediario</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📋 /review - Pedindo revisao automatizada</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/review</code> e o ponto de entrada para code review assistido por IA. O Claude analisa todas as mudancas pendentes (staged e unstaged), le o contexto dos arquivos modificados e gera um <strong class="text-purple-400">relatorio estruturado de revisao</strong> com problemas categorizados por severidade.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/review</code> funciona como ter um revisor senior disponivel 24/7. Ele analisa nao apenas o diff, mas tambem o <strong class="text-white">contexto completo dos arquivos modificados</strong>, entendendo o impacto das mudancas no sistema como um todo.
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a>
+<span>/</span>
+<span class="text-purple-400">Module 3.6</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.6</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔍 Workflow: Code Review and Pull Request</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Learn the complete code review and pull request creation workflow with Claude Code. From /review that identifies problems by severity to /pr that automatically generates professional PRs.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">30</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Intermediary</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📋 /review - Requesting automated review</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/review</code>and the entry point for AI-assisted code review. Claude analyzes all pending changes (staged and unstaged), reads the context of the modified files and generates a<strong class="text-purple-400">structured review report</strong>with problems categorized by severity.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/review</code>It works like having a senior reviewer available 24/7. It analyzes not only the diff, but also the<strong class="text-white">full context of modified files</strong>, understanding the impact of changes on the system as a whole.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Complete analysis:</strong>Claude reads the diff, the complete affected files and related tests to give a contextualized review</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Problem categories:</strong>Bugs, security, performance, style, best practices - each issue is categorized for easy prioritization</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Actionable suggestions:</strong>Each comment comes with a concrete suggestion on how to resolve it, not just a vague criticism.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Before PR:</strong>Use /review BEFORE creating the PR to catch issues early when they are cheaper to fix</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Simple review of current changes</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+<div class="text-neutral-500 mt-3"># Review focused on one aspect</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Review my changes focusing on security and error handling</span></div>
+<div class="text-neutral-500 mt-3"># Review of a specific file</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Review changes to src/auth/login.ts with a focus on vulnerabilities</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">knife<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/review</code>a habit before each commit. Even if you're working alone, automated review catches mistakes that your tired eyes don't see. And how to have pair programming without needing another dev.</p>
+<p class="text-neutral-300">Tip: rotate<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/review</code>after each significant block of work, not just at the end. Smaller, more frequent reviews are more effective.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⚠️ Severity levels</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Claude organizes the review findings into<strong class="text-purple-400">four severity levels</strong>: Critical, Important, Minor and Nitpick. This classification helps you prioritize what to fix now versus what can wait, making the review actionable rather than overwhelming.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Not every problem has the same urgency. Severity classification allows you to<strong class="text-white">focus on what matters</strong>and don't waste time on cosmetic details when there are critical bugs to resolve.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-red-400 mt-1">•</span>
+<span><strong class="text-red-400">Critical:</strong>Bugs that cause crashes, data loss, security vulnerabilities. They must be corrected BEFORE the merge. Ex: SQL injection, null pointer in production</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-orange-400 mt-1">•</span>
+<span><strong class="text-orange-400">Important:</strong>Logic problems, poor performance, missing error handling. They must be corrected in this PR. Ex: N+1 query, lack of input validation</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-yellow-400 mt-1">•</span>
+<span><strong class="text-yellow-400">Minor:</strong>Code improvements, readability, conventions. Good fix, but it doesn't block the merge. Ex: poorly named variable, duplicate code</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-neutral-400 mt-1">•</span>
+<span><strong class="text-neutral-300">Nitpick:</strong>Stylistic preferences, formatting, comments. Totally optional. Ex: import order, white space</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Review Output Example</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-red-400 font-bold">🔴 CRITICAL: SQL Injection in getUserById()</div>
+<div class="text-neutral-300 ml-4">Line 45: Query built with string concatenation.</div>
+<div class="text-neutral-300 ml-4">Fix: Use prepared statements with parameters.</div>
+<div class="text-orange-400 font-bold mt-3">🟠 IMPORTANT: Fetch() lacks error handling</div>
+<div class="text-neutral-300 ml-4">Line 78: No catch for network failure.</div>
+<div class="text-yellow-400 font-bold mt-3">🟡 MINOR: Function too long (87 lines)</div>
+<div class="text-neutral-300 ml-4">Consider extracting into smaller functions.</div>
+<div class="text-neutral-500 font-bold mt-3">⚪ NITPICK: Variable 'x' could have a better name</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Rule of thumb:<strong class="text-white">always fix Critical and Important before merging</strong>. Minor can go as a follow-up. Nitpick is optional. If Claude marks something as Critical, stop everything and resolve it immediately.</p>
+<p class="text-neutral-300">You can instruct Claude about the level of rigor: "Review with maximum rigor, treating any security issues as Critical" or "Review lightly, focusing only on bugs".</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🔧 Correcting review feedback</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">After receiving the review, the next step is<strong class="text-purple-400">resolve the identified problems</strong>. Claude doesn't just point out problems - he can fix them directly. You can ask him to resolve all Criticals, or go item by item, validating each correction.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The correction flow is iterative:<strong class="text-white">review → correct → review again</strong>. Claude maintains the context of the previous review and is able to verify that each problem was effectively resolved without introducing new problems.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Automatic fix:</strong>Ask Claude to fix all Critical and Important issues at once: "Fix all issues marked as Critical and Important in the review"</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Selective fix:</strong>Address one issue at a time to maintain control: "Fix the SQL injection on line 45 using prepared statements"</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Re-review:</strong>After the corrections, run /review again to confirm that everything has been resolved and no new problems have been introduced</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Discussion:</strong>If you disagree with a finding, explain why. Claude may recognize that it was a false positive or provide more context</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Fix all Critical</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Fix all issues marked as Critical in the previous review.</span></div>
+<div class="text-neutral-500 mt-3"># Check if it has been resolved</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+<div class="text-neutral-500 mt-3"># Disagree with a finding</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">The item about long and intentional function - it needs to be atomic for transaction reasons. You can ignore it.</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Carry out a maximum of 2 rounds of review/correction. If after 2 iterations there are still problems, the approach probably needs to be rethought rather than more patches.</p>
+<p class="text-neutral-300">Run the tests after each round of fixes to ensure the fixes didn't break anything:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Corrija os problemas do review e rode os testes para confirmar que nada quebrou."</code>
+</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🚀 /pr - Automatically creating pull request</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/pr</code>creates a complete pull request on GitHub/GitLab with<strong class="text-purple-400">automatically generated title, description, labels and summary</strong>. Claude analyzes all commits in the branch, understands the context of the changes and generates a professional description of the PR.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/pr</code>automates the most tedious part of the PR workflow: writing the description. Claude reads all commits, diffs and CLAUDE.md of the project to generate a<strong class="text-white">Descriptive PR, with context and review checklist</strong>.
         </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Analise completa:</strong> O Claude le o diff, os arquivos completos afetados e os testes relacionados para dar um review contextualizado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Categorias de problemas:</strong> Bugs, seguranca, performance, estilo, boas praticas - cada problema e categorizado para facilitar priorizacao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Sugestoes acionaveis:</strong> Cada comentario vem com uma sugestao concreta de como resolver, nao apenas uma critica vaga</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Antes do PR:</strong> Use /review ANTES de criar o PR para pegar problemas cedo, quando sao mais baratos de corrigir</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Review simples das mudancas atuais</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-          <div class="text-neutral-500 mt-3"># Review focado em um aspecto</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Revise minhas mudancas focando em seguranca e tratamento de erros</span></div>
-          <div class="text-neutral-500 mt-3"># Review de um arquivo especifico</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Revise as mudancas em src/auth/login.ts com foco em vulnerabilidades</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Faca do <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/review</code> um habito antes de cada commit. Mesmo que voce esteja trabalhando sozinho, o review automatizado pega erros que seus olhos cansados nao veem. E como ter pair programming sem precisar de outro dev.
-        </p>
-        <p class="text-neutral-300">
-          Dica: rode <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/review</code> apos cada bloco de trabalho significativo, nao apenas no final. Reviews menores e mais frequentes sao mais eficazes.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">⚠️ Niveis de severidade</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Claude organiza os achados do review em <strong class="text-purple-400">quatro niveis de severidade</strong>: Critical, Important, Minor e Nitpick. Essa classificacao ajuda voce a priorizar o que corrigir agora versus o que pode esperar, tornando o review acionavel em vez de avassalador.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Nem todo problema tem a mesma urgencia. A classificacao por severidade permite que voce <strong class="text-white">foque no que importa</strong> e nao perca tempo com detalhes cosmeticos quando ha bugs criticos para resolver.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-red-400 mt-1">•</span>
-            <span><strong class="text-red-400">Critical:</strong> Bugs que causam crash, perda de dados, vulnerabilidades de seguranca. Devem ser corrigidos ANTES do merge. Ex: SQL injection, null pointer em producao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-orange-400 mt-1">•</span>
-            <span><strong class="text-orange-400">Important:</strong> Problemas de logica, performance ruim, tratamento de erro ausente. Devem ser corrigidos neste PR. Ex: N+1 query, falta de validacao de input</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-yellow-400 mt-1">•</span>
-            <span><strong class="text-yellow-400">Minor:</strong> Melhorias de codigo, legibilidade, convencoes. Bom corrigir, mas nao bloqueia o merge. Ex: variavel mal nomeada, codigo duplicado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-neutral-400 mt-1">•</span>
-            <span><strong class="text-neutral-300">Nitpick:</strong> Preferencias estilisticas, formatacao, comentarios. Totalmente opcional. Ex: ordem de imports, espaco em branco</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo de Output do Review
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-red-400 font-bold">🔴 CRITICAL: SQL Injection em getUserById()</div>
-          <div class="text-neutral-300 ml-4">Linha 45: Query construida com concatenacao de string.</div>
-          <div class="text-neutral-300 ml-4">Fix: Use prepared statements com parametros.</div>
-          <div class="text-orange-400 font-bold mt-3">🟠 IMPORTANT: Falta tratamento de erro no fetch()</div>
-          <div class="text-neutral-300 ml-4">Linha 78: Nenhum catch para falha de rede.</div>
-          <div class="text-yellow-400 font-bold mt-3">🟡 MINOR: Funcao muito longa (87 linhas)</div>
-          <div class="text-neutral-300 ml-4">Considere extrair em funcoes menores.</div>
-          <div class="text-neutral-500 font-bold mt-3">⚪ NITPICK: Variavel 'x' poderia ter nome melhor</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Regra de ouro: <strong class="text-white">sempre corrija Critical e Important antes do merge</strong>. Minor pode ir como follow-up. Nitpick e opcional. Se o Claude marcar algo como Critical, pare tudo e resolva imediatamente.
-        </p>
-        <p class="text-neutral-300">
-          Voce pode instruir o Claude sobre o nivel de rigor: "Revise com rigor maximo, tratando qualquer problema de seguranca como Critical" ou "Revise de forma leve, foque apenas em bugs".
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🔧 Corrigindo feedback do review</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Apos receber o review, o proximo passo e <strong class="text-purple-400">resolver os problemas identificados</strong>. O Claude nao apenas aponta os problemas - ele pode corrigi-los diretamente. Voce pode pedir para ele resolver todos os Critical, ou ir item por item, validando cada correcao.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O fluxo de correcao e iterativo: <strong class="text-white">review → corrige → review novamente</strong>. O Claude mantem o contexto do review anterior e consegue verificar se cada problema foi efetivamente resolvido sem introduzir novos problemas.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Fix automatico:</strong> Peca ao Claude para corrigir todos os problemas Critical e Important de uma vez: "Corrija todos os problemas marcados como Critical e Important no review"</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Fix seletivo:</strong> Aborde um problema de cada vez para manter controle: "Corrija o SQL injection na linha 45 usando prepared statements"</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Re-review:</strong> Apos as correcoes, rode /review novamente para confirmar que tudo foi resolvido e nenhum novo problema foi introduzido</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Discussao:</strong> Se voce discorda de um achado, explique o motivo. O Claude pode reconhecer que era um falso positivo ou dar mais contexto</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Corrigir todos os Critical</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Corrija todos os problemas marcados como Critical no review anterior.</span></div>
-          <div class="text-neutral-500 mt-3"># Verificar se foi resolvido</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-          <div class="text-neutral-500 mt-3"># Discordar de um achado</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">O item sobre funcao longa e intencional - ela precisa ser atomica por questao de transacao. Pode ignorar.</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Faca no maximo 2 rodadas de review/correcao. Se apos 2 iteracoes ainda restam problemas, provavelmente a abordagem precisa ser repensada em vez de mais patches.
-        </p>
-        <p class="text-neutral-300">
-          Rode os testes apos cada rodada de correcoes para garantir que os fixes nao quebraram nada: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Corrija os problemas do review e rode os testes para confirmar que nada quebrou."</code>
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🚀 /pr - Criando pull request automaticamente</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/pr</code> cria um pull request completo no GitHub/GitLab com <strong class="text-purple-400">titulo, descricao, labels e summary gerados automaticamente</strong>. O Claude analisa todos os commits da branch, entende o contexto das mudancas e gera uma descricao profissional do PR.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/pr</code> automatiza a parte mais tediosa do workflow de PR: escrever a descricao. O Claude le todos os commits, diffs e o CLAUDE.md do projeto para gerar um <strong class="text-white">PR descritivo, com contexto e checklist de review</strong>.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Titulo inteligente:</strong> O Claude gera um titulo conciso que descreve o que o PR faz, nao como faz</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Descricao completa:</strong> Inclui motivacao, mudancas feitas, impacto, testes e instrucoes para o revisor</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Checklist automatico:</strong> Gera uma checklist de review baseada nas mudancas (testes adicionados? docs atualizados? breaking changes?)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Integracao com gh CLI:</strong> O Claude usa o GitHub CLI (gh) internamente para criar o PR diretamente no repositorio</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Criar PR automaticamente</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/pr</span></div>
-          <div class="text-neutral-500 mt-3"># PR com instrucoes especificas</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Crie um PR para a branch atual. Inclua na descricao: motivacao, mudancas e como testar. Adicione label "feature".</span></div>
-          <div class="text-neutral-500 mt-3"># Resultado tipico:</div>
-          <div class="text-neutral-300">PR #42 criado: "Add user authentication with JWT"</div>
-          <div class="text-neutral-300">https://github.com/org/repo/pull/42</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Sempre rode <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/review</code> antes do <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/pr</code>. O fluxo ideal e: code → /review → fix → /review (confirma) → /pr. Isso garante que o PR ja sai limpo.
-        </p>
-        <p class="text-neutral-300">
-          Adicione ao CLAUDE.md um template de PR para que o Claude siga o padrao do seu time: titulo com prefixo (feat:, fix:, chore:), secoes obrigatorias e labels padrao.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🎯 Review focado (seguranca, performance)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Alem do review geral, voce pode pedir ao Claude para fazer <strong class="text-purple-400">reviews especializados</strong> focados em um aspecto especifico: seguranca, performance, acessibilidade, compliance ou qualquer outro criterio. Isso e como ter especialistas diferentes revisando o mesmo codigo.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Reviews focados sao mais profundos do que reviews gerais porque o Claude concentra toda a sua atencao em <strong class="text-white">um unico aspecto</strong>. Em vez de cobrir tudo superficialmente, ele mergulha fundo em seguranca, performance ou qualquer foco que voce definir.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Security review:</strong> Injection, XSS, CSRF, autenticacao, autorizacao, exposicao de dados sensiveis, dependencias vulneraveis</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Performance review:</strong> N+1 queries, renderizacao desnecessaria, memory leaks, algoritmos ineficientes, caching ausente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Accessibility review:</strong> ARIA labels, contraste de cores, navegacao por teclado, screen reader compatibility</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Combinacao:</strong> Rode reviews focados em sequencia para obter cobertura completa: primeiro seguranca, depois performance, depois geral</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Review de seguranca</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Faca um security review das minhas mudancas. Foque em: injection, XSS, autenticacao, exposicao de dados e dependencias vulneraveis.</span></div>
-          <div class="text-neutral-500 mt-3"># Review de performance</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Revise com foco em performance. Identifique N+1 queries, renderizacoes desnecessarias, objetos grandes em memoria e oportunidades de caching.</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Para mudancas criticas (pagamento, autenticacao, dados pessoais), sempre faca um security review dedicado alem do review geral. O review geral pode pegar problemas de seguranca, mas um review focado vai muito mais fundo.
-        </p>
-        <p class="text-neutral-300">
-          Crie um checklist no CLAUDE.md: "Para PRs que tocam em auth/, payments/ ou user-data/, sempre rodar security review focado."
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔄 Fluxo completo de PR (end-to-end)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agora que voce conhece cada peca, vamos montar o <strong class="text-purple-400">workflow completo end-to-end</strong>: desde terminar o codigo ate ter o PR aprovado e pronto para merge. Este fluxo combina review, correcao, testes e criacao de PR em um processo fluido e eficiente.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O fluxo completo segue 6 etapas: <strong class="text-white">Code → Review → Fix → Test → Re-review → PR</strong>. Cada etapa alimenta a proxima, e o Claude mantem o contexto ao longo de todo o processo.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">1. Finalize o codigo:</strong> Certifique-se de que todas as mudancas estao salvas e os arquivos corretos estao staged</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">2. /review geral + focado:</strong> Rode review geral e, se aplicavel, security review. Anote os achados Critical e Important</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">3. Corrija os achados:</strong> Peca ao Claude para corrigir os problemas identificados, comecando pelos Critical</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">4. Rode testes:</strong> Confirme que as correcoes nao quebraram nada e que os novos cenarios estao cobertos</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">5. Re-review:</strong> Rode /review novamente para confirmar que esta tudo limpo. Se ainda ha problemas, repita 3-4</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">6. /pr:</strong> Com tudo limpo, crie o PR com descricao automatica e envie para revisao humana</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Fluxo Completo
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-          <div class="text-neutral-500"># Claude encontra 2 Critical, 3 Important</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Corrija todos os Critical e Important.</span></div>
-          <div class="text-neutral-500"># Claude aplica as correcoes</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Rode os testes para confirmar que nada quebrou.</span></div>
-          <div class="text-neutral-500"># Todos passam</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-          <div class="text-neutral-500"># Limpo - apenas 1 Nitpick</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/pr</span></div>
-          <div class="text-neutral-500"># PR #42 criado com descricao completa</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Adicione este fluxo como uma instrucao no CLAUDE.md do projeto: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Antes de criar qualquer PR, sempre rode /review, corrija Critical/Important, rode testes, e so entao use /pr."</code>
-        </p>
-        <p class="text-neutral-300">
-          Este fluxo leva 5-10 minutos com Claude Code versus 30-60 minutos manualmente. E o ganho de qualidade e consistente - o Claude nunca esquece de checar seguranca ou rodar testes.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-2 flex items-center">
-          <span class="mr-3">🏋️</span> Exercicio Pratico
-        </h2>
-        <p class="text-neutral-400 mb-8">Fazer review + PR completo usando /review e /pr</p>
-
-        <div class="space-y-8">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Criar uma branch com mudancas</h4>
-              <p class="text-neutral-300 text-sm mb-3">Crie uma branch feature e faca algumas mudancas em 2-3 arquivos:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">git checkout -b feature/exercicio-review</span></div>
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Adicione validacao de email na funcao de registro</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Rodar /review</h4>
-              <p class="text-neutral-300 text-sm mb-3">Peca um review completo das mudancas:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Anote quantos Critical, Important, Minor e Nitpick foram encontrados.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Corrigir feedback</h4>
-              <p class="text-neutral-300 text-sm mb-3">Peca ao Claude para corrigir os achados:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Corrija todos os problemas Critical e Important do review.</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Re-review e criar PR</h4>
-              <p class="text-neutral-300 text-sm mb-3">Confirme que esta limpo e crie o PR:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">/review</span></div>
-                <div><span class="text-neutral-500"># Se limpo:</span></div>
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">/pr</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Verifique que o PR tem titulo, descricao e checklist automaticos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist de Sucesso -->
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Executou /review e recebeu feedback</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Entendeu os niveis de severidade</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Corrigiu feedback Critical/Important</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Fez re-review apos correcoes</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Criou PR com /pr</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">PR tem descricao e checklist automaticos</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/review e seu revisor automatico</strong>
-              <span class="text-neutral-400"> - Analisa diff + contexto completo e gera feedback categorizado por severidade.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">4 niveis: Critical, Important, Minor, Nitpick</strong>
-              <span class="text-neutral-400"> - Priorize correcoes pelo impacto. Critical e Important antes do merge.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Claude corrige o que ele encontra</strong>
-              <span class="text-neutral-400"> - Nao apenas aponta problemas, mas resolve-os diretamente no codigo.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/pr gera PRs profissionais</strong>
-              <span class="text-neutral-400"> - Titulo, descricao, checklist e labels automaticos baseados nos commits.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Reviews focados vao mais fundo</strong>
-              <span class="text-neutral-400"> - Security review, performance review e outros especializados para areas criticas.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Fluxo completo em 5-10 minutos</strong>
-              <span class="text-neutral-400"> - Code → Review → Fix → Test → Re-review → PR. Automatizado e consistente.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-purple-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">3.7 - Workflow: Debug com Logs e Erros</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-5.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-3-7.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">
-            Proximo Modulo →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Clever title:</strong>Claude generates a concise title that describes what the PR does, not how it does it</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Full description:</strong>Includes motivation, changes made, impact, testing, and instructions for the reviewer</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Automatic checklist:</strong>Generates a review checklist based on changes (tests added? docs updated? breaking changes?)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Integration with gh CLI:</strong>Claude uses the GitHub CLI (gh) internally to create the PR directly in the repository</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Create PR automatically</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/pr</span></div>
+<div class="text-neutral-500 mt-3"># PR with specific instructions</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Create a PR for the current branch. Include in the description: motivation, changes and how to test. Add label "feature".</span></div>
+<div class="text-neutral-500 mt-3"># Typical result:</div>
+<div class="text-neutral-300">PR #42 created: "Add user authentication with JWT"</div>
+<div class="text-neutral-300">https://github.com/org/repo/pull/42</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Always ride<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/review</code>before the<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/pr</code>. The ideal flow is: code → /review → fix → /review (confirm) → /pr. This ensures that the PR comes out clean.</p>
+<p class="text-neutral-300">Add a PR template to CLAUDE.md so that Claude follows your team's standard: title with prefix (feat:, fix:, chore:), mandatory sections and standard labels.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🎯 Focused review (security, performance)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">In addition to the general review, you can ask Claude to do<strong class="text-purple-400">specialized reviews</strong>focused on a specific aspect: security, performance, accessibility, compliance or any other criteria. This is like having different experts review the same code.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Focused reviews are deeper than general reviews because Claude focuses all of his attention on<strong class="text-white">a single aspect</strong>. Instead of covering everything superficially, it dives deep into security, performance, or whatever focus you define.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Security review:</strong>Injection, XSS, CSRF, authentication, authorization, sensitive data exposure, vulnerable dependencies</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Performance review:</strong>N+1 queries, unnecessary rendering, memory leaks, inefficient algorithms, missing caching</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Accessibility review:</strong>ARIA labels, color contrast, keyboard navigation, screen reader compatibility</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Combination:</strong>Run focused reviews in sequence to get complete coverage: first security, then performance, then general</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Security review</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Do a security review of my changes. Focus on: injection, XSS, authentication, data exposure and vulnerable dependencies.</span></div>
+<div class="text-neutral-500 mt-3"># Performance review</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Review with a focus on performance. Identify N+1 queries, unnecessary renders, large objects in memory and caching opportunities.</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">For critical changes (payment, authentication, personal data), always carry out a dedicated security review in addition to the general review. The general review may pick up on security issues, but a focused review goes much deeper.</p>
+<p class="text-neutral-300">Create a checklist on CLAUDE.md: "For PRs that touch on auth/, payments/ or user-data/, always run a focused security review."</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔄 Complete PR flow (end-to-end)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Now that you know each piece, let's assemble the<strong class="text-purple-400">complete end-to-end workflow</strong>: from finishing the code to having the PR approved and ready for merge. This flow combines review, correction, testing and PR creation in a fluid and efficient process.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The complete flow follows 6 steps:<strong class="text-white">Code → Review → Fix → Test → Re-review → PR</strong>. Each step feeds into the next, and Claude maintains context throughout the entire process.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">1. Finalize the code:</strong>Make sure all changes are saved and the correct files are staged</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">2. /general + focused review:</strong>Run general review and, if applicable, security review. Note the Critical and Important findings</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">3. Correct the findings:</strong>Ask Claude to fix the identified problems, starting with the Critical ones</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">4. Run tests:</strong>Confirm that the fixes didn't break anything and that the new scenarios are covered</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">5. Re-review:</strong>Run /review again to confirm everything is clean. If there are still problems, repeat 3-4</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">6. /pr:</strong>Once everything is clear, create the PR with automatic description and send it for human review</span>
+</li>
+</ul>
+</div>
+Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Full Flow</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+<div class="text-neutral-500"># Claude finds 2 Critical, 3 Important</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Correct all Critical and Important.</span></div>
+<div class="text-neutral-500"># Claude applies the corrections</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Run the tests to confirm that nothing broke.</span></div>
+<div class="text-neutral-500"># Everyone passes</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+<div class="text-neutral-500"># Clean - only 1 Nitpick</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/pr</span></div>
+<div class="text-neutral-500"># PR #42 created with full description</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Add this flow as an instruction in the project's CLAUDE.md:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Antes de criar qualquer PR, sempre rode /review, corrija Critical/Important, rode testes, e so entao use /pr."</code>
+</p>
+<p class="text-neutral-300">This flow takes 5-10 minutes with Claude Code versus 30-60 minutes manually. And the quality gain is consistent - Claude never forgets to check security or run tests.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-2 flex items-center">
+<span class="mr-3">🏋️</span>Practical Exercise</h2>
+<p class="text-neutral-400 mb-8">Make review + full PR using /review and /pr</p>
+<div class="space-y-8">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Create a branch with changes</h4>
+<p class="text-neutral-300 text-sm mb-3">Create a feature branch and make some changes to 2-3 files:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">git checkout -b feature/exercicio-review</span></div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Add email validation to the registration function</span></div>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Run /review</h4>
+<p class="text-neutral-300 text-sm mb-3">Request a full review of the changes:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Note how many Critical, Important, Minor and Nitpick were found.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Fix feedback</h4>
+<p class="text-neutral-300 text-sm mb-3">Ask Claude to correct the findings:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Fix all Critical and Important issues in the review.</span></div>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Re-review and create PR</h4>
+<p class="text-neutral-300 text-sm mb-3">Confirm that it is clean and create the PR:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/review</span></div>
+<div><span class="text-neutral-500"># If clean:</span></div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/pr</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Check that the PR has an automatic title, description and checklist.</p>
+</div>
+</div>
+</div>
+</div>
+Success Checklist
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Ran /review and received feedback</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Understand severity levels</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Fixed Critical/Important feedback</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Re-reviewed after corrections</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Created PR with /pr</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">PR has automatic description and checklist</span>
+</div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/review is your automatic reviewer</strong>
+<span class="text-neutral-400">- Analyzes diff + full context and generates feedback categorized by severity.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">4 levels: Critical, Important, Minor, Nitpick</strong>
+<span class="text-neutral-400">- Prioritize corrections by impact. Critical and Important before the merge.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Claude fixes what he finds</strong>
+<span class="text-neutral-400">- Not only points out problems, but solves them directly in the code.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/pr generates professional PRs</strong>
+<span class="text-neutral-400">- Title, description, checklist and automatic labels based on commits.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Focused reviews go deeper</strong>
+<span class="text-neutral-400">- Security review, performance review and other specialized areas for critical areas.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Full flow in 5-10 minutes</strong>
+<span class="text-neutral-400">- Code → Review → Fix → Test → Re-review → PR. Automated and consistent.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-purple-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">3.7 - Workflow: Debug with Logs and Errors</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-5.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-7.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -767,6 +645,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
