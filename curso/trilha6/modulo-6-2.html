@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 6.2 - MCP Filesystem e GitHub | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 6.2 - MCP Filesystem and GitHub | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,471 +42,370 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">&#129504;</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-rose-400">Trilha 6</a>
-      <span>/</span>
-      <span class="text-rose-400">Modulo 6.2</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 6.2
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#128193; MCP Filesystem e GitHub</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Instale e configure os dois MCPs mais essenciais: Filesystem para acessar arquivos fora do repositorio e GitHub para gerenciar issues, PRs e CI diretamente do Claude.
-      </p>
-
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">30</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Pratico</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Hands-on</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">&#128194; MCP Filesystem (Acesso a Arquivos Fora do Repo)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Por padrao, o Claude Code so tem acesso aos arquivos dentro do diretorio onde voce iniciou a sessao. O MCP Filesystem <strong class="text-rose-400">expande esse acesso para qualquer diretorio do seu computador</strong> - Desktop, Documents, configs globais, outros projetos. E o MCP mais fundamental porque resolve a limitacao mais comum.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O Filesystem MCP e um <strong class="text-white">servidor local</strong> que expoe operacoes de leitura e escrita de arquivos ao Claude. Voce define quais diretorios ele pode acessar na instalacao, e ele respeita esses limites. O impacto em tokens e baixo porque so carrega conteudo quando solicitado.
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-rose-400" href="index.html">Track 6</a>
+<span>/</span>
+<span class="text-rose-400">Module 6.2</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📁 MCP Filesystem and GitHub</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Install and configure the two most essential MCPs: Filesystem to access files outside the repository and GitHub to manage issues, PRs and CI directly from Claude.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">30</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Practical</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Hands-on</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📂 MCP Filesystem (Access to Files Outside Repo)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">By default, Claude Code only has access to files within the directory where you started the session. The MCP Filesystem<strong class="text-rose-400">expands this access to any directory on your computer</strong>- Desktop, Documents, global configs, other projects. It is the most fundamental MCP because it solves the most common limitation.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The MCP Filesystem is a<strong class="text-white">local server</strong>which exposes file reading and writing operations to Claude. You define which directories it can access on installation, and it respects these limits. The impact on tokens is low because it only loads content when requested.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Controlled access:</strong>You choose exactly which directories to expose</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Low impact token:</strong>Content is only loaded when Claude needs it</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">High Utility:</strong>You will use it in practically every productive session</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Start by just exposing<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">~/Desktop</code> e <code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">~/Documents</code>. Do not expose the entire root directory - this would give access to system files that do not make sense to Claude.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⚙️ Installing Filesystem (claude mcp add)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Installing the MCP Filesystem is done with a single command. You specify the name of the MCP and the directories you want to expose to Claude. The process is instantaneous and does not require restarting anything.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The installation command follows the pattern:<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude mcp add [nome] -- [comando] [argumentos]</code>. For Filesystem:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem /Users/voce/Desktop /Users/voce/Documents</span>
+</div>
+<p class="text-neutral-300">You can add as many directories as you want, separated by space. Each directory listed will be accessible to Claude.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">After installing, check with<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude mcp list</code>"filesystem" appears in the list. Then open a session and ask:<strong class="text-white">"List the files on my Desktop"</strong>. If it works, the installation is correct.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🚀 Filesystem Use Cases</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Filesystem MCP unlocks scenarios that would be impossible or very laborious without it. Here are the most common ones in a developer's daily life.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Cross-project:</strong>Reference code from another project while working on the current one. Ex: "Use the same auth pattern as project X"</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Global settings:</strong>Access .bashrc, .zshrc, VS Code configs, ssh configs without logging out</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Desktop as staging area:</strong>Save outputs, reports or artifacts directly to the Desktop</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Partial monorepo:</strong>Access packages from a monorepo that are outside the working directory</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">The killer use case and<strong class="text-white">cross-project reference</strong>. Imagine that you are creating a new project and want to replicate authentication patterns from a previous project. With Filesystem, just say: "Look at the auth.ts file in the project ~/projects/my-app and replicate the pattern here."</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🐙 MCP GitHub (Issues, PRs, Search, CI)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">MCP GitHub gives Claude<strong class="text-rose-400">full access to the GitHub API</strong>- create and manage issues, review PRs, search for code in repositories, check CI status and much more. All without leaving the terminal.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Create/manage issues:</strong>Open, close, comment and assign issues without opening the browser</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Review PRs:</strong>Read diffs, comment and approve pull requests directly from Claude</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Search in repos:</strong>Search code, files and commits in any repository you have access to</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">CI status:</strong>Check if the checks pass before merging</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">GitHub's impact token and<strong class="text-white">moderate</strong>. Keep queries specific - instead of "list all issues", say "list open issues with label bug in the last 7 days". The more specific the query, the lower the token consumption.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔑 Installing GitHub (Command + GITHUB_TOKEN)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Installing MCP GitHub requires two steps: the installation command and the access token configuration. The token is needed so that Claude can authenticate with the GitHub API on your behalf.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Two commands and you are ready:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4 space-y-2">
+<div><span class="text-neutral-500"># 1. Configure the token</span></div>
+<div><span class="text-neutral-500">$</span> <span class="text-rose-400">export GITHUB_TOKEN=ghp_your_token_here</span></div>
+<div class="mt-2"><span class="text-neutral-500"># 2. Install MCP</span></div>
+<div><span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span></div>
+</div>
+<p class="text-neutral-300">The token can be generated in<strong class="text-white">GitHub &gt; Settings &gt; Developer Settings &gt; Personal Access Tokens</strong>. Use Fine-grained tokens with the minimum necessary permissions.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Place the<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">export GITHUB_TOKEN=...</code>in your<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">~/.bashrc</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">~/.zshrc</code>so you don't have to configure it every time. AND<strong class="text-white">never commits the token to the repository</strong>.
         </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Acesso controlado:</strong> Voce escolhe exatamente quais diretorios expor</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Token impact baixo:</strong> Conteudo so e carregado quando o Claude precisa</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Alta utilidade:</strong> Voce vai usar em praticamente toda sessao produtiva</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Comece expondo apenas <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">~/Desktop</code> e <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">~/Documents</code>. Nao exponha o diretorio raiz inteiro - isso daria acesso a arquivos de sistema que nao fazem sentido para o Claude.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">&#9881;&#65039; Instalando Filesystem (claude mcp add)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A instalacao do Filesystem MCP e feita com um unico comando. Voce especifica o nome do MCP e os diretorios que deseja expor ao Claude. O processo e instantaneo e nao requer reiniciar nada.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O comando de instalacao segue o padrao: <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude mcp add [nome] -- [comando] [argumentos]</code>. Para o Filesystem:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem /Users/voce/Desktop /Users/voce/Documents</span>
-        </div>
-        <p class="text-neutral-300">
-          Voce pode adicionar quantos diretorios quiser, separados por espaco. Cada diretorio listado sera acessivel ao Claude.
-        </p>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Apos instalar, verifique com <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude mcp list</code> se aparece "filesystem" na lista. Depois abra uma sessao e peca: <strong class="text-white">"Liste os arquivos do meu Desktop"</strong>. Se funcionar, a instalacao esta correta.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">&#128640; Casos de Uso do Filesystem</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Filesystem MCP desbloqueia cenarios que seriam impossiveis ou muito trabalhosos sem ele. Aqui estao os mais comuns no dia a dia de um desenvolvedor.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Cross-project:</strong> Referenciar codigo de outro projeto enquanto trabalha no atual. Ex: "Use o mesmo pattern de auth do projeto X"</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Configs globais:</strong> Acessar .bashrc, .zshrc, configs do VS Code, ssh configs sem sair da sessao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Desktop como staging area:</strong> Salvar outputs, relatorios ou artefatos diretamente no Desktop</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Monorepo parcial:</strong> Acessar packages de um monorepo que estao fora do working directory</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          O caso de uso killer e <strong class="text-white">cross-project reference</strong>. Imagine que voce esta criando um novo projeto e quer replicar patterns de autenticacao de um projeto anterior. Com Filesystem, basta dizer: "Olhe o arquivo auth.ts no projeto ~/projects/meu-app e replique o pattern aqui".
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">&#128025; MCP GitHub (Issues, PRs, Search, CI)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O MCP GitHub da ao Claude <strong class="text-rose-400">acesso completo a API do GitHub</strong> - criar e gerenciar issues, revisar PRs, buscar codigo em repositorios, verificar status de CI e muito mais. Tudo sem sair do terminal.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Criar/gerenciar issues:</strong> Abra, feche, comente e atribua issues sem abrir o navegador</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Revisar PRs:</strong> Leia diffs, comente e aprove pull requests direto do Claude</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Buscar em repos:</strong> Pesquise codigo, arquivos e commits em qualquer repositorio que voce tem acesso</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">CI status:</strong> Verifique se os checks passaram antes de mergear</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          O token impact do GitHub e <strong class="text-white">moderado</strong>. Mantenha queries especificas - em vez de "liste todos os issues", diga "liste issues abertos com label bug nos ultimos 7 dias". Quanto mais especifica a query, menor o consumo de tokens.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">&#128273; Instalando GitHub (Command + GITHUB_TOKEN)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A instalacao do MCP GitHub requer dois passos: o comando de instalacao e a configuracao do token de acesso. O token e necessario para que o Claude possa autenticar com a API do GitHub em seu nome.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Dois comandos e voce esta pronto:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4 space-y-2">
-          <div><span class="text-neutral-500"># 1. Configurar o token</span></div>
-          <div><span class="text-neutral-500">$</span> <span class="text-rose-400">export GITHUB_TOKEN=ghp_seu_token_aqui</span></div>
-          <div class="mt-2"><span class="text-neutral-500"># 2. Instalar o MCP</span></div>
-          <div><span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span></div>
-        </div>
-        <p class="text-neutral-300">
-          O token pode ser gerado em <strong class="text-white">GitHub &gt; Settings &gt; Developer Settings &gt; Personal Access Tokens</strong>. Use Fine-grained tokens com as permissoes minimas necessarias.
-        </p>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Coloque o <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">export GITHUB_TOKEN=...</code> no seu <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">~/.bashrc</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">~/.zshrc</code> para nao precisar configurar toda vez. E <strong class="text-white">nunca commite o token no repositorio</strong>.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">&#128260; Workflow Cross-Repo com Ambos</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O verdadeiro poder aparece quando voce <strong class="text-rose-400">combina Filesystem + GitHub</strong>. Imagine: voce esta no projeto A, precisa referenciar codigo do projeto B (Filesystem) e criar uma issue no repositorio do projeto C (GitHub). Tudo numa unica sessao, sem trocar de janela.
-      </p>
-
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Exemplo de workflow completo com ambos MCPs:
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">1.</strong> Leia o CLAUDE.md do projeto-api em ~/projects/projeto-api (Filesystem)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">2.</strong> Verifique os issues abertos do repo no GitHub (GitHub MCP)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">3.</strong> Implemente a feature no projeto atual usando patterns do projeto-api</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">4.</strong> Crie um PR com referencia ao issue (GitHub MCP)</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Esse combo (Filesystem + GitHub) e o <strong class="text-white">setup padrao recomendado</strong> para desenvolvimento. Com apenas ~5-10% de overhead, voce ganha acesso cross-projeto e integracao GitHub completa. E o melhor custo-beneficio de MCPs.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">&#9997;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4">Instalar Filesystem + GitHub e executar tarefa cross-repo</h3>
-        <p class="text-neutral-300 mb-4">
-          Instale ambos MCPs e execute uma tarefa que use os dois simultaneamente.
-        </p>
-
-        <div class="space-y-4 mb-6">
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 1: Instale os MCPs</h4>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem ~/Desktop ~/Documents ~/projects</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">export GITHUB_TOKEN=ghp_seu_token</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span>
-            </div>
-          </div>
-
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 2: Execute uma tarefa cross-repo</h4>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br>
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"Liste os arquivos do meu Desktop e depois liste os issues abertos do meu repositorio principal no GitHub"</span>
-            </div>
-          </div>
-        </div>
-
-        <h4 class="text-white font-semibold mb-3">Checklist de Conclusao:</h4>
-        <div class="space-y-2">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">MCP Filesystem instalado e funcionando</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">MCP GitHub instalado com token configurado</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Executou tarefa usando ambos MCPs numa sessao</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">&#128203;</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Filesystem = acesso cross-projeto</strong>
-              <span class="text-neutral-400"> - Expande o alcance do Claude para qualquer diretorio. Token impact baixo.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">GitHub = integracao completa</strong>
-              <span class="text-neutral-400"> - Issues, PRs, search e CI direto do terminal. Token impact moderado.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Combo ideal para desenvolvimento</strong>
-              <span class="text-neutral-400"> - Filesystem + GitHub = ~5-10% overhead com maximo de utilidade.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-rose-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">6.3 - MCP Browser e Chrome DevTools</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-6-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            &#8592; Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-6-3.html" class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors">
-            Proximo Modulo &#8594;
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔄 Cross-Repo Workflow with Both</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">True power appears when you<strong class="text-rose-400">combines Filesystem + GitHub</strong>. Imagine: you are in project A, you need to reference code from project B (Filesystem) and create an issue in the repository of project C (GitHub). All in a single session, without changing windows.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Complete workflow example with both MCPs:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">1.</strong>Read the CLAUDE.md of the api-project in ~/projects/api-project (Filesystem)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">2.</strong>Check the repo's open issues on GitHub (GitHub MCP)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">3.</strong>Implement the feature in the current project using api-project patterns</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">4.</strong>Create a PR with reference to the issue (GitHub MCP)</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">This combo (Filesystem + GitHub) and the<strong class="text-white">recommended default setup</strong>for development. With just ~5-10% overhead, you gain cross-project access and full GitHub integration. It is the best cost-benefit of MCPs.</p>
+</div>
+</section>
+EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">✍</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4">Install Filesystem + GitHub and run cross-repo task</h3>
+<p class="text-neutral-300 mb-4">Install both MCPs and run a task that uses both MCPs simultaneously.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 1: Install the MCPs</h4>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem ~/Desktop ~/Documents ~/projects</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">export GITHUB_TOKEN=ghp_your_token</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span>
+</div>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 2: Run a cross-repo task</h4>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br/>
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"List the files from my Desktop and then list the open issues from my main repository on GitHub"</span>
+</div>
+</div>
+</div>
+<h4 class="text-white font-semibold mb-3">Conclusion Checklist:</h4>
+<div class="space-y-2">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">MCP Filesystem installed and working</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">MCP GitHub installed with token configured</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Performed task using both MCPs in one session</span>
+</div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Filesystem = cross-project access</strong>
+<span class="text-neutral-400">- Expands Claude's reach to any directory. Low token impact.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">GitHub = complete integration</strong>
+<span class="text-neutral-400">- Issues, PRs, search and CI directly from the terminal. Token impact moderate.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Ideal combo for development</strong>
+<span class="text-neutral-400">- Filesystem + GitHub = ~5-10% overhead with maximum utility.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-rose-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">6.3 - MCP Browser and Chrome DevTools</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-6-1.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors" href="modulo-6-3.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -526,6 +425,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
