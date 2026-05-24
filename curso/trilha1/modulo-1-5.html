@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 1.5 - Pipe de Dados e Integracao Unix | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 1.5 - Data Pipe and Unix Integration | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,784 +42,652 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
-      <span>/</span>
-      <span class="text-emerald-400">Modulo 1.5</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 1.5
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔗 Pipe de Dados e Integracao Unix</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Domine a arte de conectar o Claude Code ao ecossistema Unix. Aprenda a enviar dados via pipe, encadear comandos, redirecionar saida e transformar o Claude num cidadao nativo do seu terminal.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">30</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Intermediario</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 1: cat | claude - Alimentando arquivos diretamente -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📄 cat | claude - Alimentando Arquivos Diretamente</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O pipe e o mecanismo mais fundamental do Unix para conectar programas. Com o Claude Code, voce pode usar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat arquivo | claude -p "instrucao"</code> para enviar o conteudo de qualquer arquivo diretamente como contexto. Isso transforma o Claude num processador universal de texto, codigo e dados que se integra naturalmente ao fluxo de trabalho do terminal.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Quando voce usa o operador <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">|</code> (pipe), a saida de um comando se torna a entrada do proximo. O Claude Code com a flag <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">-p</code> aceita dados via stdin, o que significa que qualquer conteudo pode ser canalizado diretamente para ele.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Sintaxe basica:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat arquivo.py | claude -p "explique este codigo"</code> - o conteudo do arquivo e enviado como contexto junto com a instrucao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Qualquer formato funciona:</strong> Arquivos .py, .js, .json, .yaml, .csv, .txt, logs - qualquer texto pode ser enviado via pipe. O Claude interpreta o formato automaticamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Multiplos arquivos:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat arquivo1.py arquivo2.py | claude -p "compare estes dois arquivos"</code> para enviar varios arquivos concatenados</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Contexto implicito:</strong> O conteudo do pipe aparece como contexto antes do prompt. O Claude sabe que recebeu dados via stdin e os trata como material de referencia</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Exemplos Praticos
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Enviar um arquivo Python para analise</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat app.py | claude -p "revise este codigo e aponte problemas"</span><br><br>
-            <span class="text-neutral-500"># Enviar um JSON de configuracao</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat package.json | claude -p "quais dependencias estao desatualizadas?"</span><br><br>
-            <span class="text-neutral-500"># Enviar CSV para analise de dados</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat vendas.csv | claude -p "resuma os dados e identifique tendencias"</span><br><br>
-            <span class="text-neutral-500"># Multiplos arquivos concatenados</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/model.py src/controller.py | claude -p "estes dois modulos estao bem acoplados?"</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Prefira <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat</code> para arquivos inteiros, mas se o arquivo for muito grande (mais de 1000 linhas), filtre primeiro com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">head -100</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">tail -50</code> para enviar apenas a parte relevante. Isso economiza tokens e gera respostas mais focadas.
-        </p>
-        <p class="text-neutral-300">
-          Para arquivos binarios ou muito grandes, o modo interativo do Claude Code (sem pipe) e mais eficiente, pois ele usa ferramentas internas para ler apenas as partes necessarias.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 2: Pipe de logs e erros -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🐛 Pipe de Logs e Erros</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Um dos usos mais poderosos do pipe com Claude Code e o <strong class="text-emerald-400">diagnostico de erros em tempo real</strong>. Em vez de copiar e colar stack traces manualmente, voce pode redirecionar a saida de erro diretamente para o Claude analisar. Isso transforma o debug de minutos em segundos.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          No Unix, existem dois fluxos de saida: <strong class="text-white">stdout</strong> (saida padrao, fd 1) e <strong class="text-white">stderr</strong> (saida de erro, fd 2). Voce pode redirecionar ambos para o Claude, mas o mais util no dia a dia e capturar stderr para diagnostico automatico.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Capturar stderr:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">comando 2>&1 | claude -p "diagnostique este erro"</code> para redirecionar erros ao Claude</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Logs em tempo real:</strong> Combine <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">tail -f</code> com pipes para analise continua de logs (use com cuidado para nao gerar custos excessivos)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Stack traces:</strong> O Claude reconhece automaticamente stack traces de Python, Node.js, Java, Go e outras linguagens, identificando a causa raiz com precisao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Filtragem antes do pipe:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">grep -i error logfile.log | claude -p "classifique estes erros"</code> para filtrar apenas linhas relevantes</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Exemplos Praticos
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Capturar erro de build e diagnosticar</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">npm run build 2>&1 | claude -p "explique este erro e como corrigir"</span><br><br>
-            <span class="text-neutral-500"># Analisar log de erro do servidor</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">tail -100 /var/log/app/error.log | claude -p "identifique o padrao dos erros"</span><br><br>
-            <span class="text-neutral-500"># Diagnosticar falha em testes</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">pytest tests/ 2>&1 | claude -p "quais testes falharam e por que?"</span><br><br>
-            <span class="text-neutral-500"># Filtrar erros criticos de um log grande</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -i "critical\|fatal\|panic" app.log | claude -p "priorize estes erros"</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Para debug rapido, crie um alias: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">alias debug='2>&1 | claude -p "diagnostique este erro e sugira a correcao"'</code>. Depois, basta rodar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">npm test debug</code> e o Claude analisa qualquer falha automaticamente.
-        </p>
-        <p class="text-neutral-300">
-          Cuidado com logs muito grandes. Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">tail -n 200</code> para limitar as ultimas 200 linhas. Enviar megabytes de log consome muitos tokens sem melhorar a qualidade da analise.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 3: Multiplos pipes encadeados -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">⛓️ Multiplos Pipes Encadeados</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A verdadeira magia do Unix aparece quando voce <strong class="text-emerald-400">encadeia multiplos comandos antes de enviar ao Claude</strong>. Usando grep, awk, sed, sort, uniq e outros utilitarios classicos, voce filtra, transforma e prepara dados com precisao cirurgica antes de pedir a analise do Claude. Isso resulta em respostas mais focadas e consome menos tokens.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A filosofia de pipeline Unix e: cada programa faz uma coisa bem feita e passa o resultado adiante. O Claude Code se encaixa perfeitamente nesse modelo como o <strong class="text-white">estagio final de processamento inteligente</strong> de qualquer pipeline.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">grep + claude:</strong> Filtre linhas especificas e peca analise. <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">grep "TODO" -r src/ | claude -p "priorize estes TODOs"</code></span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">awk + claude:</strong> Extraia colunas especificas de dados tabulares antes de enviar. <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">awk '{print $1, $4}' access.log | claude -p "analise os IPs e status codes"</code></span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">sed + claude:</strong> Transforme dados antes de enviar. Remova informacoes sensiveis, formate, simplifique</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Pipeline completo:</strong> Combine tudo: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat log | grep ERROR | sort | uniq -c | sort -rn | head -20 | claude -p "analise os 20 erros mais frequentes"</code></span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Pipelines Avancados
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Encontrar funcoes duplicadas no codebase</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "def \|function " src/ | awk -F: '{print $3}' | sort | uniq -d | claude -p "estas funcoes parecem duplicadas. Sugira refatoracao"</span><br><br>
-            <span class="text-neutral-500"># Analisar imports nao utilizados</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "^import\|^from" src/*.py | claude -p "identifique imports que provavelmente nao estao sendo usados"</span><br><br>
-            <span class="text-neutral-500"># Extrair e analisar metricas de performance</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">grep "response_time" access.log | awk '{print $NF}' | sort -n | tail -50 | claude -p "analise os 50 tempos de resposta mais lentos"</span><br><br>
-            <span class="text-neutral-500"># Listar e classificar TODOs do projeto</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "TODO\|FIXME\|HACK\|XXX" src/ | claude -p "classifique por urgencia e sugira ordem de resolucao"</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Sempre teste o pipeline <strong class="text-white">sem o Claude primeiro</strong>. Rode <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">grep "ERROR" log | sort | uniq -c | sort -rn | head -20</code> sozinho para ver o que sera enviado. Depois, adicione <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">| claude -p "..."</code> no final. Isso evita enviar dados errados e desperdicar tokens.
-        </p>
-        <p class="text-neutral-300">
-          Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">| head -n 50</code> antes do Claude para limitar volume. Menos e mais: dados precisos geram analises melhores do que enviar tudo de uma vez.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 4: Redirecionamento de saida -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📁 Redirecionamento de Saida</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O pipe envia dados <em>para</em> o Claude, mas o <strong class="text-emerald-400">redirecionamento de saida</strong> captura a resposta do Claude em arquivos. Com os operadores <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">></code> e <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">>></code>, voce transforma respostas em documentacao, relatorios, codigo gerado e qualquer outro artefato que precisa ser salvo.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O redirecionamento no Unix funciona com dois operadores principais. O <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">></code> cria ou sobrescreve o arquivo, e o <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">>></code> adiciona ao final do arquivo existente. Ambos sao essenciais para capturar as respostas do Claude.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Criar arquivo novo:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p "gere um README para este projeto" > README.md</code> - a resposta vira o conteudo do arquivo</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Append (adicionar):</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p "gere mais testes" >> tests.py</code> - adiciona ao final sem apagar o conteudo existente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Pipe + redirecionamento:</strong> Combine entrada e saida: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cat codigo.py | claude -p "adicione docstrings" > codigo_documentado.py</code></span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Relatorios automaticos:</strong> Gere relatorios de analise que ficam salvos para consulta posterior ou compartilhamento com a equipe</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Exemplos Praticos
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Gerar documentacao de API</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/routes/*.py | claude -p "gere documentacao de API em Markdown" > docs/api.md</span><br><br>
-            <span class="text-neutral-500"># Criar relatorio de code review</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">git diff HEAD~5 | claude -p "faca code review dos ultimos 5 commits" > review.md</span><br><br>
-            <span class="text-neutral-500"># Gerar testes unitarios</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/utils.py | claude -p "gere testes unitarios com pytest" > tests/test_utils.py</span><br><br>
-            <span class="text-neutral-500"># Acumular log de analises diarias</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "=== $(date) ===" >> analise_diaria.log</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat app.log | tail -500 | claude -p "resuma os eventos do dia" >> analise_diaria.log</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Cuidado com o operador <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">></code> - ele sobrescreve sem perguntar! Sempre use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">>></code> quando quiser preservar conteudo existente. Para seguranca extra, voce pode usar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">set -o noclobber</code> no seu shell para impedir sobrescrita acidental.
-        </p>
-        <p class="text-neutral-300">
-          Uma tecnica poderosa: use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">| tee arquivo.txt</code> em vez de <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">> arquivo.txt</code> para simultaneamente salvar em arquivo E ver a saida no terminal.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 5: Unix philosophy e Claude Code -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🐧 Unix Philosophy e Claude Code</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A filosofia Unix, definida por Ken Thompson e Dennis Ritchie nos anos 70, prega que cada programa deve fazer <strong class="text-emerald-400">uma coisa e faze-la bem</strong>, comunicando-se com outros programas via texto. O Claude Code, quando usado via pipe com a flag <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">-p</code>, se encaixa perfeitamente nessa filosofia: ele e mais uma ferramenta na cadeia, especializada em compreensao e geracao de linguagem natural e codigo.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O Claude Code como cidadao Unix segue os mesmos principios que grep, awk, sed e sort: recebe texto via stdin, processa, e emite resultado via stdout. A diferenca e que o "processamento" e feito por um modelo de linguagem capaz de raciocinar sobre o conteudo.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Faca uma coisa bem:</strong> Com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">-p</code>, o Claude faz uma tarefa especifica e termina. Sem sessao, sem estado, sem interacao - puro processamento</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Texto como interface universal:</strong> Toda comunicacao e via texto plano. Entrada via stdin, saida via stdout. Funciona com qualquer outro programa Unix</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Composabilidade:</strong> O Claude pode ser inserido em qualquer ponto de um pipeline. No inicio, no meio ou no final. Ele se adapta ao contexto</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Small tools, big results:</strong> Combine ferramentas simples (grep, sort, uniq) com o Claude para resultados que nenhuma ferramenta sozinha conseguiria</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Claude como Cidadao Unix
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Pipeline classico: filtrar -> processar -> analisar</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">find . -name "*.py" -exec wc -l {} + | sort -rn | head -10 | claude -p "quais arquivos precisam ser refatorados por tamanho?"</span><br><br>
-            <span class="text-neutral-500"># Claude no meio do pipeline (gera saida que alimenta outro comando)</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat lista_urls.txt | claude -p "filtre apenas URLs de APIs validas, uma por linha" | xargs curl -s</span><br><br>
-            <span class="text-neutral-500"># Compor com git para analise de contribuicoes</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">git log --oneline --since="1 week ago" | claude -p "categorize estes commits por tipo: feature, fix, refactor, docs"</span><br><br>
-            <span class="text-neutral-500"># Usar com find para analise de estrutura</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">find src/ -type f -name "*.ts" | head -30 | claude -p "analise a estrutura de pastas e sugira melhorias"</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Pense no Claude como um <strong class="text-white">"grep inteligente"</strong> ou um <strong class="text-white">"awk que entende semantica"</strong>. Onde grep filtra por padrao de texto, o Claude filtra por significado. Onde awk transforma colunas, o Claude transforma conceitos. Use as ferramentas tradicionais para o trabalho mecanico e o Claude para o trabalho cognitivo.
-        </p>
-        <p class="text-neutral-300">
-          Padroes uteis para memorizar: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">dados | filtro | claude -p "analise"</code> para entrada, e <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p "gere X" | comando</code> para saida.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 6: Pipelines avancados com -p -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🏋️ Pipelines Avancados com -p</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agora que voce domina os conceitos individuais, vamos combinar tudo em <strong class="text-emerald-400">pipelines de producao reais</strong>. A flag <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">-p</code> (print/pipe mode) e a chave para automacao, pois executa um prompt unico sem abrir sessao interativa, tornando o Claude perfeito para scripts e cron jobs.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A flag <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">-p</code> transforma o Claude Code de ferramenta interativa em <strong class="text-white">processador batch</strong>. Ela aceita stdin, processa o prompt uma unica vez, emite a resposta em stdout e termina. Isso permite encaixar o Claude em qualquer pipeline, script ou automacao.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">One-shot execution:</strong> O Claude processa, responde e sai. Sem interacao, sem follow-up, sem estado persistente. Perfeito para automacao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Combinavel com --output-format:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p --output-format json "..."</code> para saida estruturada que pode ser parseada por jq</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Batch processing:</strong> Processe listas de arquivos em loop, gerando analises individuais para cada um</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Cron jobs e CI/CD:</strong> Execute analises agendadas: relatorios noturnos de codigo, verificacoes pre-deploy, auditorias semanais</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Pipelines de Producao
-        </h3>
-        <div class="space-y-4">
-          <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-            <span class="text-neutral-500"># Pipeline completo: code review automatizado</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">git diff --staged | claude -p "faca code review focando em seguranca e performance" | tee review.md</span><br><br>
-            <span class="text-neutral-500"># Processar multiplos arquivos em loop</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">for f in src/*.py; do</span><br>
-            <span class="text-emerald-400">    echo "=== $f ===" >> relatorio.md</span><br>
-            <span class="text-emerald-400">    cat "$f" | claude -p "analise a qualidade deste codigo em 3 linhas" >> relatorio.md</span><br>
-            <span class="text-emerald-400">  done</span><br><br>
-            <span class="text-neutral-500"># Gerar changelog automatico</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">git log --oneline v1.0..HEAD | claude -p "gere um CHANGELOG.md formatado por categorias" > CHANGELOG.md</span><br><br>
-            <span class="text-neutral-500"># Pipeline com jq para saida estruturada</span><br>
-            <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat erros.log | claude -p "classifique cada erro como critico, alto, medio ou baixo. Responda em JSON" --output-format json | jq '.result'</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Para pipelines em producao, sempre use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">--output-format json</code> quando a saida precisa ser processada por outros programas. Isso garante uma estrutura previsivel que pode ser parseada com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">jq</code> sem surpresas.
-        </p>
-        <p class="text-neutral-300">
-          Monitore o custo em pipelines com loop. Cada chamada ao <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p</code> consome tokens. Se voce tem 100 arquivos, pode ser mais eficiente concatenar todos e fazer uma unica chamada do que 100 chamadas separadas.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">&#9733;</span>
-        <h2 class="text-2xl font-bold">🏋️ Exercicio Pratico</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hora de colocar a mao na massa. Neste exercicio voce vai construir um <strong class="text-emerald-400">pipeline completo usando cat, grep e claude -p</strong> para analisar logs de um projeto real. Siga cada passo e observe como as ferramentas Unix se compoe com o Claude.
-      </p>
-
-      <!-- Box Principal do Exercicio -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
-        <div class="flex items-center space-x-3 mb-6">
-          <span class="text-3xl">🏋️</span>
-          <div>
-            <h3 class="text-xl font-bold text-emerald-400">Exercicio: Pipeline cat + grep + claude -p para Analisar Logs</h3>
-            <p class="text-neutral-400 text-sm">Tempo estimado: 15-20 minutos</p>
-          </div>
-        </div>
-
-        <!-- Passos Numerados -->
-        <div class="space-y-6">
-          <!-- Passo 1 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Criar um arquivo de log de exemplo</h4>
-              <p class="text-neutral-300 text-sm mb-3">Se voce nao tem logs reais, crie um arquivo de teste:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat > /tmp/app.log << 'EOF'</span><br>
-                <span class="text-neutral-300">2026-03-08 10:01:23 INFO Server started on port 3000</span><br>
-                <span class="text-neutral-300">2026-03-08 10:02:45 ERROR Database connection timeout after 30s</span><br>
-                <span class="text-neutral-300">2026-03-08 10:02:46 WARN Retrying connection attempt 1/3</span><br>
-                <span class="text-neutral-300">2026-03-08 10:03:01 ERROR Authentication failed for user admin</span><br>
-                <span class="text-neutral-300">2026-03-08 10:03:15 INFO Request GET /api/users - 200 - 45ms</span><br>
-                <span class="text-neutral-300">2026-03-08 10:04:02 ERROR CRITICAL: Out of memory - heap allocation failed</span><br>
-                <span class="text-neutral-300">2026-03-08 10:04:03 ERROR Process crashed with SIGKILL</span><br>
-                <span class="text-emerald-400">EOF</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 2 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Testar o pipeline sem o Claude</h4>
-              <p class="text-neutral-300 text-sm mb-3">Filtre apenas as linhas de erro:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR"</span>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Voce deve ver 4 linhas com erros. Confirme antes de prosseguir.</p>
-            </div>
-          </div>
-
-          <!-- Passo 3 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Enviar para o Claude analisar</h4>
-              <p class="text-neutral-300 text-sm mb-3">Agora adicione o Claude ao final do pipeline:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR" | claude -p "analise estes erros de log, classifique por severidade e sugira acoes corretivas para cada um"</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 4 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Salvar o relatorio em arquivo</h4>
-              <p class="text-neutral-300 text-sm mb-3">Redirecione a saida para um arquivo Markdown:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR" | claude -p "gere um relatorio de erros em Markdown com severidade e acoes" > /tmp/relatorio_erros.md</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 5 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">5</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Verificar o relatorio gerado</h4>
-              <p class="text-neutral-300 text-sm mb-3">Abra e confira o resultado:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/relatorio_erros.md</span>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">O relatorio deve conter classificacao por severidade e sugestoes de correcao para cada erro.</p>
-            </div>
-          </div>
-
-          <!-- Passo 6 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">6</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Pipeline avancado: analisar logs reais do seu projeto</h4>
-              <p class="text-neutral-300 text-sm mb-3">Agora aplique o mesmo padrao num projeto real:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cd ~/projects/seu-projeto</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">npm test 2>&1 | claude -p "analise os resultados dos testes e sugira correcoes" | tee /tmp/analise_testes.md</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist de Sucesso -->
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Pipeline cat | grep funcionando</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Claude analisou os erros do log</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Relatorio salvo em arquivo .md</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Testado com logs reais do projeto</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- RESUMO FINAL -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">cat | claude -p envia arquivos via pipe</strong>
-              <span class="text-neutral-400"> - Qualquer conteudo textual pode ser canalizado como contexto para o Claude processar.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Logs e erros podem ser diagnosticados instantaneamente</strong>
-              <span class="text-neutral-400"> - Use 2>&1 para capturar stderr e enviar stack traces diretamente ao Claude.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Pipelines encadeados filtram antes de analisar</strong>
-              <span class="text-neutral-400"> - grep, awk, sed, sort preparam dados para analise inteligente do Claude.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Redirecionamento captura respostas em arquivos</strong>
-              <span class="text-neutral-400"> - Use > para criar e >> para adicionar. tee mostra e salva simultaneamente.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Claude Code segue a filosofia Unix</strong>
-              <span class="text-neutral-400"> - Com -p, ele e mais uma ferramenta na cadeia: recebe texto, processa, emite resultado.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Pipelines avancados permitem automacao real</strong>
-              <span class="text-neutral-400"> - Loops, cron jobs e CI/CD aproveitam -p para processamento batch sem interacao.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-emerald-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">1.6 - Atalhos de Teclado e Navegacao</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-1-4.html" class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-1-6.html" class="flex-1 text-left px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors justify-start">
-            Proximo Modulo →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-emerald-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-emerald-400" href="index.html">Track 1</a>
+<span>/</span>
+<span class="text-emerald-400">Module 1.5</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.5</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔗 Data Pipe and Unix Integration</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Master the art of connecting Claude Code to the Unix ecosystem. Learn how to send data via pipe, chain commands, redirect output and transform Claude into a native citizen of your terminal.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">30</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Intermediary</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+═══════════════════════════ ════════════════════════════
+TOPIC 1: cat | claude - Feeding files directly
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📄 cat | claude - Feeding Files Directly</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The pipe is Unix's most fundamental mechanism for connecting programs. With Claude Code, you can use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat arquivo | claude -p "instrucao"</code>to send the contents of any file directly as context. This turns Claude into a universal text, code and data processor that integrates naturally into the terminal workflow.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">When you use the operator<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">|</code>(pipe), the output of one command becomes the input of the next. The Claude Code with the flag<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">-p</code>accepts data via stdin, which means that any content can be piped directly to it.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Basic syntax:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat arquivo.py | claude -p "explique este codigo"</code>- the file content is sent as context along with the instruction</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Any format works:</strong>.py, .js, .json, .yaml, .csv, .txt files, logs - any text can be sent via pipe. Claude interprets the format automatically</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Multiple files:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat arquivo1.py arquivo2.py | claude -p "compare estes dois arquivos"</code>to send several concatenated files</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Implicit context:</strong>The contents of the pipe appear as context before the prompt. Claude knows it received data via stdin and treats it as reference material</span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Practical Examples</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Submit a Python file for analysis</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat app.py | claude -p "review this code and point out problems"</span><br/><br/>
+<span class="text-neutral-500"># Send a configuration JSON</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat package.json | claude -p "which dependencies are out of date?"</span><br/><br/>
+<span class="text-neutral-500"># Send CSV for data analysis</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat sales.csv | claude -p "summarize data and identify trends"</span><br/><br/>
+<span class="text-neutral-500"># Multiple concatenated files</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/model.py src/controller.py | claude -p "are these two modules well coupled?"</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Prefer<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat</code>for entire files, but if the file is very large (more than 1000 lines), filter first with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">head -100</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">tail -50</code>to send only the relevant part. This saves tokens and generates more focused responses.</p>
+<p class="text-neutral-300">For binary or very large files, Claude Code's interactive mode (without pipe) is more efficient, as it uses internal tools to read only the necessary parts.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 2: Logs and errors pipe
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🐛 Logs and Errors Pipe</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">One of the most powerful uses of the pipe with Claude Code and the<strong class="text-emerald-400">real-time error diagnosis</strong>. Instead of copying and pasting stack traces manually, you can redirect the error output directly to Claude for analysis. This turns debugging from minutes to seconds.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">In Unix, there are two output streams:<strong class="text-white">stdout</strong>(standard output, fd 1) and<strong class="text-white">stderr</strong>(error output, fd 2). You can redirect both to Claude, but the most useful thing in everyday life is to capture stderr for automatic diagnosis.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Capture stderr:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">comando 2&gt;&amp;1 | claude -p "diagnostique este erro"</code>to redirect errors to Claude</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Real-time logs:</strong>Combine<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">tail -f</code>with pipes for continuous log analysis (use with care to avoid excessive costs)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Stack traces:</strong>Claude automatically recognizes stack traces from Python, Node.js, Java, Go and other languages, identifying the root cause accurately</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Filtering before the pipe:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">grep -i error logfile.log | claude -p "classifique estes erros"</code>to filter only relevant rows</span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Practical Examples</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Catch build error and diagnose</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">npm run build 2&gt;&amp;1 | claude -p "explain this error and how to fix it"</span><br/><br/>
+<span class="text-neutral-500"># Analyze server error log</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">tail -100 /var/log/app/error.log | claude -p "identify the error pattern"</span><br/><br/>
+<span class="text-neutral-500"># Diagnose test failure</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">pytest tests/ 2&gt;&amp;1 | claude -p "which tests failed and why?"</span><br/><br/>
+<span class="text-neutral-500"># Filter critical errors from a large log</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -i "critical\|fatal\|panic" app.log | claude -p "prioritize these errors"</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">For quick debugging, create an alias:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">alias debug='2&gt;&amp;1 | claude -p "diagnostique este erro e sugira a correcao"'</code>. Then just rotate<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">npm test debug</code>and Claude automatically analyzes any failures.</p>
+<p class="text-neutral-300">Be careful with very large logs. Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">tail -n 200</code>to limit the last 200 lines. Sending megabytes of log consumes many tokens without improving the quality of the analysis.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 3: Multiple chained pipes
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">⛓️ Multiple Chained Pipes</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The real magic of Unix appears when you<strong class="text-emerald-400">chains multiple commands before sending to Claude</strong>. Using grep, awk, sed, sort, uniq and other classic utilities, you filter, transform and prepare data with surgical precision before asking Claude for analysis. This results in more focused responses and consumes fewer tokens.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The Unix pipeline philosophy is: each program does one thing well and passes the result on. Claude Code fits perfectly into this model as the<strong class="text-white">final stage of intelligent processing</strong>of any pipeline.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">grep + claude:</strong>Filter specific lines and ask for analysis.<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">grep "TODO" -r src/ | claude -p "priorize estes TODOs"</code></span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">awk + claude:</strong>Extract specific columns from tabular data before sending.<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">awk '{print $1, $4}' access.log | claude -p "analise os IPs e status codes"</code></span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">sed + claude:</strong>Transform data before sending. Remove sensitive information, format, simplify</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Complete pipeline:</strong>Combine it all:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat log | grep ERROR | sort | uniq -c | sort -rn | head -20 | claude -p "analise os 20 erros mais frequentes"</code></span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Advanced Pipelines</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Find duplicate functions in the codebase</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "def \|function " src/ | awk -F: '{print $3}' | sort | uniq -d | claude -p "these functions appear to be duplicates. Suggest refactoring"</span><br/><br/>
+<span class="text-neutral-500"># Analyze unused imports</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "^import\|^from" src/*.py | claude -p "identify imports that are probably not being used"</span><br/><br/>
+<span class="text-neutral-500"># Extract and analyze performance metrics</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">grep "response_time" access.log | awk '{print $NF}' | sort -n | tail -50 | claude -p "analyze the 50 slowest response times"</span><br/><br/>
+<span class="text-neutral-500"># List and classify project TODOs</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">grep -rn "TODO\|FIXME\|HACK\|XXX" src/ | claude -p "sort by urgency and suggest resolution order"</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Always test the pipeline<strong class="text-white">without Claude first</strong>. Rotate<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">grep "ERROR" log | sort | uniq -c | sort -rn | head -20</code>alone to see what will be sent. Then add<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">| claude -p "..."</code>at the end. This avoids sending wrong data and wasting tokens.</p>
+<p class="text-neutral-300">Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">| head -n 50</code>before Claude to limit volume. Less and more: accurate data generates better analysis than sending everything at once.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 4: Output redirection
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📁 Output Redirection</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The pipe sends data<em>to</em>Claude, but<strong class="text-emerald-400">output redirection</strong>captures Claude's response in files. With operators<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;</code> e <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;&gt;</code>, you transform responses into documentation, reports, generated code and any other artifact that needs to be saved.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Redirection in Unix works with two main operators. THE<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;</code>creates or overwrites the file, and the<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;&gt;</code>adds to the end of the existing file. Both are essential to capturing Claude's responses.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Create new file:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p "gere um README para este projeto" &gt; README.md</code>- the response becomes the content of the file</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Append (add):</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p "gere mais testes" &gt;&gt; tests.py</code>- adds to the end without deleting existing content</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Pipe + redirect:</strong>Combine input and output:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cat codigo.py | claude -p "adicione docstrings" &gt; codigo_documentado.py</code></span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Automatic reports:</strong>Generate analysis reports that are saved for later consultation or sharing with the team</span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Practical Examples</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Generate API documentation</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/routes/*.py | claude -p "generate API documentation in Markdown" &gt; docs/api.md</span><br/><br/>
+<span class="text-neutral-500"># Create code review report</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">git diff HEAD~5 | claude -p "faca code review of the last 5 commits" &gt; review.md</span><br/><br/>
+<span class="text-neutral-500"># Generate unit tests</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat src/utils.py | claude -p "generate unit tests with pytest" &gt; tests/test_utils.py</span><br/><br/>
+<span class="text-neutral-500"># Accumulate daily analysis log</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "=== $(date) ===" &gt;&gt; analise_diaria.log</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat app.log | tail -500 | claude -p "summarize the day's events" &gt;&gt; analise_diaria.log</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Operator beware<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;</code>- he overwrites without asking! Always use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt;&gt;</code>when you want to preserve existing content. For extra security, you can use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">set -o noclobber</code>in your shell to prevent accidental overwriting.</p>
+<p class="text-neutral-300">A powerful technique: use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">| tee arquivo.txt</code>instead of<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">&gt; arquivo.txt</code>to simultaneously save to file AND see the output in the terminal.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 5: Unix philosophy and Claude Code
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🐧 Unix Philosophy and Claude Code</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The Unix philosophy, defined by Ken Thompson and Dennis Ritchie in the 1970s, preaches that each program must do<strong class="text-emerald-400">one thing and do it well</strong>, communicating with other programs via text. The Claude Code, when used via pipe with the flag<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">-p</code>, fits perfectly into this philosophy: it is another tool in the chain, specialized in understanding and generating natural language and code.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Claude Code as a Unix citizen follows the same principles as grep, awk, sed and sort: it receives text via stdin, processes it, and outputs results via stdout. The difference is that the "processing" is done by a language model capable of reasoning about the content.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Do one thing well:</strong>With<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">-p</code>, Claude does a specific task and finishes it. No session, no state, no interaction - pure processing</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Text as a universal interface:</strong>All communication is via plain text. Input via stdin, output via stdout. Works with any other Unix program</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Composability:</strong>Claude can be inserted at any point in a pipeline. At the beginning, in the middle or at the end. It adapts to the context</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Small tools, big results:</strong>Combine simple tools (grep, sort, uniq) with Claude for results that no tool alone could achieve</span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Claude as Unix Citizen</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Classic pipeline: filter -&gt; process -&gt; analyze</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">find . -name "*.py" -exec wc -l {} + | sort -rn | head -10 | claude -p "which files need to be refactored by size?"</span><br/><br/>
+<span class="text-neutral-500"># Claude in the middle of the pipeline (generates output that feeds another command)</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat list_urls.txt | claude -p "filter only valid API URLs, one per line" | xargs curl -s</span><br/><br/>
+<span class="text-neutral-500"># Compose with git to analyze contributions</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">git log --oneline --since="1 week ago" | claude -p "categorize these commits by type: feature, fix, refactor, docs"</span><br/><br/>
+<span class="text-neutral-500"># Use with find for structure analysis</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">find src/ -type f -name "*.ts" | head -30 | claude -p "analyze folder structure and suggest improvements"</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Think of Claude as a<strong class="text-white">"smart grep"</strong>or a<strong class="text-white">"awk that understands semantics"</strong>. Where grep filters by text pattern, Claude filters by meaning. Where awk transforms columns, Claude transforms concepts. Use traditional tools for mechanical work and Claude for cognitive work.</p>
+<p class="text-neutral-300">Useful patterns to memorize:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">dados | filtro | claude -p "analise"</code>for input, and<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p "gere X" | comando</code>for exit.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 6: Advanced pipelines with -p
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🏋️ Advanced Pipelines with -p</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Now that you've mastered the individual concepts, let's combine everything into<strong class="text-emerald-400">real production pipelines</strong>. The flag<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">-p</code>(print/pipe mode) is the key to automation, as it executes a single prompt without opening an interactive session, making Claude perfect for scripts and cron jobs.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The flag<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">-p</code>transforms Claude Code from an interactive tool into<strong class="text-white">batch processor</strong>. It accepts stdin, processes the prompt once, outputs the response to stdout and finishes. This allows you to fit Claude into any pipeline, script or automation.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">One-shot execution:</strong>Claude processes it, responds and leaves. No interaction, no follow-up, no persistent state. Perfect for automation</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Combinable with --output-format:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p --output-format json "..."</code>for structured output that can be parsed by jq</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Batch processing:</strong>Process lists of files in a loop, generating individual analyzes for each one</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Cron jobs and CI/CD:</strong>Run scheduled reviews: nightly code reports, pre-deploy checks, weekly audits</span>
+</li>
+</ul>
+</div>
+Code Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Production Pipelines</h3>
+<div class="space-y-4">
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Complete pipeline: automated code review</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">git diff --staged | claude -p "faca code review focusing on security and performance" | tee review.md</span><br/><br/>
+<span class="text-neutral-500"># Process multiple files in a loop</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">for f in src/*.py; of</span><br/>
+<span class="text-emerald-400">echo "=== $f ===" &gt;&gt; report.md</span><br/>
+<span class="text-emerald-400">cat "$f" | claude -p "analyze the quality of this code in 3 lines" &gt;&gt; report.md</span><br/>
+<span class="text-emerald-400">done</span><br/><br/>
+<span class="text-neutral-500"># Generate automatic changelog</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">git log --oneline v1.0..HEAD | claude -p "generate a CHANGELOG.md formatted by categories" &gt; CHANGELOG.md</span><br/><br/>
+<span class="text-neutral-500"># Pipeline with jq for structured output</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat errors.log | claude -p "classify each error as critical, high, medium or low. Respond in JSON" --output-format json | jq '.result'</span>
+</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">For production pipelines, always use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">--output-format json</code>when the output needs to be processed by other programs. This guarantees a predictable structure that can be parsed with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">jq</code>no surprises.</p>
+<p class="text-neutral-300">Monitor cost in looped pipelines. Every call to<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p</code>consumes tokens. If you have 100 files, it may be more efficient to concatenate them all and make a single call than 100 separate calls.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">★</span>
+<h2 class="text-2xl font-bold">🏋️ Practical Exercise</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Time to get your hands dirty. In this exercise you will build a<strong class="text-emerald-400">Complete pipeline using cat, grep and claude -p</strong>to analyze logs from a real project. Follow each step and watch how Unix tools integrate with Claude.</p>
+Main Exercise Box
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
+<div class="flex items-center space-x-3 mb-6">
+<span class="text-3xl">🏋️</span>
+<div>
+<h3 class="text-xl font-bold text-emerald-400">Exercise: Pipeline cat + grep + claude -p to Analyze Logs</h3>
+<p class="text-neutral-400 text-sm">Estimated time: 15-20 minutes</p>
+</div>
+</div>
+Numbered Steps
+<div class="space-y-6">
+Step 1
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Create an example log file</h4>
+<p class="text-neutral-300 text-sm mb-3">If you don't have real logs, create a test file:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat &gt; /tmp/app.log &lt;&lt; 'EOF'</span><br/>
+<span class="text-neutral-300">2026-03-08 10:01:23 INFO Server started on port 3000</span><br/>
+<span class="text-neutral-300">2026-03-08 10:02:45 ERROR Database connection timeout after 30s</span><br/>
+<span class="text-neutral-300">2026-03-08 10:02:46 WARN Retrying connection attempt 1/3</span><br/>
+<span class="text-neutral-300">2026-03-08 10:03:01 ERROR Authentication failed for user admin</span><br/>
+<span class="text-neutral-300">2026-03-08 10:03:15 INFO Request GET /api/users - 200 - 45ms</span><br/>
+<span class="text-neutral-300">2026-03-08 10:04:02 CRITICAL ERROR: Out of memory - heap allocation failed</span><br/>
+<span class="text-neutral-300">2026-03-08 10:04:03 ERROR Process crashed with SIGKILL</span><br/>
+<span class="text-emerald-400">EOF</span>
+</div>
+</div>
+</div>
+Step 2
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Test the pipeline without Claude</h4>
+<p class="text-neutral-300 text-sm mb-3">Filter only the error lines:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR"</span>
+</div>
+<p class="text-neutral-400 text-xs mt-2">You should see 4 lines with errors. Confirm before proceeding.</p>
+</div>
+</div>
+Step 3
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Send to Claude for analysis</h4>
+<p class="text-neutral-300 text-sm mb-3">Now add Claude to the end of the pipeline:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR" | claude -p "analyze these log errors, classify by severity and suggest corrective actions for each one"</span>
+</div>
+</div>
+</div>
+Step 4
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Save the report to file</h4>
+<p class="text-neutral-300 text-sm mb-3">Redirect the output to a Markdown file:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/app.log | grep "ERROR" | claude -p "generate an error report in Markdown with severity and actions" &gt; /tmp/relatorio_erros.md</span>
+</div>
+</div>
+</div>
+Step 5
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">5</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Check the generated report</h4>
+<p class="text-neutral-300 text-sm mb-3">Open and check the result:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat /tmp/relatorio_erros.md</span>
+</div>
+<p class="text-neutral-400 text-xs mt-2">The report must contain a classification by severity and correction suggestions for each error.</p>
+</div>
+</div>
+Step 6
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">6</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Advanced pipeline: analyze real logs from your project</h4>
+<p class="text-neutral-300 text-sm mb-3">Now apply the same pattern to a real project:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cd ~/projects/your-project</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">npm test 2&gt;&amp;1 | claude -p "analyze test results and suggest corrections" | tee /tmp/analise_testes.md</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+Success Checklist
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Pipeline cat | grep working</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Claude analyzed the log errors</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Report saved in .md file</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Tested with real project logs</span>
+</div>
+</div>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+FINAL SUMMARY
+═══════════════════════════ ════════════════════════════
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">cat | claude -p sends files via pipe</strong>
+<span class="text-neutral-400">- Any textual content can be channeled as context for Claude to process.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Logs and errors can be diagnosed instantly</strong>
+<span class="text-neutral-400">- Use 2&gt;&amp;1 to capture stderr and send stack traces directly to Claude.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Threaded pipelines filter before analyzing</strong>
+<span class="text-neutral-400">- grep, awk, sed, sort prepare data for Claude's intelligent analysis.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Redirection captures responses in files</strong>
+<span class="text-neutral-400">- Use &gt; to create and &gt;&gt; to add. tee shows and saves simultaneously.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Claude Code follows the Unix philosophy</strong>
+<span class="text-neutral-400">- With -p, it is another tool in the chain: it receives text, processes it, outputs results.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Advanced pipelines enable true automation</strong>
+<span class="text-neutral-400">- Loops, cron jobs, and CI/CD leverage -p for hands-off batch processing.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-emerald-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">1.6 - Keyboard Shortcuts and Navigation</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start" href="modulo-1-4.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-left px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors justify-start" href="modulo-1-6.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -840,6 +708,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
