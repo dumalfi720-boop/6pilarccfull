@@ -8,7 +8,7 @@ Save tokens. Save time. Scale leverage.
 
 **Skills = reusable markdown workflows that Claude can call on demand.**
 
-In **Claude Code**, they live in `.claude/commands/` as markdown files. In **Cowork** (the desktop app), they show up as `/slash commands` — built-in ones like `/pdf`, `/docx`, `/pptx`, `/xlsx`, and `/visuals` come pre-loaded, and you can install more via **plugins**.
+In **Claude Code**, they live in`.claude/commands/`as markdown files. In **Cowork** (the desktop app), they show up as`/slash commands`— built-in ones like`/pdf`, `/docx`, `/pptx`, `/xlsx`, and`/visuals`comes pre-loaded, and you can install more via **plugins**.
 
 Instead of re-typing long prompts:
 
@@ -24,8 +24,8 @@ Think: **SOPs for your AI.**
 
 |  | Skills | MCP Servers | Plugins |
 | --- | --- | --- | --- |
-| What they are | Reusable prompt workflows | Live tool integrations | Bundles of skills + MCPs + tools |
-| Token cost | Near zero until called | ~20% context just connected | Varies — loaded on demand |
+| What are they | Reusable prompt workflows | Live tool integrations | Bundles of skills + MCPs + tools |
+| Token cost | Near zero until called | ~20% context just connected | Varieties — loaded on demand |
 | Best for | Repetitive workflows | Live external access | Full workflow packages |
 | Works in | Claude Code + Cowork | Claude Code + Cowork | Claude Code + Cowork |
 | Rule | Repetitive → Skill | Live data → MCP | Full workflow → Plugin |
@@ -34,30 +34,26 @@ Think: **SOPs for your AI.**
 
 ## 🔽 Where Skills Live
 
-**Claude Code:**
-
-```text
+**Claude Code:**```text
 project-root/
   .claude/
     commands/
       screenshot-to-website.md
       lead-research.md
       code-review.md
-```
-
-Claude auto-discovers them. Call them with slash commands like `/screenshot-to-website` or just reference them naturally in conversation.
+```Claude self-discovers them. Call them with slash commands like`/screenshot-to-website`or just reference them naturally in conversation.
 
 **Cowork (Desktop App):**
 
 Skills come pre-installed or via plugins. Built-in skills include:
 
-- `/pdf` — Create, merge, split, fill, and extract PDFs
-- `/docx` — Create and edit Word documents
-- `/pptx` — Create and edit presentations
-- `/xlsx` — Create and edit spreadsheets
-- `/visuals` — Create branded infographics and social content
-- `/schedule` — Create scheduled tasks that run automatically
-- `/skill-creator` — Build and test new skills
+-`/pdf`— Create, merge, split, fill, and extract PDFs
+-`/docx`— Create and edit Word documents
+-`/pptx`— Create and edit presentations
+-`/xlsx`— Create and edit spreadsheets
+-`/visuals`— Create branded infographics and social content
+-`/schedule`— Create scheduled tasks that run automatically
+-`/skill-creator`— Build and test new skills
 
 You can also install **plugins** that add new skills, MCPs, and tools all at once.
 
@@ -69,7 +65,7 @@ Plugins are the biggest upgrade to the skills ecosystem. They bundle skills, MCP
 
 ### Why Plugins Matter
 
-- **One install, everything works** — no manual config
+- **One install, everything works** — in manual config
 - **Work in both Claude Code and Cowork** — install once, use everywhere
 - **Community-built and growing fast** — new ones dropping constantly
 
@@ -85,7 +81,7 @@ If you're building anything with a database, the **Supabase MCP plugin** is a mu
 
 This means you can say things like "create a users table with email and role columns" or "show me all orders from the last 7 days" and Claude just does it — no copy-pasting SQL, no switching tabs.
 
-**How to install:** Search for Supabase in the plugin marketplace within Claude Code or Cowork and connect it to your project.
+**How ​​to install:** Search for Supabase in the plugin marketplace within Claude Code or Cowork and connect it to your project.
 
 ---
 
@@ -100,14 +96,14 @@ This means you can say things like "create a users table with email and role col
 ## Frameworks (Install & Go)
 
 - **Anthropic Official Skills** — Gold standard. Built into Cowork (pdf, docx, pptx, xlsx, visuals)
-- **Superpowers by obra** — TDD, debugging, planning, auto-triggers
+- **Superpowers by work** — TDD, debugging, planning, auto-triggers
 - **everything-claude-code** — Hackathon mega pack
 
 ## Plugin Marketplace
 
 Plugins are now the fastest way to extend Claude. Browse and install directly from within Claude Code or Cowork. Key categories include productivity, database (like Supabase), design, and developer tools.
 
-## Marketplaces
+##Marketplaces
 
 - [**SkillsMP.com**](http://SkillsMP.com) — 270k+ aggregated skills
 - [**SkillHub.club**](http://SkillHub.club) — AI-rated skills with playground
@@ -120,7 +116,7 @@ Plugins are now the fastest way to extend Claude. Browse and install directly fr
 
 Skill files and plugins have:
 
-- Filesystem access
+- File system access
 - Shell access
 - Environment access
 
@@ -133,9 +129,7 @@ Before installing:
 
 ---
 
-# 🔽 Skill Template (Copy This)
-
-```markdown
+# 🔽 Skill Template (Copy This)```markdown
 # Skill: [Name]
 
 ## Purpose
@@ -162,9 +156,7 @@ Before installing:
 
 ## Output
 [Clear description of expected final output]
-```
-
----
+```---
 
 # 🔽 Skill Example 1 — Screenshot to Website
 
@@ -182,12 +174,12 @@ Convert a design screenshot into a pixel-accurate responsive web page.
 
 ### Quality Checklist
 
-- [ ]  Layout matches
-- [ ]  Exact color hex values
-- [ ]  Typography accurate
-- [ ]  Responsive across breakpoints
-- [ ]  Hover + focus states included
-- [ ]  No console errors
+- [ ] Layout matches
+- [ ] Exact color hex values
+- [ ] Accurate typography
+- [ ] Responsive across breakpoints
+- [ ] Hover + focus states included
+- [ ] In console errors
 
 ### Output
 
@@ -205,17 +197,17 @@ Research and structure business leads into spreadsheet-ready format.
 
 1. Confirm niche + location + data points
 2. Research each lead
-3. Classify (Hot / Warm / Cold)
+3. Classify (Hot/Warm/Cold)
 4. Remove duplicates
 5. Format as CSV or table
 
 ### Quality Checklist
 
-- [ ]  All requested fields filled
-- [ ]  No duplicates
-- [ ]  URLs validated
-- [ ]  Classification accurate
-- [ ]  Test batch verified before scaling
+- [ ] All requested fields filled
+- [ ] No duplicates
+- [ ] Validated URLs
+- [ ] Classification accurate
+- [ ] Test batch verified before scaling
 
 ### Output
 
@@ -285,11 +277,11 @@ One of the most common questions: **"I have skills in Code but can't see them in
 
 ### Option 1: Select Your Skills Folder (Quickest)
 
-In Cowork, select the folder where your Claude Code skills live (usually `~/.claude/commands/`). Claude can then read and follow them — they just won't appear as slash commands.
+In Cowork, select the folder where your Claude Code skills live (usually`~/.claude/commands/`). Claude can then read and follow them — they just won't appear as slash commands.
 
 ### Option 2: Package as a Plugin (Best Long-Term)
 
-Use the `/skill-creator` or `/create-cowork-plugin` skill in Cowork to bundle your Code skills into a `.plugin` file. Install it once, and your skills show up natively with slash commands every time.
+Use the`/skill-creator` or `/create-cowork-plugin`skill in Cowork to bundle your Code skills into a`.plugin`file. Install it once, and your skills show up natively with slash commands every time.
 
 ### Option 3: Rebuild in Cowork
 
