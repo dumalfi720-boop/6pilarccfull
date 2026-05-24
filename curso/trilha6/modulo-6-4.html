@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 6.4 - MCP Database (Postgres/Supabase) | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 6.4 - MCP Database (Postgres/Supabase) | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -31,241 +31,227 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300"><span class="text-2xl">&#129504;</span><span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span></a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Atalhos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a href="../../index.html" class="hover:text-rose-400">Inicio</a><span>/</span><a href="index.html" class="hover:text-rose-400">Trilha 6</a><span>/</span><span class="text-rose-400">Modulo 6.4</span></div></nav>
-
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULO 6.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#128451;&#65039; MCP Database (Postgres/Supabase)</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Conecte bancos de dados diretamente ao Claude. Rode queries, inspecione schemas, verifique migrations e gerencie dados com seguranca.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Topicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Pratico</div><div class="text-xs text-neutral-400">Nivel</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Hands-on</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">&#128024; MCP Postgres (Acesso Direto ao Banco)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">O MCP Postgres permite que o Claude <strong class="text-rose-400">execute queries SQL diretamente no seu banco de dados PostgreSQL</strong>. Isso significa que voce pode pedir ao Claude para verificar dados, explorar schemas, debugar problemas e ate popular tabelas de teste - tudo sem sair do terminal.</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Queries ao vivo:</strong> SELECT, INSERT, UPDATE, DELETE - o Claude executa SQL real no banco</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Schema inspection:</strong> O Claude pode listar tabelas, colunas, tipos e relacionamentos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Token impact moderado:</strong> Resultados de queries consomem tokens - use LIMIT sempre</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Conexao direta:</strong> Via connection string PostgreSQL padrao</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">O caso de uso mais valioso no dia a dia e <strong class="text-white">debug de dados</strong>: "Por que o usuario X nao consegue logar? Verifique a tabela users e sessions". O Claude roda as queries, analisa os resultados e identifica o problema.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">&#9881;&#65039; Instalando Postgres MCP</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">A instalacao requer a connection string do seu banco PostgreSQL. Essa string contem host, porta, usuario, senha e nome do banco.</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add postgres -- npx @anthropic-ai/mcp-postgres postgresql://user:pass@localhost:5432/dbname</span>
-        </div>
-        <p class="text-neutral-300 mb-4">Substitua os parametros pela sua connection string real. Para bancos remotos, use o host e porta corretos. Para bancos locais, geralmente e <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">localhost:5432</code>.</p>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Use uma <strong class="text-white">variavel de ambiente</strong> para a connection string em vez de colocar a senha direto no comando: <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">export DATABASE_URL=postgresql://...</code> e depois referencie <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">$DATABASE_URL</code> no comando.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">&#9889; MCP Supabase (Managed Database)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Se voce usa Supabase como backend, o MCP Supabase oferece <strong class="text-rose-400">integracao nativa com todas as features do Supabase</strong> - nao so o banco, mas tambem auth, storage e edge functions.</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Supabase = Postgres + extras:</strong> Auth, Storage, Realtime, Edge Functions</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">API nativa:</strong> Usa a API do Supabase em vez de SQL direto</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Mais seguro:</strong> Respeita Row Level Security (RLS) policies</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Se voce tem Supabase, prefira o MCP Supabase ao Postgres puro. Voce ganha acesso ao ecossistema completo e as queries respeitam as policies de seguranca configuradas no dashboard.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">&#9881;&#65039; Instalando Supabase MCP</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">A instalacao do Supabase MCP requer a URL do projeto e a anon key (ou service role key para acesso administrativo).</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add supabase -- npx @anthropic-ai/mcp-supabase --url https://seu-projeto.supabase.co --key sua-anon-key</span>
-        </div>
-        <p class="text-neutral-300">Encontre a URL e a key no dashboard do Supabase: <strong class="text-white">Settings &gt; API</strong>. Use a anon key para acesso limitado (recomendado) ou a service_role key para acesso total.</p>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300"><strong class="text-white">Nunca use a service_role key em producao com Claude.</strong> Ela bypassa todas as policies de seguranca. Use a anon key e configure RLS adequadamente. Para desenvolvimento local, service_role e aceitavel.</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">&#128269; Casos de Uso (Debug, Migrations, Schema, Seed)</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Ter acesso direto ao banco via Claude desbloqueia cenarios que economizam horas de trabalho manual. Aqui estao os mais valiosos.</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Debug de dados:</strong> "O usuario joao@email.com esta com conta bloqueada. Verifique o status na tabela users e os logs de auth"</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Verificar migrations:</strong> "Rode a migration e depois verifique se a coluna new_field foi adicionada corretamente na tabela orders"</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Explorar schema:</strong> "Me mostre todas as tabelas, seus relacionamentos e as foreign keys do banco"</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Seed data:</strong> "Crie 50 usuarios de teste com dados realistas para QA"</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Sempre adicione <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">LIMIT</code> nas queries. O Claude pode retornar milhares de linhas sem perceber, consumindo todo seu contexto. Diga: <strong class="text-white">"Liste os 10 ultimos pedidos"</strong> em vez de "liste todos os pedidos".</p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">&#128274; Seguranca: Credenciais Read-Only em Producao</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Este e o topico mais critico de todo o modulo. <strong class="text-rose-400">Nunca de acesso de escrita ao Claude em bancos de producao.</strong> Um DELETE sem WHERE ou um UPDATE mal formulado pode destruir dados reais.</p>
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Producao = read-only:</strong> Crie um usuario PostgreSQL com permissao apenas de SELECT</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Desenvolvimento = full access:</strong> Em banco local, pode dar acesso total para seed e testes</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Staging = read-write limitado:</strong> Acesso controlado para validar migrations</span></li>
-          <li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">&bull;</span><span><strong class="text-white">Supabase anon key:</strong> Ja tem acesso limitado por RLS - use como padrao</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Crie um usuario read-only no Postgres com: <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">CREATE USER claude_readonly WITH PASSWORD 'senha'; GRANT SELECT ON ALL TABLES IN SCHEMA public TO claude_readonly;</code>. Use essa credencial para o MCP em producao.</p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">&#9997;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4">Conectar banco, rodar queries e verificar schema</h3>
-        <p class="text-neutral-300 mb-4">Conecte um banco de dados ao Claude e execute tarefas praticas de exploracao.</p>
-        <div class="space-y-4 mb-6">
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 1: Conecte o banco</h4>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add postgres -- npx @anthropic-ai/mcp-postgres postgresql://user:pass@localhost:5432/mydb</span>
-            </div>
-          </div>
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 2: Explore o schema</h4>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br>
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"Liste todas as tabelas do banco e seus relacionamentos"</span>
-            </div>
-          </div>
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 3: Execute uma query</h4>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"Mostre os 5 registros mais recentes da tabela principal"</span>
-            </div>
-          </div>
-        </div>
-        <h4 class="text-white font-semibold mb-3">Checklist de Conclusao:</h4>
-        <div class="space-y-2">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">&#9744;</span><span class="text-neutral-300">Banco conectado via MCP</span></div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">&#9744;</span><span class="text-neutral-300">Schema explorado com sucesso</span></div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">&#9744;</span><span class="text-neutral-300">Query executada e resultados visualizados</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">&#128203;</span> Resumo do Modulo</h2>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">&#10003;</span><div><strong class="text-white">Postgres MCP = SQL direto no banco</strong><span class="text-neutral-400"> - Queries, schema, debug e seed via connection string.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">&#10003;</span><div><strong class="text-white">Supabase MCP = ecossistema completo</strong><span class="text-neutral-400"> - Auth, Storage, Realtime alem do banco. Respeita RLS.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">&#10003;</span><div><strong class="text-white">Seguranca e inegociavel</strong><span class="text-neutral-400"> - Producao = read-only. SEMPRE. Sem excecoes.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-rose-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">6.5 - MCP Google Sheets e Outros</p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-6-3.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&#8592; Modulo Anterior</a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">Voltar para Trilha</a>
-          <a href="modulo-6-5.html" class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors">Proximo Modulo &#8594;</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p></div></footer>
-
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🧠</span><span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Shortcuts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a class="hover:text-rose-400" href="../../index.html">Start</a><span>/</span><a class="hover:text-rose-400" href="index.html">Track 6</a><span>/</span><span class="text-rose-400">Module 6.4</span></div></nav>
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🗃️ MCP Database (Postgres/Supabase)</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Connect databases directly to Claude. Run queries, inspect schemas, check migrations and manage data securely.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-rose-400">Hands-on</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🐘 MCP Postgres (Direct Bank Access)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">MCP Postgres allows Claude<strong class="text-rose-400">execute SQL queries directly against your PostgreSQL database</strong>. This means you can ask Claude to verify data, explore schemas, debug issues, and even populate test tables - all without leaving the terminal.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Live queries:</strong>SELECT, INSERT, UPDATE, DELETE - Claude executes real SQL on the database</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Schema inspection:</strong>Claude can list tables, columns, types and relationships</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Moderate token impact:</strong>Query results consume tokens - always use LIMIT</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Direct connection:</strong>Via standard PostgreSQL connection string</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">The most valuable use case in everyday life and<strong class="text-white">data debugging</strong>: "Why can't user X log in? Check the users and sessions table." Claude runs the queries, analyzes the results and identifies the problem.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⚙️ Installing Postgres MCP</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Installation requires the connection string of your PostgreSQL database. This string contains host, port, user, password and bank name.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add postgres -- npx @anthropic-ai/mcp-postgres postgresql://user:pass@localhost:5432/dbname</span>
+</div>
+<p class="text-neutral-300 mb-4">Replace the parameters with your actual connection string. For remote banking, use the correct host and port. For local banks, generally and<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">localhost:5432</code>.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Use a<strong class="text-white">environment variable</strong>to the connection string instead of putting the password directly in the command:<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">export DATABASE_URL=postgresql://...</code>and then reference<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">$DATABASE_URL</code>in command.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">⚡ MCP Supabase (Managed Database)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">If you use Supabase as a backend, MCP Supabase offers<strong class="text-rose-400">native integration with all Supabase features</strong>- not only the bank, but also auth, storage and edge functions.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Supabase = Postgres + extras:</strong>Auth, Storage, Realtime, Edge Functions</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Native API:</strong>Uses the Supabase API instead of direct SQL</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Safer:</strong>Respects Row Level Security (RLS) policies</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">If you have Supabase, prefer MCP Supabase to pure Postgres. You gain access to the complete ecosystem and queries respect the security policies configured on the dashboard.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">⚙️ Installing Supabase MCP</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Installing Supabase MCP requires the project URL and anon key (or service role key for administrative access).</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add supabase -- npx @anthropic-ai/mcp-supabase --url https://seu-projeto.supabase.co --key sua-anon-key</span>
+</div>
+<p class="text-neutral-300">Find the URL and key on the Supabase dashboard:<strong class="text-white">Settings &gt; API</strong>. Use the anon key for limited access (recommended) or the service_role key for full access.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300"><strong class="text-white">Never use the service_role key in production with Claude.</strong>It bypasses all security policies. Use the anon key and configure RLS accordingly. For local development, service_role is acceptable.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔍 Use Cases (Debug, Migrations, Schema, Seed)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Having direct access to the bank via Claude unlocks scenarios that save hours of manual work. Here are the most valuable ones.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Data debug:</strong>"The user joao@email.com has a blocked account. Check the status in the users table and the auth logs"</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Check migrations:</strong>"Run the migration and then check if the new_field column was added correctly to the orders table"</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Explore schema:</strong>"Show me all the tables, their relationships and the bank's foreign keys"</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Seed data:</strong>"Create 50 test users with realistic data for QA"</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Always add<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">LIMIT</code>in queries. Claude can return thousands of lines without realizing it, consuming all of its context. Say:<strong class="text-white">"List the 10 last requests"</strong>instead of "list all orders".</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔒 Security: Read-Only Credentials in Production</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">This is the most critical topic in the entire module.<strong class="text-rose-400">Never give Claude write access in production banks.</strong>A DELETE without WHERE or a poorly formulated UPDATE can destroy real data.</p>
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Production = read-only:</strong>Create a PostgreSQL user with SELECT-only permissions</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Development = full access:</strong>In a local bank, you can give full access to seeds and tests</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Staging = limited read-write:</strong>Controlled access to validate migrations</span></li>
+<li class="flex items-start space-x-2"><span class="text-rose-400 mt-1">•</span><span><strong class="text-white">Supabase anon key:</strong>Already have access limited by RLS - use as default</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Create a read-only user in Postgres with:<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">CREATE USER claude_readonly WITH PASSWORD 'senha'; GRANT SELECT ON ALL TABLES IN SCHEMA public TO claude_readonly;</code>. Use this credential for MCP in production.</p>
+</div>
+</section>
+EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">✍</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4">Connect database, run queries and check schema</h3>
+<p class="text-neutral-300 mb-4">Connect a database to Claude and perform practical exploration tasks.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 1: Connect the bank</h4>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add postgres -- npx @anthropic-ai/mcp-postgres postgresql://user:pass@localhost:5432/mydb</span>
+</div>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 2: Explore the schema</h4>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br/>
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"List all database tables and their relationships"</span>
+</div>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 3: Run a query</h4>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">"Show the 5 most recent records from the main table"</span>
+</div>
+</div>
+</div>
+<h4 class="text-white font-semibold mb-3">Conclusion Checklist:</h4>
+<div class="space-y-2">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">☐</span><span class="text-neutral-300">Bank connected via MCP</span></div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">☐</span><span class="text-neutral-300">Schema successfully explored</span></div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-rose-400">☐</span><span class="text-neutral-300">Query executed and results viewed</span></div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong class="text-white">Postgres MCP = SQL directly in the database</strong><span class="text-neutral-400">- Queries, schema, debug and seed via connection string.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong class="text-white">Supabase MCP = complete ecosystem</strong><span class="text-neutral-400">- Auth, Storage, Realtime in addition to the bank. Respect RLS.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-rose-400 mt-1">✓</span><div><strong class="text-white">Security is non-negotiable</strong><span class="text-neutral-400">- Production = read-only. ALWAYS. No exceptions.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-rose-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">6.5 - MCP Google Sheets and Others</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-6-3.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors" href="modulo-6-5.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p></div></footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle'); const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon'); const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon'); const html = document.documentElement;
     if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) { themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark'); } else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => { themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
