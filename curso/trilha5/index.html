@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 5 - Skills, Plugins e Extensibilidade | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 5 - Skills, Plugins and Extensibility | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
 
@@ -40,214 +40,192 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Inicio</a>
-      <span>/</span>
-      <span class="text-teal-400">Trilha 5</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">
-        TRILHA 5
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔧 Skills, Plugins e Extensibilidade</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Construa uma vez, use pra sempre. Domine skills reutilizaveis, plugins do ecossistema, hooks do ciclo de vida e subagentes para escalar sua produtividade com Claude Code.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-teal-400">8</div>
-          <div class="text-xs text-neutral-400">Modulos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-teal-400">48</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-teal-400">Avancado</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-teal-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- Modulos Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <!-- Modulo 5.1 -->
-      <a href="modulo-5-1.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">1</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.1</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">O que sao Skills e Como Funcionam</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Skills como SOPs para IA, onde moram, como sao descobertas, slash commands e economia de tokens.</p>
-      </a>
-
-      <!-- Modulo 5.2 -->
-      <a href="modulo-5-2.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">2</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.2</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Anatomia de uma Skill (Template Completo)</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Purpose, Inputs, Steps, Quality Checks, Output. O template completo comentado para criar skills profissionais.</p>
-      </a>
-
-      <!-- Modulo 5.3 -->
-      <a href="modulo-5-3.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">3</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.3</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Skills Praticas: Screenshot to Website</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Converta screenshots em paginas web pixel-perfect. Analise de layout, HTML semantico, Tailwind e comparacao visual.</p>
-      </a>
-
-      <!-- Modulo 5.4 -->
-      <a href="modulo-5-4.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">4</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.4</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Skills Praticas: Lead Research e Code Review</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Skills de pesquisa de leads com classificacao Hot/Warm/Cold e code review em nivel de PR senior.</p>
-      </a>
-
-      <!-- Modulo 5.5 -->
-      <a href="modulo-5-5.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">5</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.5</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Onde Encontrar Skills Prontas</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Listas curadas, frameworks, marketplaces e criterios de avaliacao e seguranca para skills da comunidade.</p>
-      </a>
-
-      <!-- Modulo 5.6 -->
-      <a href="modulo-5-6.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">6</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.6</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Plugins: Arquitetura e Ecossistema (9000+)</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Plugins como bundles de skills + MCPs, o ecossistema de 9000+ plugins, instalacao e como criar o seu.</p>
-      </a>
-
-      <!-- Modulo 5.7 -->
-      <a href="modulo-5-7.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">7</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.7</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Hooks: 12 Eventos do Ciclo de Vida</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Hooks event-driven para automatizar acoes: PreToolUse, PostToolUse, sessao, notificacoes e configuracao.</p>
-      </a>
-
-      <!-- Modulo 5.8 -->
-      <a href="modulo-5-8.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10">
-        <div class="flex items-center space-x-4 mb-4">
-          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">8</span>
-          <div>
-            <span class="text-xs text-teal-400 font-semibold">MODULO 5.8</span>
-            <h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Subagentes e /simplify /batch (2026)</h3>
-          </div>
-        </div>
-        <p class="text-neutral-400 text-sm">Subagentes delegados, /simplify para simplificacao automatica, /batch para processamento em lote e worktrees.</p>
-      </a>
-
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a>
+<span>/</span>
+<span class="text-teal-400">Track 5</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">TRACK 5</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔧 Skills, Plugins and Extensibility</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Build once, use forever. Master reusable skills, ecosystem plugins, lifecycle hooks, and subagents to scale your productivity with Claude Code.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-teal-400">8</div>
+<div class="text-xs text-neutral-400">Modules</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-teal-400">48</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-teal-400">Advanced</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-teal-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+Grid Modules
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+Module 5.1
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-1.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">1</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.1</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">What are Skills and How They Work</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Skills such as SOPs for AI, where they live, how they are discovered, slash commands and token economics.</p>
+</a>
+Module 5.2
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-2.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">2</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.2</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Anatomy of a Skill (Full Template)</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Purpose, Inputs, Steps, Quality Checks, Output. The complete commented template for creating professional skills.</p>
+</a>
+Module 5.3
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-3.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">3</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.3</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Practical Skills: Screenshot to Website</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Convert screenshots into pixel-perfect web pages. Layout analysis, semantic HTML, Tailwind and visual comparison.</p>
+</a>
+Module 5.4
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-4.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">4</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.4</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Practical Skills: Lead Research and Code Review</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Lead research skills with Hot/Warm/Cold classification and code review at senior PR level.</p>
+</a>
+Module 5.5
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-5.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">5</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.5</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Where to Find Ready-made Skills</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Curated lists, frameworks, marketplaces and evaluation and security criteria for community skills.</p>
+</a>
+Module 5.6
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-6.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">6</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.6</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Plugins: Architecture and Ecosystem (9000+)</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Plugins such as skill bundles + MCPs, the ecosystem of 9000+ plugins, installation and how to create yours.</p>
+</a>
+Module 5.7
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-7.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">7</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.7</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Hooks: 12 Lifecycle Events</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Event-driven hooks to automate actions: PreToolUse, PostToolUse, session, notifications and configuration.</p>
+</a>
+Module 5.8
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-teal-500/50 p-6 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10" href="modulo-5-8.html">
+<div class="flex items-center space-x-4 mb-4">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl group-hover:bg-teal-500/30 transition-colors">8</span>
+<div>
+<span class="text-xs text-teal-400 font-semibold">MODULE 5.8</span>
+<h3 class="text-lg font-bold group-hover:text-teal-400 transition-colors">Subagents and /simplify /batch (2026)</h3>
+</div>
+</div>
+<p class="text-neutral-400 text-sm">Delegated subagents, /simplify for automatic simplification, /batch for batch processing and worktrees.</p>
+</a>
+</div>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -268,6 +246,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
