@@ -1,40 +1,40 @@
-# 🦸 6 Pilares do Claude Code (RECURSO)
+# 🦸 6 Pillars of the Claude Code (FEATURE)
 
-Olá, lindo **Automatizador de IA**,
+Hello beautiful **AI Automator**,
 
-O **Claude Code** é uma das ferramentas de programação com IA mais avançadas atualmente.
+**Claude Code** is one of the most advanced AI programming tools today.
 
-Este documento resume **6 pilares principais para usar Claude Code de forma eficiente**.  
-Eles representam áreas importantes de domínio para quem quer automatizar tarefas, programar com IA e construir fluxos de trabalho produtivos.
-
----
-
-## 🩵 1. Atalhos do Claude
-Aprender os **shortcuts e comandos rápidos** do Claude para acelerar o uso da ferramenta.
-
-## 🎬 2. Pacote Inicial do Claude
-Um **starter pack** com configurações, exemplos e recursos essenciais para começar a usar Claude Code rapidamente.
-
-## 👾 3. 9 Fluxos de Trabalho do Claude Code
-Conjunto de **workflows práticos** para programar, automatizar tarefas e estruturar projetos usando Claude.
-
-## 🧑‍💻 4. Painel Executivo de Prompts
-Um **dashboard de prompts estratégicos** para gerenciar tarefas complexas, decisões e automações com IA.
-
-## 💙 5. Habilidades de IA do Claude
-Coleção de **skills e capacidades da IA**, mostrando como usar Claude para programação, análise, automação e criação de ferramentas.
-
-## 🌍 6. Conectando o Claude
-Integração do Claude com **APIs, ferramentas externas, automações e sistemas**, expandindo o poder da IA.
+This document summarizes **6 main pillars for using Claude Code efficiently**.  
+They represent important areas of mastery for anyone looking to automate tasks, program with AI, and build productive workflows.
 
 ---
 
-## O que é este documento
+## 🩵 1. Claude Shortcuts
+Learn Claude's **shortcuts and quick commands** to speed up the use of the tool.
 
-Este arquivo é um **resumo estruturado em Markdown** dos principais conceitos para dominar o uso do Claude Code.
+## 🎬 2. Claude's Starter Pack
+A **starter pack** with configurations, examples and essential resources to quickly start using Claude Code.
 
-Ele pode ser usado como:
-- Guia de estudo
-- Checklist de aprendizado
-- Base para documentação ou README
-- Estrutura para criar seu próprio sistema de automação com IA
+## 👾 3. 9 Claude Code Workflows
+Set of **practical workflows** to program, automate tasks and structure projects using Claude.
+
+## 🧑‍💻 4. Executive Prompt Panel
+A **dashboard of strategic prompts** to manage complex tasks, decisions and automations with AI.
+
+## 💙 5. Claude's AI Skills
+Collection of **AI skills and capabilities**, showing how to use Claude for programming, analysis, automation, and tool creation.
+
+## 🌍 6. Connecting Claude
+Claude's integration with **APIs, external tools, automations and systems**, expanding the power of AI.
+
+---
+
+## What is this document
+
+This file is a **structured summary in Markdown** of the main concepts to master the use of Claude Code.
+
+It can be used as:
+- Study guide
+- Learning checklist
+- Base for documentation or README
+- Framework to create your own AI automation system
