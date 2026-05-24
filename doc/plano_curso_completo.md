@@ -1,129 +1,129 @@
-# CURSO: Dominando o Claude Code - Os 6 Pilares
+# COURSE: Mastering the Claude Code - The 6 Pillars
 
-**Público-alvo:** Automatizadores de IA, devs e profissionais que querem usar Claude Code como ferramenta de produtividade.
-
----
-
-## MÓDULO 0 - Introdução
-- O que é Claude Code e por que ele muda o jogo
-- Diferença entre Claude Chat, Claude Code e Cowork
-- Pré-requisitos (conta Anthropic, terminal, Node.js)
-- Instalação do Claude Code (`npm install -g @anthropic-ai/claude-code`)
-- Primeira sessão: rodando `claude` no terminal
+**Target audience:** AI automators, devs and professionals who want to use Claude Code as a productivity tool.
 
 ---
 
-## MÓDULO 1 - Atalhos do Claude
-*Pilar 1 - Acelere seu uso com shortcuts*
-
-- **Aula 1.1** - Comandos essenciais do terminal (`/help`, `/clear`, `/compact`, `/cost`)
-- **Aula 1.2** - Slash commands nativos (`/commit`, `/review`, `/pr`, `/init`)
-- **Aula 1.3** - Flags de linha de comando (`-p`, `--model`, `--resume`)
-- **Aula 1.4** - Pipe de dados: enviando arquivos e logs pro Claude (`cat | claude -p`)
-- **Aula 1.5** - Atalhos de teclado e navegação rápida na sessão
-- **Prática:** Criar um alias no shell que roda Claude com suas flags favoritas
+## MODULE 0 - Introduction
+- What is Claude Code and why it changes the game
+- Difference between Claude Chat, Claude Code and Cowork
+- Prerequisites (Anthropic account, terminal, Node.js)
+- Installation of Claude Code (`npm install -g @anthropic-ai/claude-code`)
+- First session: running`claude`in the terminal
 
 ---
 
-## MÓDULO 2 - Pacote Inicial (Starter Pack)
-*Pilar 2 - Configure Claude pra entender seu projeto em 60 segundos*
+## MODULE 1 - Claude's Shortcuts
+*Pillar 1 - Accelerate your use with shortcuts*
 
-- **Aula 2.1** - O que é o `CLAUDE.md` e por que ele existe
-- **Aula 2.2** - Anatomia do CLAUDE.md perfeito (stack, comandos, convenções, proibições)
-- **Aula 2.3** - Escopos: projeto root vs subdiretório vs global (`~/.claude/CLAUDE.md`)
-- **Aula 2.4** - Exemplo real: Next.js SaaS App
-- **Aula 2.5** - Exemplo real: Python FastAPI Backend
-- **Aula 2.6** - O comando `/init` para gerar CLAUDE.md automaticamente
-- **Prática:** Criar o CLAUDE.md de um projeto pessoal do aluno
-
----
-
-## MÓDULO 3 - 9 Workflows do Claude Code
-*Pilar 3 - Os fluxos que cobrem 90% do trabalho real*
-
-- **Aula 3.1** - Workflow 1: Corrigir um Bug (contexto > stack trace > diagnóstico > fix > commit)
-- **Aula 3.2** - Workflow 2: Construir Feature Nova (Plan Mode > aprovação > implementação > testes)
-- **Aula 3.3** - Workflow 3: Refatorar Código (entender > definir objetivo > diff > testar)
-- **Aula 3.4** - Workflow 4: Entender um Codebase Novo (big picture > zoom in > trace flow > /init)
-- **Aula 3.5** - Workflow 5: Escrever Testes (gaps > gerar > verificar > coverage)
-- **Aula 3.6** - Workflow 6: Code Review (revisão > feedback > re-review)
-- **Aula 3.7** - Workflow 7: Criar Pull Request (`/pr` automático)
-- **Aula 3.8** - Workflow 8: Debug com Logs e Erros (paste direto ou pipe)
-- **Aula 3.9** - Workflow 9: Refatoração Multi-arquivo (plan mode > batches > testes > sweep)
-- **Prática:** Pegar um repo open source, clonar, e executar os workflows 4, 1 e 7 em sequência
+- **Class 1.1** - Essential terminal commands (`/help`, `/clear`, `/compact`, `/cost`)
+- **Class 1.2** - Native Slash commands (`/commit`, `/review`, `/pr`, `/init`)
+- **Class 1.3** - Command line flags (`-p`, `--model`, `--resume`)
+- **Class 1.4** - Data pipe: sending files and logs to Claude (`cat | claude -p`)
+- **Class 1.5** - Keyboard shortcuts and quick navigation in the session
+- **Practice:** Create an alias in the shell that runs Claude with your favorite flags
 
 ---
 
-## MÓDULO 4 - Painel Executivo de Prompts
-*Pilar 4 - Os prompts que separam amador de operador*
+## MODULE 2 - Starter Pack
+*Pillar 2 - Configure Claude to understand your project in 60 seconds*
 
-- **Aula 4.1** - Os 5 prompts diários (95% Confidence, Plan Mode, Structured Bug, Brutal Audit, Teach Me)
-- **Aula 4.2** - Prompts de Getting Started (kickoff, onboarding)
-- **Aula 4.3** - Prompts de Building (feature blueprint, build with tests)
-- **Aula 4.4** - Prompts de Debugging (structured bug, log analysis)
-- **Aula 4.5** - Prompts de Code Quality (review, refactor guardrails)
-- **Aula 4.6** - Prompts de Arquitetura (decisão arquitetural, API design)
-- **Aula 4.7** - Prompts de Deployment (prep, CI/CD)
-- **Aula 4.8** - Estratégia de uso: quando usar cada prompt
-- **Prática:** Montar seu próprio "dashboard de prompts" personalizado pro seu tipo de trabalho
+- **Class 2.1** - What is`CLAUDE.md`and why it exists
+- **Class 2.2** - Anatomy of the perfect CLAUDE.md (stack, commands, conventions, prohibitions)
+- **Class 2.3** - Scopes: root project vs subdirectory vs global (`~/.claude/CLAUDE.md`)
+- **Class 2.4** - Real example: Next.js SaaS App
+- **Class 2.5** - Real example: Python FastAPI Backend
+- **Class 2.6** - The command`/init`to generate CLAUDE.md automatically
+- **Practice:** Create CLAUDE.md from a student's personal project
 
 ---
 
-## MÓDULO 5 - Habilidades de IA (Skills)
-*Pilar 5 - Construa uma vez, use pra sempre*
+## MODULE 3 - 9 Claude Code Workflows
+*Pillar 3 - The flows that cover 90% of the real work*
 
-- **Aula 5.1** - O que são Skills, MCPs e Plugins (e quando usar cada um)
-- **Aula 5.2** - Onde as skills vivem (`.claude/commands/`) e como Claude as descobre
-- **Aula 5.3** - Template de skill: a estrutura padrão (Purpose > Inputs > Steps > Quality > Output)
-- **Aula 5.4** - Skill prática 1: Screenshot to Website
-- **Aula 5.5** - Skill prática 2: Lead Research
-- **Aula 5.6** - Skill prática 3: Senior Code Review
-- **Aula 5.7** - Onde encontrar skills prontas (awesome-claude-code, SkillsMP, SkillHub)
-- **Aula 5.8** - Plugins: o game-changer (Supabase, built-ins do Cowork)
-- **Aula 5.9** - Sincronizando skills entre Claude Code e Cowork
-- **Aula 5.10** - Segurança: o que verificar antes de instalar uma skill
-- **Aula 5.11** - Token math: 90% de economia com skills vs re-digitar prompts
-- **Prática:** Criar 3 skills personalizadas pro workflow do aluno
+- **Class 3.1** - Workflow 1: Fix a Bug (context > stack trace > diagnosis > fix > commit)
+- **Class 3.2** - Workflow 2: Build New Feature (Plan Mode > approval > implementation > tests)
+- **Class 3.3** - Workflow 3: Refactor Code (understand > define objective > diff > test)
+- **Class 3.4** - Workflow 4: Understanding a New Codebase (big picture > zoom in > trace flow > /init)
+- **Class 3.5** - Workflow 5: Writing Tests (gaps > generate > verify > coverage)
+- **Class 3.6** - Workflow 6: Code Review (review > feedback > re-review)
+- **Class 3.7** - Workflow 7: Create Pull Request (`/pr`automatic)
+- **Class 3.8** - Workflow 8: Debug with Logs and Errors (direct paste or pipe)
+- **Class 3.9** - Workflow 9: Multi-file Refactoring (plan mode > batches > tests > sweep)
+- **Practice:** Take an open source repo, clone it, and run workflows 4, 1 and 7 in sequence
 
 ---
 
-## MÓDULO 6 - Conectando o Claude (MCPs)
-*Pilar 6 - USB ports pro Claude*
+## MODULE 4 - Executive Prompt Panel
+*Pillar 4 - The prompts that separate amateur from operator*
 
-- **Aula 6.1** - O que são MCPs e o "Token Tax" (custo de contexto)
-- **Aula 6.2** - Framework de decisão: Skill vs MCP
-- **Aula 6.3** - MCP #1: Filesystem (acesso a arquivos fora do repo)
-- **Aula 6.4** - MCP #2: GitHub (issues, PRs, CI, search)
-- **Aula 6.5** - MCP #3: Browser/Chrome DevTools (screenshot, scrape, interação)
-- **Aula 6.6** - MCP #4: Database/Supabase (queries, schema, migrations)
-- **Aula 6.7** - MCP #5: Google Sheets (leitura/escrita de planilhas)
-- **Aula 6.8** - Gerenciando MCPs (`mcp add`, `mcp list`, `mcp remove`)
-- **Aula 6.9** - Estratégia de rotação ativa (quais MCPs pra cada tipo de tarefa)
-- **Aula 6.10** - Troubleshooting de MCPs
-- **Prática:** Instalar Filesystem + GitHub, fazer uma tarefa real conectando os dois
+- **Class 4.1** - The 5 daily prompts (95% Confidence, Plan Mode, Structured Bug, Brutal Audit, Teach Me)
+- **Class 4.2** - Getting Started Prompts (kickoff, onboarding)
+- **Class 4.3** - Building Prompts (feature blueprint, build with tests)
+- **Class 4.4** - Debugging Prompts (structured bug, log analysis)
+- **Class 4.5** - Code Quality Prompts (review, refactor guardrails)
+- **Class 4.6** - Architecture Prompts (architectural decision, API design)
+- **Class 4.7** - Deployment Prompts (prep, CI/CD)
+- **Class 4.8** - Usage strategy: when to use each prompt
+- **Practice:** Create your own "prompt dashboard" customized for your type of work
 
 ---
 
-## MÓDULO 7 - Projeto Final
-*Juntando tudo*
+## MODULE 5 - AI Skills
+*Pillar 5 - Build once, use forever*
 
-- **Aula 7.1** - Montando seu ambiente completo (CLAUDE.md + skills + MCPs)
-- **Aula 7.2** - Projeto prático: Construir uma feature do zero usando todos os 6 pilares
-- **Aula 7.3** - Automação pessoal: criando seu "AI OS" com skills customizadas
-- **Aula 7.4** - Checklist do Operador: as 10 regras de ouro
+- **Class 5.1** - What are Skills, MCPs and Plugins (and when to use each one)
+- **Class 5.2** - Where skills live (`.claude/commands/`) and how Claude discovers them
+- **Class 5.3** - Skill template: the standard structure (Purpose > Inputs > Steps > Quality > Output)
+- **Class 5.4** - Practical skill 1: Screenshot to Website
+- **Class 5.5** - Practical skill 2: Lead Research
+- **Class 5.6** - Practical skill 3: Senior Code Review
+- **Class 5.7** - Where to find ready-made skills (awesome-claude-code, SkillsMP, SkillHub)
+- **Class 5.8** - Plugins: the game-changer (Supabase, Cowork built-ins)
+- **Class 5.9** - Synchronizing skills between Claude Code and Cowork
+- **Class 5.10** - Security: what to check before installing a skill
+- **Class 5.11** - Token math: 90% savings with skills vs re-typing prompts
+- **Practice:** Create 3 personalized skills for the student's workflow
 
 ---
 
-## Resumo da Estrutura
+## MODULE 6 - Connecting Claude (MCPs)
+*Pillar 6 - USB ports for Claude*
 
-| Módulo | Aulas | Foco |
+- **Class 6.1** - What are MCPs and the "Token Tax" (context cost)
+- **Class 6.2** - Decision framework: Skill vs MCP
+- **Class 6.3** - MCP #1: Filesystem (access to files outside the repo)
+- **Class 6.4** - MCP #2: GitHub (issues, PRs, CI, search)
+- **Class 6.5** - MCP #3: Browser/Chrome DevTools (screenshot, scrape, interaction)
+- **Class 6.6** - MCP #4: Database/Supabase (queries, schema, migrations)
+- **Class 6.7** - MCP #5: Google Sheets (reading/writing spreadsheets)
+- **Class 6.8** - Managing MCPs (`mcp add`, `mcp list`, `mcp remove`)
+- **Class 6.9** - Active rotation strategy (which MCPs for each type of task)
+- **Class 6.10** - MCP Troubleshooting
+- **Practice:** Install Filesystem + GitHub, do a real task connecting the two
+
+---
+
+## MODULE 7 - Final Project
+*Putting it all together*
+
+- **Class 7.1** - Setting up your complete environment (CLAUDE.md + skills + MCPs)
+- **Class 7.2** - Practical project: Build a feature from scratch using all 6 pillars
+- **Class 7.3** - Personal automation: creating your "AI OS" with customized skills
+- **Class 7.4** - Operator Checklist: the 10 golden rules
+
+---
+
+## Structure Summary
+
+| Module | Classes | Focus |
 |--------|-------|------|
-| 0 - Introdução | 5 | Setup |
-| 1 - Atalhos | 5 + prática | Velocidade |
-| 2 - Starter Pack | 6 + prática | Configuração |
-| 3 - Workflows | 9 + prática | Execução |
-| 4 - Prompts | 8 + prática | Estratégia |
-| 5 - Skills | 11 + prática | Escalabilidade |
-| 6 - MCPs | 10 + prática | Integração |
-| 7 - Projeto Final | 4 | Consolidação |
-| **Total** | **58 aulas** | |
+| 0 - Introduction | 5 | Setup |
+| 1 - Shortcuts | 5 + practice | Speed ​​|
+| 2 - Starter Pack | 6 + practice | Configuration |
+| 3 - Workflows | 9 + practice | Execution |
+| 4 - Prompts | 8 + practice | Strategy |
+| 5 - Skills | 11 + practice | Scalability |
+| 6 - MCPs | 10 + practice | Integration |
+| 7 - Final Project | 4 | Consolidation |
+| **Total** | **58 classes** | |
