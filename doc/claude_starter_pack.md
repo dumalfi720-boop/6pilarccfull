@@ -8,9 +8,9 @@
 
 ---
 
-# What is `CLAUDE.md`?
+# What is`CLAUDE.md`?
 
-`CLAUDE.md` is a **project memory file** that lives in your repository root.
+`CLAUDE.md`is a **project memory file** that lives in your root repository.
 
 Every time you start a Claude Code session, Claude reads this file first — giving it instant context about:
 
@@ -27,11 +27,11 @@ Think of it as **onboarding documentation for your AI coding partner**.
 
 | Location | Scope |
 | --- | --- |
-| `project-root/CLAUDE.md` | Applies to the entire project |
-| `project-root/src/CLAUDE.md` | Applies only when working in `/src` |
-| `~/.claude/CLAUDE.md` | Applies to ALL projects (global memory) |
+|`project-root/CLAUDE.md`| Applies to the entire project |
+|`project-root/src/CLAUDE.md`| Apps only when working in`/src` |
+| `~/.claude/CLAUDE.md`| Applies to ALL projects (global memory) |
 
-> 💡 **Pro Tip:** You can have multiple `CLAUDE.md` files.
+> 💡 **Pro Tip:** You can have multiple`CLAUDE.md`files.
 >
 > Claude reads all relevant ones depending on which directory you're working in.
 
@@ -39,9 +39,7 @@ Think of it as **onboarding documentation for your AI coding partner**.
 
 # 📋 The Template
 
-Copy everything below and customize it for your project:
-
-```
+Copy everything below and customize it for your project:```
 # CLAUDE.md
 
 ## Project Overview
@@ -92,13 +90,9 @@ Built with [primary tech stack].
 - [Links to relevant docs]
 - [Known issues or quirks]
 - [Deployment process notes]
-```
+```---
 
----
-
-# 🚀 Real-World Example: Next.js SaaS App
-
-```
+# 🚀 Real-World Example: Next.js SaaS App```
 # CLAUDE.md
 
 ## Project Overview
@@ -132,13 +126,9 @@ Built with Next.js 14 (App Router), TypeScript, and Supabase.
 - Don't use the Pages Router — App Router only
 - Never commit .env files
 - Don't install new dependencies without discussing first
-```
+```---
 
----
-
-# 🐍 Real-World Example: Python API
-
-```
+# 🐍 Real-World Example: Python API```
 # CLAUDE.md
 
 ## Project Overview
@@ -167,13 +157,9 @@ FastAPI backend for a real-time analytics dashboard.
 - Never use raw SQL — use SQLAlchemy ORM
 - Don't use sync DB calls in async handlers
 - Never expose internal IDs — use UUIDs
-```
+```---
 
----
-
-# 🏆 Tips for a Powerful `CLAUDE.md`
-
-1. **Keep it concise**
+# 🏆 Tips for a Powerful`CLAUDE.md`1. **Keep it concise**
    Claude reads this every session — don’t write a novel.
 
 2. **Focus on what’s unique**
@@ -189,4 +175,4 @@ FastAPI backend for a real-time analytics dashboard.
    Preventing mistakes is just as powerful as guiding behavior.
 
 6. **Use directory-specific files**
-   Add a `CLAUDE.md` to subdirectories that have special rules or constraints.
+   Add to`CLAUDE.md`to subdirectories that have special rules or constraints.
