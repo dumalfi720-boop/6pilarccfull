@@ -1,142 +1,142 @@
-# CURSO FULL: Dominando o Claude Code - Os 6 Pilares (Edicao Completa 2026)
+# FULL COURSE: Mastering the Claude Code - The 6 Pillars (Complete Edition 2026)
 
-**Publico-alvo:** Devs, automatizadores de IA e profissionais que querem dominar Claude Code do zero ao avancado.
-**Diferencial:** Conteudo atualizado marco 2026 com exercicios praticos em cada modulo.
-**Baseado em:** Documentacao oficial, pesquisa web atualizada, e material do projeto 6pilarccfull.
+**Target audience:** Devs, AI automators and professionals who want to master Claude Code from scratch to advanced.
+**Differential:** Content updated in March 2026 with practical exercises in each module.
+**Based on:** Official documentation, updated web research, and material from the 6pilarccfull project.
 
 ---
 
-## TRILHA 1 - Atalhos e Fundamentos do Claude Code (Emerald)
-*Do zero ao terminal produtivo*
+## TRACK 1 - Shortcuts and Fundamentals of Claude Code (Emerald)
+*From zero to productive terminal*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 1.1 | Introducao ao Claude Code | Instalar e rodar primeiro comando |
-| 1.2 | Comandos Essenciais do Terminal | Usar /help, /clear, /compact, /cost numa sessao real |
-| 1.3 | Slash Commands Nativos | Executar /commit, /review, /pr num repo de teste |
-| 1.4 | Flags de Linha de Comando | Criar 3 comandos com -p, --model, --resume |
-| 1.5 | Pipe de Dados e Integracao Unix | Criar pipeline cat + grep + claude -p |
-| 1.6 | Atalhos de Teclado e Navegacao | Praticar todos os atalhos numa sessao cronometrada |
-| 1.7 | Criando Aliases e Scripts | Criar 5 aliases no .zshrc/.bashrc |
-| 1.8 | Modo Headless e Automacao CLI | Criar script bash que usa claude -p em loop |
+| 1.1 | Introduction to Claude Code | Install and run first command |
+| 1.2 | Essential Terminal Commands | Use /help, /clear, /compact, /cost in a real session |
+| 1.3 | Native Slash Commands | Run /commit, /review, /pr on a test repo |
+| 1.4 | Command Line Flags | Create 3 commands with -p, --model, --resume |
+| 1.5 | Data Pipe and Unix Integration | Create pipeline cat + grep + claude -p |
+| 1.6 | Keyboard Shortcuts and Navigation | Practice all shortcuts in a timed session |
+| 1.7 | Creating Aliases and Scripts | Create 5 aliases in .zshrc/.bashrc |
+| 1.8 | Headless Mode and CLI Automation | Create bash script that uses claude -p in loop |
 
-**Total:** 8 modulos, ~48 topicos, 8 exercicios praticos
+**Total:** 8 modules, ~48 topics, 8 practical exercises
 
 ---
 
-## TRILHA 2 - CLAUDE.md e Sistema de Memoria (Blue)
-*Configure o Claude pra entender seu projeto em 60 segundos*
+## TRACK 2 - CLAUDE.md and Memory System (Blue)
+*Configure Claude to understand your project in 60 seconds*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 2.1 | O que e CLAUDE.md e Por que Existe | Explorar CLAUDE.md de 3 projetos open source |
-| 2.2 | Anatomia do CLAUDE.md Perfeito | Criar CLAUDE.md completo para projeto pessoal |
-| 2.3 | Escopos e Hierarquia de Memoria | Criar CLAUDE.md global + projeto + subdiretorio |
-| 2.4 | Regras Modulares (.claude/rules/) | Criar 3 arquivos de regras modulares |
-| 2.5 | Auto-Memory e Persistencia | Configurar auto-memory e verificar o que Claude salva |
-| 2.6 | /init - Geracao Automatica | Rodar /init em 3 projetos e comparar resultados |
-| 2.7 | Templates por Stack (Next.js, Python, Go) | Criar template CLAUDE.md para 2 stacks diferentes |
-| 2.8 | Boas Praticas e Otimizacao (< 200 linhas) | Auditar e otimizar CLAUDE.md existente |
+| 2.1 | What is CLAUDE.md and Why Does It Exist | Explore CLAUDE.md from 3 open source projects |
+| 2.2 | Anatomy of CLAUDE.md Perfect | Create complete CLAUDE.md for personal project |
+| 2.3 | Scopes and Memory Hierarchy | Create global CLAUDE.md + project + subdirectory |
+| 2.4 | Modular Rules (.claude/rules/) | Create 3 modular rules files |
+| 2.5 | Auto-Memory and Persistence | Configure auto-memory and check what Claude saves |
+| 2.6 | /init - Automatic Generation | Run /init in 3 projects and compare results |
+| 2.7 | Templates by Stack (Next.js, Python, Go) | Create CLAUDE.md template for 2 different stacks |
+| 2.8 | Good Practices and Optimization (< 200 lines) | Audit and optimize existing CLAUDE.md |
 
-**Total:** 8 modulos, ~48 topicos, 8 exercicios praticos
+**Total:** 8 modules, ~48 topics, 8 practical exercises
 
 ---
 
-## TRILHA 3 - Workflows e Fluxos de Trabalho (Purple)
-*Os 9 fluxos que cobrem 90% do trabalho real + extras 2026*
+## TRACK 3 - Workflows and Workflows (Purple)
+*The 9 streams that cover 90% of the real work + extras 2026*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 3.1 | Workflow: Corrigir um Bug | Reproduzir e corrigir bug real num repo de exemplo |
-| 3.2 | Workflow: Construir Feature Nova | Implementar feature completa com Plan Mode |
-| 3.3 | Workflow: Refatorar Codigo | Refatorar modulo mantendo testes verdes |
-| 3.4 | Workflow: Entender Codebase Novo | Clonar repo desconhecido e mapear arquitetura |
-| 3.5 | Workflow: Escrever Testes | Aumentar coverage de 40% para 80% num projeto |
-| 3.6 | Workflow: Code Review e Pull Request | Fazer review + PR completo com /review e /pr |
-| 3.7 | Workflow: Debug com Logs e Erros | Diagnosticar 3 erros diferentes via pipe de logs |
-| 3.8 | Workflow: Migracao Multi-arquivo | Executar rename/refactor em 10+ arquivos |
-| 3.9 | Agent Teams e Loop Agentico (2026) | Configurar agent teams com CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS |
+| 3.1 | Workflow: Fix a Bug | Reproduce and fix real bug in example repo |
+| 3.2 | Workflow: Build New Feature | Implement complete feature with Plan Mode |
+| 3.3 | Workflow: Refactor Code | Refactor module while keeping tests green |
+| 3.4 | Workflow: Understand New Codebase | Clone unknown repo and map architecture |
+| 3.5 | Workflow: Writing Tests | Increase coverage from 40% to 80% in a project |
+| 3.6 | Workflow: Code Review and Pull Request | Review + complete PR with /review and /pr |
+| 3.7 | Workflow: Debug with Logs and Errors | Diagnose 3 different errors via log pipe |
+| 3.8 | Workflow: Multi-file Migration | Run rename/refactor on 10+ files |
+| 3.9 | Agent Teams and Loop Agentico (2026) | Configure agent teams with CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS |
 
-**Total:** 9 modulos, ~54 topicos, 9 exercicios praticos
+**Total:** 9 modules, ~54 topics, 9 practical exercises
 
 ---
 
-## TRILHA 4 - Prompts Estrategicos e Engenharia (Amber)
-*Os prompts que separam amador de operador*
+## TRACK 4 - Strategic Prompts and Engineering (Amber)
+*The prompts that separate amateur from operator*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 4.1 | Os 5 Prompts Diarios (Daily Drivers) | Usar cada um dos 5 prompts numa tarefa real |
-| 4.2 | Prompts de Getting Started e Kickoff | Iniciar projeto novo usando 95% Confidence + Kickoff |
-| 4.3 | Prompts de Building e TDD | Construir feature usando Build With Tests prompt |
-| 4.4 | Prompts de Debugging e Log Analysis | Diagnosticar 3 bugs usando prompts estruturados |
-| 4.5 | Prompts de Code Quality e Auditoria | Rodar Brutal Audit em codigo proprio e corrigir |
-| 4.6 | Prompts de Arquitetura e API Design | Projetar API REST completa usando prompts de arquitetura |
-| 4.7 | Outcome Delegation (Tecnica 2026) | Reescrever 5 prompts imperativos como outcome delegation |
-| 4.8 | Verificacao e Prompts Auto-validantes | Criar 3 prompts com criterios de verificacao embutidos |
+| 4.1 | The 5 Daily Prompts (Daily Drivers) | Use each of the 5 prompts in a real task |
+| 4.2 | Getting Started and Kickoff Prompts | Start new project using 95% Confidence + Kickoff |
+| 4.3 | Building and TDD Prompts | Build feature using Build With Tests prompt |
+| 4.4 | Debugging and Log Analysis Prompts | Diagnose 3 bugs using structured prompts |
+| 4.5 | Code Quality and Auditing Prompts | Run Brutal Audit in your own code and correct it |
+| 4.6 | Architecture and API Design Prompts | Design complete REST API using architectural prompts |
+| 4.7 | Outcome Delegation (Tecnica 2026) | Rewrite 5 imperative prompts as outcome delegation |
+| 4.8 | Verification and Self-Validating Prompts | Create 3 prompts with built-in verification criteria |
 
-**Total:** 8 modulos, ~48 topicos, 8 exercicios praticos
+**Total:** 8 modules, ~48 topics, 8 practical exercises
 
 ---
 
-## TRILHA 5 - Skills, Plugins e Extensibilidade (Teal)
-*Construa uma vez, use pra sempre*
+## TRACK 5 - Skills, Plugins and Extensibility (Teal)
+*Build once, use forever*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 5.1 | O que sao Skills e Como Funcionam | Criar primeira skill seguindo o template padrao |
-| 5.2 | Anatomia de uma Skill (Template Completo) | Construir skill com Purpose, Steps, Quality Checks |
-| 5.3 | Skills Praticas: Screenshot to Website | Implementar e testar a skill de screenshot |
-| 5.4 | Skills Praticas: Lead Research e Code Review | Implementar 2 skills de produtividade |
-| 5.5 | Onde Encontrar Skills Prontas | Auditar 10 skills de awesome-claude-code |
-| 5.6 | Plugins: Arquitetura e Ecossistema (9000+) | Instalar e configurar 2 plugins do marketplace |
-| 5.7 | Hooks: 12 Eventos do Ciclo de Vida | Criar hook PreToolUse + PostToolUse |
-| 5.8 | Subagentes e /simplify /batch (2026) | Usar /simplify num projeto e analisar resultado |
+| 5.1 | What are Skills and How They Work | Create first skill following the standard template |
+| 5.2 | Anatomy of a Skill (Full Template) | Build skill with Purpose, Steps, Quality Checks |
+| 5.3 | Practical Skills: Screenshot to Website | Implement and test the screenshot skill |
+| 5.4 | Practical Skills: Lead Research and Code Review | Implement 2 productivity skills |
+| 5.5 | Where to Find Ready Skills | Audit 10 skills from awesome-claude-code |
+| 5.6 | Plugins: Architecture and Ecosystem (9000+) | Install and configure 2 marketplace plugins |
+| 5.7 | Hooks: 12 Life Cycle Events | Create hook PreToolUse + PostToolUse |
+| 5.8 | Subagents and /simplify /batch (2026) | Use /simplify in a project and analyze results |
 
-**Total:** 8 modulos, ~48 topicos, 8 exercicios praticos
+**Total:** 8 modules, ~48 topics, 8 practical exercises
 
 ---
 
-## TRILHA 6 - MCPs, Automacao e Integracao (Rose)
-*USB ports pro Claude - conecte tudo*
+## TRACK 6 - MCPs, Automation and Integration (Rose)
+*USB ports for Claude - connect everything*
 
-| Modulo | Titulo | Exercicios |
+| Module | Title | Exercises |
 |--------|--------|------------|
-| 6.1 | O que sao MCPs e o Token Tax | Medir overhead de contexto com 0, 2 e 5 MCPs |
-| 6.2 | MCP Filesystem e GitHub | Instalar ambos e executar tarefa cross-repo |
-| 6.3 | MCP Browser e Chrome DevTools | Fazer screenshot + scrape de pagina web |
-| 6.4 | MCP Database (Postgres/Supabase) | Conectar banco, rodar queries, verificar schema |
-| 6.5 | MCP Google Sheets e Outros | Exportar dados para planilha via MCP |
-| 6.6 | Estrategia de Rotacao Ativa | Criar tabela pessoal de rotacao por tipo de tarefa |
-| 6.7 | Pipelines CI/CD com Claude Headless | Criar GitHub Action com claude -p e --allowedTools |
-| 6.8 | Claude Cowork e Desktop Agent (2026) | Explorar Cowork: scheduling, connectors, skills |
+| 6.1 | What are MCPs and Token Tax | Measure context overhead with 0, 2 and 5 MCPs |
+| 6.2 | MCP Filesystem and GitHub | Install both and run cross-repo task |
+| 6.3 | MCP Browser and Chrome DevTools | Take screenshot + scrape of web page |
+| 6.4 | MCP Database (Postgres/Supabase) | Connect database, run queries, check schema |
+| 6.5 | MCP Google Sheets and Others | Export data to spreadsheet via MCP |
+| 6.6 | Active Rotation Strategy | Create personal rotation table by type of task |
+| 6.7 | CI/CD Pipelines with Claude Headless | Create GitHub Action with claude -p and --allowedTools |
+| 6.8 | Claude Cowork and Desktop Agent (2026) | Explore Cowork: scheduling, connectors, skills |
 
-**Total:** 8 modulos, ~48 topicos, 8 exercicios praticos
+**Total:** 8 modules, ~48 topics, 8 practical exercises
 
 ---
 
-## RESUMO GERAL
+## GENERAL SUMMARY
 
-| Trilha | Cor | Modulos | Topicos | Exercicios | Nivel |
+| Trail | Color | Modules | Topics | Exercises | Level |
 |--------|-----|---------|---------|------------|-------|
-| T1 - Atalhos e Fundamentos | Emerald | 8 | ~48 | 8 | Basico |
-| T2 - CLAUDE.md e Memoria | Blue | 8 | ~48 | 8 | Basico-Inter |
-| T3 - Workflows | Purple | 9 | ~54 | 9 | Intermediario |
-| T4 - Prompts Estrategicos | Amber | 8 | ~48 | 8 | Intermediario |
-| T5 - Skills e Plugins | Teal | 8 | ~48 | 8 | Avancado |
-| T6 - MCPs e Automacao | Rose | 8 | ~48 | 8 | Avancado |
+| T1 - Shortcuts and Fundamentals | Emerald | 8 | ~48 | 8 | Basic |
+| T2 - CLAUDE.md and Memory | Blue | 8 | ~48 | 8 | Basico-Inter |
+| T3 - Workflows | Purple | 9 | ~54 | 9 | Intermediary |
+| T4 - Strategic Prompts | Amber | 8 | ~48 | 8 | Intermediary |
+| T5 - Skills and Plugins | Teal | 8 | ~48 | 8 | Advanced |
+| T6 - MCPs and Automation | Rose | 8 | ~48 | 8 | Advanced |
 | **TOTAL** | | **49** | **~294** | **49** | |
 
 ---
 
-## FONTES E REFERENCIAS (Marco 2026)
+## SOURCES AND REFERENCES (March 2026)
 
 - Claude Code Changelog (gradually.ai, releasebot.io, claudelog.com)
 - Anthropic Official Docs (code.claude.com/docs)
-- 9000+ plugins ecosystem (composio.dev, claudemarketplaces.com)
-- MCP Tool Search: reducao de 85-95% em tokens
+- 9000+ ecosystem plugins (composio.dev, claudemarketplaces.com)
+- MCP Tool Search: 85-95% reduction in tokens
 - Agent Teams: CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
-- 29M installs diarios VS Code (marco 2026)
-- 4% dos commits publicos GitHub sao do Claude Code
-- 92% reducao no tempo de conclusao de tarefas
-- 42.8% taxa de adocao entre desenvolvedores
+- 29M daily installs VS Code (March 2026)
+- 4% of public GitHub commits are from Claude Code
+- 92% reduction in task completion time
+- 42.8% adoption rate among developers
