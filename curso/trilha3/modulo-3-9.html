@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 3.9 - Agent Teams e Loop Agentico (2026) | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 3.9 - Agent Teams and Agentic Loop (2026) | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,733 +42,608 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a>
-      <span>/</span>
-      <span class="text-purple-400">Modulo 3.9</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 3.9
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🤖 Agent Teams e Loop Agentico (2026)</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Explore os recursos mais avancados do Claude Code em 2026: Agent Teams com multiplos subagentes trabalhando em paralelo, loop agentico autonomo, worktrees isolados e o framework de decisao sobre quando usar (e quando evitar) essas funcionalidades.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">40</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Avancado</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">👥 O que sao Agent Teams (multi-agent)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agent Teams e a funcionalidade experimental do Claude Code que permite <strong class="text-purple-400">multiplos agentes Claude trabalhando simultaneamente</strong> em subtarefas diferentes do mesmo projeto. Em vez de um unico agente sequencial, voce tem um time de agentes especializados operando em paralelo.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Agent Teams transforma o Claude Code de um <strong class="text-white">agente solo em um coordenador de time</strong>. O agente principal (orchestrator) recebe a tarefa, divide em subtarefas e delega para subagentes que trabalham em paralelo, cada um em seu proprio worktree git isolado.
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a>
+<span>/</span>
+<span class="text-purple-400">Module 3.9</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.9</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🤖 Agent Teams and Loop Agentico (2026)</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Explore Claude Code's most advanced features in 2026: Agent Teams with multiple sub-agents working in parallel, autonomous agentic loop, isolated worktrees and the decision framework on when to use (and when to avoid) these features.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">40</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Advanced</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">👥 What are Agent Teams (multi-agent)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Agent Teams and Claude Code's experimental functionality that allows<strong class="text-purple-400">multiple Claude agents working simultaneously</strong>in different subtasks of the same project. Instead of a single sequential agent, you have a team of specialized agents operating in parallel.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Agent Teams transforms Claude Code from a<strong class="text-white">solo agent into a team coordinator</strong>. The main agent (orchestrator) receives the task, divides it into subtasks and delegates to subagents working in parallel, each in its own isolated git worktree.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Orchestrator:</strong>The main agent receives its task, plans the division and coordinates the subagents. It doesn't edit code directly</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Subagents:</strong>Independent agents that receive specific subtasks and work in parallel, each with their own session</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Isolation:</strong>Each subagent works in a separate git worktree, avoiding concurrent editing conflicts</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Final merge:</strong>After all subagents complete, the orchestrator merges the changes and resolves conflicts</span>
+</li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Usage Example</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Task that benefits from Agent Teams</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Implement full authentication in this project:</span></div>
+<div><span class="text-neutral-300">- Backend: JWT + refresh tokens + middleware</span></div>
+<div><span class="text-neutral-300">- Frontend: Login page + AuthContext + protected routes</span></div>
+<div><span class="text-neutral-300">- Tests: Unit + integration tests for both</span></div>
+<div class="text-neutral-500 mt-3"># The orchestrator can delegate:</div>
+<div class="text-neutral-300">Subagent 1: Backend auth (models, routes, middleware)</div>
+<div class="text-neutral-300">Subagent 2: Frontend auth (components, context, pages)</div>
+<div class="text-neutral-300">Subagent 3: Tests (unit + integration)</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Agent Teams works best when subtasks are<strong class="text-white">independent of each other</strong>. If subagent A needs the result of subagent B to start, parallelism doesn't help. Think of tasks that can be performed at the same time without dependencies.</p>
+<p class="text-neutral-300">Ideal examples: implementing frontend and backend simultaneously, writing tests while another agent writes code, migrating different modules in parallel.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⚙️ Enabling Agent Teams</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Agent Teams is an experimental feature that needs to be<strong class="text-purple-400">explicitly enabled</strong>via environment variable. As it is experimental, it may change between versions, but it is already stable enough to be used in real projects.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Activation is done by configuring the environment variable<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code>. This enables the built-in tool<strong class="text-white">dispatch_agent</strong>that the orchestrator uses to create and manage subagents.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Environment variable:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code>in your shell or .bashrc</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Verification:</strong>After activating, turn<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/status</code>and confirm that "Agent Teams" appears as enabled</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Requirements:</strong>Git installed (for worktrees), disk space (each worktree is a copy), and enough API limit for parallel calls</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Cost:</strong>Agent Teams consumes more tokens because multiple agents work simultaneously. Monitor with /cost</span>
+</li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>How to Enable</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Activate for current session</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</span></div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">claude</span></div>
+<div class="text-neutral-500 mt-3"># Activate permanently</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">echo 'export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1' &gt;&gt; ~/.bashrc</span></div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">source ~/.bashrc</span></div>
+<div class="text-neutral-500 mt-3"># To check</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/status</span></div>
+<div class="text-neutral-300">Agent Teams: enabled (experimental)</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Activate Agent Teams only when you are going to use it. In simple tasks, the overhead of coordination and worktrees is not worth it. Use for large, parallelizable tasks. For everyday life, normal mode is more efficient.</p>
+<p class="text-neutral-300">Make sure your repository is in a clean state (no uncommitted changes) before starting Agent Teams. Worktrees work best from a clean git state.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📤 Subagents and task delegation</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">With Agent Teams enabled, Claude can use the tool<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">dispatch_agent</code>to<strong class="text-purple-400">create subagents with specific tasks</strong>. Each subagent receives clear instructions, works independently and reports the result to the orchestrator.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The delegation follows the standard of<strong class="text-white">task decomposition</strong>: the orchestrator divides the large task into smaller subtasks, creates a subagent for each one with specific instructions, and waits for the results to combine everything.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Clear instructions:</strong>Each sub-agent receives a specific prompt with a well-defined scope: what to do, where to do it and what not to touch</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Shared context:</strong>The project's CLAUDE.md is accessible to all subagents, maintaining consistency of style and conventions</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Parallel execution:</strong>The subagents work at the same time, each in their own worktree. Orchestrator monitors progress</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Result report:</strong>Each subagent reports: what was done, which files were modified and whether the tests pass</span>
+</li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example of Delegation</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># The orchestrator decides to delegate like this:</div>
+<div class="text-neutral-300 mt-2">dispatch_agent("API Subagent") →</div>
+<div class="text-neutral-300 ml-4">"Implement REST endpoints for product CRUD</div>
+<div class="text-neutral-300 ml-4">in src/routes/products.ts. Use the default of other routes."</div>
+<div class="text-neutral-300 mt-2">dispatch_agent("Subagent Tests") →</div>
+<div class="text-neutral-300 ml-4">“Write tests for product endpoints.</div>
+<div class="text-neutral-300 ml-4">Cover full CRUD, validation and errors."</div>
+<div class="text-neutral-300 mt-2">dispatch_agent("Docs Agent") →</div>
+<div class="text-neutral-300 ml-4">"Update the API documentation with the new endpoints</div>
+<div class="text-neutral-300 ml-4">of products in OpenAPI format."</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">The quality of the delegation depends on the clarity of the instructions. Be specific: instead of "implement the backend", say "implement the GET /products, POST /products, PUT /products/:id and DELETE /products/:id endpoints in src/routes/products.ts following the pattern in src/routes/users.ts".</p>
+<p class="text-neutral-300">Avoid circular dependencies between subagents. If the testing sub-agent needs code from the API sub-agent, they cannot run in parallel. In this case, use sequential execution.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔄 Autonomous agentic loop</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The agentic loop is when the Claude Code operates in<strong class="text-purple-400">autonomous for extended periods</strong>, making decisions, executing actions and self-correcting without human intervention. With Agent Teams, this loop multiplies - each sub-agent has its own autonomous loop.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The agentic loop follows the cycle:<strong class="text-white">Observe → Think → Act → Verify → Repeat</strong>. Claude observes the current state, thinks about the next action, executes it, checks the result and decides whether he needs to continue. This loop runs until the task is complete or a limit is reached.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Please note:</strong>Read files, run tests, check git status to understand the current situation</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Think:</strong>Plan the next action based on what you observed and the objective of the task</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Act:</strong>Edit files, run commands, create tests - execute the planned action</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Verify:</strong>Run tests, build and linting to confirm that the action had the expected effect</span>
+</li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Loop in Action</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Task that triggers an agentic loop</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Add input validation to all API endpoints. For each endpoint:</span></div>
+<div><span class="text-neutral-300">1. Identify accepted parameters</span></div>
+<div><span class="text-neutral-300">2. Add validation with zod</span></div>
+<div><span class="text-neutral-300">3. Create test for validation</span></div>
+<div><span class="text-neutral-300">4. Run the tests and correct if necessary</span></div>
+<div><span class="text-neutral-300">Repeat for all endpoints.</span></div>
+<div class="text-neutral-500 mt-3"># Claude goes into a loop:</div>
+<div class="text-neutral-300">→ Le routes/users.ts (Note)</div>
+<div class="text-neutral-300">→ Plan schema zod for POST /users (Think)</div>
+<div class="text-neutral-300">→ Add validation + test (Act)</div>
+<div class="text-neutral-300">→ Run npm test (Verify)</div>
+<div class="text-neutral-300">→ Go to GET /users/:id (Repeat)</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">The agentic loop is most effective when you define<strong class="text-white">clear completion criteria</strong>: "For when all endpoints have validated AND all tests pass." Without clear criteria, the loop may become undefined or stop too soon.</p>
+<p class="text-neutral-300">Use<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">/cost</code>after long loops. A loop of 20+ iterations can consume a lot of tokens. Set limits: "If the cost exceeds $2, stop and let me know."</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🌳 Isolated worktrees (git worktree)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The technical basis of Agent Teams are the<strong class="text-purple-400">git worktrees</strong>: each sub-agent works on an isolated copy of the repository, avoiding conflicts when multiple agents edit files at the same time. Understanding worktrees is fundamental to using Agent Teams effectively.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">A git worktree and a<strong class="text-white">additional work directory</strong>linked to the same git repository. Each worktree can be in a different branch and have independent modifications. Claude creates temporary worktrees for each subagent and removes them after the merge.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Complete insulation:</strong>Each subagent edits files in its own worktree without affecting the others. No editing conflicts</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Separate branches:</strong>Each worktree operates in its own branch, facilitating later merging</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Even .git:</strong>All worktrees share the same git repository, saving space and keeping the history unified</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Automatic Cleanup:</strong>After the merge, Claude removes the temporary worktrees automatically</span>
+</li>
+</ul>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>How It Works</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># What Claude does internally:</div>
+<div class="text-neutral-500 mt-2"># 1. Create worktree for subagent</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">git worktree add ../agent-1-api feature/agent-1-api</span></div>
+<div class="text-neutral-500 mt-2"># 2. Subagent works on worktree</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">cd ../agent-1-api &amp;&amp; claude -p "Implement..."</span></div>
+<div class="text-neutral-500 mt-2"># 3. Merge back</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">git merge feature/agent-1-api</span></div>
+<div class="text-neutral-500 mt-2"># 4. Cleanup</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">git worktree remove ../agent-1-api</span></div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Worktrees consume disk space (each is basically a copy of your project, minus the .git). In large projects (&gt;1GB), monitor available space before creating multiple worktrees.</p>
+<p class="text-neutral-300">You can also use worktrees manually (without Agent Teams) to work on multiple tasks simultaneously:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">git worktree add ../feature-x feature/x</code>.
         </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Orchestrator:</strong> O agente principal que recebe sua tarefa, planeja a divisao e coordena os subagentes. Ele nao edita codigo diretamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Subagentes:</strong> Agentes independentes que recebem subtarefas especificas e trabalham em paralelo, cada um com sua propria sessao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Isolamento:</strong> Cada subagente trabalha em um git worktree separado, evitando conflitos de edicao simultanea</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Merge final:</strong> Apos todos os subagentes completarem, o orchestrator faz o merge das mudancas e resolve conflitos</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo de Uso
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Tarefa que se beneficia de Agent Teams</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Implemente autenticacao completa neste projeto:</span></div>
-          <div><span class="text-neutral-300">- Backend: JWT + refresh tokens + middleware</span></div>
-          <div><span class="text-neutral-300">- Frontend: Login page + AuthContext + protected routes</span></div>
-          <div><span class="text-neutral-300">- Testes: Unit + integration tests para ambos</span></div>
-          <div class="text-neutral-500 mt-3"># O orchestrator pode delegar:</div>
-          <div class="text-neutral-300">Subagente 1: Backend auth (models, routes, middleware)</div>
-          <div class="text-neutral-300">Subagente 2: Frontend auth (components, context, pages)</div>
-          <div class="text-neutral-300">Subagente 3: Testes (unit + integration)</div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Agent Teams funciona melhor quando as subtarefas sao <strong class="text-white">independentes entre si</strong>. Se o subagente A precisa do resultado do subagente B para comecar, o paralelismo nao ajuda. Pense em tarefas que possam ser executadas ao mesmo tempo sem dependencias.
-        </p>
-        <p class="text-neutral-300">
-          Exemplos ideais: implementar frontend e backend simultaneamente, escrever testes enquanto outro agente escreve codigo, migrar diferentes modulos em paralelo.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">⚙️ Habilitando Agent Teams</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agent Teams e uma feature experimental que precisa ser <strong class="text-purple-400">habilitada explicitamente</strong> via variavel de ambiente. Como e experimental, pode mudar entre versoes, mas ja e estavel o suficiente para uso em projetos reais.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A ativacao e feita configurando a variavel de ambiente <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code>. Isso habilita a ferramenta interna <strong class="text-white">dispatch_agent</strong> que o orchestrator usa para criar e gerenciar subagentes.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Variavel de ambiente:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code> no seu shell ou .bashrc</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Verificacao:</strong> Apos ativar, rode <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/status</code> e confirme que "Agent Teams" aparece como habilitado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Requisitos:</strong> Git instalado (para worktrees), espaco em disco (cada worktree e uma copia), e limite de API suficiente para chamadas paralelas</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Custo:</strong> Agent Teams consome mais tokens porque multiplos agentes trabalham simultaneamente. Monitore com /cost</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Como Habilitar
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Ativar para a sessao atual</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</span></div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">claude</span></div>
-          <div class="text-neutral-500 mt-3"># Ativar permanentemente</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">echo 'export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1' >> ~/.bashrc</span></div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">source ~/.bashrc</span></div>
-          <div class="text-neutral-500 mt-3"># Verificar</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">/status</span></div>
-          <div class="text-neutral-300">Agent Teams: enabled (experimental)</div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Ative Agent Teams apenas quando for usa-lo. Em tarefas simples, o overhead de coordenacao e worktrees nao compensa. Use para tarefas grandes e paralelizaveis. Para o dia a dia, o modo normal e mais eficiente.
-        </p>
-        <p class="text-neutral-300">
-          Certifique-se de que seu repositorio esta em um estado limpo (sem mudancas nao commitadas) antes de iniciar Agent Teams. Worktrees funcionam melhor a partir de um estado git limpo.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📤 Subagentes e delegacao de tarefas</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Com Agent Teams habilitado, o Claude pode usar a ferramenta <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">dispatch_agent</code> para <strong class="text-purple-400">criar subagentes com tarefas especificas</strong>. Cada subagente recebe instrucoes claras, trabalha independentemente e reporta o resultado ao orchestrator.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A delegacao segue o padrao de <strong class="text-white">task decomposition</strong>: o orchestrator divide a tarefa grande em subtarefas menores, cria um subagente para cada uma com instrucoes especificas, e aguarda os resultados para combinar tudo.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Instrucoes claras:</strong> Cada subagente recebe um prompt especifico com escopo bem definido: o que fazer, onde fazer e o que nao tocar</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Contexto compartilhado:</strong> O CLAUDE.md do projeto e acessivel a todos os subagentes, mantendo consistencia de estilo e convencoes</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Execucao paralela:</strong> Os subagentes trabalham ao mesmo tempo, cada um em seu worktree. O orchestrator monitora o progresso</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Report de resultado:</strong> Cada subagente reporta: o que foi feito, quais arquivos foram modificados e se os testes passam</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo de Delegacao
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># O orchestrator decide delegar assim:</div>
-          <div class="text-neutral-300 mt-2">dispatch_agent("Subagente API") →</div>
-          <div class="text-neutral-300 ml-4">"Implemente os endpoints REST para CRUD de produtos</div>
-          <div class="text-neutral-300 ml-4">em src/routes/products.ts. Use o padrao dos outros routes."</div>
-          <div class="text-neutral-300 mt-2">dispatch_agent("Subagente Tests") →</div>
-          <div class="text-neutral-300 ml-4">"Escreva testes para os endpoints de produtos.</div>
-          <div class="text-neutral-300 ml-4">Cubra CRUD completo, validacao e erros."</div>
-          <div class="text-neutral-300 mt-2">dispatch_agent("Subagente Docs") →</div>
-          <div class="text-neutral-300 ml-4">"Atualize a documentacao da API com os novos endpoints</div>
-          <div class="text-neutral-300 ml-4">de produtos no formato OpenAPI."</div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          A qualidade da delegacao depende da clareza das instrucoes. Seja especifico: em vez de "implemente o backend", diga "implemente os endpoints GET /products, POST /products, PUT /products/:id e DELETE /products/:id em src/routes/products.ts seguindo o padrao de src/routes/users.ts".
-        </p>
-        <p class="text-neutral-300">
-          Evite dependencias circulares entre subagentes. Se o subagente de testes precisa do codigo do subagente de API, eles nao podem rodar em paralelo. Nesse caso, use execucao sequencial.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🔄 Loop agentico autonomo</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O loop agentico e quando o Claude Code opera em modo <strong class="text-purple-400">autonomo por periodos estendidos</strong>, tomando decisoes, executando acoes e se auto-corrigindo sem intervencao humana. Com Agent Teams, esse loop se multiplica - cada subagente tem seu proprio loop autonomo.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O loop agentico segue o ciclo: <strong class="text-white">Observe → Think → Act → Verify → Repeat</strong>. O Claude observa o estado atual, pensa na proxima acao, executa, verifica o resultado e decide se precisa continuar. Esse loop roda ate a tarefa estar completa ou um limite ser atingido.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Observe:</strong> Le arquivos, roda testes, verifica estado do git para entender a situacao atual</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Think:</strong> Planeja a proxima acao baseado no que observou e no objetivo da tarefa</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Act:</strong> Edita arquivos, roda comandos, cria testes - executa a acao planejada</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Verify:</strong> Roda testes, build e linting para confirmar que a acao teve o efeito esperado</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Loop em Acao
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Tarefa que dispara um loop agentico</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Adicione validacao de input em todos os endpoints da API. Para cada endpoint:</span></div>
-          <div><span class="text-neutral-300">1. Identifique os parametros aceitos</span></div>
-          <div><span class="text-neutral-300">2. Adicione validacao com zod</span></div>
-          <div><span class="text-neutral-300">3. Crie teste para a validacao</span></div>
-          <div><span class="text-neutral-300">4. Rode os testes e corrija se necessario</span></div>
-          <div><span class="text-neutral-300">Repita para todos os endpoints.</span></div>
-          <div class="text-neutral-500 mt-3"># O Claude entra em loop:</div>
-          <div class="text-neutral-300">→ Le routes/users.ts (Observe)</div>
-          <div class="text-neutral-300">→ Planeja schema zod para POST /users (Think)</div>
-          <div class="text-neutral-300">→ Adiciona validacao + teste (Act)</div>
-          <div class="text-neutral-300">→ Roda npm test (Verify)</div>
-          <div class="text-neutral-300">→ Passa para GET /users/:id (Repeat)</div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          O loop agentico e mais eficaz quando voce define <strong class="text-white">criterios claros de conclusao</strong>: "Para quando todos os endpoints tiverem validacao E todos os testes passarem." Sem criterios claros, o loop pode ficar indefinido ou parar cedo demais.
-        </p>
-        <p class="text-neutral-300">
-          Use <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">/cost</code> apos loops longos. Um loop de 20+ iteracoes pode consumir muitos tokens. Configure limites: "Se o custo ultrapassar $2, pare e me avise."
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🌳 Worktrees isolados (git worktree)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A base tecnica de Agent Teams sao os <strong class="text-purple-400">git worktrees</strong>: cada subagente trabalha em uma copia isolada do repositorio, evitando conflitos quando multiplos agentes editam arquivos ao mesmo tempo. Entender worktrees e fundamental para usar Agent Teams efetivamente.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Um git worktree e um <strong class="text-white">diretorio de trabalho adicional</strong> vinculado ao mesmo repositorio git. Cada worktree pode estar em uma branch diferente e ter modificacoes independentes. O Claude cria worktrees temporarios para cada subagente e os remove apos o merge.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Isolamento completo:</strong> Cada subagente edita arquivos em seu proprio worktree sem afetar os outros. Sem conflitos de edicao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Branches separadas:</strong> Cada worktree opera em sua propria branch, facilitando o merge posterior</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Mesmo .git:</strong> Todos os worktrees compartilham o mesmo repositorio git, economizando espaco e mantendo a historia unificada</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Cleanup automatico:</strong> Apos o merge, o Claude remove os worktrees temporarios automaticamente</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Como Funciona
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># O que o Claude faz internamente:</div>
-          <div class="text-neutral-500 mt-2"># 1. Cria worktree para subagente</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">git worktree add ../agent-1-api feature/agent-1-api</span></div>
-          <div class="text-neutral-500 mt-2"># 2. Subagente trabalha no worktree</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">cd ../agent-1-api && claude -p "Implemente..."</span></div>
-          <div class="text-neutral-500 mt-2"># 3. Merge de volta</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">git merge feature/agent-1-api</span></div>
-          <div class="text-neutral-500 mt-2"># 4. Cleanup</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">git worktree remove ../agent-1-api</span></div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Worktrees consomem espaco em disco (cada um e basicamente uma copia do seu projeto, menos o .git). Em projetos grandes (>1GB), monitore o espaco disponivel antes de criar multiplos worktrees.
-        </p>
-        <p class="text-neutral-300">
-          Voce tambem pode usar worktrees manualmente (sem Agent Teams) para trabalhar em multiplas tarefas simultaneamente: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">git worktree add ../feature-x feature/x</code>.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🧭 Quando usar e quando evitar</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agent Teams e loop agentico sao ferramentas poderosas, mas <strong class="text-purple-400">nao sao para toda tarefa</strong>. Saber quando usar e tao importante quanto saber como usar. O overhead de coordenacao, custo de tokens e risco de conflitos tornam essa decisao critica.
-      </p>
-
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O framework de decisao e simples: <strong class="text-white">se a tarefa pode ser feita por um unico agente em menos de 30 minutos, nao use Agent Teams</strong>. O overhead de coordenacao so compensa quando ha paralelismo real e a tarefa e grande o suficiente.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Use quando:</strong> Tarefa tem 3+ subtarefas independentes, levaria >1h para um agente solo, envolve areas diferentes do codebase (frontend + backend + testes)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Evite quando:</strong> Tarefa e sequencial (cada passo depende do anterior), envolve poucos arquivos (<5), ou requer decisoes de design que precisam de supervisao humana</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Custo:</strong> Agent Teams consome 2-4x mais tokens que um agente solo. Justifica-se quando o speedup de tempo compensa o custo extra</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Risco:</strong> Mais agentes = mais chances de conflito no merge. Minimize designando areas de arquivo nao-sobrepostas para cada subagente</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Fazer vs Evitar -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-4">✓ Bons candidatos para Agent Teams</h4>
-          <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2">
-              <span class="text-purple-400">✓</span>
-              <span>Implementar feature full-stack (API + UI + testes)</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-purple-400">✓</span>
-              <span>Migracao de 20+ arquivos com areas independentes</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-purple-400">✓</span>
-              <span>Gerar testes para multiplos modulos simultaneamente</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-purple-400">✓</span>
-              <span>Refatoracao + documentacao + testes em paralelo</span>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Evite Agent Teams para</h4>
-          <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Bug fix em um unico arquivo</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Tarefas com alta dependencia entre subtarefas</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Decisoes de arquitetura que precisam de supervisao</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Projetos muito pequenos (&lt;10 arquivos)</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Comece com Agent Teams em tarefas de <strong class="text-white">baixo risco</strong> (geracao de testes, documentacao) antes de usa-lo para implementacao de features criticas. Isso permite que voce entenda o comportamento e os limites da ferramenta sem arriscar o codigo de producao.
-        </p>
-        <p class="text-neutral-300">
-          Regra pratica: se voce nao confia no resultado de um unico agente para a tarefa, nao confie no resultado de multiplos agentes. Agent Teams amplifica capacidade, mas tambem amplifica erros.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO PRATICO -->
-    <section id="exercicio" class="mb-16">
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-2 flex items-center">
-          <span class="mr-3">🏋️</span> Exercicio Pratico
-        </h2>
-        <p class="text-neutral-400 mb-8">Configurar Agent Teams e executar tarefa multi-agente</p>
-
-        <div class="space-y-8">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Habilitar Agent Teams</h4>
-              <p class="text-neutral-300 text-sm mb-3">Configure a variavel de ambiente e verifique:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</span></div>
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">claude</span></div>
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">/status</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Confirme que Agent Teams aparece como habilitado.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Definir tarefa paralelizavel</h4>
-              <p class="text-neutral-300 text-sm mb-3">Escolha uma tarefa que tenha subtarefas independentes:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Gere testes unitarios para os modulos: auth, products e orders.</span></div>
-                <div><span class="text-neutral-300">Cada modulo pode ser testado independentemente.</span></div>
-                <div><span class="text-neutral-300">Use subagentes para trabalhar em paralelo.</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Monitorar execucao</h4>
-              <p class="text-neutral-300 text-sm mb-3">Observe os subagentes trabalhando e monitore o custo:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">/cost</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Anote o tempo total e o custo. Compare com quanto levaria com um agente solo.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Verificar resultado e merge</h4>
-              <p class="text-neutral-300 text-sm mb-3">Confirme que tudo foi mergeado corretamente e os testes passam:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test</span></div>
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">git log --oneline -10</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Todos os testes devem passar e os commits dos subagentes devem estar no historico.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist -->
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Habilitou Agent Teams com sucesso</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Subagentes trabalharam em paralelo</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Worktrees foram criados e removidos</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Merge sem conflitos</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Todos os testes passam</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Avaliou custo vs tempo economizado</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Agent Teams = multiplos agentes em paralelo</strong>
-              <span class="text-neutral-400"> - Orchestrator divide e delega. Subagentes executam independentemente.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Ativacao via variavel de ambiente</strong>
-              <span class="text-neutral-400"> - CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 habilita a funcionalidade.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Delegacao com instrucoes claras</strong>
-              <span class="text-neutral-400"> - Cada subagente recebe escopo definido, sem ambiguidades.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Loop agentico: Observe → Think → Act → Verify</strong>
-              <span class="text-neutral-400"> - Ciclo autonomo que se repete ate a tarefa estar completa.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Worktrees garantem isolamento</strong>
-              <span class="text-neutral-400"> - Cada subagente trabalha em copia separada, sem conflitos de edicao.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Use para tarefas grandes e paralelizaveis</strong>
-              <span class="text-neutral-400"> - Evite para tarefas pequenas, sequenciais ou que precisam de supervisao.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-purple-400 mb-2">Proximo Passo:</h3>
-          <p class="text-neutral-300">Trilha 4 - Prompts: Engenharia de Prompt para Claude Code</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-8.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="../trilha4/index.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">
-            Proxima Trilha →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🧭 When to use and when to avoid</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Agent Teams and agentic loop are powerful tools, but<strong class="text-purple-400">not for every task</strong>. Knowing when to use it is just as important as knowing how to use it. The coordination overhead, cost of tokens and risk of conflicts make this decision critical.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The decision framework is simple:<strong class="text-white">If the task can be done by a single agent in less than 30 minutes, don't use Agent Teams</strong>. The coordination overhead only pays off when there is real parallelism and the task is large enough.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Use when:</strong>Task has 3+ independent subtasks, would take &gt;1h for a solo agent, involves different areas of the codebase (frontend + backend + tests)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Avoid when:</strong>Task is sequential (each step depends on the previous one), involves few files (&lt;5), or requires design decisions that need human supervision</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Cost:</strong>Agent Teams consume 2-4x more tokens than a solo agent. Justified when the time speedup compensates the extra cost</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Risk:</strong>More agents = more chances of conflict in the merge. Minimize by assigning non-overlapping file areas to each subagent</span>
+</li>
+</ul>
+</div>
+Do vs Avoid
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<h4 class="font-bold text-purple-400 mb-4">✓ Good candidates for Agent Teams</h4>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400">✓</span>
+<span>Implement full-stack feature (API + UI + tests)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400">✓</span>
+<span>Migration of 20+ files with independent areas</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400">✓</span>
+<span>Generate tests for multiple modules simultaneously</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400">✓</span>
+<span>Refactoring + documentation + parallel testing</span>
+</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ Avoid Agent Teams for</h4>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>Bug fix in a single file</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>Tasks with high dependency between subtasks</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>Architectural decisions that need oversight</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>Very small projects (&lt;10 files)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Get started with Agent Teams in tasks<strong class="text-white">low risk</strong>(test generation, documentation) before using it to implement critical features. This allows you to understand the behavior and limits of the tool without risking production code.</p>
+<p class="text-neutral-300">Rule of thumb: if you don't trust the result of a single agent for the task, don't trust the result of multiple agents. Agent Teams amplifies capacity, but it also amplifies errors.</p>
+</div>
+</section>
+PRACTICAL EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-2 flex items-center">
+<span class="mr-3">🏋️</span>Practical Exercise</h2>
+<p class="text-neutral-400 mb-8">Configure Agent Teams and perform multi-agent tasking</p>
+<div class="space-y-8">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Enable Agent Teams</h4>
+<p class="text-neutral-300 text-sm mb-3">Configure the environment variable and check:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</span></div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">claude</span></div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/status</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Confirm that Agent Teams appears as enabled.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Define parallelizable task</h4>
+<p class="text-neutral-300 text-sm mb-3">Choose a task that has independent subtasks:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Generate unit tests for the modules: auth, products and orders.</span></div>
+<div><span class="text-neutral-300">Each module can be tested independently.</span></div>
+<div><span class="text-neutral-300">Use subagents to work in parallel.</span></div>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Monitor execution</h4>
+<p class="text-neutral-300 text-sm mb-3">Watch the subagents work and monitor the cost:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">/cost</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Write down the total time and cost. Compare that to how much it would take with a solo agent.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Check result and merge</h4>
+<p class="text-neutral-300 text-sm mb-3">Confirm that everything was merged correctly and the tests pass:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test</span></div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">git log --oneline -10</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">All tests must pass and subagents' commits must be in history.</p>
+</div>
+</div>
+</div>
+</div>
+Checklist
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Successfully enabled Agent Teams</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Subagents worked in parallel</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Worktrees were created and removed</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Merge without conflicts</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">All tests pass</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Evaluated cost vs time saved</span>
+</div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Agent Teams = multiple agents in parallel</strong>
+<span class="text-neutral-400">- Orchestrator divides and delegates. Subagents execute independently.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Activation via environment variable</strong>
+<span class="text-neutral-400">- CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 enables the functionality.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Delegation with clear instructions</strong>
+<span class="text-neutral-400">- Each sub-agent receives a defined scope, without ambiguities.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Agentic loop: Observe → Think → Act → Verify</strong>
+<span class="text-neutral-400">- Autonomous cycle that repeats until the task is complete.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Worktrees guarantee isolation</strong>
+<span class="text-neutral-400">- Each subagent works in a separate copy, without editing conflicts.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Use for large, parallelizable tasks</strong>
+<span class="text-neutral-400">- Avoid for small, sequential tasks or those that require supervision.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-purple-400 mb-2">Next Step:</h3>
+<p class="text-neutral-300">Track 4 - Prompts: Prompt Engineering for Claude Code</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-8.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="../trilha4/index.html">Next Trail →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -789,6 +664,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
