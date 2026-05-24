@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 1.7 - Criando Aliases e Scripts | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 1.7 - Creating Aliases and Scripts | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,838 +42,701 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
-      <span>/</span>
-      <span class="text-emerald-400">Modulo 1.7</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 1.7
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⚡ Criando Aliases e Scripts</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Transforme comandos repetitivos em aliases rapidos e scripts reutilizaveis. Automatize seu fluxo de trabalho com Claude Code usando o poder do shell.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">30</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Intermediario</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 1: O que sao aliases shell -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📖 O que sao Aliases Shell</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Um alias e simplesmente um <strong class="text-emerald-400">atalho de texto para um comando mais longo</strong>. Em vez de digitar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">git status</code> toda vez, voce pode criar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">gs</code> e economizar tempo. Para o Claude Code, aliases transformam comandos complexos com muitas flags em atalhos de duas ou tres letras.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Aliases vivem no arquivo de configuracao do seu shell: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.bashrc</code> para bash ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.zshrc</code> para zsh. Quando voce adiciona um alias e recarrega o arquivo, o atalho fica disponivel em todas as sessoes de terminal.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Sintaxe basica:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">alias nome='comando'</code> - o nome substitui o comando entre aspas simples</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Persistencia:</strong> Aliases definidos diretamente no terminal sao temporarios (morrem com a sessao). Para permanentes, adicione ao <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.zshrc</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.bashrc</code></span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Recarregar:</strong> Apos editar o arquivo, rode <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">source ~/.zshrc</code> (ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">source ~/.bashrc</code>) para ativar as mudancas sem abrir novo terminal</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Listar aliases:</strong> Rode <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">alias</code> sem argumentos para ver todos os aliases ativos. Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">alias nome</code> para ver a definicao de um especifico</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Exemplo Basico
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># Criar alias temporario (morre com o terminal)</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">alias gs='git status'</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">gs</span>  <span class="text-neutral-500"># equivale a "git status"</span><br><br>
-          <span class="text-neutral-500"># Criar alias permanente (adicionar ao ~/.zshrc)</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "alias gs='git status'" >> ~/.zshrc</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.zshrc</span><br><br>
-          <span class="text-neutral-500"># Ver todos os aliases</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">alias</span><br>
-          <span class="text-neutral-500"># Remover um alias</span><br>
-          <span class="text-neutral-500">$</span> <span class="text-emerald-400">unalias gs</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Use nomes curtos e mnemonicos. <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cc</code> para claude, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccp</code> para claude -p, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccr</code> para claude --resume. Quanto mais curto e intuitivo, mais voce vai usar.
-        </p>
-        <p class="text-neutral-300">
-          Antes de criar um alias, verifique se o nome nao conflita com um comando existente usando <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">which nome</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">type nome</code>. Evite sobrescrever comandos do sistema.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 2: Aliases basicos para Claude Code -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🚀 Aliases Basicos para Claude Code</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Com aliases bem definidos, voce transforma o Claude Code de uma ferramenta que exige digitacao em uma que responde a <strong class="text-emerald-400">atalhos de duas letras</strong>. Vamos criar os aliases mais uteis para o dia a dia, cobrindo os modos mais comuns de uso.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Os aliases mais valiosos para o Claude Code cobrem tres categorias: <strong class="text-white">iniciar sessoes</strong> (interativa, print, resume), <strong class="text-white">operacoes rapidas</strong> (review, commit, test) e <strong class="text-white">diagnostico</strong> (debug, analise de logs).
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">cc:</strong> Alias para <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude</code> - abrir sessao interativa rapidamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">ccp:</strong> Alias para <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p</code> - modo print/pipe para one-shots</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">ccr:</strong> Alias para <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude --resume</code> - retomar sessao anterior</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">ccv:</strong> Alias para <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude --version</code> - verificar versao rapidamente</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Kit Basico de Aliases
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># === Claude Code Aliases (adicionar ao ~/.zshrc) ===</span><br><br>
-          <span class="text-neutral-500"># Sessoes</span><br>
-          <span class="text-emerald-400">alias cc='claude'</span><br>
-          <span class="text-emerald-400">alias ccp='claude -p'</span><br>
-          <span class="text-emerald-400">alias ccr='claude --resume'</span><br>
-          <span class="text-emerald-400">alias ccv='claude --version'</span><br><br>
-          <span class="text-neutral-500"># Operacoes rapidas</span><br>
-          <span class="text-emerald-400">alias ccreview='claude -p "faca code review do git diff staged" < <(git diff --staged)'</span><br>
-          <span class="text-emerald-400">alias cctest='claude -p "analise os resultados dos testes"'</span><br>
-          <span class="text-emerald-400">alias ccexplain='claude -p "explique este projeto em 5 linhas"'</span><br><br>
-          <span class="text-neutral-500"># Diagnostico</span><br>
-          <span class="text-emerald-400">alias ccdebug='claude -p "diagnostique este erro e sugira correcao"'</span><br>
-          <span class="text-emerald-400">alias cclog='claude -p "analise estes logs e identifique problemas"'</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          O alias <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cc</code> e tao natural que voce vai esquecer que nao e o nome real do comando. Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cc</code> para sessoes interativas e <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccp</code> quando precisar de one-shots.
-        </p>
-        <p class="text-neutral-300">
-          Dica avancada: para aliases que recebem pipe, o formato e <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">comando | cclog</code>. O alias cclog recebe o stdin do pipe automaticamente porque o <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p "..."</code> ja aceita stdin.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 3: Aliases compostos com argumentos -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🔧 Aliases Compostos com Argumentos</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Aliases simples nao aceitam argumentos. Para criar atalhos que recebem parametros dinamicos (como nomes de arquivo, prompts customizados ou opcoes), voce precisa de <strong class="text-emerald-400">funcoes shell</strong>. Funcoes funcionam como aliases turbinados: aceitam argumentos, tem logica condicional e podem executar multiplos comandos.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          No shell, funcoes sao definidas com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">nome() { ... }</code> e acessam argumentos via <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">$1</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">$2</code>, etc. Coloque-as no <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.zshrc</code> junto com seus aliases para que fiquem disponiveis em todas as sessoes.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">$1, $2, $3...:</strong> Primeiro, segundo, terceiro argumento passado para a funcao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">$@:</strong> Todos os argumentos juntos. Util para passar prompts completos com espacos</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">$#:</strong> Numero de argumentos. Use para validacao e mensagens de uso</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Aspas duplas:</strong> Sempre envolva variaveis em aspas duplas (<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">"$1"</code>) para preservar espacos e caracteres especiais</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Funcoes com Argumentos
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># Funcao: pedir ao Claude para analisar qualquer arquivo</span><br>
-          <span class="text-emerald-400">ccfile() {</span><br>
-          <span class="text-emerald-400">  cat "$1" | claude -p "${2:-analise este arquivo}"</span><br>
-          <span class="text-emerald-400">}</span><br>
-          <span class="text-neutral-500"># Uso: ccfile src/app.py "encontre bugs neste arquivo"</span><br>
-          <span class="text-neutral-500"># Uso: ccfile config.yaml  (usa prompt padrao)</span><br><br>
-
-          <span class="text-neutral-500"># Funcao: review de um arquivo especifico</span><br>
-          <span class="text-emerald-400">ccrev() {</span><br>
-          <span class="text-emerald-400">  cat "$1" | claude -p "faca code review deste arquivo focando em: ${2:-qualidade geral, seguranca e performance}"</span><br>
-          <span class="text-emerald-400">}</span><br>
-          <span class="text-neutral-500"># Uso: ccrev src/auth.py "seguranca e SQL injection"</span><br><br>
-
-          <span class="text-neutral-500"># Funcao: perguntar algo ao Claude com contexto do projeto</span><br>
-          <span class="text-emerald-400">ccask() {</span><br>
-          <span class="text-emerald-400">  claude -p "$@"</span><br>
-          <span class="text-emerald-400">}</span><br>
-          <span class="text-neutral-500"># Uso: ccask "qual o padrao de design usado neste projeto?"</span><br><br>
-
-          <span class="text-neutral-500"># Funcao: gerar testes para um arquivo</span><br>
-          <span class="text-emerald-400">cctest() {</span><br>
-          <span class="text-emerald-400">  local arquivo="$1"</span><br>
-          <span class="text-emerald-400">  local saida="${arquivo%.py}_test.py"</span><br>
-          <span class="text-emerald-400">  cat "$arquivo" | claude -p "gere testes unitarios com pytest para este codigo" > "$saida"</span><br>
-          <span class="text-emerald-400">  echo "Testes gerados em: $saida"</span><br>
-          <span class="text-emerald-400">}</span><br>
-          <span class="text-neutral-500"># Uso: cctest src/utils.py → gera src/utils_test.py</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">${2:-valor_padrao}</code> para dar valores padrao a argumentos opcionais. Isso torna suas funcoes mais flexiveis: funcionam com ou sem o argumento extra.
-        </p>
-        <p class="text-neutral-300">
-          Nomeie funcoes com o prefixo <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cc</code> para manter consistencia e facilitar a memoria. <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccfile</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccrev</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cctest</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">ccask</code> - todos comecam com "cc" para que voce saiba que envolvem Claude Code.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 4: Scripts bash com Claude -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📜 Scripts Bash com Claude</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Quando a logica fica mais complexa do que uma funcao permite, e hora de criar <strong class="text-emerald-400">scripts bash dedicados</strong>. Scripts sao arquivos .sh executaveis que combinam comandos shell com chamadas ao Claude Code, adicionando tratamento de erros, loops, condicoes e variaveis de ambiente.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Um script bash e um arquivo de texto com extensao <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">.sh</code> que comeca com o shebang <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">#!/bin/bash</code> e contem comandos executaveis. Com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">chmod +x script.sh</code>, ele se torna um programa executavel.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Shebang:</strong> Sempre comece com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">#!/bin/bash</code> (ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">#!/usr/bin/env bash</code> para portabilidade) na primeira linha</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">set -euo pipefail:</strong> Adicione na segunda linha para tratamento rigoroso de erros. -e para na primeira falha, -u trata variaveis indefinidas como erro, -o pipefail propaga erros em pipes</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Permissao:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">chmod +x script.sh</code> para tornar executavel. Depois rode com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">./script.sh</code> ou coloque em <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/bin/</code> para acessar de qualquer lugar</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Organizacao:</strong> Guarde seus scripts em <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/bin/</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.local/bin/</code> e adicione ao PATH para executar de qualquer diretorio</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Script -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Script: Code Review Automatizado
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500">#!/bin/bash</span><br>
-          <span class="text-neutral-500"># cc-review.sh - Code review automatizado com Claude Code</span><br>
-          <span class="text-emerald-400">set -euo pipefail</span><br><br>
-          <span class="text-neutral-500"># Verificar se estamos num repo git</span><br>
-          <span class="text-emerald-400">if ! git rev-parse --is-inside-work-tree &> /dev/null; then</span><br>
-          <span class="text-emerald-400">  echo "Erro: nao estamos num repositorio git"</span><br>
-          <span class="text-emerald-400">  exit 1</span><br>
-          <span class="text-emerald-400">fi</span><br><br>
-          <span class="text-neutral-500"># Capturar diff (staged ou unstaged)</span><br>
-          <span class="text-emerald-400">DIFF=$(git diff --staged)</span><br>
-          <span class="text-emerald-400">if [ -z "$DIFF" ]; then</span><br>
-          <span class="text-emerald-400">  DIFF=$(git diff)</span><br>
-          <span class="text-emerald-400">fi</span><br><br>
-          <span class="text-emerald-400">if [ -z "$DIFF" ]; then</span><br>
-          <span class="text-emerald-400">  echo "Nenhuma mudanca para revisar."</span><br>
-          <span class="text-emerald-400">  exit 0</span><br>
-          <span class="text-emerald-400">fi</span><br><br>
-          <span class="text-neutral-500"># Enviar para o Claude</span><br>
-          <span class="text-emerald-400">echo "$DIFF" | claude -p "Faca code review detalhado. Aponte: bugs, seguranca, performance, legibilidade. Formato: Markdown com severidade (critico/alto/medio/baixo)." | tee review-$(date +%Y%m%d).md</span><br><br>
-          <span class="text-emerald-400">echo "Review salvo em review-$(date +%Y%m%d).md"</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Sempre adicione <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">set -euo pipefail</code> nos seus scripts. Sem isso, erros silenciosos podem causar comportamento inesperado. Por exemplo, se <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">claude -p</code> falhar por falta de autenticacao, o script continuaria executando os proximos comandos com dados vazios.
-        </p>
-        <p class="text-neutral-300">
-          Mantenha seus scripts em um repo git dedicado (ex: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/dotfiles/scripts/</code>) para versionamento e sincronizacao entre maquinas.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 5: Funcoes shell avancadas -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🧩 Funcoes Shell Avancadas</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Funcoes avancadas combinam <strong class="text-emerald-400">logica condicional, loops, integracao com git e processamento de dados</strong> para criar workflows completos. Estas funcoes vao alem de simples atalhos: elas automatizam fluxos de trabalho inteiros com o Claude Code.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Funcoes avancadas usam recursos do shell como <strong class="text-white">variaveis locais</strong>, <strong class="text-white">substituicao de comando</strong> ($(...)), <strong class="text-white">condicoes</strong> (if/elif/else), <strong class="text-white">loops</strong> (for/while) e <strong class="text-white">redirecionamento</strong> para criar fluxos sofisticados.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Variaveis locais:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">local var=valor</code> dentro de funcoes para evitar poluir o escopo global</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Substituicao de comando:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">resultado=$(comando)</code> captura a saida de um comando em uma variavel</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Integracao com git:</strong> Funcoes que combinam git log, git diff e Claude para analises automatizadas do repositorio</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Validacao de entrada:</strong> Sempre verifique se os argumentos necessarios foram fornecidos antes de chamar o Claude</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplos Avancados -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Funcoes Avancadas
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># Funcao: commit inteligente (gera mensagem com Claude)</span><br>
-          <span class="text-emerald-400">cccommit() {</span><br>
-          <span class="text-emerald-400">  local diff=$(git diff --staged)</span><br>
-          <span class="text-emerald-400">  if [ -z "$diff" ]; then</span><br>
-          <span class="text-emerald-400">    echo "Nada no staging. Use 'git add' primeiro."</span><br>
-          <span class="text-emerald-400">    return 1</span><br>
-          <span class="text-emerald-400">  fi</span><br>
-          <span class="text-emerald-400">  local msg=$(echo "$diff" | claude -p "gere uma mensagem de commit concisa em ingles seguindo conventional commits. Apenas a mensagem, sem explicacao.")</span><br>
-          <span class="text-emerald-400">  echo "Mensagem sugerida: $msg"</span><br>
-          <span class="text-emerald-400">  read -p "Usar esta mensagem? [Y/n] " resposta</span><br>
-          <span class="text-emerald-400">  if [[ "$resposta" != "n" ]]; then</span><br>
-          <span class="text-emerald-400">    git commit -m "$msg"</span><br>
-          <span class="text-emerald-400">  fi</span><br>
-          <span class="text-emerald-400">}</span><br><br>
-
-          <span class="text-neutral-500"># Funcao: analise de qualidade do projeto</span><br>
-          <span class="text-emerald-400">ccquality() {</span><br>
-          <span class="text-emerald-400">  local dir="${1:-.}"</span><br>
-          <span class="text-emerald-400">  echo "Analisando $dir..."</span><br>
-          <span class="text-emerald-400">  {</span><br>
-          <span class="text-emerald-400">    echo "=== Estrutura ==="</span><br>
-          <span class="text-emerald-400">    find "$dir" -type f -name "*.py" -o -name "*.js" -o -name "*.ts" | head -30</span><br>
-          <span class="text-emerald-400">    echo "=== TODOs ==="</span><br>
-          <span class="text-emerald-400">    grep -rn "TODO\|FIXME" "$dir" --include="*.py" --include="*.js" 2>/dev/null | head -20</span><br>
-          <span class="text-emerald-400">    echo "=== Git Stats ==="</span><br>
-          <span class="text-emerald-400">    git log --oneline -10 2>/dev/null</span><br>
-          <span class="text-emerald-400">  } | claude -p "Com base nesta visao geral, avalie a qualidade do projeto e sugira 5 melhorias prioritarias"</span><br>
-          <span class="text-emerald-400">}</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          A funcao <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">cccommit</code> e um game-changer. Nunca mais perca tempo pensando na mensagem de commit - o Claude analisa o diff e sugere uma mensagem precisa seguindo conventional commits. Voce so confirma e pronto.
-        </p>
-        <p class="text-neutral-300">
-          Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">return 1</code> (nao <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">exit 1</code>) dentro de funcoes. <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">exit</code> fecha o terminal inteiro; <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">return</code> sai apenas da funcao.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 6: Organizacao do .zshrc/.bashrc -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">📂 Organizacao do .zshrc/.bashrc</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Conforme voce adiciona mais aliases e funcoes, o arquivo de configuracao do shell pode ficar <strong class="text-emerald-400">bagunçado e dificil de manter</strong>. Uma boa organizacao garante que voce encontre, edite e compartilhe seus atalhos facilmente. Vamos ver as melhores praticas para manter tudo limpo e modular.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A melhor pratica e <strong class="text-white">modularizar</strong> seu arquivo de configuracao. Em vez de colocar tudo no <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.zshrc</code>, separe aliases e funcoes em arquivos dedicados e use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">source</code> para carrega-los.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Arquivo dedicado:</strong> Crie <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.claude_aliases</code> com todos os aliases e funcoes do Claude Code. No <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">~/.zshrc</code>, adicione <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">source ~/.claude_aliases</code></span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Secoes com comentarios:</strong> Use blocos de comentarios para separar categorias: # === Git ===, # === Claude Code ===, # === Docker ===</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Dotfiles repo:</strong> Mantenha seus arquivos de configuracao num repositorio git (~/ dotfiles) para versionamento, backup e sincronizacao entre maquinas</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Condicao de existencia:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">[ -f ~/.claude_aliases ] && source ~/.claude_aliases</code> para evitar erros se o arquivo nao existir</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Estrutura Organizada -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Estrutura Recomendada
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># ~/.zshrc (arquivo principal - limpo e organizado)</span><br><br>
-          <span class="text-neutral-500"># === Configuracoes basicas ===</span><br>
-          <span class="text-emerald-400">export EDITOR=vim</span><br>
-          <span class="text-emerald-400">export PATH="$HOME/bin:$HOME/.local/bin:$PATH"</span><br><br>
-          <span class="text-neutral-500"># === Carregar modulos ===</span><br>
-          <span class="text-emerald-400">[ -f ~/.aliases ] && source ~/.aliases</span><br>
-          <span class="text-emerald-400">[ -f ~/.claude_aliases ] && source ~/.claude_aliases</span><br>
-          <span class="text-emerald-400">[ -f ~/.git_aliases ] && source ~/.git_aliases</span><br>
-          <span class="text-emerald-400">[ -f ~/.functions ] && source ~/.functions</span><br><br>
-          <span class="text-neutral-500"># === Plugins e frameworks ===</span><br>
-          <span class="text-neutral-500"># ... oh-my-zsh, starship, etc.</span>
-        </div>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">⌨️</span> Arquivo ~/.claude_aliases
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-          <span class="text-neutral-500"># ~/.claude_aliases - Aliases e funcoes do Claude Code</span><br>
-          <span class="text-neutral-500"># Atualizado: 2026-03-08</span><br><br>
-          <span class="text-neutral-500"># === Sessoes ===</span><br>
-          <span class="text-emerald-400">alias cc='claude'</span><br>
-          <span class="text-emerald-400">alias ccp='claude -p'</span><br>
-          <span class="text-emerald-400">alias ccr='claude --resume'</span><br><br>
-          <span class="text-neutral-500"># === Funcoes de Analise ===</span><br>
-          <span class="text-emerald-400">ccfile() { cat "$1" | claude -p "${2:-analise este arquivo}"; }</span><br>
-          <span class="text-emerald-400">ccrev() { cat "$1" | claude -p "code review: ${2:-geral}"; }</span><br><br>
-          <span class="text-neutral-500"># === Funcoes Git + Claude ===</span><br>
-          <span class="text-emerald-400">cccommit() { ... }</span><br>
-          <span class="text-emerald-400">ccquality() { ... }</span><br><br>
-          <span class="text-neutral-500"># === Diagnostico ===</span><br>
-          <span class="text-emerald-400">alias ccdebug='claude -p "diagnostique este erro"'</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Use um repositorio <strong class="text-white">dotfiles</strong> no GitHub para versionar todos os seus arquivos de configuracao. Assim, quando configurar uma maquina nova, basta clonar o repo e rodar um script de setup para ter todos os seus aliases e funcoes prontos.
-        </p>
-        <p class="text-neutral-300">
-          Compartilhe seus aliases uteis com colegas! Um arquivo <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">.claude_aliases</code> bem organizado pode acelerar a adocao do Claude Code por toda a equipe.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">&#9733;</span>
-        <h2 class="text-2xl font-bold">🏋️ Exercicio Pratico</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Neste exercicio voce vai criar <strong class="text-emerald-400">5 aliases uteis no seu .zshrc ou .bashrc</strong> para o Claude Code, organizados num arquivo dedicado. Ao final, voce tera um kit de produtividade personalizado.
-      </p>
-
-      <!-- Box Principal do Exercicio -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
-        <div class="flex items-center space-x-3 mb-6">
-          <span class="text-3xl">🏋️</span>
-          <div>
-            <h3 class="text-xl font-bold text-emerald-400">Exercicio: Criar 5 Aliases Uteis para Claude Code</h3>
-            <p class="text-neutral-400 text-sm">Tempo estimado: 15-20 minutos</p>
-          </div>
-        </div>
-
-        <!-- Passos Numerados -->
-        <div class="space-y-6">
-          <!-- Passo 1 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Criar arquivo dedicado de aliases</h4>
-              <p class="text-neutral-300 text-sm mb-3">Crie o arquivo ~/.claude_aliases:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">touch ~/.claude_aliases</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "# Claude Code Aliases - $(date +%Y-%m-%d)" > ~/.claude_aliases</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 2 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Adicionar os 5 aliases essenciais</h4>
-              <p class="text-neutral-300 text-sm mb-3">Abra o arquivo no editor e adicione:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cat >> ~/.claude_aliases << 'EOF'</span><br>
-                <span class="text-neutral-300">alias cc='claude'</span><br>
-                <span class="text-neutral-300">alias ccp='claude -p'</span><br>
-                <span class="text-neutral-300">alias ccr='claude --resume'</span><br>
-                <span class="text-neutral-300">ccfile() { cat "$1" | claude -p "${2:-analise este arquivo}"; }</span><br>
-                <span class="text-neutral-300">cccommit() { git diff --staged | claude -p "gere mensagem de commit concisa em ingles, conventional commits, apenas a mensagem"; }</span><br>
-                <span class="text-emerald-400">EOF</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 3 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Integrar ao .zshrc/.bashrc</h4>
-              <p class="text-neutral-300 text-sm mb-3">Adicione a linha de source ao seu arquivo de configuracao:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">echo '[ -f ~/.claude_aliases ] && source ~/.claude_aliases' >> ~/.zshrc</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.zshrc</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 4 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Testar os aliases</h4>
-              <p class="text-neutral-300 text-sm mb-3">Verifique que todos funcionam:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">alias cc</span>  <span class="text-neutral-500"># deve mostrar cc='claude'</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">type ccfile</span>  <span class="text-neutral-500"># deve mostrar a funcao</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">ccfile ~/.zshrc "resuma em 3 linhas"</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 5 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">5</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Adicionar seu proprio alias personalizado</h4>
-              <p class="text-neutral-300 text-sm mb-3">Crie um alias que seja util para o SEU fluxo de trabalho especifico:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500"># Exemplo: alias para o framework que voce usa</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">echo 'alias ccnext="claude -p \"analise este projeto Next.js e sugira otimizacoes\""' >> ~/.claude_aliases</span><br>
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.claude_aliases</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist de Sucesso -->
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Arquivo ~/.claude_aliases criado</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">5 aliases/funcoes definidos</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Source integrado ao .zshrc</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Todos testados e funcionando</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- RESUMO FINAL -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Aliases sao atalhos de texto para comandos longos</strong>
-              <span class="text-neutral-400"> - Definidos no ~/.zshrc ou ~/.bashrc, persistem entre sessoes com source.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">cc, ccp, ccr sao os aliases essenciais</strong>
-              <span class="text-neutral-400"> - Sessao interativa, modo print e resume com atalhos de duas letras.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Funcoes aceitam argumentos dinamicos</strong>
-              <span class="text-neutral-400"> - Use $1, $2, $@ para criar atalhos flexiveis como ccfile e ccrev.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Scripts bash adicionam logica complexa</strong>
-              <span class="text-neutral-400"> - Tratamento de erros, condicoes, loops e integracao com git em arquivos .sh.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Funcoes avancadas automatizam workflows completos</strong>
-              <span class="text-neutral-400"> - cccommit gera mensagens de commit, ccquality analisa projetos inteiros.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Organizacao modular mantem tudo limpo</strong>
-              <span class="text-neutral-400"> - Arquivo dedicado ~/.claude_aliases com source condicional e dotfiles versionado.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-emerald-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">1.8 - Modo Headless e Automacao CLI</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-1-6.html" class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-1-8.html" class="flex-1 text-left px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors justify-start">
-            Proximo Modulo →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-emerald-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-emerald-400" href="index.html">Track 1</a>
+<span>/</span>
+<span class="text-emerald-400">Module 1.7</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.7</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">⚡ Creating Aliases and Scripts</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Turn repetitive commands into quick aliases and reusable scripts. Automate your workflow with Claude Code using the power of the shell.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">30</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Intermediary</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+═══════════════════════════ ════════════════════════════
+TOPIC 1: What are shell aliases
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📖 What are Shell Aliases</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">An alias is simply a<strong class="text-emerald-400">text shortcut for a longer command</strong>. Instead of typing<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">git status</code>every time, you can create<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">gs</code>and save time. For Claude Code, aliases transform complex commands with many flags into two- or three-letter shortcuts.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Aliases live in your shell's configuration file:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.bashrc</code>for bash or<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.zshrc</code>for zsh. When you add an alias and reload the file, the shortcut is available in all terminal sessions.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Basic syntax:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">alias nome='comando'</code>- the name replaces the command in single quotes</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Persistence:</strong>Aliases defined directly in the terminal are temporary (they die with the session). For permanents, add to<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.zshrc</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.bashrc</code></span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Recharge:</strong>After editing the file, run<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">source ~/.zshrc</code>(or<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">source ~/.bashrc</code>) to activate the changes without opening a new terminal</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">List aliases:</strong>Rotate<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">alias</code>no arguments to see all active aliases. Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">alias nome</code>to see the definition of a specific</span>
+</li>
+</ul>
+</div>
+Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Basic Example</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Create temporary alias (dies with the terminal)</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">alias gs='git status'</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">gs</span> <span class="text-neutral-500"># is equivalent to "git status"</span><br/><br/>
+<span class="text-neutral-500"># Create permanent alias (add to ~/.zshrc)</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "alias gs='git status'" &gt;&gt; ~/.zshrc</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.zshrc</span><br/><br/>
+<span class="text-neutral-500"># See all aliases</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">indeed</span><br/>
+<span class="text-neutral-500"># Remove an alias</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">unalias gs</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Use short, mnemonic names.<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cc</code>for claude,<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccp</code>for claude -p,<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccr</code>for claude --resume. The shorter and more intuitive, the more you will use it.</p>
+<p class="text-neutral-300">Before creating an alias, check that the name does not conflict with an existing command using<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">which nome</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">type nome</code>. Avoid overwriting system commands.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 2: Basic aliases for Claude Code
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🚀 Basic Aliases for Claude Code</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">With well-defined aliases, you transform Claude Code from a tool that requires typing into one that responds to<strong class="text-emerald-400">two-letter shortcuts</strong>. We will create the most useful aliases for everyday life, covering the most common ways of use.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The most valuable aliases for Claude Code cover three categories:<strong class="text-white">start sessions</strong>(interactive, print, summarize),<strong class="text-white">quick operations</strong>(review, commit, test) and<strong class="text-white">diagnosis</strong>(debug, log analysis).</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">cc:</strong>Alias ​​for<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude</code>- open interactive session quickly</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">ccp:</strong>Alias ​​for<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p</code>- print/pipe mode for one-shots</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">ccr:</strong>Alias ​​for<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude --resume</code>- resume previous session</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">ccv:</strong>Alias ​​for<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude --version</code>- check version quickly</span>
+</li>
+</ul>
+</div>
+Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Basic Aliases Kit</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># === Claude Code Aliases (add to ~/.zshrc) ===</span><br/><br/>
+<span class="text-neutral-500"># Sessions</span><br/>
+<span class="text-emerald-400">alias cc='claude'</span><br/>
+<span class="text-emerald-400">alias ccp='claude -p'</span><br/>
+<span class="text-emerald-400">alias ccr='claude --resume'</span><br/>
+<span class="text-emerald-400">alias ccv='claude --version'</span><br/><br/>
+<span class="text-neutral-500"># Fast operations</span><br/>
+<span class="text-emerald-400">alias ccreview='claude -p "faca code review do git diff staged" &lt; &lt;(git diff --staged)'</span><br/>
+<span class="text-emerald-400">alias cctest='claude -p "analyze test results"'</span><br/>
+<span class="text-emerald-400">alias ccexplain='claude -p "explain this project in 5 lines"'</span><br/><br/>
+<span class="text-neutral-500"># Diagnosis</span><br/>
+<span class="text-emerald-400">alias ccdebug='claude -p "diagnose this error and suggest correction"'</span><br/>
+<span class="text-emerald-400">alias cclog='claude -p "analyze these logs and identify problems"'</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">The alias<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cc</code>It's so natural that you'll forget it's not the real name of the command. Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cc</code>for interactive sessions and<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccp</code>when you need one-shots.</p>
+<p class="text-neutral-300">Advanced tip: for aliases that receive pipe, the format and<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">comando | cclog</code>. The cclog alias receives the pipe's stdin automatically because the<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p "..."</code>already accepts stdin.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 3: Composite aliases with arguments
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🔧 Compound Aliases with Arguments</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Simple aliases do not accept arguments. To create shortcuts that take dynamic parameters (such as file names, custom prompts, or options), you need<strong class="text-emerald-400">shell functions</strong>. Functions work like turbocharged aliases: they accept arguments, have conditional logic and can execute multiple commands.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">In the shell, functions are defined with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">nome() { ... }</code>and access arguments via<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">$1</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">$2</code>, etc. Put them in<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.zshrc</code>along with their aliases so that they are available in all sessions.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">$1, $2, $3...:</strong>First, second, third argument passed to the function</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">$@:</strong>All arguments together. Useful for passing complete prompts with spaces</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">$#:</strong>Number of arguments. Use for validation and usage messages</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Double quotes:</strong>Always enclose variables in double quotes (<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">"$1"</code>) to preserve spaces and special characters</span>
+</li>
+</ul>
+</div>
+Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Functions with Arguments</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Function: ask Claude to analyze any file</span><br/>
+<span class="text-emerald-400">ccfile() {</span><br/>
+<span class="text-emerald-400">cat "$1" | claude -p "${2:-parse this file}"</span><br/>
+<span class="text-emerald-400">}</span><br/>
+<span class="text-neutral-500"># Usage: ccfile src/app.py "find bugs in this file"</span><br/>
+<span class="text-neutral-500"># Usage: ccfile config.yaml (uses standard prompt)</span><br/><br/>
+<span class="text-neutral-500"># Function: review of a specific file</span><br/>
+<span class="text-emerald-400">ccrev() {</span><br/>
+<span class="text-emerald-400">cat "$1" | claude -p "do code review of this file focusing on: ${2:-general quality, security and performance}"</span><br/>
+<span class="text-emerald-400">}</span><br/>
+<span class="text-neutral-500"># Usage: ccrev src/auth.py "security and SQL injection"</span><br/><br/>
+<span class="text-neutral-500"># Function: ask Claude something with project context</span><br/>
+<span class="text-emerald-400">ccask() {</span><br/>
+<span class="text-emerald-400">claude -p "$@"</span><br/>
+<span class="text-emerald-400">}</span><br/>
+<span class="text-neutral-500"># Usage: ccask "what design pattern is used in this project?"</span><br/><br/>
+<span class="text-neutral-500"># Function: generate tests for a file</span><br/>
+<span class="text-emerald-400">cctest() {</span><br/>
+<span class="text-emerald-400">local file="$1"</span><br/>
+<span class="text-emerald-400">local output="${file%.py}_test.py"</span><br/>
+<span class="text-emerald-400">cat "$file" | claude -p "generate unit tests with pytest for this code" &gt; "$output"</span><br/>
+<span class="text-emerald-400">echo "Tests generated in: $output"</span><br/>
+<span class="text-emerald-400">}</span><br/>
+<span class="text-neutral-500"># Usage: cctest src/utils.py → generates src/utils_test.py</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">${2:-valor_padrao}</code>to give default values ​​to optional arguments. This makes your functions more flexible: they work with or without the extra argument.</p>
+<p class="text-neutral-300">Name functions with the prefix<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cc</code>to maintain consistency and facilitate memory.<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccfile</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccrev</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cctest</code>, <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">ccask</code>- they all start with "cc" so you know they involve Claude Code.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 4: Bash scripts with Claude
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📜 Bash Scripts with Claude</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">When the logic gets more complex than a function allows, it's time to create<strong class="text-emerald-400">dedicated bash scripts</strong>. Scripts are executable .sh files that combine shell commands with calls to Claude Code, adding error handling, loops, conditions and environment variables.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">A bash script is a text file with the extension<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">.sh</code>that starts with the shebang<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">#!/bin/bash</code>and contains executable commands. With<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">chmod +x script.sh</code>, it becomes an executable program.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Shebang:</strong>Always start with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">#!/bin/bash</code>(or<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">#!/usr/bin/env bash</code>for portability) in the first line</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">set -euo pipefail:</strong>Add on second line for strict error handling. -e stops on the first failure, -u treats undefined variables as errors, -o pipefail propagates errors in pipes</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Permission:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">chmod +x script.sh</code>to make it executable. Then run with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">./script.sh</code>or put in<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/bin/</code>to access from anywhere</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Organization:</strong>Save your scripts to<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/bin/</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.local/bin/</code>and add it to PATH to run from any directory</span>
+</li>
+</ul>
+</div>
+Script Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Script: Automated Code Review</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">#!/bin/bash</span><br/>
+<span class="text-neutral-500"># cc-review.sh - Automated code review with Claude Code</span><br/>
+<span class="text-emerald-400">set -euo pipefail</span><br/><br/>
+<span class="text-neutral-500"># Check if we are in a git repo</span><br/>
+<span class="text-emerald-400">if ! git rev-parse --is-inside-work-tree &amp;&gt; /dev/null; then</span><br/>
+<span class="text-emerald-400">echo "Error: we are not in a git repository"</span><br/>
+<span class="text-emerald-400">exit 1</span><br/>
+<span class="text-emerald-400">fi</span><br/><br/>
+<span class="text-neutral-500"># Capture diff (staged or unstaged)</span><br/>
+<span class="text-emerald-400">DIFF=$(git diff --staged)</span><br/>
+<span class="text-emerald-400">if [ -z "$DIFF" ]; then</span><br/>
+<span class="text-emerald-400">DIFF=$(git diff)</span><br/>
+<span class="text-emerald-400">fi</span><br/><br/>
+<span class="text-emerald-400">if [ -z "$DIFF" ]; then</span><br/>
+<span class="text-emerald-400">echo "No changes to review."</span><br/>
+<span class="text-emerald-400">exit 0</span><br/>
+<span class="text-emerald-400">fi</span><br/><br/>
+<span class="text-neutral-500"># Send to Claude</span><br/>
+<span class="text-emerald-400">echo "$DIFF" | claude -p "Do a detailed code review. Point out: bugs, security, performance, readability. Format: Markdown with severity (critical/high/medium/low)." | tee review-$(date +%Y%m%d).md</span><br/><br/>
+<span class="text-emerald-400">echo "Review saved in review-$(date +%Y%m%d).md"</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Always add<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">set -euo pipefail</code>in your scripts. Without this, silent errors can cause unexpected behavior. For example, if<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">claude -p</code>fails due to lack of authentication, the script would continue executing the next commands with empty data.</p>
+<p class="text-neutral-300">Keep your scripts in a dedicated git repo (ex:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/dotfiles/scripts/</code>) for versioning and synchronization between machines.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 5: Advanced shell functions
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🧩 Advanced Shell Functions</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Advanced functions combine<strong class="text-emerald-400">conditional logic, loops, git integration and data processing</strong>to create complete workflows. These functions go beyond simple shortcuts: they automate entire workflows with Claude Code.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Advanced functions use shell features like<strong class="text-white">local variables</strong>, <strong class="text-white">command substitution</strong> ($(...)), <strong class="text-white">conditions</strong>(if/elif/else),<strong class="text-white">loops</strong>(for/while) and<strong class="text-white">redirection</strong>to create sophisticated flows.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Local variables:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">local var=valor</code>within functions to avoid polluting the global scope</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Command substitution:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">resultado=$(comando)</code>captures the output of a command in a variable</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Integration with git:</strong>Functions that combine git log, git diff and Claude for automated repository analysis</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Input validation:</strong>Always check that the necessary arguments are provided before calling Claude</span>
+</li>
+</ul>
+</div>
+Advanced Examples
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Advanced Functions</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Function: smart commit (generates message with Claude)</span><br/>
+<span class="text-emerald-400">cccommit() {</span><br/>
+<span class="text-emerald-400">local diff=$(git diff --staged)</span><br/>
+<span class="text-emerald-400">if [ -z "$diff" ]; then</span><br/>
+<span class="text-emerald-400">echo "Nothing in staging. Use 'git add' first."</span><br/>
+<span class="text-emerald-400">return 1</span><br/>
+<span class="text-emerald-400">  fi</span><br/>
+<span class="text-emerald-400">local msg=$(echo "$diff" | claude -p "generate a concise commit message in English following conventional commits. Just the message, no explanation.")</span><br/>
+<span class="text-emerald-400">echo "Suggested message: $msg"</span><br/>
+<span class="text-emerald-400">read -p "Use this message? [Y/n] " reply</span><br/>
+<span class="text-emerald-400">if [[ "$response" != "n" ]]; then</span><br/>
+<span class="text-emerald-400">git commit -m "$msg"</span><br/>
+<span class="text-emerald-400">  fi</span><br/>
+<span class="text-emerald-400">}</span><br/><br/>
+<span class="text-neutral-500"># Function: project quality analysis</span><br/>
+<span class="text-emerald-400">ccquality() {</span><br/>
+<span class="text-emerald-400">local dir="${1:-.}"</span><br/>
+<span class="text-emerald-400">echo "Analyzing $dir..."</span><br/>
+<span class="text-emerald-400">  {</span><br/>
+<span class="text-emerald-400">echo "=== Structure ==="</span><br/>
+<span class="text-emerald-400">find "$dir" -type f -name "*.py" -o -name "*.js" -o -name "*.ts" | head -30</span><br/>
+<span class="text-emerald-400">echo "=== ALL ==="</span><br/>
+<span class="text-emerald-400">grep -rn "TODO\|FIXME" "$dir" --include="*.py" --include="*.js" 2&gt;/dev/null | head -20</span><br/>
+<span class="text-emerald-400">echo "=== Git Stats ==="</span><br/>
+<span class="text-emerald-400">git log --oneline -10 2&gt;/dev/null</span><br/>
+<span class="text-emerald-400">} | claude -p "Based on this overview, evaluate the quality of the project and suggest 5 priority improvements"</span><br/>
+<span class="text-emerald-400">}</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">The function<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">cccommit</code>and a game-changer. Never waste time thinking about the commit message again - Claude analyzes the diff and suggests an accurate message following conventional commits. You just confirm and that's it.</p>
+<p class="text-neutral-300">Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">return 1</code>(no<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">exit 1</code>) within functions.<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">exit</code>closes the entire terminal;<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">return</code>it just exits the function.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 6: Organization of .zshrc/.bashrc
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">📂 Organization of .zshrc/.bashrc</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">As you add more aliases and functions, the shell configuration file may become<strong class="text-emerald-400">messy and difficult to maintain</strong>. Good organization ensures that you can easily find, edit, and share your shortcuts. Let's see the best practices for keeping everything clean and modular.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The best practice and<strong class="text-white">modularize</strong>your configuration file. Instead of putting everything into<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.zshrc</code>, separate aliases and functions into dedicated files and use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">source</code>to load them.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Dedicated file:</strong>Create<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.claude_aliases</code>with all Claude Code aliases and functions. Node<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">~/.zshrc</code>, add<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">source ~/.claude_aliases</code></span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Sections with comments:</strong>Use comment blocks to separate categories: # === Git ===, # === Claude Code ===, # === Docker ===</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Dotfiles repo:</strong>Keep your configuration files in a git repository (~/dotfiles) for versioning, backup and synchronization between machines</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Condition of existence:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">[ -f ~/.claude_aliases ] &amp;&amp; source ~/.claude_aliases</code>to avoid errors if the file does not exist</span>
+</li>
+</ul>
+</div>
+Organized Structure
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>Recommended Structure</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># ~/.zshrc (main file - clean and organized)</span><br/><br/>
+<span class="text-neutral-500"># === Basic settings ===</span><br/>
+<span class="text-emerald-400">export EDITOR=vim</span><br/>
+<span class="text-emerald-400">export PATH="$HOME/bin:$HOME/.local/bin:$PATH"</span><br/><br/>
+<span class="text-neutral-500"># === Load modules ===</span><br/>
+<span class="text-emerald-400">[ -f ~/.aliases ] &amp;&amp; source ~/.aliases</span><br/>
+<span class="text-emerald-400">[ -f ~/.claude_aliases ] &amp;&amp; source ~/.claude_aliases</span><br/>
+<span class="text-emerald-400">[ -f ~/.git_aliases ] &amp;&amp; source ~/.git_aliases</span><br/>
+<span class="text-emerald-400">[ -f ~/.functions ] &amp;&amp; source ~/.functions</span><br/><br/>
+<span class="text-neutral-500"># === Plugins and frameworks ===</span><br/>
+<span class="text-neutral-500"># ... oh-my-zsh, starship, etc.</span>
+</div>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">⌨️</span>File ~/.claude_aliases</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># ~/.claude_aliases - Claude Code aliases and functions</span><br/>
+<span class="text-neutral-500"># Updated: 2026-03-08</span><br/><br/>
+<span class="text-neutral-500"># === Sessions ===</span><br/>
+<span class="text-emerald-400">alias cc='claude'</span><br/>
+<span class="text-emerald-400">alias ccp='claude -p'</span><br/>
+<span class="text-emerald-400">alias ccr='claude --resume'</span><br/><br/>
+<span class="text-neutral-500"># === Analysis Functions ===</span><br/>
+<span class="text-emerald-400">ccfile() { cat "$1" | claude -p "${2:-analyze this file}"; }</span><br/>
+<span class="text-emerald-400">ccrev() { cat "$1" | claude -p "code review: ${2:-geral}"; }</span><br/><br/>
+<span class="text-neutral-500"># === Git Functions + Claude ===</span><br/>
+<span class="text-emerald-400">cccommit() { ... }</span><br/>
+<span class="text-emerald-400">ccquality() { ... }</span><br/><br/>
+<span class="text-neutral-500"># === Diagnosis ===</span><br/>
+<span class="text-emerald-400">alias ccdebug='claude -p "diagnose this error"'</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Use a repository<strong class="text-white">dotfiles</strong>on GitHub to version all your configuration files. So, when configuring a new machine, just clone the repo and run a setup script to have all your aliases and functions ready.</p>
+<p class="text-neutral-300">Share your useful aliases with colleagues! A file<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">.claude_aliases</code>Well-organized code can accelerate the adoption of Claude Code by the entire team.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">★</span>
+<h2 class="text-2xl font-bold">🏋️ Practical Exercise</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">In this exercise you will create<strong class="text-emerald-400">5 useful aliases in your .zshrc or .bashrc</strong>for Claude Code, organized in a dedicated archive. In the end, you will have a personalized productivity kit.</p>
+Main Exercise Box
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
+<div class="flex items-center space-x-3 mb-6">
+<span class="text-3xl">🏋️</span>
+<div>
+<h3 class="text-xl font-bold text-emerald-400">Exercise: Create 5 Useful Aliases for Claude Code</h3>
+<p class="text-neutral-400 text-sm">Estimated time: 15-20 minutes</p>
+</div>
+</div>
+Numbered Steps
+<div class="space-y-6">
+Step 1
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Create dedicated aliases file</h4>
+<p class="text-neutral-300 text-sm mb-3">Create the ~/.claude_aliases file:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">touch ~/.claude_aliases</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">echo "# Claude Code Aliases - $(date +%Y-%m-%d)" &gt; ~/.claude_aliases</span>
+</div>
+</div>
+</div>
+Step 2
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Add the 5 essential aliases</h4>
+<p class="text-neutral-300 text-sm mb-3">Open the file in the editor and add:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cat &gt;&gt; ~/.claude_aliases &lt;&lt; 'EOF'</span><br/>
+<span class="text-neutral-300">alias cc='claude'</span><br/>
+<span class="text-neutral-300">alias ccp='claude -p'</span><br/>
+<span class="text-neutral-300">alias ccr='claude --resume'</span><br/>
+<span class="text-neutral-300">ccfile() { cat "$1" | claude -p "${2:-analyze this file}"; }</span><br/>
+<span class="text-neutral-300">cccommit() { git diff --staged | claude -p "generate concise commit message in English, conventional commits, just the message"; }</span><br/>
+<span class="text-emerald-400">EOF</span>
+</div>
+</div>
+</div>
+Step 3
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Integrate with .zshrc/.bashrc</h4>
+<p class="text-neutral-300 text-sm mb-3">Add the source line to your configuration file:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">echo '[ -f ~/.claude_aliases ] &amp;&amp; source ~/.claude_aliases' &gt;&gt; ~/.zshrc</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.zshrc</span>
+</div>
+</div>
+</div>
+Step 4
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Test aliases</h4>
+<p class="text-neutral-300 text-sm mb-3">Check that they all work:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">alias cc</span> <span class="text-neutral-500"># should show cc='claude'</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">type ccfile</span> <span class="text-neutral-500"># should show the function</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">ccfile ~/.zshrc "summarize in 3 lines"</span>
+</div>
+</div>
+</div>
+Step 5
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">5</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Add your own custom alias</h4>
+<p class="text-neutral-300 text-sm mb-3">Create an alias that is useful for YOUR specific workflow:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500"># Example: alias for the framework you use</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">echo 'alias ccnext="claude -p \"analyze this Next.js project and suggest optimizations\""' &gt;&gt; ~/.claude_aliases</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">source ~/.claude_aliases</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+Success Checklist
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">~/.claude_aliases file created</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">5 defined aliases/functions</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Source integrated into .zshrc</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">All tested and working</span>
+</div>
+</div>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+FINAL SUMMARY
+═══════════════════════════ ════════════════════════════
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Aliases are text shortcuts for long commands</strong>
+<span class="text-neutral-400">- Defined in ~/.zshrc or ~/.bashrc, persists between sessions with source.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">cc, ccp, ccr are the essential aliases</strong>
+<span class="text-neutral-400">- Interactive session, print and resume mode with two-letter shortcuts.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Functions accept dynamic arguments</strong>
+<span class="text-neutral-400">- Use $1, $2, $@ to create flexible shortcuts like ccfile and ccrev.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Bash scripts add complex logic</strong>
+<span class="text-neutral-400">- Error handling, conditions, loops and integration with git in .sh files.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Advanced functions automate complete workflows</strong>
+<span class="text-neutral-400">- cccommit generates commit messages, ccquality analyzes entire projects.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Modular organization keeps everything clean</strong>
+<span class="text-neutral-400">- Dedicated file ~/.claude_aliases with conditional source and versioned dotfiles.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-emerald-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">1.8 - Headless Mode and CLI Automation</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start" href="modulo-1-6.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-left px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors justify-start" href="modulo-1-8.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -894,6 +757,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
