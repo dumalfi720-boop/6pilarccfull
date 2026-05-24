@@ -4,7 +4,7 @@
 >
 > These step-by-step workflows cover 90% of what you’ll do inside Claude Code.
 >
-> Battle-tested. Minimal friction. Maximum output.
+>Battle-tested. Minimal friction. Maximum output.
 
 ---
 
@@ -12,35 +12,19 @@
 
 **When to use:** Something’s broken and you want Claude to diagnose + fix it properly.
 
-### Step 1 — Start with context
-
-```text
+### Step 1 — Start with context```text
 claude "There's a bug where [describe the symptom]. It happens when [describe the trigger]."
-```
-
-### Step 2 — Force investigation first
-
-```text
+```### Step 2 — Force investigation first```text
 Read the relevant files and trace the logic before suggesting a fix.
-```
-
-### Step 3 — Review diagnosis
+```### Step 3 — Review diagnosis
 
 Confirm the root cause matches your understanding.
 
-### Step 4 — Apply the fix
-
-```text
+### Step 4 — Apply the fix```text
 Fix the bug and run the tests to make sure nothing else breaks.
-```
-
-### Step 5 — Commit
-
-```text
+```### Step 5 — Commit```text
 /commit
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Paste the full stack trace
 - Point Claude to the suspected file
@@ -52,13 +36,9 @@ Fix the bug and run the tests to make sure nothing else breaks.
 
 **When to use:** Adding new functionality.
 
-### Step 1 — Start in Plan Mode
-
-```text
+### Step 1 — Start in Plan Mode```text
 I want to add [feature]. Enter plan mode and design the approach before writing any code.
-```
-
-### Step 2 — Review the plan
+```### Step 2 — Review the plan
 
 Approve file changes, architecture, tradeoffs.
 
@@ -66,25 +46,13 @@ Approve file changes, architecture, tradeoffs.
 
 Claude builds step-by-step.
 
-### Step 4 — Test
-
-```text
+### Step 4 — Test```text
 Run the tests and fix any failures.
-```
-
-### Step 5 — Polish
-
-```text
+```### Step 5 — Polish```text
 Review what you just built. Is there anything we missed?
-```
-
-### Step 6 — Commit
-
-```text
+```### Step 6 — Commit```text
 /commit
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Break large features into smaller tasks
 - Plan Mode prevents wasted tokens
@@ -96,35 +64,19 @@ Review what you just built. Is there anything we missed?
 
 **When to use:** Improve structure without changing behavior.
 
-### Step 1 — Understand current architecture
-
-```text
+### Step 1 — Understand current architecture```text
 claude "Read through [file/module] and explain the current architecture."
-```
-
-### Step 2 — Define the goal
-
-```text
+```### Step 2 — Define the goal```text
 Refactor this to [goal]. Don't change any external behavior.
-```
+```### Step 3 — Review the diff
 
-### Step 3 — Review the diff
+Touch a lot refactors. Be careful.
 
-Refactors touch a lot. Be careful.
-
-### Step 4 — Run tests
-
-```text
+### Step 4 — Run tests```text
 Run all tests to make sure nothing broke.
-```
-
-### Step 5 — Commit
-
-```text
+```### Step 5 — Commit```text
 /commit
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Have tests before refactoring
 - Be specific about the goal
@@ -136,31 +88,15 @@ Run all tests to make sure nothing broke.
 
 **When to use:** You just cloned a repo.
 
-### Step 1 — Big picture
-
-```text
+### Step 1 — Big picture```text
 claude "Explore this codebase and give me a high-level overview. What does it do? What's the tech stack? What's the structure?"
-```
-
-### Step 2 — Zoom in
-
-```text
+```### Step 2 — Zoom in```text
 Walk me through how authentication works.
-```
-
-### Step 3 — Trace flow
-
-```text
+```### Step 3 — Trace flow```text
 Trace what happens when a user submits the signup form.
-```
-
-### Step 4 — Create project memory
-
-```text
+```### Step 4 — Create project memory```text
 /init
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Start broad -> then narrow
 - Ask “why” questions
@@ -172,31 +108,15 @@ Trace what happens when a user submits the signup form.
 
 **When to use:** Increasing test coverage.
 
-### Step 1 — Identify gaps
-
-```text
+### Step 1 — Identify gaps```text
 claude "Read [file/module] and identify what should be tested. Focus on edge cases."
-```
-
-### Step 2 — Generate tests
-
-```text
+```### Step 2 — Generate tests```text
 Write comprehensive tests for [file/module].
-```
-
-### Step 3 — Verify
-
-```text
+```### Step 3 — Verify```text
 Run the tests and make sure they pass.
-```
-
-### Step 4 — Coverage check
-
-```text
+```### Step 4 — Coverage check```text
 Run tests with coverage and show me any gaps.
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Define your test framework upfront
 - Test behavior, not implementation
@@ -208,29 +128,17 @@ Run tests with coverage and show me any gaps.
 
 **When to use:** Before pushing code.
 
-### Step 1 — Ask for review
-
-```text
+### Step 1 — Ask for review```text
 claude "Review my current changes. Look for bugs, security issues, performance problems, and code quality."
-```
-
-### Or:
-
-```text
+```### Or:```text
 /review
-```
-
-### Step 2 — Address feedback
+```### Step 2 — Address feedback
 
 Fix or justify.
 
-### Step 3 — Re-review if needed
-
-```text
+### Step 3 — Re-review if needed```text
 Review the changes again after my fixes.
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Focus review (security / performance)
 - Use before every PR
@@ -242,13 +150,9 @@ Review the changes again after my fixes.
 
 **When to use:** Changes are ready.
 
-### Step 1
-
-```text
+### Step 1```text
 /pr
-```
-
-Claude will:
+```Claude will:
 
 - Analyze commits
 - Generate title + description
@@ -269,29 +173,17 @@ Adjust if needed.
 
 **When to use:** You have logs or stack traces.
 
-### Option A — Paste error
-
-```text
+### Option A — Paste error```text
 claude "I'm getting this error: [paste stack trace]. Help me fix it."
-```
-
-### Option B — Pipe it
-
-```bash
+```### Option B — Pipe it```bash
 cat error.log | claude -p "What's causing these errors and how do I fix them?"
-```
-
-### Step 3 — Trace root cause
+```### Step 3 — Trace root cause
 
 Claude reads relevant files.
 
-### Step 4 — Apply fix
-
-```text
+### Step 4 — Apply fix```text
 Fix it and verify the error is resolved.
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Include full stack trace
 - Describe what triggered it
@@ -303,40 +195,24 @@ Fix it and verify the error is resolved.
 
 **When to use:** Large-scale changes across many files.
 
-### Step 1 — Plan Mode
-
-```text
+### Step 1 — Plan Mode```text
 claude "I need to [migrate/update/rename] [X] across the entire codebase. Enter plan mode."
-```
-
-### Step 2 — Review scope
+```### Step 2 — Review scope
 
 Claude identifies all affected files.
 
-### Step 3 — Execute in batches
-
-```text
+### Step 3 — Run in batches```text
 Start with the core module, then move to dependent modules.
-```
-
-### Step 4 — Test after each batch
-
-```text
+```### Step 4 — Test after each batch```text
 Run tests after each batch.
-```
-
-### Step 5 — Final sweep
-
-```text
+```### Step 5 — Final sweep```text
 Do a final sweep — are there any files we missed?
-```
-
-**Pro Tips**
+```**Pro Tips**
 
 - Never do everything in one shot
 - Keep tests green at all times
-- Use `/compact` during long migrations
+- Use`/compact`during long migrations
 
 ---
 
-# 🎯 Quick Reference
+# 🎯Quick Reference
