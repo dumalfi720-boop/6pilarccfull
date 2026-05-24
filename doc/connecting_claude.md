@@ -32,7 +32,7 @@ Your context window is your oxygen.
 | Repeatable workflow | Skill |
 | Live external tool/API | MCP |
 | Data formatting | Skill |
-| Browsing / scraping | MCP |
+| Browsing/scraping | MCP |
 | Token efficiency | Skill |
 
 **Repetitive → Skill**
@@ -53,19 +53,11 @@ You will constantly need Desktop, config files, or cross-project access.
 
 ---
 
-### Install
-
-```bash
+### Install```bash
 claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem /path/to/directory
-```
-
-Example:
-
-```bash
+```Example:```bash
 claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem /Users/you/Desktop /Users/you/Documents
-```
-
----
+```---
 
 ### Use Cases
 
@@ -91,19 +83,11 @@ You manage everything without leaving Claude.
 
 ---
 
-### Install
-
-```bash
+### Install```bash
 claude mcp add github -- npx @anthropic-ai/mcp-github
-```
-
-Set token:
-
-```bash
+```Set token:```bash
 export GITHUB_TOKEN=your_token_here
-```
-
----
+```---
 
 ### Use Cases
 
@@ -130,13 +114,9 @@ Screenshot verification loop for UI perfection.
 
 ---
 
-### Install
-
-```bash
+### Install```bash
 claude mcp add browser -- npx @anthropic-ai/mcp-browser
-```
-
----
+```---
 
 ### Use Cases
 
@@ -163,19 +143,11 @@ Run live queries, inspect schema, manage data.
 
 ---
 
-### Install — PostgreSQL
-
-```bash
+### Install — PostgreSQL```bash
 claude mcp add postgres -- npx @anthropic-ai/mcp-postgres postgresql://user:pass@localhost:5432/dbname
-```
-
-### Install — Supabase
-
-```bash
+```### Install — Supabase```bash
 claude mcp add supabase -- npx @anthropic-ai/mcp-supabase --url https://your-project.supabase.co --key your-anon-key
-```
-
----
+```---
 
 ### Use Cases
 
@@ -186,7 +158,7 @@ claude mcp add supabase -- npx @anthropic-ai/mcp-supabase --url https://your-pro
 
 **Token Impact:** Moderate
 
-Use `LIMIT` in queries.
+Use`LIMIT`in queries.
 
 **Safety Rule:**
 
@@ -202,13 +174,9 @@ Read/write spreadsheets directly.
 
 ---
 
-### Install
-
-```bash
+### Install```bash
 claude mcp add google-sheets -- npx @anthropic-ai/mcp-google-sheets
-```
-
-Follow setup prompts for API credentials.
+```Follow setup prompts for API credentials.
 
 ---
 
@@ -241,34 +209,22 @@ Query ranges, not entire sheets.
 ### Also Useful
 
 - Notion
-- Slack
+-Slack
 - Linear
-- Gmail
+-Gmail
 - Figma
 
 ---
 
 # 🔽 Managing MCPs
 
-### See active MCPs
-
-```bash
+### See active MCPs```bash
 claude mcp list
-```
-
-### Remove unused
-
-```bash
+```### Remove unused```bash
 claude mcp remove <name>
-```
-
-### Re-add later
-
-```bash
+```### Re-add later```bash
 claude mcp add <name> -- <command>
-```
-
----
+```---
 
 # 🔽 Active Rotation Strategy (This Is Key)
 
@@ -292,7 +248,7 @@ Don’t run all MCPs at once. Rotate intentionally.
 | Permission denied | Verify tokens |
 | High token usage | Disconnect unused MCPs |
 | Slow responses | External API speed issue |
-| Server not found | `claude mcp list` |
+| Server not found |`claude mcp list`|
 
 ---
 
@@ -301,8 +257,7 @@ Don’t run all MCPs at once. Rotate intentionally.
 1. Install only what you need
 2. Disconnect unused MCPs
 3. Use Skills when possible
-4. Monitor `/cost`
-5. Rotate intentionally
+4. Monitor`/cost`5. Rotate intentionally
 
 Your context window = budget.
 
