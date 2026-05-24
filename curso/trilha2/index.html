@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha 2 - CLAUDE.md e Sistema de Memoria | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 2 - CLAUDE.md and Memory System | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
 
@@ -49,393 +49,330 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">Inicio</a>
-      <span>/</span>
-      <span class="text-blue-400">Trilha 2</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">
-        TRILHA 2
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">📋 CLAUDE.md e Sistema de Memoria</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Configure o Claude pra entender seu projeto em 60 segundos. Domine CLAUDE.md, escopos de memoria, regras modulares, auto-memory, /init e templates por stack.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-blue-400">8</div>
-          <div class="text-xs text-neutral-400">Modulos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-blue-400">48</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-blue-400">~3h</div>
-          <div class="text-xs text-neutral-400">Duracao</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-blue-400">8</div>
-          <div class="text-xs text-neutral-400">Exercicios</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO - MODULE CARDS -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      <!-- Modulo 2.1 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.1</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">O que e CLAUDE.md e Por que Existe</h3>
-          <p class="text-neutral-400 text-sm mb-4">Entenda o conceito de project memory file, por que toda sessao comeca lendo CLAUDE.md e o impacto na qualidade das respostas.</p>
-          <button onclick="toggleTopics('m21')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m21-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m21-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que e CLAUDE.md</li>
-              <li>2. Por que toda sessao comeca lendo CLAUDE.md</li>
-              <li>3. CLAUDE.md vs documentacao tradicional</li>
-              <li>4. O impacto na qualidade das respostas</li>
-              <li>5. Quando criar e quando nao criar</li>
-              <li>6. Exemplos do mundo real</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-1.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-1.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.2 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.2</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Anatomia do CLAUDE.md Perfeito</h3>
-          <p class="text-neutral-400 text-sm mb-4">Domine cada secao do CLAUDE.md: Project Overview, Tech Stack, Commands, Code Conventions, Important Patterns e Things To Avoid.</p>
-          <button onclick="toggleTopics('m22')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m22-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m22-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. Secao Project Overview</li>
-              <li>2. Secao Tech Stack e Commands</li>
-              <li>3. Secao Code Conventions</li>
-              <li>4. Secao Important Patterns</li>
-              <li>5. Secao Things To Avoid</li>
-              <li>6. Template completo pronto para copiar</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-2.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-2.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.3 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.3</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Escopos e Hierarquia de Memoria</h3>
-          <p class="text-neutral-400 text-sm mb-4">CLAUDE.md no root, em subdiretorios, global ~/.claude/. Como Claude resolve conflitos e a estrategia de camadas.</p>
-          <button onclick="toggleTopics('m23')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m23-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m23-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. CLAUDE.md no root do projeto</li>
-              <li>2. CLAUDE.md em subdiretorios</li>
-              <li>3. CLAUDE.md global ~/.claude/</li>
-              <li>4. Como Claude resolve conflitos entre escopos</li>
-              <li>5. Estrategia de camadas</li>
-              <li>6. Quando usar cada escopo</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-3.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-3.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.4 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.4</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Regras Modulares (.claude/rules/)</h3>
-          <p class="text-neutral-400 text-sm mb-4">O que sao regras modulares, diferenca de CLAUDE.md, regras por tipo de arquivo e por contexto.</p>
-          <button onclick="toggleTopics('m24')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m24-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m24-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que sao regras modulares</li>
-              <li>2. Diferenca entre CLAUDE.md e rules/</li>
-              <li>3. Criando seu primeiro arquivo de regra</li>
-              <li>4. Regras por tipo de arquivo</li>
-              <li>5. Regras por contexto</li>
-              <li>6. Boas praticas de organizacao de regras</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-4.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-4.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.5 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.5</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Auto-Memory e Persistencia</h3>
-          <p class="text-neutral-400 text-sm mb-4">Como configurar auto-memory, o que Claude salva automaticamente, diretorio .claude/memory/ e integracao com CLAUDE.md.</p>
-          <button onclick="toggleTopics('m25')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m25-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m25-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que e auto-memory</li>
-              <li>2. Como configurar auto-memory</li>
-              <li>3. O que o Claude salva automaticamente</li>
-              <li>4. Diretorio .claude/memory/</li>
-              <li>5. Quando confiar e quando editar</li>
-              <li>6. Integracao com CLAUDE.md</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-5.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-5.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.6 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.6</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">/init - Geracao Automatica</h3>
-          <p class="text-neutral-400 text-sm mb-4">O que /init faz, quando usar, o que detecta automaticamente, como editar o resultado e comparacao com CLAUDE.md manual.</p>
-          <button onclick="toggleTopics('m26')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m26-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m26-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. O que o /init faz</li>
-              <li>2. Quando usar /init</li>
-              <li>3. O que /init detecta automaticamente</li>
-              <li>4. Editando o resultado do /init</li>
-              <li>5. /init em projetos existentes</li>
-              <li>6. Comparando /init vs CLAUDE.md manual</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-6.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-6.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.7 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.7</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Templates por Stack (Next.js, Python, Go)</h3>
-          <p class="text-neutral-400 text-sm mb-4">Templates prontos de CLAUDE.md para Next.js, Python/FastAPI, Go, Node.js/Express e como adaptar para seu caso.</p>
-          <button onclick="toggleTopics('m27')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m27-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m27-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. Template para Next.js/React</li>
-              <li>2. Template para Python/FastAPI</li>
-              <li>3. Template para Go</li>
-              <li>4. Template para Node.js/Express</li>
-              <li>5. Adaptando templates para seu caso</li>
-              <li>6. Compartilhando templates no time</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-7.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-7.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modulo 2.8 -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-4">
-            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULO 2.8</span>
-            <span class="text-xs text-neutral-500">6 topicos</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Boas Praticas e Otimizacao (< 200 linhas)</h3>
-          <p class="text-neutral-400 text-sm mb-4">A regra das 200 linhas, o que incluir e cortar, formatacao, atualizacao frequente, auditoria e anti-patterns.</p>
-          <button onclick="toggleTopics('m28')" class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center">
-            <span id="m28-arrow" class="mr-1 transition-transform">▶</span> Ver topicos
-          </button>
-          <div id="m28-topics" class="module-topics mb-4">
-            <ul class="space-y-1 text-sm text-neutral-400 pl-4">
-              <li>1. A regra das 200 linhas</li>
-              <li>2. O que incluir e o que cortar</li>
-              <li>3. Usando marcadores e secoes claras</li>
-              <li>4. Atualizando com frequencia</li>
-              <li>5. Auditoria do CLAUDE.md</li>
-              <li>6. Anti-patterns comuns</li>
-            </ul>
-          </div>
-          <div class="flex space-x-3">
-            <a href="modulo-2-8.html" class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors">
-              Abrir Modulo
-            </a>
-            <button onclick="openModal('modulo-2-8.html')" class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors">
-              Preview
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <!-- MODAL -->
-  <div id="module-modal" class="modal-overlay" onclick="closeModal(event)">
-    <div class="modal-content">
-      <button class="modal-close bg-dark-700 hover:bg-dark-600 text-neutral-300 rounded-lg p-2" onclick="closeModalBtn()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <iframe id="modal-iframe" class="w-full h-full border-0"></iframe>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-blue-400" href="../../index.html">Start</a>
+<span>/</span>
+<span class="text-blue-400">Track 2</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">TRACK 2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📋 CLAUDE.md and Memory System</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Configure Claude to understand your project in 60 seconds. Master CLAUDE.md, memory scopes, modular rules, auto-memory, /init and stack templates.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-blue-400">8</div>
+<div class="text-xs text-neutral-400">Modules</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-blue-400">48</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-blue-400">~3h</div>
+<div class="text-xs text-neutral-400">Duration</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-blue-400">8</div>
+<div class="text-xs text-neutral-400">Exercises</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT - MODULE CARDS
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+Module 2.1
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.1</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">What is CLAUDE.md and Why Does It Exist</h3>
+<p class="text-neutral-400 text-sm mb-4">Understand the concept of project memory file, why every session starts by reading CLAUDE.md and the impact on the quality of responses.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m21')">
+<span class="mr-1 transition-transform" id="m21-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m21-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What is CLAUDE.md</li>
+<li>2. Why does every session start by reading CLAUDE.md</li>
+<li>3. CLAUDE.md vs traditional documentation</li>
+<li>4. The impact on the quality of responses</li>
+<li>5. When to create and when not to create</li>
+<li>6. Real-world examples</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-1.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-1.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.2
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.2</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Anatomy of CLAUDE.md Perfect</h3>
+<p class="text-neutral-400 text-sm mb-4">Master each section of CLAUDE.md: Project Overview, Tech Stack, Commands, Code Conventions, Important Patterns and Things To Avoid.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m22')">
+<span class="mr-1 transition-transform" id="m22-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m22-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. Project Overview Section</li>
+<li>2. Tech Stack and Commands Section</li>
+<li>3. Code Conventions Section</li>
+<li>4. Important Patterns Section</li>
+<li>5. Things To Avoid Section</li>
+<li>6. Complete template ready to copy</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-2.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-2.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.3
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.3</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Scopes and Memory Hierarchy</h3>
+<p class="text-neutral-400 text-sm mb-4">CLAUDE.md in root, in subdirectories, global ~/.claude/. How Claude resolves conflicts and the layering strategy.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m23')">
+<span class="mr-1 transition-transform" id="m23-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m23-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. CLAUDE.md in the project root</li>
+<li>2. CLAUDE.md in subdirectories</li>
+<li>3. CLAUDE.md global ~/.claude/</li>
+<li>4. How Claude resolves conflicts between scopes</li>
+<li>5. Layering strategy</li>
+<li>6. When to use each scope</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-3.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-3.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.4
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.4</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Modular Rules (.claude/rules/)</h3>
+<p class="text-neutral-400 text-sm mb-4">What are modular rules, difference from CLAUDE.md, rules by file type and by context.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m24')">
+<span class="mr-1 transition-transform" id="m24-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m24-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What are modular rules</li>
+<li>2. Difference between CLAUDE.md and rules/</li>
+<li>3. Creating your first rule file</li>
+<li>4. Rules by file type</li>
+<li>5. Rules by context</li>
+<li>6. Good rules organization practices</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-4.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-4.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.5
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.5</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Auto-Memory and Persistence</h3>
+<p class="text-neutral-400 text-sm mb-4">How to configure auto-memory, what Claude automatically saves, .claude/memory/ directory and integration with CLAUDE.md.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m25')">
+<span class="mr-1 transition-transform" id="m25-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m25-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What is auto-memory</li>
+<li>2. How to configure auto-memory</li>
+<li>3. What Claude automatically saves</li>
+<li>4. Directory .claude/memory/</li>
+<li>5. When to trust and when to edit</li>
+<li>6. Integration with CLAUDE.md</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-5.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-5.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.6
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.6</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">/init - Automatic Generation</h3>
+<p class="text-neutral-400 text-sm mb-4">What /init does, when to use it, what it automatically detects, how to edit the result and comparison with manual CLAUDE.md.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m26')">
+<span class="mr-1 transition-transform" id="m26-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m26-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. What /init does</li>
+<li>2. When to use /init</li>
+<li>3. What /init automatically detects</li>
+<li>4. Editing the /init result</li>
+<li>5. /init in existing projects</li>
+<li>6. Comparing /init vs manual CLAUDE.md</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-6.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-6.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.7
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.7</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Templates by Stack (Next.js, Python, Go)</h3>
+<p class="text-neutral-400 text-sm mb-4">Ready-made CLAUDE.md templates for Next.js, Python/FastAPI, Go, Node.js/Express and how to adapt to your case.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m27')">
+<span class="mr-1 transition-transform" id="m27-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m27-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. Template for Next.js/React</li>
+<li>2. Template for Python/FastAPI</li>
+<li>3. Template for Go</li>
+<li>4. Template for Node.js/Express</li>
+<li>5. Adapting templates to your case</li>
+<li>6. Sharing templates within the team</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-7.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-7.html')">Preview</button>
+</div>
+</div>
+</div>
+Module 2.8
+<div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">MODULE 2.8</span>
+<span class="text-xs text-neutral-500">6 topics</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Good Practices and Optimization (&lt; 200 lines)</h3>
+<p class="text-neutral-400 text-sm mb-4">The 200 line rule, what to include and cut, formatting, frequent updating, auditing and anti-patterns.</p>
+<button class="text-blue-400 text-sm hover:text-blue-300 mb-3 flex items-center" onclick="toggleTopics('m28')">
+<span class="mr-1 transition-transform" id="m28-arrow">▶</span>View topics</button>
+<div class="module-topics mb-4" id="m28-topics">
+<ul class="space-y-1 text-sm text-neutral-400 pl-4">
+<li>1. The 200 line rule</li>
+<li>2. What to include and what to cut</li>
+<li>3. Using highlighters and clear sections</li>
+<li>4. Updating frequently</li>
+<li>5. CLAUDE.md audit</li>
+<li>6. Common anti-patterns</li>
+</ul>
+</div>
+<div class="flex space-x-3">
+<a class="justify-start px-4 py-2 bg-blue-600/30 text-blue-300 rounded-lg text-sm font-semibold hover:bg-blue-600/50 transition-colors" href="modulo-2-8.html">Open Module</a>
+<button class="justify-start px-4 py-2 bg-dark-700 text-neutral-300 rounded-lg text-sm font-semibold hover:bg-dark-600 transition-colors" onclick="openModal('modulo-2-8.html')">Preview</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+MODAL
+<div class="modal-overlay" id="module-modal" onclick="closeModal(event)">
+<div class="modal-content">
+<button class="modal-close bg-dark-700 hover:bg-dark-600 text-neutral-300 rounded-lg p-2" onclick="closeModalBtn()">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<iframe class="w-full h-full border-0" id="modal-iframe"></iframe>
+</div>
+</div>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -481,6 +418,5 @@
       document.body.style.overflow = '';
     }
   </script>
-
 </body>
 </html>
