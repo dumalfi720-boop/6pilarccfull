@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 5.4 - Skills Praticas: Lead Research e Code Review | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 5.4 - Practical Skills: Lead Research and Code Review | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -38,370 +38,306 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Atalhos</span></a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-teal-400">Inicio</a><span>/</span>
-      <a href="index.html" class="hover:text-teal-400">Trilha 5</a><span>/</span>
-      <span class="text-teal-400">Modulo 5.4</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULO 5.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔬 Skills Praticas: Lead Research e Code Review</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Duas skills de alta produtividade: pesquisa de leads com classificacao Hot/Warm/Cold e code review em nivel de PR senior com severidade categorizada.
-      </p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Intermediario</div><div class="text-xs text-neutral-400">Nivel</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Pratica</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1: Skill de Lead Research -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🎯 Skill de Lead Research</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A skill de Lead Research transforma a <strong class="text-teal-400">pesquisa manual de leads em um processo automatizado</strong>. Ela recebe um nicho, localizacao e pontos de dados desejados, pesquisa cada lead individualmente e entrega uma tabela pronta para importar em planilha ou CRM.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">O core system da skill segue 5 passos:</p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 1 - Confirmar parametros:</strong> Nicho do negocio, localizacao geografica e pontos de dados desejados (nome, email, telefone, website, etc.)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 2 - Pesquisar cada lead:</strong> Buscar informacoes em fontes publicas, redes sociais profissionais e websites das empresas</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 3 - Classificar leads:</strong> Hot (alto potencial), Warm (medio potencial) ou Cold (baixo potencial) baseado em criterios definidos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 4 - Remover duplicatas:</strong> Garantir unicidade por nome da empresa e email de contato</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 5 - Formatar output:</strong> Entregar como tabela CSV ou markdown, pronta para importacao</span></li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Comece com lotes pequenos: 10-15 leads por invocacao. Verifique a qualidade e ajuste os criterios de classificacao antes de escalar para lotes maiores. A skill funciona melhor quando combinada com um MCP de busca web para dados ao vivo.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2: Classificacao Hot/Warm/Cold -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🌡️ Classificacao Hot / Warm / Cold</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A classificacao de leads e o que transforma uma lista de contatos em <strong class="text-teal-400">inteligencia acionavel</strong>. A skill aplica criterios consistentes para cada lead, eliminando o vies subjetivo que acontece quando humanos classificam manualmente.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Principal</h3>
-        <div class="space-y-4">
-          <div class="bg-red-900/20 rounded-lg border border-red-500/30 p-4">
-            <h4 class="font-bold text-red-400 mb-2">🔥 HOT (Alta Prioridade)</h4>
-            <p class="text-neutral-300 text-sm">Website ativo com trafego, presenca em redes sociais, sinais de crescimento recente, budget indicado, match perfeito com ICP (Ideal Customer Profile).</p>
-          </div>
-          <div class="bg-yellow-900/20 rounded-lg border border-yellow-500/30 p-4">
-            <h4 class="font-bold text-yellow-400 mb-2">🟡 WARM (Media Prioridade)</h4>
-            <p class="text-neutral-300 text-sm">Website existe mas desatualizado, alguma presenca online, pode ter necessidade mas nao demonstra urgencia, match parcial com ICP.</p>
-          </div>
-          <div class="bg-blue-900/20 rounded-lg border border-blue-500/30 p-4">
-            <h4 class="font-bold text-blue-400 mb-2">❄️ COLD (Baixa Prioridade)</h4>
-            <p class="text-neutral-300 text-sm">Informacoes limitadas, sem presenca online clara, sem sinais de necessidade ou budget, match fraco com ICP.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Customize os criterios de classificacao para seu negocio. O que e "Hot" para uma consultoria de marketing e diferente do que e "Hot" para uma empresa de SaaS B2B. Inclua seus criterios especificos na secao Steps da skill.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3: Skill de Senior Code Review -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">🔍 Skill de Senior Code Review</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A skill de Code Review emula o processo de um <strong class="text-teal-400">engenheiro senior revisando um Pull Request</strong>. Ela nao apenas identifica problemas, mas classifica por severidade e sugere correcoes especificas com arquivo e linha.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Principal</h3>
-        <p class="text-neutral-300 mb-4">A skill organiza a review em quatro camadas de analise, cada uma focando em um aspecto diferente do codigo:</p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Seguranca:</strong> SQL injection, XSS, chaves expostas, falhas de autenticacao. Estes sao sempre os mais criticos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Bugs:</strong> Referencias nulas, race conditions, promises nao tratadas, mismatches de tipo</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Performance:</strong> Queries N+1, memory leaks, indices de banco faltando, imports de bundles grandes</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Qualidade:</strong> Clareza de nomenclatura, violacoes DRY, funcoes com mais de 50 linhas, consistencia de padroes</span></li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Use esta skill antes de abrir um PR, nao depois. Rode <code class="bg-dark-700 px-2 py-1 rounded text-teal-400">/code-review</code> nos seus proprios arquivos antes de submeter. Isso pega 80% dos problemas que um reviewer humano encontraria, economizando tempo de todo o time.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4: Camadas de Review -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🔬 Camadas de Review (Security, Bugs, Performance, Quality)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Cada camada de review tem <strong class="text-teal-400">checkpoints especificos</strong> que o Claude verifica sistematicamente. Isso garante cobertura completa, sem depender da memoria ou humor do reviewer.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Principal</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-red-900/20 rounded-lg border border-red-500/30 p-4">
-            <h4 class="font-bold text-red-400 mb-2">🔒 Security</h4>
-            <ul class="text-neutral-300 text-sm space-y-1">
-              <li>• SQL injection vulnerabilities</li>
-              <li>• Cross-Site Scripting (XSS)</li>
-              <li>• Chaves/secrets expostas no codigo</li>
-              <li>• Falhas de autenticacao/autorizacao</li>
-            </ul>
-          </div>
-          <div class="bg-orange-900/20 rounded-lg border border-orange-500/30 p-4">
-            <h4 class="font-bold text-orange-400 mb-2">🐛 Bugs</h4>
-            <ul class="text-neutral-300 text-sm space-y-1">
-              <li>• Null/undefined references</li>
-              <li>• Race conditions</li>
-              <li>• Unhandled promise rejections</li>
-              <li>• Type mismatches</li>
-            </ul>
-          </div>
-          <div class="bg-yellow-900/20 rounded-lg border border-yellow-500/30 p-4">
-            <h4 class="font-bold text-yellow-400 mb-2">⚡ Performance</h4>
-            <ul class="text-neutral-300 text-sm space-y-1">
-              <li>• N+1 database queries</li>
-              <li>• Memory leaks</li>
-              <li>• Indices de banco faltando</li>
-              <li>• Bundle imports desnecessarios</li>
-            </ul>
-          </div>
-          <div class="bg-blue-900/20 rounded-lg border border-blue-500/30 p-4">
-            <h4 class="font-bold text-blue-400 mb-2">💎 Quality</h4>
-            <ul class="text-neutral-300 text-sm space-y-1">
-              <li>• Nomenclatura clara e consistente</li>
-              <li>• Violacoes do principio DRY</li>
-              <li>• Funcoes maiores que 50 linhas</li>
-              <li>• Consistencia de padroes do projeto</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Customize as camadas para o seu stack. Se voce usa Python, adicione checks para type hints. Se usa React, adicione checks para hooks rules e memo patterns. A skill e um ponto de partida que deve ser adaptado.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5: Formato de Output Estruturado -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">📊 Formato de Output Estruturado</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O output da skill de code review segue um <strong class="text-teal-400">formato padronizado por severidade</strong> que facilita a triagem e a correcao. Cada issue inclui arquivo, linha, descricao do problema e sugestao de fix.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Principal</h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-red-400 font-bold">## Critical</div>
-          <div class="text-neutral-300">- `src/auth.js:42` - SQL injection via input nao sanitizado</div>
-          <div class="text-neutral-300">  Fix: Usar prepared statements com parametros</div>
-          <div class="mt-3 text-orange-400 font-bold">## Important</div>
-          <div class="text-neutral-300">- `src/api.js:88` - Promise sem catch pode crashar o servidor</div>
-          <div class="text-neutral-300">  Fix: Adicionar .catch() ou try/catch no async handler</div>
-          <div class="mt-3 text-yellow-400 font-bold">## Minor</div>
-          <div class="text-neutral-300">- `src/utils.js:15` - Variavel `data` pouco descritiva</div>
-          <div class="text-neutral-300">  Fix: Renomear para `userProfileData`</div>
-          <div class="mt-3 text-teal-400 font-bold">## Positive</div>
-          <div class="text-neutral-300">- Excelente uso de early returns em `validateInput()`</div>
-          <div class="text-neutral-300">- Testes unitarios cobrem todos os edge cases</div>
-        </div>
-        <p class="text-neutral-300">
-          A secao <strong class="text-teal-400">Positive</strong> e crucial. Destacar boas decisoes reforcar padroes positivos e e o que diferencia um code review util de uma sessao de criticas.
-        </p>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Configure a skill para gerar um resumo no topo: "X Critical, Y Important, Z Minor, W Positive". Isso permite triagem rapida: se tem Critical, pare tudo e corrija. Se so tem Minor, pode aprovar e corrigir depois.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6: Adaptando ao Contexto -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔧 Adaptando Skills ao Seu Contexto</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skills exemplares sao pontos de partida, nao solucoes finais. O verdadeiro poder esta em <strong class="text-teal-400">adaptar cada skill ao seu contexto especifico</strong>: seu stack, suas convencoes, seu workflow e seu time.
-      </p>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Stack-specific:</strong> Adicione checks para o framework que voce usa (React hooks rules, Django ORM patterns, Go concurrency patterns)</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Convencoes do time:</strong> Inclua naming conventions, import order, file structure patterns que o time segue</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Regras de negocio:</strong> Para skills de leads, adapte criterios de classificacao ao seu ICP. Para code review, adapte severidade ao seu dominio</span></li>
-          <li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Iteracao continua:</strong> Versione as skills no git. Cada melhoria beneficia todo o time automaticamente</span></li>
-        </ul>
-      </div>
-
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Pratica</h3>
-        <p class="text-neutral-300">
-          Crie uma skill de "meta-skill" que gera outras skills. Pergunte ao Claude: "Analise meu workflow de [X] e crie uma skill otimizada para ele". O Claude observa seus padroes e gera a skill customizada. Use <code class="bg-dark-700 px-2 py-1 rounded text-teal-400">/skill-creator</code> no Cowork para isso.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">🏋️</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-
-      <div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border-2 border-teal-500/40 p-8 mb-6">
-        <div class="flex items-center space-x-3 mb-6">
-          <span class="text-3xl">🏋️</span>
-          <div>
-            <h3 class="text-xl font-bold text-teal-400">Exercicio: Implementar 2 Skills de Produtividade</h3>
-            <p class="text-neutral-400 text-sm">Tempo estimado: 30-40 minutos</p>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">1</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Criar skill de Lead Research</h4><p class="text-neutral-300 text-sm">Use o template do modulo 5.2. Defina seu nicho, criterios de classificacao e formato de output.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">2</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Criar skill de Code Review</h4><p class="text-neutral-300 text-sm">Adapte as 4 camadas de review para o stack que voce mais usa. Inclua checks especificos.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">3</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Testar ambas as skills</h4><p class="text-neutral-300 text-sm">Invoque cada skill com dados reais e avalie a qualidade do output.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">4</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Iterar e melhorar</h4><p class="text-neutral-300 text-sm">Com base nos resultados, ajuste steps, quality checks e output format.</p></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">✅</span> Criterios de Sucesso</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Skill de Lead Research criada</span></div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Skill de Code Review criada</span></div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Ambas testadas com dados reais</span></div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Output no formato esperado</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span> Resumo do Modulo</h2>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Lead Research automatiza pesquisa de leads</strong><span class="text-neutral-400"> - 5 steps: confirmar, pesquisar, classificar, deduplicar, formatar.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Classificacao Hot/Warm/Cold objetiva</strong><span class="text-neutral-400"> - Criterios claros eliminam vies subjetivo na priorizacao.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Code Review em 4 camadas</strong><span class="text-neutral-400"> - Security, Bugs, Performance, Quality com cobertura sistematica.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Output com severidade categorizada</strong><span class="text-neutral-400"> - Critical, Important, Minor, Positive com arquivo e linha.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Secao Positive reforcar boas praticas</strong><span class="text-neutral-400"> - Destacar o que esta bem feito e tao importante quanto apontar problemas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Adaptacao ao contexto e essencial</strong><span class="text-neutral-400"> - Customize para seu stack, convencoes e regras de negocio.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-teal-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">5.5 - Onde Encontrar Skills Prontas</p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-5-3.html" class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start">← Modulo Anterior</a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">Voltar para Trilha</a>
-          <a href="modulo-5-5.html" class="flex-1 text-left px-6 py-3 bg-teal-600/40 text-teal-100 rounded-lg font-semibold hover:bg-teal-600/60 transition-colors justify-start">Proximo Modulo →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Shortcuts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-teal-400 bg-teal-500/10" href="index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-teal-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-teal-400" href="index.html">Track 5</a><span>/</span>
+<span class="text-teal-400">Module 5.4</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-teal-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-teal-500/20 text-teal-400 text-xs font-semibold rounded-full mb-4">MODULE 5.4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔬 Practical Skills: Lead Research and Code Review</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Two high productivity skills: lead research with Hot/Warm/Cold classification and code review at senior PR level with categorized severity.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">35</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Intermediary</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-teal-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1: Lead Research Skill
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🎯 Lead Research Skill</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The Lead Research skill transforms the<strong class="text-teal-400">manual lead research into an automated process</strong>. It receives a niche, location and desired data points, researches each lead individually and delivers a table ready to import into a spreadsheet or CRM.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The skill’s core system follows 5 steps:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 1 - Confirm parameters:</strong>Business niche, geographic location and desired data points (name, email, phone, website, etc.)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 2 - Search each lead:</strong>Search for information in public sources, professional social networks and company websites</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 3 - Classify leads:</strong>Hot (high potential), Warm (medium potential) or Cold (low potential) based on defined criteria</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 4 - Remove duplicates:</strong>Ensure uniqueness by company name and contact email</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Step 5 - Format output:</strong>Deliver as CSV or markdown table, ready for import</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Start with small batches: 10-15 leads per invocation. Check quality and adjust grading criteria before scaling to larger batches. The skill works best when combined with a web search MCP for live data.</p>
+</div>
+</section>
+TOPIC 2: Hot/Warm/Cold Classification
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🌡️ Hot / Warm / Cold classification</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Lead classification is what turns a contact list into<strong class="text-teal-400">actionable intelligence</strong>. The skill applies consistent criteria to each lead, eliminating the subjective bias that occurs when humans manually classify.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<div class="space-y-4">
+<div class="bg-red-900/20 rounded-lg border border-red-500/30 p-4">
+<h4 class="font-bold text-red-400 mb-2">🔥 HOT (High Priority)</h4>
+<p class="text-neutral-300 text-sm">Active website with traffic, presence on social networks, signs of recent growth, indicated budget, perfect match with ICP (Ideal Customer Profile).</p>
+</div>
+<div class="bg-yellow-900/20 rounded-lg border border-yellow-500/30 p-4">
+<h4 class="font-bold text-yellow-400 mb-2">🟡 WARM (Medium Priority)</h4>
+<p class="text-neutral-300 text-sm">Website exists but outdated, some online presence, may be necessary but does not demonstrate urgency, partial match with ICP.</p>
+</div>
+<div class="bg-blue-900/20 rounded-lg border border-blue-500/30 p-4">
+<h4 class="font-bold text-blue-400 mb-2">❄️ COLD (Low Priority)</h4>
+<p class="text-neutral-300 text-sm">Limited information, no clear online presence, no signs of need or budget, weak match with ICP.</p>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Customize the classification criteria for your business. What is "Hot" for a marketing consultancy is different than what is "Hot" for a B2B SaaS company. Include your specific criteria in the Steps section of the skill.</p>
+</div>
+</section>
+TOPIC 3: Senior Code Review Skill
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🔍 Senior Code Review Skill</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The Code Review skill emulates the process of a<strong class="text-teal-400">senior engineer reviewing a Pull Request</strong>. It not only identifies problems, but classifies them by severity and suggests file- and line-specific fixes.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The skill organizes the review into four layers of analysis, each focusing on a different aspect of the code:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Security:</strong>SQL injection, XSS, exposed keys, authentication failures. These are always the most critical</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Bugs:</strong>Null references, race conditions, unhandled promises, type mismatches</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Performance:</strong>N+1 queries, memory leaks, missing database indexes, large bundle imports</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Quality:</strong>Naming clarity, DRY violations, functions with more than 50 lines, pattern consistency</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Use this skill before opening a PR, not after. Rotate<code class="bg-dark-700 px-2 py-1 rounded text-teal-400" data-notranslate="True">/code-review</code>in your own files before submitting. This catches 80% of the issues a human reviewer would encounter, saving the entire team time.</p>
+</div>
+</section>
+TOPIC 4: Review Layers
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔬 Review Layers (Security, Bugs, Performance, Quality)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Each review layer has<strong class="text-teal-400">specific checkpoints</strong>which Claude systematically checks. This guarantees complete coverage, without depending on the reviewer's memory or mood.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-red-900/20 rounded-lg border border-red-500/30 p-4">
+<h4 class="font-bold text-red-400 mb-2">🔒Security</h4>
+<ul class="text-neutral-300 text-sm space-y-1">
+<li>• SQL injection vulnerabilities</li>
+<li>• Cross-Site Scripting (XSS)</li>
+<li>• Keys/secrets exposed in the code</li>
+<li>• Authentication/authorization failures</li>
+</ul>
+</div>
+<div class="bg-orange-900/20 rounded-lg border border-orange-500/30 p-4">
+<h4 class="font-bold text-orange-400 mb-2">🐛 Bugs</h4>
+<ul class="text-neutral-300 text-sm space-y-1">
+<li>• Null/undefined references</li>
+<li>• Race conditions</li>
+<li>• Unhandled promise rejections</li>
+<li>• Type mismatches</li>
+</ul>
+</div>
+<div class="bg-yellow-900/20 rounded-lg border border-yellow-500/30 p-4">
+<h4 class="font-bold text-yellow-400 mb-2">⚡ Performance</h4>
+<ul class="text-neutral-300 text-sm space-y-1">
+<li>• N+1 database queries</li>
+<li>• Memory leaks</li>
+<li>• Missing bank indices</li>
+<li>• Unnecessary Bundle imports</li>
+</ul>
+</div>
+<div class="bg-blue-900/20 rounded-lg border border-blue-500/30 p-4">
+<h4 class="font-bold text-blue-400 mb-2">💎Quality</h4>
+<ul class="text-neutral-300 text-sm space-y-1">
+<li>• Clear and consistent nomenclature</li>
+<li>• Violations of the DRY principle</li>
+<li>• Functions longer than 50 lines</li>
+<li>• Consistency of project standards</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Customize the layers for your stack. If you use Python, add checks for type hints. If you use React, add checks for hooks rules and memo patterns. The skill is a starting point that must be adapted.</p>
+</div>
+</section>
+TOPIC 5: Structured Output Format
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">📊 Structured Output Format</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The output of the code review skill follows a<strong class="text-teal-400">standardized format by severity</strong>which facilitates screening and correction. Each issue includes file, line, problem description and fix suggestion.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-red-400 font-bold">## Critical</div>
+<div class="text-neutral-300">- `src/auth.js:42` - SQL injection via unsanitized input</div>
+<div class="text-neutral-300">Fix: Use prepared statements with parameters</div>
+<div class="mt-3 text-orange-400 font-bold">## Important</div>
+<div class="text-neutral-300">- `src/api.js:88` - Promise without catch can crash the server</div>
+<div class="text-neutral-300">Fix: Add .catch() or try/catch to async handler</div>
+<div class="mt-3 text-yellow-400 font-bold">## Minor</div>
+<div class="text-neutral-300">- `src/utils.js:15` - Variable `data` not very descriptive</div>
+<div class="text-neutral-300">Fix: Rename to `userProfileData`</div>
+<div class="mt-3 text-teal-400 font-bold">##Positive</div>
+<div class="text-neutral-300">- Excellent use of early returns in `validateInput()`</div>
+<div class="text-neutral-300">- Unit tests cover all edge cases</div>
+</div>
+<p class="text-neutral-300">The section<strong class="text-teal-400">positive</strong>and crucial. Highlighting good decisions reinforces positive patterns and is what differentiates a useful code review from a critique session.</p>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Configure the skill to generate a summary at the top: "X Critical, Y Important, Z Minor, W Positive". This allows for quick triage: if you have Critical, stop everything and correct it. If you only have a Minor, you can approve it and correct it later.</p>
+</div>
+</section>
+TOPIC 6: Adapting to Context
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔧 Adapting Skills to Your Context</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Exemplary skills are starting points, not final solutions. True power is in<strong class="text-teal-400">adapt each skill to your specific context</strong>: your stack, your conventions, your workflow and your team.</p>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Stack-specific:</strong>Add checks for the framework you use (React hooks rules, Django ORM patterns, Go concurrency patterns)</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Team conventions:</strong>Include naming conventions, import order, file structure patterns that the team follows</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Business rules:</strong>For lead skills, adapt classification criteria to your ICP. For code review, adapt severity to your domain</span></li>
+<li class="flex items-start space-x-2"><span class="text-teal-400 mt-1">•</span><span><strong class="text-white">Iteration continues:</strong>Version the skills in git. Each improvement automatically benefits the entire team</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Create a "meta-skill" skill that generates other skills. Ask Claude: "Analyze my [X] workflow and create an optimized skill for it." Claude observes your patterns and generates the customized skill. Use<code class="bg-dark-700 px-2 py-1 rounded text-teal-400" data-notranslate="True">/skill-creator</code>on Cowork for this.</p>
+</div>
+</section>
+EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 font-bold text-xl">🏋️</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-gradient-to-br from-teal-900/30 to-dark-800 rounded-xl border-2 border-teal-500/40 p-8 mb-6">
+<div class="flex items-center space-x-3 mb-6">
+<span class="text-3xl">🏋️</span>
+<div>
+<h3 class="text-xl font-bold text-teal-400">Exercise: Implement 2 Productivity Skills</h3>
+<p class="text-neutral-400 text-sm">Estimated time: 30-40 minutes</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">1</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Create Lead Research skill</h4><p class="text-neutral-300 text-sm">Use the template from module 5.2. Define your niche, classification criteria and output format.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">2</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Create Code Review skill</h4><p class="text-neutral-300 text-sm">Adapt the 4 review layers to the stack you use most. Include specific checks.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">3</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Test both skills</h4><p class="text-neutral-300 text-sm">Invoke each skill with real data and evaluate the quality of the output.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-500/30 flex items-center justify-center border border-teal-500/40"><span class="text-teal-400 font-bold">4</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Iterate and improve</h4><p class="text-neutral-300 text-sm">Based on the results, adjust steps, quality checks and output format.</p></div>
+</div>
+</div>
+</div>
+<div class="bg-teal-900/20 rounded-xl border border-teal-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-teal-400 mb-4 flex items-center"><span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Lead Research skill created</span></div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Code Review skill created</span></div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Both tested with real data</span></div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg"><span class="text-teal-400">☐</span><span class="text-neutral-300">Output in expected format</span></div>
+</div>
+</div>
+</section>
+SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-teal-900/40 via-dark-800 to-dark-800 rounded-xl border border-teal-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Lead Research automates lead research</strong><span class="text-neutral-400">- 5 steps: confirm, search, sort, deduplicate, format.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Objective Hot/Warm/Cold classification</strong><span class="text-neutral-400">- Clear criteria eliminate subjective bias in prioritization.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Code Review in 4 layers</strong><span class="text-neutral-400">- Security, Bugs, Performance, Quality with systematic coverage.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Output with categorized severity</strong><span class="text-neutral-400">- Critical, Important, Minor, Positive with file and line.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Positive section reinforcing good practices</strong><span class="text-neutral-400">- Highlighting what is well done is as important as pointing out problems.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-teal-400 mt-1">✓</span><div><strong class="text-white">Adaptation to the context is essential</strong><span class="text-neutral-400">- Customize to your stack, conventions and business rules.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-teal-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">5.5 - Where to Find Ready Skills</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-left px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start" href="modulo-5-3.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-left px-6 py-3 bg-teal-600/40 text-teal-100 rounded-lg font-semibold hover:bg-teal-600/60 transition-colors justify-start" href="modulo-5-5.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
