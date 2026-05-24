@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 3.5 - Workflow: Escrever Testes | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 3.5 - Workflow: Writing Tests | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,736 +42,613 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-purple-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-purple-400">Trilha 3</a>
-      <span>/</span>
-      <span class="text-purple-400">Modulo 3.5</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 3.5
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🧪 Workflow: Escrever Testes</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Domine o workflow completo de geracao de testes com Claude Code: identifique gaps de cobertura, gere testes abrangentes, rode e corrija, e use TDD assistido por IA para alcancar cobertura acima de 80%.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">35</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Intermediario</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-purple-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 1: Identificando gaps de cobertura -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🔍 Identificando gaps de cobertura</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Antes de escrever testes, voce precisa saber <strong class="text-purple-400">o que testar</strong>. O Claude Code consegue analisar seu codigo-fonte, identificar funcoes sem cobertura, caminhos nao testados e logica critica exposta. Essa analise inicial e o que separa testes uteis de testes que apenas inflam metricas.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O Claude pode ler seu relatorio de coverage (lcov, istanbul, pytest-cov) e cruzar com o codigo-fonte para identificar exatamente quais funcoes, branches e linhas nao estao cobertas. Mais do que isso, ele prioriza pelo <strong class="text-white">risco do que nao esta testado</strong>.
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-purple-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a>
+<span>/</span>
+<span class="text-purple-400">Module 3.5</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.5</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧪 Workflow: Writing Tests</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Master the complete test generation workflow with Claude Code: identify coverage gaps, generate comprehensive tests, run and fix, and use AI-assisted TDD to achieve coverage above 80%.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">35</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Intermediary</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-purple-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+═══════════════════════════ ════════════════════════════
+TOPIC 1: Identifying coverage gaps
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🔍 Identifying coverage gaps</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Before writing tests, you need to know<strong class="text-purple-400">what to test</strong>. Claude Code can analyze your source code, identify uncovered functions, untested paths and exposed critical logic. This initial analysis is what separates useful tests from tests that just inflate metrics.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Claude can read your coverage report (lcov, istanbul, pytest-cov) and cross-reference the source code to identify exactly which functions, branches and lines are not covered. More than that, he prioritizes<strong class="text-white">risk of what is not tested</strong>.
         </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Analise de coverage:</strong> Peca ao Claude para ler o relatorio de cobertura e listar as funcoes com 0% de coverage, priorizando as mais criticas</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Branches descobertos:</strong> Identifique if/else, try/catch e switch/case que so tem um caminho testado - esses sao os maiores pontos cegos</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Priorizacao por risco:</strong> Funcoes que lidam com dinheiro, autenticacao, dados sensiveis ou integracao externa devem ser testadas primeiro</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Prompt eficaz:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Analise a cobertura de testes deste projeto. Identifique as 10 funcoes mais criticas sem testes."</code></span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Gerar relatorio de coverage primeiro</div>
-          <div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
-          <div class="text-neutral-500 mt-3"># Pedir ao Claude para analisar</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Leia o relatorio de coverage em coverage/lcov-report/index.html e identifique as funcoes mais criticas sem testes. Priorize por risco de negocio.</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Nao busque 100% de cobertura cegamente. Peca ao Claude para focar nos <strong class="text-white">20% do codigo que representam 80% do risco</strong>: funcoes de pagamento, autenticacao, validacao de dados e logica de negocio central.
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Coverage analysis:</strong>Ask Claude to read the coverage report and list the functions with 0% coverage, prioritizing the most critical ones</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Branches discovered:</strong>Identify if/else, try/catch and switch/case that only have one tested path - these are the biggest blind spots</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Prioritization by risk:</strong>Functions that deal with money, authentication, sensitive data or external integration should be tested first</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Effective prompt:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Analise a cobertura de testes deste projeto. Identifique as 10 funcoes mais criticas sem testes."</code></span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Generate coverage report first</div>
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
+<div class="text-neutral-500 mt-3"># Ask Claude to analyze</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Read the coverage report at coverage/lcov-report/index.html and identify the most critical untested functions. Prioritize by business risk.</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Don't blindly seek 100% coverage. Ask Claude to focus on the<strong class="text-white">20% of the code that represents 80% of the risk</strong>: payment functions, authentication, data validation and core business logic.</p>
+<p class="text-neutral-300">A good approach is to say: "Given that we have 40% coverage, what functions should I test to have the greatest impact on system reliability?"</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 2: Generating tests with Claude
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">✍️ Generating tests with Claude</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">With the gaps identified, and time to<strong class="text-purple-400">generate comprehensive tests</strong>. Claude Code reads the function's source code, understands its expected behavior, identifies edge cases and generates complete tests that follow your project's conventions.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Claude generates tests that cover the<strong class="text-white">happy path, expected errors and edge cases</strong>. It analyzes the function signature, input/output types, dependencies, and business context to create meaningful tests.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Full tests:</strong>Claude generates tests for happy path, error cases, boundary values ​​and null/undefined inputs automatically</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Project conventions:</strong>If you already have existing tests, Claude imitates the style (describe/it, test(), assert vs expect) and folder structure</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Smart Mocks:</strong>Claude identifies external dependencies (database, APIs, filesystem) and generates appropriate mocks</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Effective prompt:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Escreva testes para a funcao calculateDiscount em src/pricing.ts. Cubra happy path, erros e edge cases. Use o mesmo estilo dos testes existentes."</code></span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Comprehensive test generation</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Read src/services/auth.ts and write complete unit tests. Include:</span></div>
+<div><span class="text-neutral-300">- Login with valid credentials</span></div>
+<div><span class="text-neutral-300">- Login with wrong password</span></div>
+<div><span class="text-neutral-300">- Non-existent user</span></div>
+<div><span class="text-neutral-300">- Expired token</span></div>
+<div><span class="text-neutral-300">- Rate limiting</span></div>
+<div><span class="text-neutral-300">Follow the test pattern in __tests__/</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Always ask Claude to read existing tests before generating new ones. This ensures style consistency. Use:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Leia os testes existentes em __tests__/ para entender o padrao, depois gere testes para X."</code>
+</p>
+<p class="text-neutral-300">For complex functions, ask for testing in stages: first the happy path, then the errors, then the edge cases. This gives more detailed results than asking for everything at once.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 3: Verifying and running tests
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">▶️ Checking and running tests</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">AI-generated tests need to be<strong class="text-purple-400">validated and executed</strong>. Claude Code can run the tests, interpret failures, correct the test code and re-run until they all pass. This feedback loop is one of Claude's biggest advantages over traditional test generators.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The validation workflow is iterative:<strong class="text-white">generates → runs → fails → corrects → runs again</strong>. Claude understands error messages, stack traces and diffs to adjust tests until they are correct. This is done in a natural conversational loop.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Run tests:</strong>Ask Claude to run<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">npm test</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">pytest</code>and analyze the results automatically</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Interpret faults:</strong>Claude reads the error output and distinguishes between poorly written tests (fixes the test) and real bugs in the code (reports the bug)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Automatic fix:</strong>When the test fails due to incorrect setup (wrong mock, missing import), Claude corrects it and re-executes it</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Bug discovery:</strong>Failed tests can reveal real bugs in production code - Claude distinguishes between the two scenarios</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Ask to run and correct</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Run the tests you just created. If one fails, analyze the error and correct it. Repeat until everyone passes.</span></div>
+<div class="text-neutral-500 mt-3"># Typical result:</div>
+<div class="text-neutral-300">Running: npm test -- --testPathPattern=auth.test.ts</div>
+<div class="text-red-400">FAIL: 2 out of 8 tests failed</div>
+<div class="text-neutral-300">Correcting database mock...</div>
+<div class="text-neutral-300">Running again...</div>
+<div class="text-emerald-400">PASS: 8 out of 8 tests passed</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Instruct Claude to make no more than 3 correction attempts per test. If a test fails 3 times, there is probably a design problem that needs human intervention.</p>
+<p class="text-neutral-300">Add to CLAUDE.md:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Apos gerar testes, sempre rode-os. Se falharem, corrija e rode novamente. Maximo 3 tentativas por teste."</code>
+</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 4: Coverage check
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📈 Coverage check (measuring improvement)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">After generating and validating the tests, it is time to<strong class="text-purple-400">measure the real impact</strong>. Claude can run the coverage report before and after, calculate the improvement and identify what is still missing to reach the desired coverage goal.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Coverage check and the<strong class="text-white">quantitative feedback</strong>of your testing effort. Claude compares the before and after, shows the evolution by file/function and suggests next steps to continue improving coverage in a strategic way.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Before vs after:</strong>Run coverage before generating tests and after. Claude calculates the delta and shows which areas have improved</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Important metrics:</strong>Line coverage, branch coverage and function coverage. Branch coverage is the most revealing - it shows whether all logical paths are tested</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Remaining gaps:</strong>Claude identifies what is still missing and estimates how many additional tests are needed to reach the goal</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">CI integration:</strong>Configure a minimum threshold in CI (e.g. 80%) and Claude helps you maintain this goal in each PR</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Check coverage after new tests</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Run npm test -- --coverage and compare with the previous coverage. Show the evolution per file and suggest next steps to reach 80%.</span></div>
+<div class="text-neutral-500 mt-3"># Typical result:</div>
+<div class="text-neutral-300">Coverage before: 42.3%</div>
+<div class="text-neutral-300">Coverage after: 67.8% (+25.5%)</div>
+<div class="text-neutral-300">Missing: auth.ts (branch 60%), payment.ts (0%), utils.ts (line 45-67)</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Don't chase 100% coverage - the return drops dramatically after 80%. The effort to go from 80% to 90% is often greater than from 40% to 80%. Focus on branch coverage for critical logic.</p>
+<p class="text-neutral-300">Create a script in package.json:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"branches\":80}}'"</code>to set the threshold automatically.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 5: TDD with Claude Code
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔴🟢 TDD with Claude Code (test-first)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Claude Code is an ideal partner for<strong class="text-purple-400">Test-Driven Development</strong>. You describe the desired behavior, Claude writes the test first (which fails), then implements the code to make the test pass. The Red-Green-Refactor cycle gains extraordinary speed.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">In TDD assisted by Claude, the cycle is:<strong class="text-white">describe the behavior → Claude writes the test → test fails (RED) → Claude implements the code → test passes (GREEN) → Claude refactors (REFACTOR)</strong>. You conduct the specification, Claude executes it.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">RED - Write the test:</strong>Describe the behavior in natural language and ask Claude to write just the test (no implementation)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">GREEN - Implement:</strong>Ask Claude to implement the minimum code necessary for the test to pass</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">REFACTOR - Improve:</strong>With the green test as a safety net, ask Claude to refactor the code while keeping the tests passing</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Fast iteration:</strong>Claude does the complete cycle in minutes, where it would take hours manually. You focus on the specification, he focuses on the implementation</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Step 1: RED - Write the test</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Write a test for a calculateShipping function that:</span></div>
+<div><span class="text-neutral-300">- Free shipping returns for orders over R$200</span></div>
+<div><span class="text-neutral-300">- Charges R$15 for orders between R$100 and R$200</span></div>
+<div><span class="text-neutral-300">- Charges R$25 for orders under R$100</span></div>
+<div><span class="text-neutral-300">DO NOT implement the function, just test it.</span></div>
+<div class="text-neutral-500 mt-3"># Step 2: GREEN - Implement</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Now implement the calculateShipping function to make all tests pass.</span></div>
+<div class="text-neutral-500 mt-3"># Step 3: REFACTOR</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Refactor the implementation to be more readable while keeping the tests green.</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">TDD with Claude works best when you describe behaviors rather than implementations. Say "free shipping must be returned for orders over R$200" instead of "use an if to check if the value is greater than 200".</p>
+<p class="text-neutral-300">Add to CLAUDE.md:<code class="bg-dark-700 px-2 py-1 rounded text-purple-400" data-notranslate="True">"Quando eu disser 'TDD', escreva primeiro os testes, depois implemente o codigo para passar os testes, e finalmente refatore."</code>
+</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 6: Edge case testing
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🧊 Edge case testing</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The most dangerous bugs live in<strong class="text-purple-400">edge cases</strong>: limit values, unexpected inputs, race conditions and impossible states. Claude Code is excellent at thinking about these scenarios that humans often forget, generating tests that cover boundary values ​​and error paths.</p>
+Main Concept
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Edge cases are scenarios that lie on the edges of expected behavior. Claude can analyze a function and systematically generate tests to<strong class="text-white">null values, empty lists, negative numbers, giant strings, special characters, wrong types and concurrent states</strong>.
         </p>
-        <p class="text-neutral-300">
-          Uma boa abordagem e dizer: "Dado que temos 40% de coverage, quais funcoes devo testar para ter o maior impacto na confiabilidade do sistema?"
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 2: Gerando testes com Claude -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">✍️ Gerando testes com Claude</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Com os gaps identificados, e hora de <strong class="text-purple-400">gerar testes abrangentes</strong>. O Claude Code le o codigo-fonte da funcao, entende seu comportamento esperado, identifica edge cases e gera testes completos que seguem as convencoes do seu projeto.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O Claude gera testes que cobrem o <strong class="text-white">caminho feliz, erros esperados e edge cases</strong>. Ele analisa a assinatura da funcao, os tipos de entrada/saida, as dependencias e o contexto de negocio para criar testes significativos.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Testes completos:</strong> O Claude gera testes para happy path, error cases, boundary values e null/undefined inputs automaticamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Convencoes do projeto:</strong> Se voce ja tem testes existentes, o Claude imita o estilo (describe/it, test(), assert vs expect) e a estrutura de pastas</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Mocks inteligentes:</strong> O Claude identifica dependencias externas (banco de dados, APIs, filesystem) e gera mocks apropriados</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Prompt eficaz:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Escreva testes para a funcao calculateDiscount em src/pricing.ts. Cubra happy path, erros e edge cases. Use o mesmo estilo dos testes existentes."</code></span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Geracao abrangente de testes</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Leia src/services/auth.ts e escreva testes unitarios completos. Inclua:</span></div>
-          <div><span class="text-neutral-300">  - Login com credenciais validas</span></div>
-          <div><span class="text-neutral-300">  - Login com senha errada</span></div>
-          <div><span class="text-neutral-300">  - Usuario inexistente</span></div>
-          <div><span class="text-neutral-300">  - Token expirado</span></div>
-          <div><span class="text-neutral-300">  - Rate limiting</span></div>
-          <div><span class="text-neutral-300">  Siga o padrao dos testes em __tests__/</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Sempre peca ao Claude para ler os testes existentes antes de gerar novos. Isso garante consistencia de estilo. Use: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Leia os testes existentes em __tests__/ para entender o padrao, depois gere testes para X."</code>
-        </p>
-        <p class="text-neutral-300">
-          Para funcoes complexas, peca testes em etapas: primeiro o happy path, depois os erros, depois os edge cases. Isso da resultados mais detalhados do que pedir tudo de uma vez.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 3: Verificando e rodando testes -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">▶️ Verificando e rodando testes</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Testes gerados por IA precisam ser <strong class="text-purple-400">validados e executados</strong>. O Claude Code pode rodar os testes, interpretar falhas, corrigir o codigo dos testes e re-executar ate que todos passem. Esse loop de feedback e uma das maiores vantagens do Claude sobre geradores de testes tradicionais.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O workflow de validacao e iterativo: <strong class="text-white">gera → roda → falha → corrige → roda novamente</strong>. O Claude entende mensagens de erro, stack traces e diffs para ajustar os testes ate que estejam corretos. Isso e feito em um loop natural de conversa.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Executar testes:</strong> Peca ao Claude para rodar <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">npm test</code> ou <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">pytest</code> e analise os resultados automaticamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Interpretar falhas:</strong> O Claude le o output de erro e distingue entre testes mal escritos (corrige o teste) e bugs reais no codigo (reporta o bug)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Fix automatico:</strong> Quando o teste falha por setup incorreto (mock errado, import faltando), o Claude corrige e re-executa</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Descoberta de bugs:</strong> Testes que falham podem revelar bugs reais no codigo de producao - o Claude distingue os dois cenarios</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Pedir para rodar e corrigir</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Rode os testes que voce acabou de criar. Se algum falhar, analise o erro e corrija. Repita ate todos passarem.</span></div>
-          <div class="text-neutral-500 mt-3"># Resultado tipico:</div>
-          <div class="text-neutral-300">Rodando: npm test -- --testPathPattern=auth.test.ts</div>
-          <div class="text-red-400">FAIL: 2 de 8 testes falharam</div>
-          <div class="text-neutral-300">Corrigindo mock do database...</div>
-          <div class="text-neutral-300">Rodando novamente...</div>
-          <div class="text-emerald-400">PASS: 8 de 8 testes passaram</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Instrua o Claude a nao mais do que 3 tentativas de correcao por teste. Se um teste falhar 3 vezes, provavelmente ha um problema de design que precisa de intervencao humana.
-        </p>
-        <p class="text-neutral-300">
-          Adicione ao CLAUDE.md: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Apos gerar testes, sempre rode-os. Se falharem, corrija e rode novamente. Maximo 3 tentativas por teste."</code>
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 4: Coverage check -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">📈 Coverage check (medindo melhoria)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Apos gerar e validar os testes, e hora de <strong class="text-purple-400">medir o impacto real</strong>. O Claude pode rodar o coverage report antes e depois, calcular a melhoria e identificar o que ainda falta para atingir a meta de cobertura desejada.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Coverage check e o <strong class="text-white">feedback quantitativo</strong> do seu esforco de testes. O Claude compara o antes e depois, mostra a evolucao por arquivo/funcao e sugere proximos passos para continuar melhorando a cobertura de forma estrategica.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Antes vs depois:</strong> Rode coverage antes de gerar testes e depois. O Claude calcula o delta e mostra quais areas melhoraram</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Metricas importantes:</strong> Line coverage, branch coverage e function coverage. Branch coverage e a mais reveladora - mostra se todos os caminhos logicos estao testados</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Gaps restantes:</strong> O Claude identifica o que ainda falta e estima quantos testes adicionais sao necessarios para atingir a meta</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">CI integration:</strong> Configure um threshold minimo no CI (ex: 80%) e o Claude ajuda a manter essa meta em cada PR</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Verificar coverage apos novos testes</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Rode npm test -- --coverage e compare com o coverage anterior. Mostre a evolucao por arquivo e sugira proximos passos para chegar a 80%.</span></div>
-          <div class="text-neutral-500 mt-3"># Resultado tipico:</div>
-          <div class="text-neutral-300">Coverage antes: 42.3%</div>
-          <div class="text-neutral-300">Coverage depois: 67.8% (+25.5%)</div>
-          <div class="text-neutral-300">Faltam: auth.ts (branch 60%), payment.ts (0%), utils.ts (linha 45-67)</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Nao persiga 100% de cobertura - o retorno diminui drasticamente apos 80%. O esforco para ir de 80% a 90% e frequentemente maior do que de 40% a 80%. Foque em coverage de branches para logica critica.
-        </p>
-        <p class="text-neutral-300">
-          Crie um script no package.json: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"branches\":80}}'"</code> para enforcar o threshold automaticamente.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 5: TDD com Claude Code -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔴🟢 TDD com Claude Code (test-first)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Claude Code e um parceiro ideal para <strong class="text-purple-400">Test-Driven Development</strong>. Voce descreve o comportamento desejado, o Claude escreve o teste primeiro (que falha), depois implementa o codigo para fazer o teste passar. O ciclo Red-Green-Refactor ganha uma velocidade extraordinaria.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          No TDD assistido por Claude, o ciclo e: <strong class="text-white">descreva o comportamento → Claude escreve o teste → teste falha (RED) → Claude implementa o codigo → teste passa (GREEN) → Claude refatora (REFACTOR)</strong>. Voce conduz a especificacao, o Claude executa.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">RED - Escreva o teste:</strong> Descreva o comportamento em linguagem natural e peca ao Claude para escrever apenas o teste (sem implementacao)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">GREEN - Implemente:</strong> Peca ao Claude para implementar o minimo de codigo necessario para o teste passar</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">REFACTOR - Melhore:</strong> Com o teste verde como rede de seguranca, peca ao Claude para refatorar o codigo mantendo os testes passando</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Iteracao rapida:</strong> O Claude faz o ciclo completo em minutos, onde manualmente levaria horas. Voce foca na especificacao, ele na implementacao</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Passo 1: RED - Escreva o teste</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Escreva um teste para uma funcao calculateShipping que:</span></div>
-          <div><span class="text-neutral-300">  - Retorna frete gratis para pedidos acima de R$200</span></div>
-          <div><span class="text-neutral-300">  - Cobra R$15 para pedidos entre R$100 e R$200</span></div>
-          <div><span class="text-neutral-300">  - Cobra R$25 para pedidos abaixo de R$100</span></div>
-          <div><span class="text-neutral-300">  NAO implemente a funcao, apenas o teste.</span></div>
-          <div class="text-neutral-500 mt-3"># Passo 2: GREEN - Implemente</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Agora implemente a funcao calculateShipping para fazer todos os testes passarem.</span></div>
-          <div class="text-neutral-500 mt-3"># Passo 3: REFACTOR</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Refatore a implementacao para ser mais legivel, mantendo os testes verdes.</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          TDD com Claude funciona melhor quando voce descreve comportamentos em vez de implementacoes. Diga "deve retornar frete gratis para pedidos acima de R$200" em vez de "use um if para checar se o valor e maior que 200".
-        </p>
-        <p class="text-neutral-300">
-          Adicione ao CLAUDE.md: <code class="bg-dark-700 px-2 py-1 rounded text-purple-400">"Quando eu disser 'TDD', escreva primeiro os testes, depois implemente o codigo para passar os testes, e finalmente refatore."</code>
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 6: Testes de edge cases -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🧊 Testes de edge cases</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Os bugs mais perigosos vivem nos <strong class="text-purple-400">edge cases</strong>: valores limite, entradas inesperadas, condicoes de corrida e estados impossiveis. O Claude Code e excelente em pensar nesses cenarios que humanos frequentemente esquecem, gerando testes que cobrem boundary values e error paths.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Edge cases sao os cenarios que ficam nas bordas do comportamento esperado. O Claude consegue analisar uma funcao e gerar sistematicamente testes para <strong class="text-white">valores nulos, listas vazias, numeros negativos, strings gigantes, caracteres especiais, tipos errados e estados concorrentes</strong>.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Boundary values:</strong> Valores no limite exato (0, -1, MAX_INT, string vazia, array com 1 elemento) sao onde a maioria dos bugs se esconde</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Error paths:</strong> O que acontece quando a API retorna 500? Quando o banco esta fora? Quando o disco esta cheio? Testes de resiliencia</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Tipos inesperados:</strong> Em JavaScript/Python, o que acontece quando recebe undefined, NaN, Infinity ou um objeto onde esperava string?</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-purple-400 mt-1">•</span>
-            <span><strong class="text-white">Concorrencia:</strong> Duas chamadas simultaneas a mesma funcao, timeout durante operacao, cancelamento no meio de uma transacao</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Pedir testes de edge cases especificamente</div>
-          <div><span class="text-purple-400">></span> <span class="text-neutral-300">Leia a funcao processPayment em src/payment.ts e gere APENAS testes de edge cases:</span></div>
-          <div><span class="text-neutral-300">  - Valor zero, negativo, muito grande (overflow)</span></div>
-          <div><span class="text-neutral-300">  - Moeda invalida, moeda nula</span></div>
-          <div><span class="text-neutral-300">  - Timeout do gateway de pagamento</span></div>
-          <div><span class="text-neutral-300">  - Duplo processamento (idempotencia)</span></div>
-          <div><span class="text-neutral-300">  - Cancelamento durante processamento</span></div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Peca ao Claude para pensar como um <strong class="text-white">"adversario"</strong> do codigo: "Tente quebrar esta funcao. Quais inputs causariam comportamento inesperado, crash ou dados corrompidos?" Isso gera testes muito mais reveladores do que pedir "escreva testes".
-        </p>
-        <p class="text-neutral-300">
-          Uma abordagem poderosa: peca ao Claude para listar 20 edge cases possíveis, escolha os 10 mais relevantes, e entao peca para gerar testes so para esses.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-2 flex items-center">
-          <span class="mr-3">🏋️</span> Exercicio Pratico
-        </h2>
-        <p class="text-neutral-400 mb-8">Aumentar coverage de 40% para 80% em um projeto real</p>
-
-        <div class="space-y-8">
-          <!-- Passo 1 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Medir coverage inicial</h4>
-              <p class="text-neutral-300 text-sm mb-3">Rode o coverage report e anote o percentual atual:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
-                <div><span class="text-neutral-500"># ou: pytest --cov=src --cov-report=html</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Anote: Lines __%, Branches __%, Functions __%</p>
-            </div>
-          </div>
-
-          <!-- Passo 2 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Identificar gaps com Claude</h4>
-              <p class="text-neutral-300 text-sm mb-3">Peca ao Claude para analisar e priorizar:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Analise o coverage report e identifique as 5 funcoes mais criticas sem testes. Priorize por risco de negocio.</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 3 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Gerar testes para as funcoes priorizadas</h4>
-              <p class="text-neutral-300 text-sm mb-3">Para cada funcao identificada, peca testes completos:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Escreva testes para [funcao]. Cubra happy path, erros e edge cases. Siga o padrao dos testes existentes.</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 4 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Rodar, corrigir e validar</h4>
-              <p class="text-neutral-300 text-sm mb-3">Peca ao Claude para executar e corrigir ate todos passarem:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Rode os testes. Corrija os que falharem. Repita ate todos passarem.</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Passo 5 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
-              <span class="text-purple-400 font-bold">5</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Medir coverage final e comparar</h4>
-              <p class="text-neutral-300 text-sm mb-3">Rode coverage novamente e compare:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
-                <div><span class="text-purple-400">></span> <span class="text-neutral-300">Compare o coverage atual com o inicial. Quanto melhorou? O que falta para 80%?</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Meta: coverage acima de 80% em lines e branches.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist de Sucesso -->
-      <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
-        <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Mediu coverage inicial do projeto</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Identificou funcoes criticas sem testes</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Gerou testes com happy path e edge cases</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Todos os testes gerados passam</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Coverage subiu significativamente</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-purple-400">☐</span>
-            <span class="text-neutral-300">Experimentou TDD com Claude Code</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- RESUMO FINAL -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Identifique gaps antes de escrever</strong>
-              <span class="text-neutral-400"> - Analise coverage existente e priorize por risco de negocio, nao por percentual.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Claude gera testes abrangentes</strong>
-              <span class="text-neutral-400"> - Happy path, erros, edge cases e mocks inteligentes seguindo convencoes do projeto.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Loop de validacao automatico</strong>
-              <span class="text-neutral-400"> - Rode, corrija, rode novamente. O Claude faz o ciclo ate todos os testes passarem.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Meca o impacto quantitativamente</strong>
-              <span class="text-neutral-400"> - Compare coverage antes e depois. Foque em branch coverage para logica critica.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">TDD assistido por IA e poderoso</strong>
-              <span class="text-neutral-400"> - Red-Green-Refactor em minutos. Voce especifica, Claude implementa.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-purple-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Edge cases revelam bugs escondidos</strong>
-              <span class="text-neutral-400"> - Peca ao Claude para "quebrar" o codigo. Boundary values, nulls e concorrencia.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-purple-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">3.6 - Workflow: Code Review e Pull Request</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-3-4.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-3-6.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">
-            Proximo Modulo →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Boundary values:</strong>Values ​​at the exact limit (0, -1, MAX_INT, empty string, array with 1 element) are where most bugs hide</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Error paths:</strong>What happens when the API returns 500? When is the bank out? When is the disk full? Resilience tests</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Unexpected types:</strong>In JavaScript/Python, what happens when you receive undefined, NaN, Infinity or an object where you expect string?</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-purple-400 mt-1">•</span>
+<span><strong class="text-white">Competition:</strong>Two simultaneous calls to the same function, timeout during operation, cancellation in the middle of a transaction</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Request edge case testing specifically</div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Read the processPayment function in src/payment.ts and ONLY generate edge case tests:</span></div>
+<div><span class="text-neutral-300">- Zero, negative, very large value (overflow)</span></div>
+<div><span class="text-neutral-300">- Invalid currency, null currency</span></div>
+<div><span class="text-neutral-300">- Payment gateway timeout</span></div>
+<div><span class="text-neutral-300">- Double processing (idempotency)</span></div>
+<div><span class="text-neutral-300">- Cancellation during processing</span></div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Ask Claude to think like a<strong class="text-white">"adversary"</strong>from the code: "Try to break this function. What inputs would cause unexpected behavior, crash, or corrupted data?" This generates much more revealing tests than asking "write tests".</p>
+<p class="text-neutral-300">A powerful approach: ask Claude to list 20 possible edge cases, choose the 10 most relevant, and then ask him to generate tests just for those.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-2 flex items-center">
+<span class="mr-3">🏋️</span>Practical Exercise</h2>
+<p class="text-neutral-400 mb-8">Increase coverage from 40% to 80% in a real project</p>
+<div class="space-y-8">
+Step 1
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Measure initial coverage</h4>
+<p class="text-neutral-300 text-sm mb-3">Run the coverage report and note the current percentage:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
+<div><span class="text-neutral-500"># or: pytest --cov=src --cov-report=html</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Note: Lines __%, Branches __%, Functions __%</p>
+</div>
+</div>
+Step 2
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Identify gaps with Claude</h4>
+<p class="text-neutral-300 text-sm mb-3">Ask Claude to analyze and prioritize:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Analyze the coverage report and identify the 5 most critical functions without testing. Prioritize by business risk.</span></div>
+</div>
+</div>
+</div>
+Step 3
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Generate tests for prioritized functions</h4>
+<p class="text-neutral-300 text-sm mb-3">For each function identified, request complete tests:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Write tests for [function]. Cover happy path, errors and edge cases. Follow the standard of existing tests.</span></div>
+</div>
+</div>
+</div>
+Step 4
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Run, correct and validate</h4>
+<p class="text-neutral-300 text-sm mb-3">Ask Claude to run and correct until everyone passes:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Run the tests. Correct any that fail. Repeat until everyone passes.</span></div>
+</div>
+</div>
+</div>
+Step 5
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center border border-purple-500/40">
+<span class="text-purple-400 font-bold">5</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Measure final coverage and compare</h4>
+<p class="text-neutral-300 text-sm mb-3">Run coverage again and compare:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-purple-400">$</span> <span class="text-neutral-300">npm test -- --coverage</span></div>
+<div><span class="text-purple-400">&gt;</span> <span class="text-neutral-300">Compare the current coverage with the initial one. How much has it improved? What's left for 80%?</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Goal: coverage above 80% in lines and branches.</p>
+</div>
+</div>
+</div>
+</div>
+Success Checklist
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6 mb-6 mt-8">
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Measured initial coverage of the project</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Identified critical functions without testing</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Generated tests with happy path and edge cases</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">All generated tests pass</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Coverage rose significantly</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-purple-400">☐</span>
+<span class="text-neutral-300">Tried TDD with Claude Code</span>
+</div>
+</div>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+FINAL SUMMARY
+═══════════════════════════ ════════════════════════════
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Identify gaps before writing</strong>
+<span class="text-neutral-400">- Analyze existing coverage and prioritize by business risk, not by percentage.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Claude generates comprehensive tests</strong>
+<span class="text-neutral-400">- Happy path, errors, edge cases and intelligent mocks following project conventions.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Automatic validation loop</strong>
+<span class="text-neutral-400">- Rotate, correct, rotate again. Claude runs the cycle until all tests pass.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Measure the impact quantitatively</strong>
+<span class="text-neutral-400">- Compare coverage before and after. Focus on branch coverage for critical logic.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Powerful AI-Assisted TDD</strong>
+<span class="text-neutral-400">- Red-Green-Refactor in minutes. You specify, Claude implements.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-purple-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Edge cases reveal hidden bugs</strong>
+<span class="text-neutral-400">- Ask Claude to "break" the code. Boundary values, nulls and competition.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-purple-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">3.6 - Workflow: Code Review and Pull Request</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-4.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-6.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -792,6 +669,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
