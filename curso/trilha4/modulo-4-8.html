@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 4.8 - Verificacao e Prompts Auto-validantes | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 4.8 - Verification and Self-Validating Prompts | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,679 +42,565 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-amber-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-amber-400">Trilha 4</a>
-      <span>/</span>
-      <span class="text-amber-400">Modulo 4.8</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 4.8
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔒 Verificacao e Prompts Auto-validantes</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        O ultimo modulo da Trilha 4 fecha o ciclo: como criar prompts que se verificam sozinhos. Aprenda a embutir criterios de verificacao, checklists automaticos, loops de validacao e confidence scoring nos seus prompts para que o Claude nunca entregue trabalho incompleto.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-amber-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-amber-400">35</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-amber-400">Avancado</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-amber-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 1: O que sao prompts auto-validantes -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">🧩 O que sao Prompts Auto-validantes</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Um prompt auto-validante e um prompt que inclui <strong class="text-amber-400">seus proprios criterios de verificacao</strong>. Em vez de voce revisar manualmente se o Claude fez tudo certo, o prompt instrui o Claude a verificar o trabalho antes de declarar concluido. E como entregar uma tarefa com um checklist de aceite embutido.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A diferenca entre um prompt normal e um auto-validante:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-neutral-500">// PROMPT NORMAL:</div>
-          <div class="text-red-400">"Add input validation to the signup form."</div>
-          <br>
-          <div class="text-neutral-500">// PROMPT AUTO-VALIDANTE:</div>
-          <div class="text-amber-400">"Add input validation to the signup form.</div>
-          <br>
-          <div class="text-amber-400">Before marking complete, verify:</div>
-          <div class="text-amber-400">□ Email format validated (regex + DNS check)</div>
-          <div class="text-amber-400">□ Password meets requirements (8+ chars, 1 upper,</div>
-          <div class="text-amber-400">  1 number, 1 special)</div>
-          <div class="text-amber-400">□ Error messages are user-friendly (not technical)</div>
-          <div class="text-amber-400">□ XSS prevented on all inputs</div>
-          <div class="text-amber-400">□ Tests cover valid + 3 invalid scenarios</div>
-          <div class="text-amber-400">□ All existing tests still pass</div>
-          <br>
-          <div class="text-amber-400">Report status of each checkbox."</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Checklist explicito:</strong> O Claude sabe exatamente o que precisa estar pronto. Nao ha espaco para "esqueci de adicionar testes"</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">"Report status":</strong> Pedir que o Claude reporte o status de cada item forca ele a verificar cada um antes de responder</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Reduz ciclos de revisao:</strong> Em vez de voce descobrir que faltou XSS prevention na review, o prompt ja exige isso antes de concluir</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Documenta expectativas:</strong> O checklist funciona como documentacao do que "pronto" significa para aquela tarefa especifica</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Crie <strong class="text-white">checklists reutilizaveis</strong> para tipos comuns de tarefa. Um checklist para "nova feature", outro para "bug fix", outro para "endpoint de API". Guarde no CLAUDE.md ou como snippets. Com o tempo, seus prompts auto-validantes ficam instantaneos de escrever.
-        </p>
-        <p class="text-neutral-300">
-          A frase "Before marking complete, verify" e a trigger. Sem ela, o Claude pode ou nao verificar. Com ela, ele SEMPRE verifica.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 2: Adicionando criterios de verificacao -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">📏 Adicionando Criterios de Verificacao</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Criterios de verificacao eficazes sao <strong class="text-amber-400">especificos, mensuráveis e verificaveis automaticamente</strong>. "Codigo deve ser bom" nao e um criterio. "Todos os testes passam e nao ha erros de lint" e um criterio. Neste topico, voce aprende a escrever criterios que realmente funcionam.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Os 4 tipos de criterios de verificacao e como escreve-los corretamente:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-neutral-500">// 1. AUTOMATICOS (Claude pode verificar rodando comando)</div>
-          <div class="text-amber-400">□ `npm test` passes with 0 failures</div>
-          <div class="text-amber-400">□ `npm run lint` reports 0 errors</div>
-          <div class="text-amber-400">□ `npm run build` completes without errors</div>
-          <br>
-          <div class="text-neutral-500">// 2. INSPECAO (Claude verifica lendo o codigo)</div>
-          <div class="text-amber-400">□ No hardcoded secrets or API keys</div>
-          <div class="text-amber-400">□ All new functions have JSDoc comments</div>
-          <div class="text-amber-400">□ Error messages are in Portuguese</div>
-          <br>
-          <div class="text-neutral-500">// 3. COMPORTAMENTAIS (Claude verifica logicamente)</div>
-          <div class="text-amber-400">□ Empty list returns empty array, not null</div>
-          <div class="text-amber-400">□ Invalid email shows specific error message</div>
-          <div class="text-amber-400">□ Concurrent requests don't cause race conditions</div>
-          <br>
-          <div class="text-neutral-500">// 4. NEGATIVOS (o que NAO deve existir)</div>
-          <div class="text-amber-400">□ No console.log statements in production code</div>
-          <div class="text-amber-400">□ No TODO comments left behind</div>
-          <div class="text-amber-400">□ No new npm dependencies added</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Automaticos sao os mais fortes:</strong> O Claude pode literalmente rodar o comando e ver se passa. Sem ambiguidade, sem interpretacao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Inspecao funciona bem:</strong> O Claude le o codigo e verifica. Funciona para padroes visiveis como naming, comments e formatacao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Negativos previnem regressoes:</strong> Dizer o que NAO deve existir e tao importante quanto o que deve. "No console.log" evita debug trash em producao</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Comece com criterios <strong class="text-white">automaticos</strong> (testes e lint) e adicione 2-3 criterios de inspecao ou negativos relevantes para a tarefa. Nao exagere: 5-8 criterios por tarefa e o ideal. Mais que 10 diluiu o foco.
-        </p>
-        <p class="text-neutral-300">
-          Para projetos com CI/CD, alinhe os criterios do prompt com os checks do pipeline. Se o CI roda lint + tests + build, seus criterios devem espelhar isso.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 3: Prompts com checklists embutidos -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📋 Prompts com Checklists Embutidos</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Checklists embutidos vao alem de criterios de verificacao. Eles guiam o Claude <strong class="text-amber-400">durante a execucao, nao so na verificacao final</strong>. Cada passo do checklist e uma etapa que o Claude deve completar e marcar, criando um rastro visivel do progresso.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Um prompt com checklist embutido tem tres secoes: tarefa, checklist de execucao e checklist de verificacao:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-amber-400">[Task description]</div>
-          <br>
-          <div class="text-amber-400">Execution checklist (do in order):</div>
-          <div class="text-amber-400">□ Step 1: [specific action]</div>
-          <div class="text-amber-400">□ Step 2: [specific action]</div>
-          <div class="text-amber-400">□ Step 3: [specific action]</div>
-          <div class="text-amber-400">□ Step 4: Run tests</div>
-          <br>
-          <div class="text-amber-400">Verification checklist (check after completion):</div>
-          <div class="text-amber-400">□ All tests pass</div>
-          <div class="text-amber-400">□ No lint errors</div>
-          <div class="text-amber-400">□ [domain-specific check]</div>
-          <br>
-          <div class="text-amber-400">Report: mark each item ✅ or ❌ with notes.</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Dois checklists separados:</strong> Execucao (durante) e verificacao (depois). Isso garante que o Claude segue o processo E valida o resultado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Ordem importa:</strong> "Do in order" garante execucao sequencial. Util quando passo 2 depende de passo 1</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Report visual:</strong> Pedir marcacao com check/x cria um relatorio visual que voce pode escanear em segundos</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Use checklists embutidos para <strong class="text-white">tarefas repetitivas que voce faz frequentemente</strong>. Setup de novo modulo, deployment checklist, code review checklist. Salve como template no CLAUDE.md e reuse com pequenas adaptacoes.
-        </p>
-        <p class="text-neutral-300">
-          O report com marcacoes permite identificar rapidamente o que falhou. Se o Claude marca algo como x, voce sabe exatamente onde intervir, sem ler todo o output.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 4: Loop de verificacao automatico -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">🔁 Loop de Verificacao Automatico</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O loop de verificacao automatico e o nivel mais avancado de prompts auto-validantes. Em vez de verificar uma vez no final, voce instrui o Claude a <strong class="text-amber-400">verificar continuamente e corrigir automaticamente</strong> ate todos os criterios passarem. E como um pipeline de CI que roda ate ficar verde.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O prompt de loop de verificacao tem uma instrucao de repeticao ate satisfazer todos os criterios:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-amber-400">[Task description]</div>
-          <br>
-          <div class="text-amber-400">After implementation, run this verification loop:</div>
-          <br>
-          <div class="text-amber-400">1. Run `npm test` - if failures, fix and re-run</div>
-          <div class="text-amber-400">2. Run `npm run lint` - if errors, fix and re-run</div>
-          <div class="text-amber-400">3. Run `npm run build` - if errors, fix and re-run</div>
-          <div class="text-amber-400">4. Check: no hardcoded values, no console.logs</div>
-          <div class="text-amber-400">5. Check: all new code has error handling</div>
-          <br>
-          <div class="text-amber-400">Repeat until ALL checks pass.</div>
-          <div class="text-amber-400">Maximum 3 iterations. If still failing after 3,</div>
-          <div class="text-amber-400">report what's blocking and ask for guidance.</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Loop automatico:</strong> O Claude executa, verifica, corrige, verifica de novo. Voce recebe o resultado final ja validado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Limite de iteracoes:</strong> "Maximum 3 iterations" previne loops infinitos. Se apos 3 tentativas ainda falha, provavelmente precisa de intervencao humana</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Fallback humano:</strong> "Report what's blocking and ask for guidance" garante que o Claude nao fica preso. Ele escala para voce quando necessario</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Ordem importa:</strong> Testes primeiro, lint depois, build por ultimo. Se os testes falham, nao adianta verificar lint</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          O loop de verificacao funciona melhor com <strong class="text-white">criterios automaticos</strong> (testes, lint, build). Para criterios de inspecao, use checklists em vez de loops, pois o Claude nao tem como "re-rodar" uma inspecao visual de forma diferente.
-        </p>
-        <p class="text-neutral-300">
-          Em projetos com CI/CD, voce pode ir alem: "After all local checks pass, push to a feature branch and verify CI passes. If CI fails, fix locally and push again."
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 5: Confidence Scoring -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">📊 Confidence Scoring (Asking Claude to Rate)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Confidence scoring e uma tecnica onde voce pede ao Claude para <strong class="text-amber-400">avaliar sua propria confianca no resultado</strong>. Isso revela areas de incerteza que voce pode revisar com mais atencao. Um Claude que diz "90% confiante" e mais confiavel do que um que diz "100% confiante" sobre uma tarefa complexa.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O prompt de confidence scoring pede auto-avaliacao por dimensao:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-amber-400">[After completing the task]</div>
-          <br>
-          <div class="text-amber-400">Rate your confidence (0-100%) on each dimension:</div>
-          <br>
-          <div class="text-amber-400">- Correctness: __% (does it do what was asked?)</div>
-          <div class="text-amber-400">- Completeness: __% (all edge cases covered?)</div>
-          <div class="text-amber-400">- Security: __% (no vulnerabilities?)</div>
-          <div class="text-amber-400">- Performance: __% (no bottlenecks?)</div>
-          <div class="text-amber-400">- Test coverage: __% (all paths tested?)</div>
-          <br>
-          <div class="text-amber-400">For any dimension below 85%, explain what's</div>
-          <div class="text-amber-400">uncertain and what would increase your confidence.</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Metacognicao forçada:</strong> Pedir ao Claude para se avaliar ativa o "thinking about thinking". Ele reconsidera o trabalho sob cada dimensao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Threshold de 85%:</strong> Qualquer dimensao abaixo de 85% exige explicacao. Isso revela onde o Claude tem duvidas e onde voce deve focar sua revisao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">"What would increase confidence":</strong> Essa pergunta e ouro. O Claude pode dizer "testes de integracao aumentariam minha confianca em correctness" — e voce pode pedir que ele os escreva</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Calibracao com experiencia:</strong> Com o tempo, voce aprende como o Claude calibra suas notas. 95% geralmente e solido. 70% merece atencao imediata</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Combine confidence scoring com o loop de verificacao: <strong class="text-white">"For any dimension below 85%, take action to increase it before declaring done."</strong> Isso transforma o scoring de diagnostico em acao corretiva automatica.
-        </p>
-        <p class="text-neutral-300">
-          Desconfie de 100% em qualquer dimensao. Se o Claude diz 100% em seguranca para uma feature complexa, pode ser falta de pensamento critico, nao confianca real. Nesse caso, rode um Security Audit separado.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 6: Sistema completo de prompts validados -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔄 Sistema Completo de Prompts Validados</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Agora vamos combinar tudo num <strong class="text-amber-400">sistema completo de prompts auto-validantes</strong>. Este e o workflow final da Trilha 4: um template universal que voce pode adaptar para qualquer tarefa, garantindo que o output do Claude sempre atende aos padroes de qualidade que voce definiu.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O template universal de prompt auto-validante combina outcome delegation, checklists e confidence scoring:
-        </p>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
-          <div class="text-amber-400">## Outcome</div>
-          <div class="text-amber-400">[What I want to achieve - declarative]</div>
-          <br>
-          <div class="text-amber-400">## Constraints</div>
-          <div class="text-amber-400">[What must NOT change, tech restrictions]</div>
-          <br>
-          <div class="text-amber-400">## Execution Steps</div>
-          <div class="text-amber-400">[Ordered checklist of what to do]</div>
-          <br>
-          <div class="text-amber-400">## Verification</div>
-          <div class="text-amber-400">[Automated checks + inspection checks]</div>
-          <div class="text-amber-400">Run verification loop (max 3 iterations).</div>
-          <br>
-          <div class="text-amber-400">## Confidence Report</div>
-          <div class="text-amber-400">Rate correctness, completeness, security (0-100%).</div>
-          <div class="text-amber-400">For any below 85%, take corrective action.</div>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">5 secoes claras:</strong> Outcome (o que), Constraints (limites), Execution (como), Verification (checagem), Confidence (auto-avaliacao). Cada secao tem um papel especifico</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Adaptavel:</strong> Para tarefas simples, use so Outcome + Verification. Para tarefas complexas, use o template completo. O framework e modular</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-amber-400 mt-1">•</span>
-            <span><strong class="text-white">Documente no CLAUDE.md:</strong> Adicione o template como padrao do projeto. O Claude passara a seguir essa estrutura automaticamente em tarefas futuras</span>
-          </li>
-        </ul>
-        <p class="text-neutral-300 mt-4">
-          <strong class="text-white">Este template encapsula toda a Trilha 4:</strong> Daily Drivers (modulo 4.1), Getting Started (4.2), Building (4.3), Testing (4.4), Quality (4.5), Architecture (4.6), Outcome Delegation (4.7) e agora Verificacao (4.8). Voce tem o sistema completo.
-        </p>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Nao trate o template como rigido. <strong class="text-white">Adapte para cada contexto</strong>. Um hotfix urgente precisa de Outcome + Verification rapidos. Uma feature critica precisa do template completo com 10+ criterios de verificacao. O objetivo e ter uma estrutura, nao uma prisao.
-        </p>
-        <p class="text-neutral-300">
-          Com a conclusao deste modulo, voce domina a Trilha 4 completa. Da proxima vez que abrir o Claude Code, voce tera um arsenal de prompts profissionais que geram resultados de nivel senior, verificados e validados automaticamente.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">&#9998;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4">Criar 3 prompts com criterios de verificacao embutidos</h3>
-        <p class="text-neutral-300 mb-4">
-          Aplique tudo que aprendeu neste modulo para criar prompts auto-validantes completos:
-        </p>
-        <ol class="space-y-3 text-neutral-300">
-          <li class="flex items-start space-x-3">
-            <span class="text-amber-400 font-bold">1.</span>
-            <span>Crie um prompt auto-validante para <strong class="text-white">adicionar uma feature nova</strong> ao seu projeto. Use o template completo (Outcome, Constraints, Execution, Verification, Confidence)</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <span class="text-amber-400 font-bold">2.</span>
-            <span>Crie um prompt auto-validante para <strong class="text-white">corrigir um bug</strong>. Inclua loop de verificacao com max 3 iteracoes</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <span class="text-amber-400 font-bold">3.</span>
-            <span>Crie um prompt auto-validante para <strong class="text-white">refactoring seguro</strong>. Combine Refactor Guardrails (modulo 4.5) com checklists e confidence scoring</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <span class="text-amber-400 font-bold">4.</span>
-            <span>Rode os 3 prompts no Claude Code e observe como o Claude responde ao formato auto-validante</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <span class="text-amber-400 font-bold">5.</span>
-            <span>Salve os 3 templates no seu <strong class="text-white">CLAUDE.md</strong> como prompts padrao do projeto</span>
-          </li>
-        </ol>
-      </div>
-
-      <!-- Criterios de Sucesso -->
-      <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-amber-400">☐</span>
-            <span class="text-neutral-300">Criou prompt auto-validante para feature nova</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-amber-400">☐</span>
-            <span class="text-neutral-300">Criou prompt com loop de verificacao para bug fix</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-amber-400">☐</span>
-            <span class="text-neutral-300">Criou prompt com confidence scoring para refactoring</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-amber-400">☐</span>
-            <span class="text-neutral-300">Rodou os 3 no Claude Code e observou resultados</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-amber-400">☐</span>
-            <span class="text-neutral-300">Salvou templates no CLAUDE.md do projeto</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- RESUMO FINAL -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Prompts auto-validantes incluem criterios proprios</strong>
-              <span class="text-neutral-400"> - "Before marking complete, verify" ativa a auto-verificacao do Claude.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">4 tipos de criterios: automatico, inspecao, comportamental, negativo</strong>
-              <span class="text-neutral-400"> - Automaticos sao os mais fortes. Negativos previnem regressoes.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Checklists embutidos guiam execucao e verificacao</strong>
-              <span class="text-neutral-400"> - Duas secoes: execution checklist (durante) e verification checklist (depois).</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Loop de verificacao automatiza fix-and-check</strong>
-              <span class="text-neutral-400"> - Max 3 iteracoes. Fallback humano se ainda falhar. CI/CD local no prompt.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Confidence scoring revela areas de incerteza</strong>
-              <span class="text-neutral-400"> - 0-100% por dimensao. Abaixo de 85% exige acao corretiva. Desconfie de 100%.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-amber-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Template universal combina tudo da Trilha 4</strong>
-              <span class="text-neutral-400"> - Outcome + Constraints + Execution + Verification + Confidence. Modular e adaptavel.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-amber-400 mb-2">Proxima Trilha:</h3>
-          <p class="text-neutral-300">Trilha 5 - Custom Slash Commands e Skills</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-4-7.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="../trilha5/index.html" class="flex-1 text-center px-6 py-3 bg-amber-600/40 text-amber-100 rounded-lg font-semibold hover:bg-amber-600/60 transition-colors">
-            Proxima Trilha →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-amber-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-amber-400" href="index.html">Track 4</a>
+<span>/</span>
+<span class="text-amber-400">Module 4.8</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MODULE 4.8</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔒 Verification and Self-Validating Prompts</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">The last module of Track 4 closes the loop: how to create prompts that check themselves. Learn how to embed verification criteria, automatic checklists, validation loops and confidence scoring into your prompts so that Claude never delivers incomplete work.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-amber-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-amber-400">35</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-amber-400">Advanced</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-amber-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+═══════════════════════════ ════════════════════════════
+TOPIC 1: What are self-validating prompts
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🧩 What are Self-Validating Prompts</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">A self-validating prompt and a prompt that includes<strong class="text-amber-400">your own verification criteria</strong>. Instead of you manually reviewing whether Claude did everything right, the prompt instructs Claude to check the work before declaring it complete. And how to deliver a task with a built-in acceptance checklist.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The difference between a normal prompt and a self-validating one:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-neutral-500">// NORMAL PROMPT:</div>
+<div class="text-red-400">"Add input validation to the signup form."</div>
+<br/>
+<div class="text-neutral-500">// SELF-VALIDATING PROMPT:</div>
+<div class="text-amber-400">"Add input validation to the signup form.</div>
+<br/>
+<div class="text-amber-400">Before completing marking, verify:</div>
+<div class="text-amber-400">□ Email format validated (regex + DNS check)</div>
+<div class="text-amber-400">□ Password meets requirements (8+ chars, 1 upper,</div>
+<div class="text-amber-400">1 number, 1 special)</div>
+<div class="text-amber-400">□ Error messages are user-friendly (not technical)</div>
+<div class="text-amber-400">□ XSS prevented on all inputs</div>
+<div class="text-amber-400">□ Tests cover valid + 3 invalid scenarios</div>
+<div class="text-amber-400">□ All existing tests still pass</div>
+<br/>
+<div class="text-amber-400">Report status of each box."</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Explicit checklist:</strong>Claude knows exactly what needs to be ready. There is no space for "I forgot to add tests"</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">"Report status":</strong>Asking Claude to report the status of each item forces him to check each one before responding</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Reduces review cycles:</strong>Instead of you discovering that XSS prevention was missing in the review, the prompt already requires this before concluding</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Document expectations:</strong>The checklist functions as documentation of what "done" means for that specific task</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Create<strong class="text-white">reusable checklists</strong>for common task types. One checklist for "new feature", another for "bug fix", another for "API endpoint". Save to CLAUDE.md or as snippets. Over time, your self-validating prompts become instant to write.</p>
+<p class="text-neutral-300">The phrase "Before marking complete, verify" is the trigger. Without it, Claude may or may not check. With her, he ALWAYS checks.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 2: Adding verification criteria
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">📏 Adding Verification Criteria</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Effective verification criteria are<strong class="text-amber-400">specific, measurable and automatically verifiable</strong>. "Code must be good" is not a criterion. "All tests pass and there are no lint errors" is a criterion. In this topic, you learn how to write criteria that actually work.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The 4 types of verification criteria and how to write them correctly:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-neutral-500">// 1. AUTOMATIC (Claude can check by running command)</div>
+<div class="text-amber-400">□ `npm test` passes with 0 failures</div>
+<div class="text-amber-400">□ `npm run lint` reports 0 errors</div>
+<div class="text-amber-400">□ `npm run build` completes without errors</div>
+<br/>
+<div class="text-neutral-500">// 2. INSPECTION (Claude checks by reading the code)</div>
+<div class="text-amber-400">□ No hardcoded secrets or API keys</div>
+<div class="text-amber-400">□ All new functions have JSDoc comments</div>
+<div class="text-amber-400">□ Error messages are in Portuguese</div>
+<br/>
+<div class="text-neutral-500">// 3. BEHAVIORAL (Claude checks logically)</div>
+<div class="text-amber-400">□ Empty list returns empty array, not null</div>
+<div class="text-amber-400">□ Invalid email shows specific error message</div>
+<div class="text-amber-400">□ Concurrent requests don't cause race conditions</div>
+<br/>
+<div class="text-neutral-500">// 4. NEGATIVES (which should NOT exist)</div>
+<div class="text-amber-400">□ No console.log statements in production code</div>
+<div class="text-amber-400">□ No TODO comments left behind</div>
+<div class="text-amber-400">□ No new npm dependencies added</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Automatics are the strongest:</strong>Claude can literally turn the controller and see what happens. No ambiguity, no interpretation</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Inspection works well:</strong>Claude reads the code and checks it. Works for visible patterns such as naming, comments and formatting</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Negatives prevent regressions:</strong>Saying what should NOT exist is as important as what should. "No console.log" avoids debug trash in production</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Start with criteria<strong class="text-white">automatics</strong>(tests and lint) and add 2-3 inspection criteria or negatives relevant to the task. Don't overdo it: 5-8 criteria per task is ideal. More than 10 dilutes the focus.</p>
+<p class="text-neutral-300">For CI/CD projects, align the prompt criteria with the pipeline checks. If the CI runs lint + tests + build, its criteria should mirror this.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 3: Prompts with built-in checklists
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📋 Prompts with Built-in Checklists</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Built-in checklists go beyond verification criteria. They guide Claude<strong class="text-amber-400">during execution, not just at the final check</strong>. Each step in the checklist is a step that Claude must complete and check off, creating a visible trail of progress.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">A prompt with a built-in checklist has three sections: task, execution checklist, and verification checklist:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-amber-400">[Task description]</div>
+<br/>
+<div class="text-amber-400">Execution checklist (do in order):</div>
+<div class="text-amber-400">□ Step 1: [specific action]</div>
+<div class="text-amber-400">□ Step 2: [specific action]</div>
+<div class="text-amber-400">□ Step 3: [specific action]</div>
+<div class="text-amber-400">□ Step 4: Run tests</div>
+<br/>
+<div class="text-amber-400">Verification checklist (check after completion):</div>
+<div class="text-amber-400">□ All tests pass</div>
+<div class="text-amber-400">□ No lint errors</div>
+<div class="text-amber-400">□ [domain-specific check]</div>
+<br/>
+<div class="text-amber-400">Report: mark each item ✅ or ❌ with notes.</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Two separate checklists:</strong>Execution (during) and verification (after). This ensures that Claude follows the process AND validates the result</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Order matters:</strong>"Do in order" guarantees sequential execution. Useful when step 2 depends on step 1</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Visual report:</strong>Requesting an appointment with check/x creates a visual report that you can scan in seconds</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Use built-in checklists to<strong class="text-white">repetitive tasks you do frequently</strong>. New module setup, deployment checklist, code review checklist. Save as a template in CLAUDE.md and reuse with small adaptations.</p>
+<p class="text-neutral-300">The marked report allows you to quickly identify what failed. If Claude marks something as x, you know exactly where to intervene, without reading the entire output.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 4: Automatic verification loop
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔁 Automatic Verification Loop</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The automatic check loop is the most advanced level of self-validating prompts. Instead of checking once at the end, you instruct Claude to<strong class="text-amber-400">Continuously check and automatically correct</strong>until all criteria pass. It's like a CI pipeline that runs until it's green.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The check loop prompt has a repeat until all criteria are met:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-amber-400">[Task description]</div>
+<br/>
+<div class="text-amber-400">After implementation, run this verification loop:</div>
+<br/>
+<div class="text-amber-400">1. Run `npm test` - if failures, fix and re-run</div>
+<div class="text-amber-400">2. Run `npm run lint` - if errors, fix and re-run</div>
+<div class="text-amber-400">3. Run `npm run build` - if errors, fix and re-run</div>
+<div class="text-amber-400">4. Check: no hardcoded values, no console.logs</div>
+<div class="text-amber-400">5. Check: all new code has error handling</div>
+<br/>
+<div class="text-amber-400">Repeat until ALL checks pass.</div>
+<div class="text-amber-400">Maximum 3 iterations. If still failing after 3,</div>
+<div class="text-amber-400">report what's blocking and ask for guidance.</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Automatic loop:</strong>Claude executes, checks, corrects, checks again. You receive the final result already validated</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Iteration limit:</strong>"Maximum 3 iterations" prevents infinite loops. If after 3 attempts it still fails, it probably needs human intervention</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Human fallback:</strong>"Report what's blocking and ask for guidance" ensures that Claude doesn't get stuck. It scales for you when needed</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Order matters:</strong>Tests first, lint second, build last. If the tests fail, there is no point checking the lint</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">The check loop works best with<strong class="text-white">automatic criteria</strong>(tests, lint, build). For inspection criteria, use checklists instead of loops, as Claude has no way to "re-run" a visual inspection in a different way.</p>
+<p class="text-neutral-300">In projects with CI/CD, you can go further: "After all local checks pass, push to a feature branch and verify CI passes. If CI fails, fix locally and push again."</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 5: Confidence Scoring
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">📊 Confidence Scoring (Asking Claude to Rate)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Confidence scoring is a technique where you ask Claude to<strong class="text-amber-400">assess your own confidence in the result</strong>. This reveals areas of uncertainty that you can review more closely. A Claude who says "90% confident" is more reliable than one who says "100% confident" about a complex task.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The confidence scoring prompt asks for self-assessment by dimension:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-amber-400">[After completing the task]</div>
+<br/>
+<div class="text-amber-400">Rate your confidence (0-100%) on each dimension:</div>
+<br/>
+<div class="text-amber-400">- Correctness: __% (does it do what was asked?)</div>
+<div class="text-amber-400">- Completeness: __% (all edge cases covered?)</div>
+<div class="text-amber-400">- Security: __% (no vulnerabilities?)</div>
+<div class="text-amber-400">- Performance: __% (no bottlenecks?)</div>
+<div class="text-amber-400">- Test coverage: __% (all paths tested?)</div>
+<br/>
+<div class="text-amber-400">For any dimension below 85%, explain what's</div>
+<div class="text-amber-400">uncertain and what would increase your confidence.</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Forced metacognition:</strong>Asking Claude to evaluate himself activates "thinking about thinking". He reconsiders the work under each dimension</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">85% Threshold:</strong>Any dimension below 85% requires explanation. This reveals where Claude has doubts and where you should focus your review</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">"What would increase confidence":</strong>This question is gold. Claude might say "integration tests would increase my confidence in correctness" — and you can ask him to write them</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Calibration with experience:</strong>Over time, you learn how Claude calibrates his notes. 95% is generally solid. 70% deserve immediate attention</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Combine confidence scoring with the verification loop:<strong class="text-white">"For any dimension below 85%, take action to increase it before declaring done."</strong>This transforms diagnostic scoring into automatic corrective action.</p>
+<p class="text-neutral-300">Be 100% suspicious in any dimension. If Claude says 100% security for a complex feature, it may be a lack of critical thinking, not real confidence. In this case, run a separate Security Audit.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 6: Complete system of validated prompts
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔄 Complete Validated Prompt System</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Now let's combine everything into one<strong class="text-amber-400">complete system of self-validating prompts</strong>. This is the final workflow of Track 4: a universal template that you can adapt to any task, ensuring that Claude's output always meets the quality standards you have defined.</p>
+Main Concept
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The universal self-validating prompt template combines outcome delegation, checklists and confidence scoring:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm mb-4">
+<div class="text-amber-400">##Outcome</div>
+<div class="text-amber-400">[What I want to achieve - declarative]</div>
+<br/>
+<div class="text-amber-400">##Constraints</div>
+<div class="text-amber-400">[What must NOT change, tech restrictions]</div>
+<br/>
+<div class="text-amber-400">## Execution Steps</div>
+<div class="text-amber-400">[Ordered checklist of what to do]</div>
+<br/>
+<div class="text-amber-400">## Verification</div>
+<div class="text-amber-400">[Automated checks + inspection checks]</div>
+<div class="text-amber-400">Run verification loop (max 3 iterations).</div>
+<br/>
+<div class="text-amber-400">## Confidence Report</div>
+<div class="text-amber-400">Rate correctness, completeness, security (0-100%).</div>
+<div class="text-amber-400">For any below 85%, take corrective action.</div>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">5 clear sections:</strong>Outcome (what), Constraints (limits), Execution (how), Verification (checking), Confidence (self-assessment). Each section has a specific role</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Adaptable:</strong>For simple tasks, use Outcome + Verification. For complex tasks, use the full template. The framework is modular</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-amber-400 mt-1">•</span>
+<span><strong class="text-white">Document in CLAUDE.md:</strong>Add the template as the project default. Claude will automatically follow this structure in future tasks</span>
+</li>
+</ul>
+<p class="text-neutral-300 mt-4">
+<strong class="text-white">This template encapsulates the entire Track 4:</strong>Daily Drivers (module 4.1), Getting Started (4.2), Building (4.3), Testing (4.4), Quality (4.5), Architecture (4.6), Outcome Delegation (4.7) and now Verification (4.8). You have the complete system.</p>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Don't treat the template as rigid.<strong class="text-white">Adapt to each context</strong>. An urgent hotfix needs quick Outcome + Verification. A critical feature needs the complete template with 10+ verification criteria. The goal is to have a structure, not a prison.</p>
+<p class="text-neutral-300">With the completion of this module, you have mastered the entire Track 4. The next time you open Claude Code, you'll have an arsenal of professional prompts that generate senior-level results, automatically verified and validated.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">✎</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4">Create 3 prompts with built-in verification criteria</h3>
+<p class="text-neutral-300 mb-4">Apply everything you learned in this module to create complete self-validating prompts:</p>
+<ol class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-3">
+<span class="text-amber-400 font-bold">1.</span>
+<span>Create a self-validating prompt to<strong class="text-white">add a new feature</strong>to your project. Use the complete template (Outcome, Constraints, Execution, Verification, Confidence)</span>
+</li>
+<li class="flex items-start space-x-3">
+<span class="text-amber-400 font-bold">2.</span>
+<span>Create a self-validating prompt to<strong class="text-white">fix a bug</strong>. Include verification loop with max 3 iterations</span>
+</li>
+<li class="flex items-start space-x-3">
+<span class="text-amber-400 font-bold">3.</span>
+<span>Create a self-validating prompt to<strong class="text-white">safe refactoring</strong>. Combine Refactor Guardrails (module 4.5) with checklists and confidence scoring</span>
+</li>
+<li class="flex items-start space-x-3">
+<span class="text-amber-400 font-bold">4.</span>
+<span>Run the 3 prompts in Claude Code and observe how Claude responds to the self-validating format</span>
+</li>
+<li class="flex items-start space-x-3">
+<span class="text-amber-400 font-bold">5.</span>
+<span>Save the 3 templates to your<strong class="text-white">CLAUDE.md</strong>as standard project prompts</span>
+</li>
+</ol>
+</div>
+Success Criteria
+<div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-amber-400">☐</span>
+<span class="text-neutral-300">Created self-validating prompt for new feature</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-amber-400">☐</span>
+<span class="text-neutral-300">Created prompt with verification loop to fix bug</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-amber-400">☐</span>
+<span class="text-neutral-300">Created prompt with confidence scoring for refactoring</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-amber-400">☐</span>
+<span class="text-neutral-300">He ran all 3 on Claude Code and observed results</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-amber-400">☐</span>
+<span class="text-neutral-300">Saved templates in the project's CLAUDE.md</span>
+</div>
+</div>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+FINAL SUMMARY
+═══════════════════════════ ════════════════════════════
+<section class="mb-12">
+<div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Self-validating prompts include own criteria</strong>
+<span class="text-neutral-400">- "Before marking complete, verify" activates Claude's self-verification.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">4 types of criteria: automatic, inspection, behavioral, negative</strong>
+<span class="text-neutral-400">- Automatics are the strongest. Negatives prevent regressions.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Built-in checklists guide execution and verification</strong>
+<span class="text-neutral-400">- Two sections: execution checklist (during) and verification checklist (after).</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Verification loop automates fix-and-check</strong>
+<span class="text-neutral-400">- Max 3 iterations. Human fallback if it still fails. Local CI/CD at the prompt.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Confidence scoring reveals areas of uncertainty</strong>
+<span class="text-neutral-400">- 0-100% per dimension. Below 85% requires corrective action. Be 100% suspicious.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-amber-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Universal template combines everything from Track 4</strong>
+<span class="text-neutral-400">- Outcome + Constraints + Execution + Verification + Confidence. Modular and adaptable.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-amber-400 mb-2">Next Trail:</h3>
+<p class="text-neutral-300">Track 5 - Custom Slash Commands and Skills</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start" href="modulo-4-7.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600/40 text-amber-100 rounded-lg font-semibold hover:bg-amber-600/60 transition-colors" href="../trilha5/index.html">Next Trail →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -735,6 +621,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
