@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 6.7 - Pipelines CI/CD com Claude Headless | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 6.7 - CI/CD Pipelines with Claude Headless | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,599 +42,497 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">&#129504;</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-rose-400">Trilha 6</a>
-      <span>/</span>
-      <span class="text-rose-400">Modulo 6.7</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 6.7
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#9881;&#65039; Pipelines CI/CD com Claude Headless</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Integre o Claude Code em pipelines de CI/CD para automatizar code review, quality checks e deployment validation usando o modo headless com claude -p e --allowedTools.
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-rose-400" href="index.html">Track 6</a>
+<span>/</span>
+<span class="text-rose-400">Module 6.7</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.7</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">⚙️ CI/CD Pipelines with Claude Headless</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Integrate Claude Code into CI/CD pipelines to automate code review, quality checks, and deployment validation using headless mode with claude -p and --allowedTools.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">35</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Advanced</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚀 Claude in CI/CD (Automated Code Quality)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Claude Code is not just an interactive tool. With the<strong class="text-rose-400">headless mode (<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude -p</code>)</strong>, it runs without a graphical interface, accepting prompts via stdin and returning results via stdout. This opens the door to integrating it directly into CI/CD pipelines.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <strong class="text-white">headless mode</strong>transforms Claude Code into an automated process. Instead of typing commands interactively, you pass a prompt via flag<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">-p</code>and receives the answer directly. Perfect for automation.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">No interaction:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude -p "Analise este codigo"</code>returns the direct result, without waiting for input</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Formatted output:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">--output-format json</code>to get easily parsed structured results</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Integrable:</strong>Works on any CI - GitHub Actions, GitLab CI, Jenkins, CircleCI, etc.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Use cases:</strong>Automatic code review, standards verification, doc generation, pre-deploy validation</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Test headless mode locally before placing it on the IC. Rotate<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude -p "Revise o arquivo src/main.ts e aponte problemas de seguranca"</code>and see the output. If it works in the terminal, it will work in the CI.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🛠 GitHub Actions with claude -p</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">GitHub Actions is the most common environment for integrating Claude Code into pipelines. Setup is surprisingly simple:<strong class="text-rose-400">install Claude Code on the runner, configure the API key and run commands with<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude -p</code></strong>.
       </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">35</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Avancado</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">&#128640; Claude em CI/CD (Automated Code Quality)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Claude Code nao e apenas uma ferramenta interativa. Com o <strong class="text-rose-400">modo headless (<code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude -p</code>)</strong>, ele roda sem interface grafica, aceitando prompts via stdin e retornando resultados via stdout. Isso abre a porta para integra-lo diretamente em pipelines de CI/CD.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <strong class="text-white">modo headless</strong> transforma o Claude Code num processo automatizavel. Em vez de digitar comandos interativamente, voce passa um prompt via flag <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">-p</code> e recebe a resposta diretamente. Perfeito para automacao.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Sem interacao:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude -p "Analise este codigo"</code> retorna o resultado direto, sem esperar input</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Saida formatada:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">--output-format json</code> para obter resultados estruturados parseados facilmente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Integravel:</strong> Funciona em qualquer CI - GitHub Actions, GitLab CI, Jenkins, CircleCI, etc.</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Casos de uso:</strong> Code review automatico, verificacao de padroes, geracao de docs, validacao pre-deploy</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Teste o modo headless localmente antes de colocar no CI. Rode <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude -p "Revise o arquivo src/main.ts e aponte problemas de seguranca"</code> e veja a saida. Se funcionar no terminal, vai funcionar no CI.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">&#128736; GitHub Actions com claude -p</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        GitHub Actions e o ambiente mais comum para integrar o Claude Code em pipelines. A configuracao e surpreendentemente simples: <strong class="text-rose-400">instale o Claude Code no runner, configure a API key e rode comandos com <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude -p</code></strong>.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A estrutura basica de uma GitHub Action com Claude:
-        </p>
-        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
-          <span class="text-neutral-500"># .github/workflows/claude-review.yml</span><br>
-          <span class="text-rose-400">name:</span> <span class="text-neutral-300">Claude Code Review</span><br>
-          <span class="text-rose-400">on:</span> <span class="text-neutral-300">[pull_request]</span><br><br>
-          <span class="text-rose-400">jobs:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;</span><span class="text-rose-400">review:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">runs-on:</span> <span class="text-neutral-300">ubuntu-latest</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">steps:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">uses:</span> <span class="text-neutral-300">actions/checkout@v4</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Install Claude Code</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">run:</span> <span class="text-neutral-300">npm install -g @anthropic-ai/claude-code</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Run Review</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">env:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">ANTHROPIC_API_KEY:</span> <span class="text-neutral-300">${{ secrets.ANTHROPIC_API_KEY }}</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">run:</span> <span class="text-neutral-300">claude -p "Revise os arquivos alterados neste PR"</span>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Trigger em PR:</strong> A action roda automaticamente quando um PR e aberto ou atualizado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">API Key segura:</strong> Use GitHub Secrets para armazenar a chave - nunca coloque no codigo</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Custo controlado:</strong> Cada execucao consome tokens da sua API key. Monitore com alertas de billing</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Comece com uma action simples que so roda em PRs para a branch main. Nao coloque em todos os pushes - isso consome muitos tokens. Use <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">on: pull_request: branches: [main]</code> para limitar o escopo e manter o custo sob controle.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">&#128274; --allowedTools para Seguranca</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Em ambientes CI/CD, seguranca e fundamental. Voce nao quer que o Claude execute comandos arbitrarios no seu runner. A flag <strong class="text-rose-400"><code class="bg-dark-700 px-2 py-1 rounded text-rose-400">--allowedTools</code></strong> restringe quais ferramentas o Claude pode usar, criando um sandbox seguro.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <strong class="text-white">--allowedTools</strong> funciona como uma whitelist de permissoes. Somente as ferramentas listadas estarao disponiveis para o Claude naquela execucao. Tudo mais e bloqueado automaticamente.
-        </p>
-        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
-          <span class="text-neutral-500"># Somente leitura - seguro para code review</span><br>
-          <span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Revise este codigo" \</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;--allowedTools Read,Grep,Glob</span><br><br>
-          <span class="text-neutral-500"># Leitura + escrita limitada</span><br>
-          <span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Corrija os bugs encontrados" \</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;--allowedTools Read,Write,Edit,Grep,Glob</span><br><br>
-          <span class="text-neutral-500"># Nenhuma ferramenta - so analise textual</span><br>
-          <span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Analise este diff: $(git diff)" \</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;--allowedTools ""</span>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Read-only para reviews:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">Read,Grep,Glob</code> quando o Claude so precisa analisar, nao modificar</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Sem Bash:</strong> Nunca inclua Bash na whitelist do CI a menos que seja absolutamente necessario e controlado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Principio do menor privilegio:</strong> De ao Claude apenas as ferramentas que ele precisa para aquela tarefa especifica</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Para code review automatico, a combinacao <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">--allowedTools Read,Grep,Glob</code> e o padrao ouro. O Claude consegue ler e analisar todo o codigo sem risco de modificar nada. Comece sempre com o minimo e so adicione mais ferramentas se a tarefa realmente exigir.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">&#128269; Code Review Automatico em PRs</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O caso de uso mais poderoso do Claude em CI/CD e o <strong class="text-rose-400">code review automatico</strong>. A cada PR aberto, o Claude analisa as mudancas, identifica bugs potenciais, sugere melhorias e posta um comentario detalhado - tudo automaticamente, antes de qualquer humano olhar.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Um pipeline de code review automatico com Claude envolve:
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Capturar o diff:</strong> Use <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">git diff origin/main...HEAD</code> para obter apenas as mudancas do PR</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Prompt estruturado:</strong> Passe o diff com instrucoes claras sobre o que analisar (seguranca, performance, padroes)</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Postar como comentario:</strong> Use a API do GitHub (<code class="bg-dark-700 px-2 py-1 rounded text-rose-400">gh pr comment</code>) para adicionar o review como comentario no PR</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Status check:</strong> Configure como check obrigatorio para que PRs nao sejam mergeados sem review do Claude</span>
-          </li>
-        </ul>
-        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mt-4 overflow-x-auto">
-          <span class="text-neutral-500"># Exemplo completo de step de review</span><br>
-          <span class="text-rose-400">- name:</span> <span class="text-neutral-300">Claude Review</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;</span><span class="text-rose-400">run:</span> <span class="text-neutral-300">|</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;REVIEW=$(claude -p "Analise este diff e reporte bugs, problemas de seguranca e sugestoes de melhoria. Seja conciso. $(git diff origin/main...HEAD)" --allowedTools Read,Grep,Glob)</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;gh pr comment ${{ github.event.pull_request.number }} --body "$REVIEW"</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          O segredo de um bom review automatico e o <strong class="text-white">prompt bem estruturado</strong>. Inclua instrucoes sobre o que priorizar: "Foque em: 1) Bugs criticos, 2) Vulnerabilidades de seguranca, 3) Performance. Ignore: formatacao, nomes de variaveis." Quanto mais especifico o prompt, mais util o review.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">&#128640; Deployment Checks com Claude</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Alem de code review, o Claude pode atuar como <strong class="text-rose-400">validador pre-deploy</strong>. Antes de cada deploy, ele analisa o codigo, verifica configuracoes, valida variaveis de ambiente e confirma que tudo esta pronto para ir para producao.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Deployment checks com Claude podem verificar:
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Variaveis de ambiente:</strong> Todas as envs necessarias estao definidas? Alguma esta com valor padrao inseguro?</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Migrations pendentes:</strong> Ha migrations de banco de dados que precisam rodar antes do deploy?</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Breaking changes:</strong> As mudancas na API sao retrocompativeis? Algum endpoint foi removido?</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Seguranca:</strong> Ha secrets expostos, dependencias vulneraveis ou configuracoes inseguras?</span>
-          </li>
-        </ul>
-        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mt-4 overflow-x-auto">
-          <span class="text-neutral-500"># Pre-deploy check</span><br>
-          <span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Verifique se este projeto esta pronto para deploy em producao. Cheque: 1) .env.example vs variaveis usadas, 2) Migrations pendentes, 3) Secrets expostos no codigo, 4) Breaking changes na API. Retorne PASS ou FAIL com justificativa." \</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;--allowedTools Read,Grep,Glob</span>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Configure o deployment check como <strong class="text-white">blocking step</strong> no pipeline. Se o Claude retornar FAIL, o deploy nao acontece. Isso funciona como uma camada extra de seguranca - mesmo que os testes passem, o Claude pode pegar problemas que testes automatizados nao cobrem, como configuracoes incorretas ou padroes inseguros.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">&#128220; Pipeline Completo de Exemplo (Full YAML)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Vamos juntar tudo num <strong class="text-rose-400">pipeline completo que voce pode copiar e adaptar</strong>. Este YAML inclui code review automatico em PRs, validacao pre-deploy e notificacao dos resultados - tudo usando Claude headless com seguranca.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Pipeline completo com 3 jobs: review, quality check e deploy validation:
-        </p>
-        <div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
-          <span class="text-neutral-500"># .github/workflows/claude-pipeline.yml</span><br>
-          <span class="text-rose-400">name:</span> <span class="text-neutral-300">Claude CI/CD Pipeline</span><br>
-          <span class="text-rose-400">on:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;</span><span class="text-rose-400">pull_request:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">branches:</span> <span class="text-neutral-300">[main]</span><br><br>
-          <span class="text-rose-400">jobs:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;</span><span class="text-rose-400">claude-review:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">runs-on:</span> <span class="text-neutral-300">ubuntu-latest</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">steps:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">uses:</span> <span class="text-neutral-300">actions/checkout@v4</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">with:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">fetch-depth:</span> <span class="text-neutral-300">0</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">npm i -g @anthropic-ai/claude-code</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Code Review</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">env:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">ANTHROPIC_API_KEY:</span> <span class="text-neutral-300">${{ secrets.ANTHROPIC_API_KEY }}</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">run:</span> <span class="text-neutral-300">|</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REVIEW=$(claude -p "Revise as mudancas deste PR. Foque em bugs, seguranca e performance." --allowedTools Read,Grep,Glob)</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gh pr comment $PR_NUMBER --body "$REVIEW"</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">env:</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">PR_NUMBER:</span> <span class="text-neutral-300">${{ github.event.pull_request.number }}</span><br>
-          <span class="text-neutral-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-rose-400">GH_TOKEN:</span> <span class="text-neutral-300">${{ secrets.GITHUB_TOKEN }}</span>
-        </div>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">fetch-depth: 0:</strong> Necessario para ter acesso ao historico completo de commits no diff</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Dois secrets:</strong> ANTHROPIC_API_KEY para o Claude e GITHUB_TOKEN para postar comentarios</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Extensivel:</strong> Adicione mais jobs (quality-check, deploy-validation) seguindo o mesmo padrao</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Copie este YAML como ponto de partida e adapte para seu projeto. As principais customizacoes sao: <strong class="text-white">o prompt de review</strong> (adapte ao estilo do seu time) e as <strong class="text-white">allowedTools</strong> (ajuste conforme o nivel de permissao desejado).
-        </p>
-        <p class="text-neutral-300">
-          Dica de custo: adicione <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">--max-turns 1</code> para limitar o Claude a uma unica resposta, evitando loops de ferramentas que consomem tokens excessivamente.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">&#9997;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4">Criar GitHub Action com claude -p e --allowedTools</h3>
-        <p class="text-neutral-300 mb-4">
-          Neste exercicio, voce vai configurar um pipeline real de CI/CD que usa o Claude para code review automatico em pull requests.
-        </p>
-
-        <div class="space-y-4 mb-6">
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 1: Criar o arquivo de workflow</h4>
-            <p class="text-neutral-400 text-sm mb-2">Crie a estrutura de diretorio e o arquivo YAML:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">mkdir -p</span> <span class="text-neutral-300">.github/workflows</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span> <span class="text-neutral-300">"Crie um workflow GitHub Actions em .github/workflows/claude-review.yml que faca code review automatico com claude -p e --allowedTools Read,Grep,Glob"</span>
-            </div>
-          </div>
-
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 2: Configurar o secret</h4>
-            <p class="text-neutral-400 text-sm mb-2">Adicione sua API key como secret no repositorio:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">gh secret set</span> <span class="text-neutral-300">ANTHROPIC_API_KEY</span>
-            </div>
-            <p class="text-neutral-500 text-xs mt-2">O comando vai pedir o valor da chave interativamente.</p>
-          </div>
-
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 3: Testar com um PR</h4>
-            <p class="text-neutral-400 text-sm mb-2">Crie um PR de teste para validar o pipeline:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">git checkout -b</span> <span class="text-neutral-300">test/claude-ci</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-neutral-300">git add .github/workflows/claude-review.yml</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">git commit -m</span> <span class="text-neutral-300">"Add Claude CI review"</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">gh pr create</span> <span class="text-neutral-300">--title "Test Claude CI" --body "Testing automated review"</span>
-            </div>
-          </div>
-        </div>
-
-        <h4 class="text-white font-semibold mb-3">Checklist de Conclusao:</h4>
-        <div class="space-y-2">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Criou o arquivo .github/workflows/claude-review.yml</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Configurou ANTHROPIC_API_KEY como GitHub Secret</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Usou --allowedTools para restringir permissoes</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Testou com um PR real e verificou o comentario do Claude</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">&#128203;</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Claude headless com -p</strong>
-              <span class="text-neutral-400"> - Modo sem interface que aceita prompts via flag e retorna resultado via stdout.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">GitHub Actions integracao nativa</strong>
-              <span class="text-neutral-400"> - Instale no runner, configure API key como secret e rode com claude -p.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">--allowedTools para seguranca</strong>
-              <span class="text-neutral-400"> - Whitelist de ferramentas que restringe o que o Claude pode fazer no CI.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Code review automatico em PRs</strong>
-              <span class="text-neutral-400"> - Analise automatica de bugs, seguranca e performance a cada pull request.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Pipeline completo copiavel</strong>
-              <span class="text-neutral-400"> - YAML pronto para adaptar com review, quality check e deploy validation.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-rose-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">6.8 - Claude Cowork e Desktop Agent (2026)</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-6-6.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start">
-            &#8592; Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-6-8.html" class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors">
-            Proximo Modulo &#8594;
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The basic structure of a GitHub Action with Claude:</p>
+<div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
+<span class="text-neutral-500"># .github/workflows/claude-review.yml</span><br/>
+<span class="text-rose-400">name:</span> <span class="text-neutral-300">Claude Code Review</span><br/>
+<span class="text-rose-400">on:</span> <span class="text-neutral-300">[pull_request]</span><br/><br/>
+<span class="text-rose-400">jobs:</span><br/>
+<span class="text-neutral-300">  </span><span class="text-rose-400">review:</span><br/>
+<span class="text-neutral-300">    </span><span class="text-rose-400">runs-on:</span> <span class="text-neutral-300">ubuntu-latest</span><br/>
+<span class="text-neutral-300">    </span><span class="text-rose-400">steps:</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">uses:</span> <span class="text-neutral-300">actions/checkout@v4</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Install Claude Code</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">npm install -g @anthropic-ai/claude-code</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Run Review</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">env:</span><br/>
+<span class="text-neutral-300">          </span><span class="text-rose-400">ANTHROPIC_API_KEY:</span> <span class="text-neutral-300">${{ secrets.ANTHROPIC_API_KEY }}</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">claude -p "Review the files changed in this PR"</span>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Trigger in PR:</strong>The action runs automatically when a PR is opened or updated</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Secure API Key:</strong>Use GitHub Secrets to store the key - never put it in the code</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Controlled cost:</strong>Each execution consumes tokens from your API key. Monitor with billing alerts</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Start with a simple action that only runs on PRs for the main branch. Don't put in every push - this consumes a lot of tokens. Use<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">on: pull_request: branches: [main]</code>to limit scope and keep cost under control.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">🔒 --allowedTools for Security</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">In CI/CD environments, security is paramount. You don't want Claude to execute arbitrary commands in your runner. The flag<strong class="text-rose-400"><code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">--allowedTools</code></strong>restricts which tools Claude can use, creating a secure sandbox.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <strong class="text-white">--allowedTools</strong>works like a permissions whitelist. Only the tools listed will be available to Claude in that run. Everything else is automatically blocked.</p>
+<div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
+<span class="text-neutral-500"># Read only - safe for code review</span><br/>
+<span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Review this code" \</span><br/>
+<span class="text-neutral-300">--allowedTools Read,Grep,Glob</span><br/><br/>
+<span class="text-neutral-500"># Limited reading + writing</span><br/>
+<span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Fix found bugs"\</span><br/>
+<span class="text-neutral-300">--allowedTools Read,Write,Edit,Grep,Glob</span><br/><br/>
+<span class="text-neutral-500"># No tools - just textual analysis</span><br/>
+<span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Analyze this diff: $(git diff)" \</span><br/>
+<span class="text-neutral-300">--allowedTools ""</span>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Read-only for reviews:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">Read,Grep,Glob</code>when Claude just needs to analyze, not modify</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Without Bash:</strong>Never include Bash in the CI whitelist unless absolutely necessary and controlled</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Principle of least privilege:</strong>Give Claude only the tools he needs for that specific task</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">For automatic code review, the combination<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">--allowedTools Read,Grep,Glob</code>is the gold standard. Claude can read and analyze the entire code without the risk of modifying anything. Always start with the minimum and only add more tools if the task really requires it.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">🔍 Automatic Code Review in PRs</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Claude's most powerful use case in CI/CD is the<strong class="text-rose-400">automatic code review</strong>. With each PR opened, Claude analyzes the changes, identifies potential bugs, suggests improvements and posts a detailed comment - all automatically, before any human looks.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">An automatic code review pipeline with Claude involves:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Capture the diff:</strong>Use<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">git diff origin/main...HEAD</code>to get only the PR changes</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Structured prompt:</strong>Pass the diff with clear instructions on what to analyze (security, performance, standards)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Post as comment:</strong>Use the GitHub API (<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">gh pr comment</code>) to add the review as a comment in the PR</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Status check:</strong>Configure it as a mandatory check so that PRs are not merged without Claude's review</span>
+</li>
+</ul>
+<div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mt-4 overflow-x-auto">
+<span class="text-neutral-500"># Complete review step example</span><br/>
+<span class="text-rose-400">- name:</span> <span class="text-neutral-300">Claude Review</span><br/>
+<span class="text-neutral-300">  </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">|</span><br/>
+<span class="text-neutral-300">REVIEW=$(claude -p "Review this diff and report bugs, security issues, and improvement suggestions. Be concise. $(git diff origin/main...HEAD)" --allowedTools Read,Grep,Glob)</span><br/>
+<span class="text-neutral-300">gh pr comment ${{ github.event.pull_request.number }} --body "$REVIEW"</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">The secret of a good automatic review is the<strong class="text-white">well-structured prompt</strong>. Include instructions on what to prioritize: "Focus on: 1) Critical bugs, 2) Security vulnerabilities, 3) Performance. Ignore: formatting, variable names." The more specific the prompt, the more useful the review.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🚀 Deployment Checks with Claude</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">In addition to code review, Claude can act as<strong class="text-rose-400">pre-deploy validator</strong>. Before each deployment, it analyzes the code, checks configurations, validates environment variables and confirms that everything is ready to go to production.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Deployment checks with Claude can verify:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Environment variables:</strong>Are all necessary envs defined? Do any of them have an insecure default value?</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Pending migrations:</strong>Are there database migrations that need to be run before deployment?</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Breaking changes:</strong>Are API changes backwards compatible? Have any endpoints been removed?</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Security:</strong>Are there exposed secrets, vulnerable dependencies or insecure configurations?</span>
+</li>
+</ul>
+<div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mt-4 overflow-x-auto">
+<span class="text-neutral-500"># Pre-deploy check</span><br/>
+<span class="text-rose-400">claude -p</span> <span class="text-neutral-300">"Check if this project is ready to deploy to production. Check: 1) .env.example vs variables used, 2) Pending migrations, 3) Secrets exposed in the code, 4) Breaking changes in the API. Return PASS or FAIL with justification." \</span><br/>
+<span class="text-neutral-300">--allowedTools Read,Grep,Glob</span>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Configure the deployment check as<strong class="text-white">blocking step</strong>in the pipeline. If Claude returns FAIL, the deployment does not happen. This acts as an extra layer of security - even if the tests pass, Claude can catch issues that automated tests don't cover, such as incorrect configurations or insecure defaults.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">📜 Complete Example Pipeline (Full YAML)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Let's put it all together<strong class="text-rose-400">complete pipeline that you can copy and adapt</strong>. This YAML includes automatic code review on PRs, pre-deploy validation and notification of results - all securely using Claude headless.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Complete pipeline with 3 jobs: review, quality check and deploy validation:</p>
+<div class="bg-dark-700 rounded-lg p-4 font-mono text-sm mb-4 overflow-x-auto">
+<span class="text-neutral-500"># .github/workflows/claude-pipeline.yml</span><br/>
+<span class="text-rose-400">name:</span> <span class="text-neutral-300">Claude CI/CD Pipeline</span><br/>
+<span class="text-rose-400">on:</span><br/>
+<span class="text-neutral-300">  </span><span class="text-rose-400">pull_request:</span><br/>
+<span class="text-neutral-300">    </span><span class="text-rose-400">branches:</span> <span class="text-neutral-300">[main]</span><br/><br/>
+<span class="text-rose-400">jobs:</span><br/>
+<span class="text-neutral-300">  </span><span class="text-rose-400">claude-review:</span><br/>
+<span class="text-neutral-300">    </span><span class="text-rose-400">runs-on:</span> <span class="text-neutral-300">ubuntu-latest</span><br/>
+<span class="text-neutral-300">    </span><span class="text-rose-400">steps:</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">uses:</span> <span class="text-neutral-300">actions/checkout@v4</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">with:</span><br/>
+<span class="text-neutral-300">          </span><span class="text-rose-400">fetch-depth:</span> <span class="text-neutral-300">0</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">npm i -g @anthropic-ai/claude-code</span><br/>
+<span class="text-neutral-300">      - </span><span class="text-rose-400">name:</span> <span class="text-neutral-300">Code Review</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">env:</span><br/>
+<span class="text-neutral-300">          </span><span class="text-rose-400">ANTHROPIC_API_KEY:</span> <span class="text-neutral-300">${{ secrets.ANTHROPIC_API_KEY }}</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">run:</span> <span class="text-neutral-300">|</span><br/>
+<span class="text-neutral-300">REVIEW=$(claude -p "Review the changes in this PR. Focus on bugs, security and performance." --allowedTools Read,Grep,Glob)</span><br/>
+<span class="text-neutral-300">gh pr comment $PR_NUMBER --body "$REVIEW"</span><br/>
+<span class="text-neutral-300">        </span><span class="text-rose-400">env:</span><br/>
+<span class="text-neutral-300">          </span><span class="text-rose-400">PR_NUMBER:</span> <span class="text-neutral-300">${{ github.event.pull_request.number }}</span><br/>
+<span class="text-neutral-300">          </span><span class="text-rose-400">GH_TOKEN:</span> <span class="text-neutral-300">${{ secrets.GITHUB_TOKEN }}</span>
+</div>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">fetch-depth: 0:</strong>Necessary to have access to the complete commit history in diff</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Two secrets:</strong>ANTHROPIC_API_KEY for Claude and GITHUB_TOKEN for posting comments</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Extensible:</strong>Add more jobs (quality-check, deploy-validation) following the same pattern</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Copy this YAML as a starting point and adapt it for your project. The main customizations are:<strong class="text-white">the review prompt</strong>(adapt to your team's style) and the<strong class="text-white">allowedTools</strong>(adjust according to the desired permission level).</p>
+<p class="text-neutral-300">Cost tip: add<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">--max-turns 1</code>to limit Claude to a single response, avoiding tool loops that excessively consume tokens.</p>
+</div>
+</section>
+EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">✍</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4">Create GitHub Action with claude -p and --allowedTools</h3>
+<p class="text-neutral-300 mb-4">In this exercise, you will set up a real CI/CD pipeline that uses Claude for automatic code review on pull requests.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 1: Create the workflow file</h4>
+<p class="text-neutral-400 text-sm mb-2">Create the directory structure and YAML file:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">mkdir -p</span> <span class="text-neutral-300">.github/workflows</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span> <span class="text-neutral-300">"Create a GitHub Actions workflow in .github/workflows/claude-review.yml that does automatic code review with claude -p and --allowedTools Read,Grep,Glob"</span>
+</div>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 2: Configure the secret</h4>
+<p class="text-neutral-400 text-sm mb-2">Add your API key as secret in the repository:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">gh secret set</span> <span class="text-neutral-300">ANTHROPIC_API_KEY</span>
+</div>
+<p class="text-neutral-500 text-xs mt-2">The command will ask for the key value interactively.</p>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 3: Test with a PR</h4>
+<p class="text-neutral-400 text-sm mb-2">Create a test PR to validate the pipeline:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">git checkout -b</span> <span class="text-neutral-300">test/claude-ci</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-neutral-300">git add .github/workflows/claude-review.yml</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">git commit -m</span> <span class="text-neutral-300">"Add Claude CI review"</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">gh pr create</span> <span class="text-neutral-300">--title "Test Claude CI" --body "Testing automated review"</span>
+</div>
+</div>
+</div>
+<h4 class="text-white font-semibold mb-3">Conclusion Checklist:</h4>
+<div class="space-y-2">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Created the file .github/workflows/claude-review.yml</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Configured ANTHROPIC_API_KEY as GitHub Secret</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Used --allowedTools to restrict permissions</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Tested with a real PR and checked Claude's comment</span>
+</div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Claude headless with -p</strong>
+<span class="text-neutral-400">- Interfaceless mode that accepts prompts via flag and returns results via stdout.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">GitHub Actions native integration</strong>
+<span class="text-neutral-400">- Install in the runner, configure API key as secret and run with claude -p.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">--allowedTools for security</strong>
+<span class="text-neutral-400">- Whitelist of tools that restricts what Claude can do in CI.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Automatic code review in PRs</strong>
+<span class="text-neutral-400">- Automatic analysis of bugs, security and performance for each pull request.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Complete copyable pipeline</strong>
+<span class="text-neutral-400">- YAML ready to adapt with review, quality check and deploy validation.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-rose-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">6.8 - Claude Cowork and Desktop Agent (2026)</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors justify-start" href="modulo-6-6.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors" href="modulo-6-8.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -655,6 +553,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
