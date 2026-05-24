@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 6.1 - O que sao MCPs e o Token Tax | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 6.1 - What are MCPs and the Token Tax | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,587 +42,482 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">&#129504;</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-rose-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-rose-400">Trilha 6</a>
-      <span>/</span>
-      <span class="text-rose-400">Modulo 6.1</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 6.1
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#128268; O que sao MCPs e o Token Tax</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Entenda o Model Context Protocol, a analogia USB que simplifica tudo, o custo real de cada MCP ativo no seu contexto e quando usar Skills em vez de MCPs.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">25</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Basico</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-rose-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- TOPICO 1 -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">&#128640; O que sao MCPs (Model Context Protocol)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        MCP (Model Context Protocol) e o <strong class="text-rose-400">protocolo aberto da Anthropic para conectar o Claude a ferramentas externas</strong>. Pense em MCPs como portas USB do Claude: cada MCP conectado da ao Claude acesso a um servico, ferramenta ou fonte de dados que ele nao teria nativamente. GitHub, banco de dados, browser, planilhas - tudo se conecta via MCP.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          MCPs sao <strong class="text-white">servidores locais</strong> que rodam no seu computador e expoe ferramentas ao Claude via um protocolo padronizado. Quando voce instala um MCP, o Claude ganha novas habilidades - como acessar seu GitHub, navegar sites ou consultar bancos de dados.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Protocolo aberto:</strong> Qualquer desenvolvedor pode criar MCPs. Ja existem milhares no ecossistema, cobrindo desde Notion ate Figma</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Rodam localmente:</strong> MCPs sao processos no seu computador. O Claude se comunica com eles via stdin/stdout, sem enviar dados para servidores terceiros</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Ferramentas sob demanda:</strong> Cada MCP expoe uma lista de ferramentas. O Claude escolhe qual usar baseado no que voce pede</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Instalacao simples:</strong> Um unico comando <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude mcp add</code> instala e configura qualquer MCP</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Para ver os MCPs que voce ja tem instalados, rode <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude mcp list</code>. Se a lista estiver vazia, nao se preocupe - nos proximos modulos vamos instalar cada um passo a passo.
-        </p>
-        <p class="text-neutral-300">
-          Nao instale tudo de uma vez. Comece com Filesystem e GitHub (os dois mais uteis com menor custo) e adicione outros conforme a necessidade surgir no seu workflow real.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 2 -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">&#128268; MCPs = USB ports para o Claude</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A melhor analogia para entender MCPs e pensar no Claude como um computador. Sem MCPs, ele so tem acesso ao que esta no diretorio do projeto (o "disco interno"). Cada MCP que voce conecta e como <strong class="text-rose-400">plugar um dispositivo USB</strong> - da acesso a algo externo, mas consome energia (contexto).
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Assim como um computador tem portas USB limitadas e cada dispositivo consome energia, o Claude tem uma <strong class="text-white">janela de contexto limitada</strong> e cada MCP ativo consome parte dela. A analogia e perfeita:
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">USB = MCP:</strong> Cada um conecta uma capacidade externa ao sistema</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Energia = Contexto:</strong> Mesmo ocioso, o dispositivo consome energia. Mesmo sem usar, o MCP ocupa espaco no contexto</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Hub USB = Token Tax:</strong> Plugar um hub com 10 dispositivos nao e gratis. Cada conexao tem um custo fixo</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Plug and Play:</strong> Voce pode conectar e desconectar MCPs a qualquer momento, sem reiniciar</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Quando alguem perguntar "o que sao MCPs?", responda: <strong class="text-white">"Sao portas USB para o Claude. Voce pluga, ele ganha poderes. Mas cada porta consome contexto, entao so ligue o que precisa agora."</strong> Essa frase resume 90% do que voce precisa saber para comecar.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 3 -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">&#9888;&#65039; O Token Tax (Context Overhead por MCP)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Aqui esta o segredo que a maioria dos usuarios ignora: <strong class="text-rose-400">todo MCP ativo consome contexto, mesmo quando nao esta sendo usado</strong>. Isso porque quando voce conecta um MCP, o Claude recebe a descricao de todas as ferramentas que aquele MCP oferece. Essa descricao ocupa tokens. E tokens = dinheiro e capacidade.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <strong class="text-white">Token Tax</strong> e o custo fixo de contexto que cada MCP ativo impoe. Nao importa se voce usa a ferramenta ou nao - so de estar conectada, ela ocupa espaco na janela de contexto do Claude.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Custo invisivel:</strong> Voce nao ve diretamente, mas o Claude perde capacidade de raciocinio a cada MCP adicionado</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Efeito cumulativo:</strong> 1 MCP = quase imperceptivel. 10 MCPs = perda significativa de qualidade</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">Janela e fixa:</strong> O contexto do Claude tem um limite. Cada token gasto com descricoes de MCP e um token a menos para seu codigo e suas instrucoes</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Use o comando <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">/cost</code> dentro de uma sessao do Claude para ver quanto contexto voce ja consumiu. Compare o custo com 0 MCPs, com 2 e com 5 - voce vai ver a diferenca na pratica. Essa experiencia concreta vale mais que qualquer tabela.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 4 -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">&#128202; Tabela de Overhead por Quantidade de MCPs</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Para tomar decisoes informadas sobre quais MCPs manter ativos, voce precisa entender o custo real. Esta tabela mostra o <strong class="text-rose-400">overhead aproximado de contexto</strong> baseado na quantidade de MCPs conectados simultaneamente.
-      </p>
-
-      <!-- Tabela -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
-        <h3 class="text-lg font-semibold text-white mb-4">Overhead de Contexto por MCPs Ativos</h3>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-dark-600">
-              <th class="text-left py-3 pr-4 text-neutral-400 font-medium">MCPs Conectados</th>
-              <th class="text-left py-3 px-4 text-neutral-400 font-medium">Overhead de Contexto</th>
-              <th class="text-left py-3 pl-4 text-neutral-400 font-medium">Impacto Pratico</th>
-            </tr>
-          </thead>
-          <tbody class="text-neutral-300">
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-white">0</td>
-              <td class="py-3 px-4 text-emerald-400">0%</td>
-              <td class="py-3 pl-4">Maximo de contexto disponivel</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-white">1-2</td>
-              <td class="py-3 px-4 text-yellow-400">~5-10%</td>
-              <td class="py-3 pl-4">Quase imperceptivel. Sweet spot.</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-white">3-5</td>
-              <td class="py-3 px-4 text-orange-400">~15-25%</td>
-              <td class="py-3 pl-4">Perceptivel em sessoes longas</td>
-            </tr>
-            <tr>
-              <td class="py-3 pr-4 font-medium text-white">10+</td>
-              <td class="py-3 px-4 text-red-400">30%+ &#9888;</td>
-              <td class="py-3 pl-4">Degradacao significativa de qualidade</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <strong class="text-white">sweet spot e 1-2 MCPs ativos</strong> por sessao. Nesse range, o overhead e minimo e voce ganha capacidades poderosas sem comprometer a qualidade das respostas. Acima de 5, comece a questionar se realmente precisa de todos ativos ao mesmo tempo.
-        </p>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Imprima essa tabela e cole do lado do monitor. Antes de cada sessao, pergunte: <strong class="text-white">"Quantos MCPs eu realmente preciso AGORA?"</strong>. Se a resposta for "todos", voce provavelmente esta tentando fazer coisas demais numa sessao so.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 5 -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">&#9878;&#65039; Skills vs MCPs (Decision Framework)</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Uma das duvidas mais comuns e: <strong class="text-rose-400">"Quando uso uma Skill e quando uso um MCP?"</strong>. A resposta e simples, mas fundamental. Skills sao instrucoes que o Claude executa internamente. MCPs sao conexoes com ferramentas externas. Cada um tem seu dominio ideal.
-      </p>
-
-      <!-- Tabela de Decisao -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
-        <h3 class="text-lg font-semibold text-white mb-4">Framework de Decisao: Skill ou MCP?</h3>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-dark-600">
-              <th class="text-left py-3 pr-4 text-neutral-400 font-medium">Se voce precisa de...</th>
-              <th class="text-left py-3 pl-4 text-neutral-400 font-medium">Use</th>
-            </tr>
-          </thead>
-          <tbody class="text-neutral-300">
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4">Workflow repetivel (sempre faz a mesma coisa)</td>
-              <td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4">Acesso a ferramenta/API externa ao vivo</td>
-              <td class="py-3 pl-4 text-rose-400 font-medium">MCP</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4">Formatacao de dados ou output padronizado</td>
-              <td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4">Navegacao web / scraping</td>
-              <td class="py-3 pl-4 text-rose-400 font-medium">MCP</td>
-            </tr>
-            <tr>
-              <td class="py-3 pr-4">Eficiencia maxima de tokens</td>
-              <td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          A regra de ouro: <strong class="text-white">Repetitivo = Skill. Dados ao vivo = MCP.</strong> Se voce faz a mesma tarefa toda semana, crie uma Skill. Se voce precisa de informacao em tempo real de um servico externo, use um MCP.
-        </p>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Antes de instalar um MCP novo, pergunte: <strong class="text-white">"Eu poderia resolver isso com uma Skill que le um arquivo ou roda um comando?"</strong>. Se sim, a Skill e melhor - zero overhead de contexto, execucao mais rapida e sem dependencia externa.
-        </p>
-      </div>
-    </section>
-
-    <!-- TOPICO 6 -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">&#128188; A Mentalidade de CEO</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        A melhor metafora para gerenciar MCPs e pensar como um CEO gerenciando orcamento. <strong class="text-rose-400">Contexto = orcamento. Cada MCP = assinatura recorrente.</strong> Um CEO nao assina 10 servicos "so pra ter". Ele assina o que usa, cancela o que nao usa, e monitora o gasto.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
-          <span class="mr-2">&#127919;</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Os 5 principios do Operador de MCPs:
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">1. Instale apenas o que precisa:</strong> Nao instale MCPs "por precaucao". Instale quando a necessidade surgir</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">2. Desconecte o que nao esta usando:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-rose-400">claude mcp remove</code> e seu melhor amigo</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">3. Prefira Skills quando possivel:</strong> Zero overhead, mesma funcionalidade em muitos casos</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">4. Monitore com /cost:</strong> Acompanhe o consumo real de tokens por sessao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-rose-400 mt-1">&bull;</span>
-            <span><strong class="text-white">5. Rotacione intencionalmente:</strong> Troque os MCPs ativos conforme o tipo de tarefa muda</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">&#128161;</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300">
-          Crie um mantra mental antes de cada sessao: <strong class="text-white">"O que eu estou fazendo AGORA? Quais MCPs sao essenciais para ISSO?"</strong>. Se a resposta for "to codando features", provavelmente so precisa de Filesystem + GitHub. Se for "verificando UI", troque para Filesystem + Browser. Nunca ligue tudo ao mesmo tempo.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXERCICIO -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">&#9997;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4">Medir overhead de contexto com 0, 2 e 5 MCPs</h3>
-        <p class="text-neutral-300 mb-4">
-          Neste exercicio, voce vai medir na pratica o impacto do Token Tax. O objetivo e ver com seus proprios olhos quanto contexto cada MCP consome.
-        </p>
-
-        <div class="space-y-4 mb-6">
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 1: Baseline (0 MCPs)</h4>
-            <p class="text-neutral-400 text-sm mb-2">Desconecte todos os MCPs e abra uma sessao nova:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp list</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br>
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
-            </div>
-            <p class="text-neutral-500 text-xs mt-2">Anote o consumo base de contexto.</p>
-          </div>
-
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 2: Com 2 MCPs</h4>
-            <p class="text-neutral-400 text-sm mb-2">Adicione Filesystem e GitHub, abra nova sessao:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem ~/Desktop</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span><br>
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br>
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
-            </div>
-            <p class="text-neutral-500 text-xs mt-2">Compare com o baseline.</p>
-          </div>
-
-          <div class="bg-dark-900 rounded-lg p-4">
-            <h4 class="text-rose-400 font-semibold mb-2">Passo 3: Com 5 MCPs</h4>
-            <p class="text-neutral-400 text-sm mb-2">Adicione mais MCPs e repita a medicao:</p>
-            <div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
-              <span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br>
-              <span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
-            </div>
-            <p class="text-neutral-500 text-xs mt-2">Observe o aumento cumulativo.</p>
-          </div>
-        </div>
-
-        <h4 class="text-white font-semibold mb-3">Checklist de Conclusao:</h4>
-        <div class="space-y-2">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Mediu o baseline com 0 MCPs</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Mediu com 2 MCPs (Filesystem + GitHub)</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Mediu com 5 MCPs e comparou os resultados</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-rose-400">&#9744;</span>
-            <span class="text-neutral-300">Entendeu o impacto real do Token Tax</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESUMO FINAL -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">&#128203;</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">MCPs sao o Model Context Protocol</strong>
-              <span class="text-neutral-400"> - Protocolo aberto que conecta o Claude a ferramentas externas como USB ports.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Analogia USB perfeita</strong>
-              <span class="text-neutral-400"> - Cada MCP conectado da poderes mas consome energia (contexto). Plug and play.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Token Tax e real</strong>
-              <span class="text-neutral-400"> - 0 MCPs = 0%, 1-2 = 5-10%, 3-5 = 15-25%, 10+ = 30%+. Sweet spot: 1-2 MCPs.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Skills vs MCPs: repetitivo vs ao vivo</strong>
-              <span class="text-neutral-400"> - Se e repetivel, use Skill. Se precisa de dados externos em tempo real, use MCP.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-rose-400 mt-1">&#10003;</span>
-            <div>
-              <strong class="text-white">Mentalidade de CEO</strong>
-              <span class="text-neutral-400"> - Contexto = orcamento. Instale o necessario, desconecte o ocioso, monitore com /cost.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-rose-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">6.2 - MCP Filesystem e GitHub</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <span class="flex-1 text-center px-6 py-3 bg-dark-700/50 text-neutral-500 rounded-lg font-semibold cursor-not-allowed">
-            &#8592; Modulo Anterior
-          </span>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-6-2.html" class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors">
-            Proximo Modulo &#8594;
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-rose-400 bg-rose-500/10" href="index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-rose-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-rose-400" href="index.html">Track 6</a>
+<span>/</span>
+<span class="text-rose-400">Module 6.1</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-rose-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-rose-500/20 text-rose-400 text-xs font-semibold rounded-full mb-4">MODULE 6.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔌 What are MCPs and Token Tax</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Understand the Model Context Protocol, the USB analogy that simplifies everything, the real cost of each active MCP in your context and when to use Skills instead of MCPs.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">25</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Basic</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-rose-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+TOPIC 1
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">🚀 What are MCPs (Model Context Protocol)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">MCP (Model Context Protocol) and the<strong class="text-rose-400">Anthropic's open protocol for connecting Claude to external tools</strong>. Think of MCPs as Claude's USB ports: each connected MCP gives Claude access to a service, tool, or data source that he wouldn't have natively. GitHub, database, browser, spreadsheets - everything connects via MCP.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">MCPs are<strong class="text-white">local servers</strong>that run on your computer and expose tools to Claude via a standardized protocol. When you install an MCP, Claude gains new abilities - like accessing your GitHub, browsing websites or querying databases.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Open protocol:</strong>Any developer can create MCPs. There are already thousands in the ecosystem, covering everything from Notion to Figma</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Run locally:</strong>MCPs are processes on your computer. Claude communicates with them via stdin/stdout, without sending data to third-party servers</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">On-Demand Tools:</strong>Each MCP exposes a list of tools. Claude chooses which one to use based on what you ask</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Simple installation:</strong>A single command<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude mcp add</code>install and configure any MCP</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">To see the MCPs you already have installed, run<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude mcp list</code>. If the list is empty, don't worry - in the next modules we will install each one step by step.</p>
+<p class="text-neutral-300">Don't install everything at once. Start with Filesystem and GitHub (the two most useful and least expensive) and add others as the need arises in your real workflow.</p>
+</div>
+</section>
+TOPIC 2
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🔌 MCPs = USB ports for Claude</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The best analogy to understand MCPs and think of Claude as a computer. Without MCPs, it only has access to what is in the project directory (the "internal disk"). Each MCP you connect and how<strong class="text-rose-400">plug in a USB device</strong>- gives access to something external, but consumes energy (context).</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Just like a computer has limited USB ports and each device consumes power, the Claude has a<strong class="text-white">limited context window</strong>and each active MCP consumes part of it. The analogy is perfect:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">USB = MCP:</strong>Each connects an external capability to the system</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Energy = Context:</strong>Even when idle, the device consumes energy. Even without using it, the MCP occupies space in the context</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">USB Hub = Token Tax:</strong>Plugging in a hub with 10 devices is not free. Each connection has a fixed cost</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Plug and Play:</strong>You can connect and disconnect MCPs at any time without restarting</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">When someone asks "what are MCPs?", answer:<strong class="text-white">"These are USB ports for Claude. You plug it in, he gains powers. But each port consumes context, so only connect what you need now."</strong>This sentence summarizes 90% of what you need to know to get started.</p>
+</div>
+</section>
+TOPIC 3
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">⚠️ The Token Tax (Context Overhead by MCP)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Here is the secret that most users ignore:<strong class="text-rose-400">every active MCP consumes context, even when not being used</strong>. This is because when you connect an MCP, Claude receives a description of all the tools that MCP offers. This description takes up tokens. And tokens = money and capacity.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <strong class="text-white">Token Tax</strong>and the fixed context cost that each active MCP imposes. It doesn't matter if you use the tool or not - just by being connected, it takes up space in Claude's context window.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Invisible cost:</strong>You don't see it directly, but Claude loses reasoning ability with each MCP added</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Cumulative effect:</strong>1 MCP = almost imperceptible. 10 MCPs = significant loss of quality</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">Window and fixed:</strong>Claude's context has a limit. Each token spent on MCP descriptions is one less token for your code and instructions</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Use the command<code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">/cost</code>within a Claude session to see how much context you have already consumed. Compare the cost with 0 MCPs, with 2 and with 5 - you will see the difference in practice. This concrete experience is worth more than any table.</p>
+</div>
+</section>
+TOPIC 4
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📊 Overhead Table by Number of MCPs</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">To make informed decisions about which MCPs to keep active, you need to understand the true cost. This table shows the<strong class="text-rose-400">approximate context overhead</strong>based on the number of MCPs connected simultaneously.</p>
+Table
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
+<h3 class="text-lg font-semibold text-white mb-4">Context Overhead by Active MCPs</h3>
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b border-dark-600">
+<th class="text-left py-3 pr-4 text-neutral-400 font-medium">Connected MCPs</th>
+<th class="text-left py-3 px-4 text-neutral-400 font-medium">Context Overhead</th>
+<th class="text-left py-3 pl-4 text-neutral-400 font-medium">Practical Impact</th>
+</tr>
+</thead>
+<tbody class="text-neutral-300">
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-white">0</td>
+<td class="py-3 px-4 text-emerald-400">0%</td>
+<td class="py-3 pl-4">Maximum available context</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-white">1-2</td>
+<td class="py-3 px-4 text-yellow-400">~5-10%</td>
+<td class="py-3 pl-4">Almost imperceptible. Sweet spot.</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-white">3-5</td>
+<td class="py-3 px-4 text-orange-400">~15-25%</td>
+<td class="py-3 pl-4">Noticeable in long sessions</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 font-medium text-white">10+</td>
+<td class="py-3 px-4 text-red-400">30%+ ⚠</td>
+<td class="py-3 pl-4">Significant quality degradation</td>
+</tr>
+</tbody>
+</table>
+</div>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <strong class="text-white">sweet spot and 1-2 active MCPs</strong>per session. In this range, overhead is minimal and you gain powerful capabilities without compromising the quality of responses. Above 5, start to question whether you really need them all active at the same time.</p>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Print this table and paste it next to the monitor. Before each session, ask:<strong class="text-white">"How many MCPs do I really need RIGHT NOW?"</strong>. If the answer is "all", you are probably trying to do too much in one session.</p>
+</div>
+</section>
+TOPIC 5
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">⚖️ Skills vs MCPs (Decision Framework)</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">One of the most common doubts is:<strong class="text-rose-400">"When do I use a Skill and when do I use an MCP?"</strong>. The answer is simple, but fundamental. Skills are instructions that Claude executes internally. MCPs are connections to external tools. Everyone has their ideal domain.</p>
+Decision Table
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
+<h3 class="text-lg font-semibold text-white mb-4">Decision Framework: Skill or MCP?</h3>
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b border-dark-600">
+<th class="text-left py-3 pr-4 text-neutral-400 font-medium">If you need...</th>
+<th class="text-left py-3 pl-4 text-neutral-400 font-medium">Use</th>
+</tr>
+</thead>
+<tbody class="text-neutral-300">
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4">Repeatable workflow (always does the same thing)</td>
+<td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4">Access to live external tool/API</td>
+<td class="py-3 pl-4 text-rose-400 font-medium">MCP</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4">Data formatting or standardized output</td>
+<td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4">Web browsing/scraping</td>
+<td class="py-3 pl-4 text-rose-400 font-medium">MCP</td>
+</tr>
+<tr>
+<td class="py-3 pr-4">Maximum token efficiency</td>
+<td class="py-3 pl-4 text-teal-400 font-medium">Skill</td>
+</tr>
+</tbody>
+</table>
+</div>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The golden rule:<strong class="text-white">Repetitive = Skill. Live data = MCP.</strong>If you do the same task every week, create a Skill. If you need real-time information from an external service, use an MCP.</p>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Before installing a new MCP, ask:<strong class="text-white">"Could I solve this with a Skill that reads a file or runs a command?"</strong>. If so, Skill is better - zero context overhead, faster execution and no external dependency.</p>
+</div>
+</section>
+TOPIC 6
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">💼 The CEO Mindset</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The best metaphor for managing MCPs is thinking like a CEO managing budget.<strong class="text-rose-400">Context = budget. Each MCP = recurring subscription.</strong>A CEO doesn't sign up for 10 services "just to have it". He signs up for what he uses, cancels what he doesn't use, and monitors spending.</p>
+Main Concept
+<div class="bg-gradient-to-br from-rose-900/30 to-dark-800 rounded-xl border border-rose-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-rose-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">The 5 principles of the MCP Operator:</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">1. Install only what you need:</strong>Do not install MCPs "just in case". Install when the need arises</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">2. Disconnect what you are not using:</strong> <code class="bg-dark-700 px-2 py-1 rounded text-rose-400" data-notranslate="True">claude mcp remove</code>and your best friend</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">3. Prefer Skills when possible:</strong>Zero overhead, same functionality in many cases</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">4. Monitor with /cost:</strong>Track actual token consumption per session</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 mt-1">•</span>
+<span><strong class="text-white">5. Rotate intentionally:</strong>Swap active MCPs as task type changes</span>
+</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Create a mental mantra before each session:<strong class="text-white">"What am I doing NOW? Which MCPs are essential for THIS?"</strong>. If the answer is "I'm coding features", you probably only need Filesystem + GitHub. If it is "checking UI", change it to Filesystem + Browser. Never turn on everything at the same time.</p>
+</div>
+</section>
+EXERCISE
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 font-bold text-xl">✍</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4">Measuring context overhead with 0, 2 and 5 MCPs</h3>
+<p class="text-neutral-300 mb-4">In this exercise, you will practically measure the impact of Token Tax. The objective is to see with your own eyes how much context each MCP consumes.</p>
+<div class="space-y-4 mb-6">
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 1: Baseline (0 MCPs)</h4>
+<p class="text-neutral-400 text-sm mb-2">Disconnect all MCPs and open a new session:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp list</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br/>
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
+</div>
+<p class="text-neutral-500 text-xs mt-2">Note the context base consumption.</p>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 2: With 2 MCPs</h4>
+<p class="text-neutral-400 text-sm mb-2">Add Filesystem and GitHub, open new session:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add filesystem -- npx @anthropic-ai/mcp-filesystem ~/Desktop</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude mcp add github -- npx @anthropic-ai/mcp-github</span><br/>
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br/>
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
+</div>
+<p class="text-neutral-500 text-xs mt-2">Compare with the baseline.</p>
+</div>
+<div class="bg-dark-900 rounded-lg p-4">
+<h4 class="text-rose-400 font-semibold mb-2">Step 3: With 5 MCPs</h4>
+<p class="text-neutral-400 text-sm mb-2">Add more MCPs and repeat the measurement:</p>
+<div class="bg-dark-700 rounded-lg p-3 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-rose-400">claude</span><br/>
+<span class="text-neutral-500">&gt;</span> <span class="text-neutral-300">/cost</span>
+</div>
+<p class="text-neutral-500 text-xs mt-2">Note the cumulative increase.</p>
+</div>
+</div>
+<h4 class="text-white font-semibold mb-3">Conclusion Checklist:</h4>
+<div class="space-y-2">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Measured the baseline with 0 MCPs</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Measured with 2 MCPs (Filesystem + GitHub)</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Measured with 5 MCPs and compared the results</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-rose-400">☐</span>
+<span class="text-neutral-300">Understood the real impact of Token Tax</span>
+</div>
+</div>
+</div>
+</section>
+FINAL SUMMARY
+<section class="mb-12">
+<div class="bg-gradient-to-br from-rose-900/40 via-dark-800 to-dark-800 rounded-xl border border-rose-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">MCPs are the Model Context Protocol</strong>
+<span class="text-neutral-400">- Open protocol that connects Claude to external tools such as USB ports.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Perfect USB analogy</strong>
+<span class="text-neutral-400">- Each connected MCP gives power but consumes energy (context). Plug and play.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Token Tax and real</strong>
+<span class="text-neutral-400">- 0 MCPs = 0%, 1-2 = 5-10%, 3-5 = 15-25%, 10+ = 30%+. Sweet spot: 1-2 MCPs.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Skills vs MCPs: repetitive vs live</strong>
+<span class="text-neutral-400">- If it is repeatable, use Skill. If you need real-time external data, use MCP.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-rose-400 mt-1">✓</span>
+<div>
+<strong class="text-white">CEO mindset</strong>
+<span class="text-neutral-400">- Context = budget. Install the necessary, disconnect the idle, monitor with /cost.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-rose-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">6.2 - MCP Filesystem and GitHub</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<span class="flex-1 text-center px-6 py-3 bg-dark-700/50 text-neutral-500 rounded-lg font-semibold cursor-not-allowed">← Previous Module</span>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-rose-600/40 text-rose-100 rounded-lg font-semibold hover:bg-rose-600/60 transition-colors" href="modulo-6-2.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -643,6 +538,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
