@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 1.2 - Comandos Essenciais do Terminal | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 1.2 - Essential Terminal Commands | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -42,844 +42,714 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🧠</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Atalhos</span>
-          </a>
-          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">CLAUDE.md</span>
-          </a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Workflows</span>
-          </a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
-            <span class="sm:hidden">T4</span>
-            <span class="hidden sm:inline">Prompts</span>
-          </a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors">
-            <span class="sm:hidden">T5</span>
-            <span class="hidden sm:inline">Skills</span>
-          </a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors">
-            <span class="sm:hidden">T6</span>
-            <span class="hidden sm:inline">MCPs</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BREADCRUMB -->
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">Inicio</a>
-      <span>/</span>
-      <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
-      <span>/</span>
-      <span class="text-emerald-400">Modulo 1.2</span>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
-        MODULO 1.2
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">⌨️ Comandos Essenciais do Terminal</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">
-        Domine os comandos internos do Claude Code que todo usuario precisa conhecer: /help, /clear, /compact, /cost e /status. Aprenda quando e como usar cada um para manter suas sessoes organizadas e eficientes.
-      </p>
-
-      <!-- Stats Banner -->
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">6</div>
-          <div class="text-xs text-neutral-400">Topicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">20</div>
-          <div class="text-xs text-neutral-400">Minutos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Basico</div>
-          <div class="text-xs text-neutral-400">Nivel</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-          <div class="text-xl font-bold text-emerald-400">Teoria + Pratica</div>
-          <div class="text-xs text-neutral-400">Tipo</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTEUDO -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 1: /help -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">📖 /help - Seu guia de referencia rapida</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/help</code> e o ponto de partida para qualquer duvida sobre o que o Claude Code pode fazer. Em vez de sair da sessao para buscar documentacao, voce acessa tudo <strong class="text-emerald-400">diretamente no terminal</strong>, sem perder o contexto da conversa atual.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/help</code> exibe uma lista completa de todos os slash commands disponiveis, flags de configuracao e atalhos de teclado. E a sua <strong class="text-white">documentacao inline</strong> - sempre atualizada com a versao que voce esta rodando.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Lista de comandos:</strong> Mostra todos os slash commands nativos (/help, /clear, /compact, /cost, /status, /commit, /review, /pr, /init, /doctor) com uma breve descricao de cada um</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Atalhos de teclado:</strong> Exibe os keybindings essenciais como Escape para cancelar uma operacao, Ctrl+C para sair, e Tab para autocompletar caminhos de arquivo</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Informacoes de sessao:</strong> Indica o modelo atual em uso, o plano da conta e configuracoes ativas de permissao</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Versao sempre atualizada:</strong> Como o /help le da propria instalacao, ele reflete exatamente o que sua versao suporta - sem risco de documentacao desatualizada</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/help</span></div>
-          <div class="text-neutral-500 mt-2"># Saida tipica:</div>
-          <div class="text-neutral-300">Available slash commands:</div>
-          <div class="text-neutral-300">  /help      - Show this help message</div>
-          <div class="text-neutral-300">  /clear     - Clear conversation history</div>
-          <div class="text-neutral-300">  /compact   - Compact conversation to save context</div>
-          <div class="text-neutral-300">  /cost      - Show token usage and costs</div>
-          <div class="text-neutral-300">  /status    - Show session status</div>
-          <div class="text-neutral-300">  /commit    - Create a git commit</div>
-          <div class="text-neutral-300">  /review    - Review code changes</div>
-          <div class="text-neutral-300">  /pr        - Create a pull request</div>
-          <div class="text-neutral-300">  /init      - Initialize CLAUDE.md</div>
-          <div class="text-neutral-300">  /doctor    - Check for issues</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Crie o habito de rodar <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/help</code> sempre que atualizar o Claude Code. Novas versoes frequentemente adicionam comandos e funcionalidades que nao existiam antes. E a forma mais rapida de descobrir o que ha de novo.
-        </p>
-        <p class="text-neutral-300">
-          Alem disso, o /help nao consome tokens significativos - e uma operacao local que nao envia nada para o modelo. Pode usar sem medo de impactar seu custo.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 2: /clear -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🧹 /clear - Limpando contexto estrategicamente</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/clear</code> limpa todo o historico da conversa atual, resetando o contexto do Claude Code. Parece simples, mas saber <strong class="text-emerald-400">quando e por que usar</strong> faz uma diferenca enorme na qualidade das respostas e no custo da sessao.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Cada mensagem que voce troca com o Claude Code fica armazenada no <strong class="text-white">contexto da sessao</strong>. Quanto mais longo o contexto, mais tokens sao consumidos por mensagem e maior a chance do modelo "se perder" em informacoes antigas. O /clear zera esse contador.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Reset completo:</strong> Remove todas as mensagens anteriores da memoria ativa. O Claude nao lembra mais do que foi discutido antes do /clear</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Contexto poluido:</strong> Se voce explorou 5 arquivos diferentes, pediu refatoracoes, voltou atras e mudou de ideia, o contexto esta poluido. Um /clear permite recomecar com foco</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Economia de tokens:</strong> Contexto longo = mais tokens por request. Limpar regularmente quando muda de tarefa reduz custo significativamente</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Nao afeta arquivos:</strong> O /clear so limpa a conversa. Todos os arquivos editados, commits feitos e mudancas no projeto permanecem intactos</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Fazer vs Evitar -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Quando USAR /clear</h4>
-          <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2">
-              <span class="text-emerald-400">✓</span>
-              <span>Ao mudar completamente de tarefa (ex: de frontend para backend)</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-emerald-400">✓</span>
-              <span>Quando o Claude comeca a dar respostas confusas ou repetitivas</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-emerald-400">✓</span>
-              <span>Apos completar uma tarefa e antes de iniciar outra na mesma sessao</span>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Quando NAO usar /clear</h4>
-          <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>No meio de uma tarefa complexa que depende do contexto anterior</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Quando voce quer que o Claude lembre de decisoes ja tomadas</span>
-            </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-red-400">✗</span>
-              <span>Se o problema e excesso de contexto, prefira /compact em vez de /clear</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Pense no <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/clear</code> como fechar e abrir uma nova aba no navegador. Voce nao perde o trabalho feito, mas comeca a navegacao do zero. Use-o como separador entre tarefas distintas.
-        </p>
-        <p class="text-neutral-300">
-          Uma regra pratica: se voce precisa explicar ao Claude "esquece o que eu disse antes", e hora de dar um /clear. E mais eficiente do que tentar corrigir o contexto com palavras.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 3: /compact -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">📦 /compact - Compactando conversas longas</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/compact</code> e o meio-termo inteligente entre continuar com contexto poluido e perder tudo com /clear. Ele <strong class="text-emerald-400">resume a conversa</strong>, mantendo os pontos essenciais e descartando o ruido, permitindo que voce continue a tarefa com menos tokens.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Quando voce roda /compact, o Claude Code pega toda a conversa atual e gera um <strong class="text-white">resumo condensado</strong> que substitui o historico completo. O resultado e uma sessao mais leve, mais barata e muitas vezes mais focada do que a original.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Como funciona:</strong> O Claude le toda a conversa, identifica as decisoes-chave, o estado atual do trabalho e os proximos passos, e gera um resumo estruturado que se torna o novo contexto</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Preservacao inteligente:</strong> Arquivos editados, decisoes de design, bugs encontrados e resolucoes ficam preservados no resumo. Detalhes como tentativas falhas e exploracoes laterais sao descartados</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Reducao dramatica:</strong> Uma conversa de 50k tokens pode ser compactada para 5-8k tokens, reduzindo em ate 85% o custo das proximas mensagens</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Compact com instrucao:</strong> Voce pode passar uma instrucao adicional como <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/compact foque nas decisoes de arquitetura</code> para guiar o que deve ser priorizado no resumo</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div class="text-neutral-500"># Compact simples - resume tudo automaticamente</div>
-          <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/compact</span></div>
-          <div class="text-neutral-500 mt-3"># Compact direcionado - foca no que importa</div>
-          <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/compact mantenha o foco nas mudancas no schema do banco de dados</span></div>
-          <div class="text-neutral-500 mt-3"># Resultado tipico:</div>
-          <div class="text-neutral-300">Conversation compacted. Context reduced from 47,231 to 6,892 tokens.</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/compact</code> sempre que sentir que a conversa esta ficando longa mas voce <strong class="text-white">ainda precisa do contexto</strong>. A regra de ouro: se voce ja trocou mais de 15-20 mensagens na mesma tarefa, e hora de compactar.
-        </p>
-        <p class="text-neutral-300">
-          O Claude Code tambem faz auto-compact quando o contexto se aproxima do limite da janela. Mas nao espere isso acontecer - compactar proativamente da resultados melhores porque voce controla o que e preservado.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 4: /cost -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">💰 /cost - Monitorando gastos de tokens</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/cost</code> mostra exatamente quanto voce gastou na sessao atual em termos de <strong class="text-emerald-400">tokens consumidos e custo estimado</strong>. E essencial para manter o controle dos seus gastos e otimizar o uso do Claude Code no dia a dia.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O /cost exibe um relatorio detalhado de consumo: <strong class="text-white">tokens de entrada, tokens de saida, tokens de cache e o custo total estimado</strong> em dolares. Esses dados permitem que voce entenda quais acoes sao caras e quais sao baratas.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Tokens de entrada:</strong> Tudo que o Claude recebe - seu prompt, o contexto da conversa, conteudo de arquivos lidos. Quanto maior o contexto, mais tokens de entrada por mensagem</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Tokens de saida:</strong> Tudo que o Claude gera - respostas, codigo, explicacoes. Respostas longas custam mais, mas geralmente sao necessarias</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Cache hits:</strong> Tokens que foram reutilizados do cache, custando significativamente menos (ate 90% mais barato). O cache e automatico e otimizado pelo Claude Code</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Custo acumulado:</strong> O total da sessao em USD. No plano Pro, esse custo e absorvido pela assinatura ate o limite mensal. Em API direta, e cobrado sob demanda</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/cost</span></div>
-          <div class="text-neutral-500 mt-2"># Saida tipica apos ~10 minutos de uso:</div>
-          <div class="text-neutral-300">Session Cost Summary:</div>
-          <div class="text-neutral-300">  Input tokens:  34,521 ($0.1036)</div>
-          <div class="text-neutral-300">  Output tokens:  8,743 ($0.0437)</div>
-          <div class="text-neutral-300">  Cache read:   21,200 ($0.0064)</div>
-          <div class="text-neutral-300">  Cache write:   13,321 ($0.0400)</div>
-          <div class="text-neutral-300 font-bold mt-1">  Total: $0.1937</div>
-        </div>
-      </div>
-
-      <!-- Dados -->
-      <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
-          <span class="mr-2">📊</span> Custos de Referencia (2026)
-        </h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li><strong class="text-white">Sessao curta (5 min):</strong> ~$0.05 a $0.15 dependendo dos arquivos lidos</li>
-          <li><strong class="text-white">Sessao media (30 min):</strong> ~$0.50 a $2.00 com multiplas edicoes e leituras</li>
-          <li><strong class="text-white">Sessao longa (1h+):</strong> ~$2.00 a $8.00, especialmente com modelos Opus</li>
-          <li><strong class="text-white">Plano Pro mensal:</strong> Cobre a grande maioria dos usos individuais sem cobranca extra</li>
-        </ul>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Rode <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/cost</code> antes e depois de operacoes grandes para entender o impacto. Ler um arquivo grande de 2000 linhas pode custar mais do que 10 mensagens de texto simples. Saber isso muda como voce estrutura seus pedidos.
-        </p>
-        <p class="text-neutral-300">
-          Se o custo esta subindo rapido, combine com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/compact</code> para reduzir o contexto, ou use <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/clear</code> se estiver mudando de tarefa. O maior vilao de custo e contexto acumulado desnecessario.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 5: /status -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">📊 /status - Estado atual da sessao</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        O comando <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/status</code> e o seu painel de controle dentro do Claude Code. Ele mostra <strong class="text-emerald-400">tudo sobre a sessao atual</strong>: modelo em uso, ferramentas disponiveis, MCPs conectados, permissoes configuradas e estado geral do ambiente.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          O /status revela o <strong class="text-white">estado completo da sua sessao</strong>. E especialmente util para diagnosticar problemas, verificar se MCPs estao conectados corretamente e confirmar qual modelo esta sendo usado antes de uma tarefa critica.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Modelo ativo:</strong> Mostra qual modelo esta em uso (Opus, Sonnet, Haiku). Importante porque cada modelo tem capacidades e custos diferentes</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">MCPs conectados:</strong> Lista todos os servidores MCP ativos, suas ferramentas disponiveis e status de conexao. Se um MCP esta com problema, aparece aqui</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Permissoes:</strong> Mostra quais ferramentas estao permitidas, bloqueadas ou requerem aprovacao. Reflete as configuracoes do --allowedTools e do settings.json</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Diretorio de trabalho:</strong> Confirma em qual pasta o Claude Code esta operando. Util quando voce nao lembra se fez cd para o diretorio correto</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Exemplo de Codigo -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
-          <span class="mr-2">💻</span> Exemplo no Terminal
-        </h3>
-        <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
-          <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/status</span></div>
-          <div class="text-neutral-500 mt-2"># Saida tipica:</div>
-          <div class="text-neutral-300">Session Status:</div>
-          <div class="text-neutral-300">  Model: claude-opus-4-6</div>
-          <div class="text-neutral-300">  Working directory: /home/user/projects/meu-app</div>
-          <div class="text-neutral-300">  Account: Pro Plan</div>
-          <div class="text-neutral-300">  MCP Servers: 3 connected</div>
-          <div class="text-neutral-300">    - filesystem (4 tools)</div>
-          <div class="text-neutral-300">    - github (12 tools)</div>
-          <div class="text-neutral-300">    - postgres (6 tools)</div>
-          <div class="text-neutral-300">  Tools: 28 available, 2 blocked</div>
-        </div>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Rode <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/status</code> sempre que algo nao funcionar como esperado. Se o Claude nao consegue acessar o banco de dados, o /status vai mostrar se o MCP do Postgres esta conectado. Se as respostas estao ruins, pode ser que voce esteja rodando Haiku em vez de Opus.
-        </p>
-        <p class="text-neutral-300">
-          Combine com <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/doctor</code> (que voce vai aprender no modulo 1.3) para ter um diagnostico completo quando algo nao funciona.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- TOPICO 6: Combinando comandos na pratica -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">🔗 Combinando comandos na pratica</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Cada comando que vimos ate aqui e poderoso isoladamente, mas o verdadeiro ganho vem quando voce os <strong class="text-emerald-400">combina em workflows fluidos</strong>. Nesta secao, vamos montar sequencias praticas que profissionais usam no dia a dia para manter sessoes organizadas, baratas e produtivas.
-      </p>
-
-      <!-- Conceito Principal -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🎯</span> Conceito Principal
-        </h3>
-        <p class="text-neutral-300 mb-4">
-          Os comandos de sessao formam um <strong class="text-white">ciclo de gerenciamento</strong>: voce monitora com /status e /cost, otimiza com /compact, reseta com /clear e consulta com /help. Dominar esse ciclo e o que separa usuarios casuais de power users.
-        </p>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Workflow de tarefa longa:</strong> Comece a tarefa → a cada 15-20 mensagens, rode /cost para checar → se caro, rode /compact → continue → ao terminar, /clear antes da proxima tarefa</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Workflow de debug:</strong> Rode /status para verificar ambiente → identifique o bug → /cost para ver impacto → resolva → /compact se quiser continuar, /clear se terminou</span>
-          </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 mt-1">•</span>
-            <span><strong class="text-white">Workflow de exploracao:</strong> /help para ver comandos disponiveis → explore o projeto → /cost para monitorar → /clear quando satisfeito e pronto para codar</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tabela de Referencia Rapida -->
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
-        <h3 class="text-lg font-semibold text-white mb-4">Referencia Rapida dos Comandos</h3>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-dark-600">
-              <th class="text-left py-3 pr-4 text-neutral-400 font-medium">Comando</th>
-              <th class="text-left py-3 px-4 text-neutral-400 font-medium">Funcao</th>
-              <th class="text-left py-3 px-4 text-neutral-400 font-medium">Quando usar</th>
-              <th class="text-left py-3 pl-4 text-neutral-400 font-medium">Custo</th>
-            </tr>
-          </thead>
-          <tbody class="text-neutral-300">
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-emerald-400">/help</td>
-              <td class="py-3 px-4">Lista comandos e atalhos</td>
-              <td class="py-3 px-4">Quando esqueceu um comando</td>
-              <td class="py-3 pl-4 text-emerald-300">Zero</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-emerald-400">/clear</td>
-              <td class="py-3 px-4">Reseta todo o contexto</td>
-              <td class="py-3 px-4">Mudou de tarefa</td>
-              <td class="py-3 pl-4 text-emerald-300">Zero</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-emerald-400">/compact</td>
-              <td class="py-3 px-4">Resume a conversa</td>
-              <td class="py-3 px-4">Contexto ficou grande</td>
-              <td class="py-3 pl-4 text-yellow-300">Baixo</td>
-            </tr>
-            <tr class="border-b border-dark-700">
-              <td class="py-3 pr-4 font-medium text-emerald-400">/cost</td>
-              <td class="py-3 px-4">Mostra gastos da sessao</td>
-              <td class="py-3 px-4">Monitorar consumo</td>
-              <td class="py-3 pl-4 text-emerald-300">Zero</td>
-            </tr>
-            <tr>
-              <td class="py-3 pr-4 font-medium text-emerald-400">/status</td>
-              <td class="py-3 px-4">Informacoes da sessao</td>
-              <td class="py-3 px-4">Diagnosticar problemas</td>
-              <td class="py-3 pl-4 text-emerald-300">Zero</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Dica Pratica -->
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
-          <span class="mr-2">💡</span> Dica Pratica
-        </h3>
-        <p class="text-neutral-300 mb-3">
-          Memorize esta sequencia para sessoes longas: <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/cost</code> → avalie → <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/compact</code> → continue → <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400">/cost</code> → compare. Essa rotina de "checkpoint" mantém seus gastos sob controle e a qualidade das respostas alta.
-        </p>
-        <p class="text-neutral-300">
-          Desenvolvedores experientes rodam /cost a cada 10 minutos como habito. E como olhar o velocimetro enquanto dirige - nao muda a direcao, mas evita surpresas.
-        </p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- EXERCICIO PRATICO -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">🏋️</span>
-        <h2 class="text-2xl font-bold">🏋️ Exercicio Pratico</h2>
-      </div>
-
-      <p class="text-neutral-300 mb-6 leading-relaxed">
-        Hora de praticar todos os comandos aprendidos neste modulo. Voce vai usar <strong class="text-emerald-400">/help, /clear, /compact, /cost e /status</strong> numa sessao real do Claude Code, observando o impacto de cada um no fluxo de trabalho.
-      </p>
-
-      <!-- Box Principal do Exercicio -->
-      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
-        <div class="flex items-center space-x-3 mb-6">
-          <span class="text-3xl">🏋️</span>
-          <div>
-            <h3 class="text-xl font-bold text-emerald-400">Exercicio: Dominando os Comandos de Sessao</h3>
-            <p class="text-neutral-400 text-sm">Tempo estimado: 10-15 minutos</p>
-          </div>
-        </div>
-
-        <!-- Passos Numerados -->
-        <div class="space-y-6">
-          <!-- Passo 1 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">1</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Abrir uma sessao e consultar ajuda</h4>
-              <p class="text-neutral-300 text-sm mb-3">Navegue ate um projeto e abra o Claude Code. Depois, rode /help:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-neutral-500">$</span> <span class="text-emerald-400">cd ~/projects/qualquer-projeto && claude</span>
-                <br>
-                <span class="text-emerald-400">></span> <span class="text-neutral-300">/help</span>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Observe a lista de comandos disponiveis. Conte quantos voce ja conhece.</p>
-            </div>
-          </div>
-
-          <!-- Passo 2 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">2</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Verificar o estado da sessao</h4>
-              <p class="text-neutral-300 text-sm mb-3">Rode /status para ver o ambiente completo:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-emerald-400">></span> <span class="text-neutral-300">/status</span>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Anote qual modelo esta ativo e quantos MCPs estao conectados.</p>
-            </div>
-          </div>
-
-          <!-- Passo 3 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">3</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Gerar contexto e medir custo</h4>
-              <p class="text-neutral-300 text-sm mb-3">Faca 3-4 perguntas sobre o projeto e depois cheque o custo:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">Quais sao os principais arquivos deste projeto?</span></div>
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">Explique a arquitetura geral</span></div>
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">Liste as dependencias principais</span></div>
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/cost</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Anote o custo total ate aqui.</p>
-            </div>
-          </div>
-
-          <!-- Passo 4 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">4</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Compactar a conversa</h4>
-              <p class="text-neutral-300 text-sm mb-3">Use /compact para resumir e depois cheque o custo novamente:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/compact</span></div>
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/cost</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">Compare o custo por mensagem antes e depois do compact.</p>
-            </div>
-          </div>
-
-          <!-- Passo 5 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">5</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Limpar e recomecar</h4>
-              <p class="text-neutral-300 text-sm mb-3">Limpe o contexto e confirme que o Claude nao lembra da conversa anterior:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">/clear</span></div>
-                <div><span class="text-emerald-400">></span> <span class="text-neutral-300">O que estávamos fazendo antes?</span></div>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">O Claude nao deve saber responder - confirmando que o /clear funcionou.</p>
-            </div>
-          </div>
-
-          <!-- Passo 6 -->
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
-              <span class="text-emerald-400 font-bold">6</span>
-            </div>
-            <div class="flex-1">
-              <h4 class="font-semibold text-white mb-2">Checar custo final</h4>
-              <p class="text-neutral-300 text-sm mb-3">Verifique o custo total do exercicio inteiro:</p>
-              <div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
-                <span class="text-emerald-400">></span> <span class="text-neutral-300">/cost</span>
-              </div>
-              <p class="text-neutral-400 text-xs mt-2">O exercicio completo deve ter custado menos de $0.30. Se custou mais, reveja onde o contexto cresceu demais.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checklist de Sucesso -->
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">✅</span> Criterios de Sucesso
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Rodou /help e identificou comandos</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Verificou modelo ativo com /status</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Monitorou custo com /cost</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Compactou com /compact e viu reducao</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Limpou contexto com /clear</span>
-          </div>
-          <div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
-            <span class="text-emerald-400">☐</span>
-            <span class="text-neutral-300">Confirmou que /clear apagou o historico</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <!-- RESUMO FINAL -->
-    <!-- ═══════════════════════════════════════════════════════ -->
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center">
-          <span class="mr-3">📋</span> Resumo do Modulo
-        </h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/help e sua referencia inline</strong>
-              <span class="text-neutral-400"> - Lista todos os comandos, atalhos e informacoes da versao sem custo de tokens.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/clear reseta o contexto completamente</strong>
-              <span class="text-neutral-400"> - Use ao mudar de tarefa. Nao afeta arquivos, so a memoria da conversa.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/compact resume sem perder o essencial</strong>
-              <span class="text-neutral-400"> - Reduz contexto em ate 85%, mantendo decisoes-chave e estado atual.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/cost monitora gastos em tempo real</strong>
-              <span class="text-neutral-400"> - Tokens de entrada, saida, cache e custo total. Essencial para controle financeiro.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">/status mostra o painel completo da sessao</strong>
-              <span class="text-neutral-400"> - Modelo, MCPs, permissoes e diretorio. Primeiro comando a rodar quando algo nao funciona.</span>
-            </div>
-          </div>
-          <div class="flex items-start space-x-3">
-            <span class="text-emerald-400 mt-1">✓</span>
-            <div>
-              <strong class="text-white">Combine comandos em workflows</strong>
-              <span class="text-neutral-400"> - /cost → /compact → /cost e o ciclo de otimizacao. /clear para separar tarefas.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-emerald-400 mb-2">Proximo Modulo:</h3>
-          <p class="text-neutral-300">1.3 - Slash Commands Nativos (/commit, /review, /pr, /init, /doctor)</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-1-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            ← Modulo Anterior
-          </a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">
-            Voltar para Trilha
-          </a>
-          <a href="modulo-1-3.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">
-            Proximo Modulo →
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Shortcuts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">CLAUDE.md</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Workflows</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
+<span class="sm:hidden">T4</span>
+<span class="hidden sm:inline">Prompts</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html">
+<span class="sm:hidden">T5</span>
+<span class="hidden sm:inline">Skills</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html">
+<span class="sm:hidden">T6</span>
+<span class="hidden sm:inline">MCPs</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+BREADCRUMB
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-emerald-400" href="../../index.html">Start</a>
+<span>/</span>
+<a class="hover:text-emerald-400" href="index.html">Track 1</a>
+<span>/</span>
+<span class="text-emerald-400">Module 1.2</span>
+</div>
+</nav>
+HEADER
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">⌨️ Essential Terminal Commands</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Master Claude Code's internal commands that every user needs to know: /help, /clear, /compact, /cost and /status. Learn when and how to use each one to keep your sessions organized and efficient.</p>
+Stats Banner
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">6</div>
+<div class="text-xs text-neutral-400">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">20</div>
+<div class="text-xs text-neutral-400">Minutes</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Basic</div>
+<div class="text-xs text-neutral-400">Level</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
+<div class="text-xl font-bold text-emerald-400">Theory + Practice</div>
+<div class="text-xs text-neutral-400">Type</div>
+</div>
+</div>
+</div>
+</header>
+CONTENT
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+═══════════════════════════ ════════════════════════════
+TOPIC 1: /help
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">📖 /help - Your quick reference guide</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/help</code>and the starting point for any doubts about what Claude Code can do. Instead of leaving the session to look for documentation, you access everything<strong class="text-emerald-400">directly in the terminal</strong>, without losing the context of the current conversation.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">
+          O <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/help</code>displays a complete list of all available slash commands, configuration flags and keyboard shortcuts. And yours<strong class="text-white">inline documentation</strong>- always updated with the version you are running.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">List of commands:</strong>Shows all native slash commands (/help, /clear, /compact, /cost, /status, /commit, /review, /pr, /init, /doctor) with a brief description of each one</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Keyboard shortcuts:</strong>Displays essential keybindings such as Escape to cancel an operation, Ctrl+C to exit, and Tab to autocomplete file paths</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Session information:</strong>Indicates the current template in use, account plan, and active permission settings</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Always updated version:</strong>Since /help is part of the installation itself, it reflects exactly what your version supports - without the risk of outdated documentation</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/help</span></div>
+<div class="text-neutral-500 mt-2"># Typical output:</div>
+<div class="text-neutral-300">Available slash commands:</div>
+<div class="text-neutral-300">/help - Show this help message</div>
+<div class="text-neutral-300">/clear - Clear conversation history</div>
+<div class="text-neutral-300">/compact - Compact conversation to save context</div>
+<div class="text-neutral-300">/cost - Show token usage and costs</div>
+<div class="text-neutral-300">/status - Show session status</div>
+<div class="text-neutral-300">/commit - Create a git commit</div>
+<div class="text-neutral-300">/review - Review code changes</div>
+<div class="text-neutral-300">/pr - Create a pull request</div>
+<div class="text-neutral-300">/init - Initialize CLAUDE.md</div>
+<div class="text-neutral-300">/doctor - Check for issues</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Get into the habit of spinning<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/help</code>whenever you update Claude Code. New versions often add commands and functionality that didn't exist before. It's the fastest way to discover what's new.</p>
+<p class="text-neutral-300">Furthermore, /help does not consume significant tokens - it is a local operation that does not send anything to the model. You can use it without fear of impacting your cost.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 2: /clear
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">🧹 /clear - Strategically clearing context</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/clear</code>Clears the entire history of the current conversation, resetting the Claude Code context. It seems simple, but knowing<strong class="text-emerald-400">when and why to use</strong>It makes a huge difference in the quality of the answers and the cost of the session.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Every message you exchange with Claude Code is stored in the<strong class="text-white">session context</strong>. The longer the context, the more tokens are consumed per message and the greater the chance of the model "getting lost" in old information. /clear resets this counter.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Full reset:</strong>Removes all previous messages from active memory. Claude no longer remembers what was discussed before /clear</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Polluted context:</strong>If you explored 5 different files, asked for refactorings, went back and changed your mind, the context is polluted. A /clear allows you to start over with focus</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Token Economy:</strong>Long context = more tokens per request. Cleaning regularly when changing tasks significantly reduces costs</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Does not affect files:</strong>/clear only clears the conversation. All files edited, commits made and changes to the project remain intact</span>
+</li>
+</ul>
+</div>
+Do vs Avoid
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-4">✓ When to USE /clear</h4>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400">✓</span>
+<span>When completely changing tasks (e.g. from frontend to backend)</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400">✓</span>
+<span>When Claude starts giving confusing or repetitive answers</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400">✓</span>
+<span>After completing a task and before starting another in the same session</span>
+</li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-4">✗ When NOT to use /clear</h4>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>In the middle of a complex task that depends on the previous context</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>When you want Claude to remember decisions already made</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-red-400">✗</span>
+<span>If the problem is too much context, choose /compact over /clear</span>
+</li>
+</ul>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Think about<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/clear</code>how to close and open a new tab in the browser. You don't lose the work you've done, but start browsing from scratch. Use it as a separator between different tasks.</p>
+<p class="text-neutral-300">A rule of thumb: if you need to explain to Claude "forget what I said before", it's time to /clear. And more efficient than trying to correct the context with words.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 3: /compact
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📦 /compact - Compressing long conversations</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">
+        O <code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/compact</code>and the smart middle ground between continuing with polluted context and losing everything with /clear. He<strong class="text-emerald-400">summarizes the conversation</strong>, keeping the essential points and discarding the noise, allowing you to continue the task with fewer tokens.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">When you run /compact, Claude Code takes the entire current conversation and generates a<strong class="text-white">condensed summary</strong>which replaces the full history. The result is a lighter, cheaper and often more focused session than the original.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">How it works:</strong>Claude reads the entire conversation, identifies key decisions, the current state of work and next steps, and generates a structured summary that becomes the new context</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Smart preservation:</strong>Edited files, design decisions, bugs found and resolutions are preserved in the summary. Details such as failed attempts and lateral explorations are discarded</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Dramatic reduction:</strong>A conversation of 50k tokens can be compressed to 5-8k tokens, reducing the cost of future messages by up to 85%</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Compact with instruction:</strong>You can pass an additional instruction like<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/compact foque nas decisoes de arquitetura</code>to guide what should be prioritized in the summary</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div class="text-neutral-500"># Compact simple - summarizes everything automatically</div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/compact</span></div>
+<div class="text-neutral-500 mt-3"># Targeted compact - focuses on what matters</div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/compact keep focus on changes to the database schema</span></div>
+<div class="text-neutral-500 mt-3"># Typical result:</div>
+<div class="text-neutral-300">Conversation compressed. Context reduced from 47,231 to 6,892 tokens.</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/compact</code>whenever you feel like the conversation is getting long but you<strong class="text-white">still need context</strong>. The rule of thumb: if you've already exchanged more than 15-20 messages in the same task, it's time to compact.</p>
+<p class="text-neutral-300">Claude Code also auto-compacts when the context approaches the window limit. But don't wait for this to happen - proactively compressing gives better results because you control what is preserved.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 4: /cost
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">💰 /cost - Monitoring token spending</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/cost</code>shows exactly how much you spent in the current session in terms of<strong class="text-emerald-400">tokens consumed and estimated cost</strong>. It is essential to keep control of your expenses and optimize the use of Claude Code on a daily basis.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">/cost displays a detailed consumption report:<strong class="text-white">input tokens, output tokens, cache tokens and the total estimated cost</strong>in dollars. This data allows you to understand which stocks are expensive and which are cheap.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Entry Tokens:</strong>Everything Claude receives - your prompt, the context of the conversation, content of files read. The higher the context, the more input tokens per message</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Output tokens:</strong>Everything Claude generates - answers, code, explanations. Long answers cost more, but are generally necessary</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Cache hits:</strong>Tokens that were reused from the cache, costing significantly less (up to 90% cheaper). The cache is automatic and optimized by Claude Code</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Accumulated cost:</strong>The session total in USD. In the Pro plan, this cost is absorbed by the subscription up to the monthly limit. In direct API, and billed on demand</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/cost</span></div>
+<div class="text-neutral-500 mt-2"># Typical output after ~10 minutes of use:</div>
+<div class="text-neutral-300">Session Cost Summary:</div>
+<div class="text-neutral-300">Input tokens: 34,521 ($0.1036)</div>
+<div class="text-neutral-300">Output tokens: 8,743 ($0.0437)</div>
+<div class="text-neutral-300">Cache read: 21,200 ($0.0064)</div>
+<div class="text-neutral-300">Cache write: 13,321 ($0.0400)</div>
+<div class="text-neutral-300 font-bold mt-1">Total: $0.1937</div>
+</div>
+</div>
+Data
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center">
+<span class="mr-2">📊</span>Reference Costs (2026)</h3>
+<ul class="space-y-2 text-neutral-300">
+<li><strong class="text-white">Short session (5 min):</strong>~$0.05 to $0.15 depending on files read</li>
+<li><strong class="text-white">Medium session (30 min):</strong>~$0.50 to $2.00 with multiple editions and readings</li>
+<li><strong class="text-white">Long session (1h+):</strong>~$2.00 to $8.00, especially with Opus models</li>
+<li><strong class="text-white">Monthly Pro Plan:</strong>Covers the vast majority of individual uses without extra charges</li>
+</ul>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Rotate<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/cost</code>before and after large operations to understand the impact. Reading a large file of 2000 lines can cost more than 10 simple text messages. Knowing this changes how you structure your orders.</p>
+<p class="text-neutral-300">If the cost is rising quickly, agree with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/compact</code>to reduce context, or use<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/clear</code>if you are changing tasks. The biggest villain of unnecessary accumulated cost and context.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 5: /status
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">📊 /status - Current session status</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The command<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/status</code>and your control panel within Claude Code. It shows<strong class="text-emerald-400">everything about the current session</strong>: model in use, available tools, connected MCPs, configured permissions and general state of the environment.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">/status reveals the<strong class="text-white">Complete status of your session</strong>. It is especially useful for diagnosing problems, checking that MCPs are connected correctly, and confirming which model is being used before a critical task.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Active model:</strong>Shows which model is in use (Opus, Sonnet, Haiku). Important because each model has different capabilities and costs</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Connected MCPs:</strong>Lists all active MCP servers, their available tools, and connection status. If an MCP is having a problem, it appears here</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Permissions:</strong>Shows which tools are allowed, blocked, or require approval. Reflects --allowedTools and settings.json settings</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Working directory:</strong>Confirm in which folder Claude Code is operating. Useful when you don't remember if you cded to the correct directory</span>
+</li>
+</ul>
+</div>
+Code Example
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
+<h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+<span class="mr-2">💻</span>Example in Terminal</h3>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-2">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/status</span></div>
+<div class="text-neutral-500 mt-2"># Typical output:</div>
+<div class="text-neutral-300">Session Status:</div>
+<div class="text-neutral-300">Model: claude-opus-4-6</div>
+<div class="text-neutral-300">Working directory: /home/user/projects/meu-app</div>
+<div class="text-neutral-300">Account: Pro Plan</div>
+<div class="text-neutral-300">MCP Servers: 3 connected</div>
+<div class="text-neutral-300">- filesystem (4 tools)</div>
+<div class="text-neutral-300">- github (12 tools)</div>
+<div class="text-neutral-300">- postgres (6 tools)</div>
+<div class="text-neutral-300">Tools: 28 available, 2 blocked</div>
+</div>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Rotate<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/status</code>whenever something doesn't work as expected. If Claude cannot access the database, /status will show whether the Postgres MCP is connected. If the responses are bad, you may be running Haiku instead of Opus.</p>
+<p class="text-neutral-300">Combine with<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/doctor</code>(which you will learn in module 1.3) to have a complete diagnosis when something doesn't work.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+TOPIC 6: Combining commands in practice
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔗 Combining commands in practice</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Each command we've seen so far is powerful on its own, but the real gain comes when you use them<strong class="text-emerald-400">combines into fluid workflows</strong>. In this section, we will put together practical sequences that professionals use on a daily basis to maintain organized, cheap and productive sessions.</p>
+Main Concept
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">🎯</span>Main Concept</h3>
+<p class="text-neutral-300 mb-4">Session commands form a<strong class="text-white">management cycle</strong>: you monitor with /status and /cost, optimize with /compact, reset with /clear and consult with /help. Mastering this cycle is what separates casual users from power users.</p>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Long task workflow:</strong>Start the task → every 15-20 messages, run /cost to check → if expensive, run /compact → continue → when finished, /clear before the next task</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Debug workflow:</strong>Run /status to check environment → identify the bug → /cost to see impact → resolve → /compact if you want to continue, /clear if finished</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 mt-1">•</span>
+<span><strong class="text-white">Exploration workflow:</strong>/help to see available commands → explore the project → /cost to monitor → /clear when satisfied and ready to code</span>
+</li>
+</ul>
+</div>
+Quick Reference Table
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6 overflow-x-auto">
+<h3 class="text-lg font-semibold text-white mb-4">Quick Command Reference</h3>
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b border-dark-600">
+<th class="text-left py-3 pr-4 text-neutral-400 font-medium">Command</th>
+<th class="text-left py-3 px-4 text-neutral-400 font-medium">Function</th>
+<th class="text-left py-3 px-4 text-neutral-400 font-medium">When to use</th>
+<th class="text-left py-3 pl-4 text-neutral-400 font-medium">Cost</th>
+</tr>
+</thead>
+<tbody class="text-neutral-300">
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-emerald-400">/help</td>
+<td class="py-3 px-4">List commands and shortcuts</td>
+<td class="py-3 px-4">When you forgot a command</td>
+<td class="py-3 pl-4 text-emerald-300">Zero</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-emerald-400">/clear</td>
+<td class="py-3 px-4">Reset the entire context</td>
+<td class="py-3 px-4">Changed task</td>
+<td class="py-3 pl-4 text-emerald-300">Zero</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-emerald-400">/compact</td>
+<td class="py-3 px-4">Summarize the conversation</td>
+<td class="py-3 px-4">Context got big</td>
+<td class="py-3 pl-4 text-yellow-300">Low</td>
+</tr>
+<tr class="border-b border-dark-700">
+<td class="py-3 pr-4 font-medium text-emerald-400">/cost</td>
+<td class="py-3 px-4">Shows session expenses</td>
+<td class="py-3 px-4">Monitor consumption</td>
+<td class="py-3 pl-4 text-emerald-300">Zero</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 font-medium text-emerald-400">/status</td>
+<td class="py-3 px-4">Session information</td>
+<td class="py-3 px-4">Diagnose problems</td>
+<td class="py-3 pl-4 text-emerald-300">Zero</td>
+</tr>
+</tbody>
+</table>
+</div>
+Practical Tip
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
+<span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300 mb-3">Memorize this sequence for long sessions:<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/cost</code>→ rate →<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/compact</code>→ continue →<code class="bg-dark-700 px-2 py-1 rounded text-emerald-400" data-notranslate="True">/cost</code>→ compare. This "checkpoint" routine keeps your expenses under control and the quality of responses high.</p>
+<p class="text-neutral-300">Experienced developers run /cost every 10 minutes as a matter of habit. It's like looking at the speedometer while driving - it doesn't change the direction, but it avoids surprises.</p>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+PRACTICAL EXERCISE
+═══════════════════════════ ════════════════════════════
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">🏋️</span>
+<h2 class="text-2xl font-bold">🏋️ Practical Exercise</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Time to practice all the commands learned in this module. You will use<strong class="text-emerald-400">/help, /clear, /compact, /cost and /status</strong>in a real Claude Code session, observing the impact of each one on the workflow.</p>
+Main Exercise Box
+<div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border-2 border-emerald-500/40 p-8 mb-6">
+<div class="flex items-center space-x-3 mb-6">
+<span class="text-3xl">🏋️</span>
+<div>
+<h3 class="text-xl font-bold text-emerald-400">Exercise: Mastering Session Commands</h3>
+<p class="text-neutral-400 text-sm">Estimated time: 10-15 minutes</p>
+</div>
+</div>
+Numbered Steps
+<div class="space-y-6">
+Step 1
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">1</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Open a session and get help</h4>
+<p class="text-neutral-300 text-sm mb-3">Navigate to a project and open Claude Code. Then run /help:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-neutral-500">$</span> <span class="text-emerald-400">cd ~/projects/ulquer-projeto &amp;&amp; claude</span>
+<br/>
+<span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/help</span>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Observe the list of available commands. Count how many you already know.</p>
+</div>
+</div>
+Step 2
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">2</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Check session state</h4>
+<p class="text-neutral-300 text-sm mb-3">Run /status to see the full environment:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/status</span>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Note which model is active and how many MCPs are connected.</p>
+</div>
+</div>
+Step 3
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">3</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Generate context and measure cost</h4>
+<p class="text-neutral-300 text-sm mb-3">Ask 3-4 questions about the project and then check the cost:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">What are the main files of this project?</span></div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">Explain the general architecture</span></div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">List the main dependencies</span></div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/cost</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Write down the total cost so far.</p>
+</div>
+</div>
+Step 4
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">4</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Compress the conversation</h4>
+<p class="text-neutral-300 text-sm mb-3">Use /compact to summarize and then check the cost again:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/compact</span></div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/cost</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Compare the cost per message before and after compact.</p>
+</div>
+</div>
+Step 5
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">5</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Clean and restart</h4>
+<p class="text-neutral-300 text-sm mb-3">Clear the context and confirm that Claude does not remember the previous conversation:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm space-y-1">
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/clear</span></div>
+<div><span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">What were we doing before?</span></div>
+</div>
+<p class="text-neutral-400 text-xs mt-2">Claude must not know how to respond - confirming that /clear worked.</p>
+</div>
+</div>
+Step 6
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center border border-emerald-500/40">
+<span class="text-emerald-400 font-bold">6</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-white mb-2">Check final cost</h4>
+<p class="text-neutral-300 text-sm mb-3">Check the total cost of the entire exercise:</p>
+<div class="bg-dark-900 rounded-lg p-4 font-mono text-sm">
+<span class="text-emerald-400">&gt;</span> <span class="text-neutral-300">/cost</span>
+</div>
+<p class="text-neutral-400 text-xs mt-2">The entire exercise must have cost less than $0.30. If it cost more, review where the context grew too much.</p>
+</div>
+</div>
+</div>
+</div>
+Success Checklist
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
+<span class="mr-2">✅</span>Success Criteria</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Ran /help and identified commands</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Checked active model with /status</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Monitored cost with /cost</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Compacted with /compact and saw reduction</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Cleared context with /clear</span>
+</div>
+<div class="flex items-center space-x-3 p-3 bg-dark-800/50 rounded-lg">
+<span class="text-emerald-400">☐</span>
+<span class="text-neutral-300">Confirmed that /clear deleted the history</span>
+</div>
+</div>
+</div>
+</section>
+═══════════════════════════ ════════════════════════════
+FINAL SUMMARY
+═══════════════════════════ ════════════════════════════
+<section class="mb-12">
+<div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center">
+<span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/help and its inline reference</strong>
+<span class="text-neutral-400">- Lists all commands, shortcuts and version information without cost of tokens.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/clear resets the context completely</strong>
+<span class="text-neutral-400">- Use when changing tasks. It does not affect files, only the memory of the conversation.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/compact summarizes without losing the essentials</strong>
+<span class="text-neutral-400">- Reduces context by up to 85%, maintaining key decisions and current state.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/cost monitors expenses in real time</strong>
+<span class="text-neutral-400">- Input, output, cache and total cost tokens. Essential for financial control.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">/status shows the full session panel</strong>
+<span class="text-neutral-400">- Model, MCPs, permissions and directory. First command to run when something doesn't work.</span>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div>
+<strong class="text-white">Combine commands into workflows</strong>
+<span class="text-neutral-400">- /cost → /compact → /cost is the optimization cycle. /clear to separate tasks.</span>
+</div>
+</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+<h3 class="font-semibold text-emerald-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">1.3 - Native Slash Commands (/commit, /review, /pr, /init, /doctor)</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-1-1.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="modulo-1-3.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -900,6 +770,5 @@
       localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
-
 </body>
 </html>
