@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modulo 2.5 - &#129504; Auto-Memory e Persistencia | 6 Pilares CC Full</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 2.5 - 🧠 Auto-Memory and Persistence | 6 Full CC Pillars</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
     .topic-explanation { display: none; }
@@ -38,248 +38,233 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">&#129504;</span>
-            <span class="font-bold text-lg hidden sm:inline">6 Pilares CC Full</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Atalhos</span></a>
-          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
-          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
-          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
-          <a href="../trilha5/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
-          <a href="../trilha6/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">Inicio</a><span>/</span>
-      <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">Modulo 2.5</span>
-    </div>
-  </nav>
-
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULO 2.5</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">&#129504; Auto-Memory e Persistencia</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Descubra como o Claude Code pode salvar informacoes automaticamente entre sessoes, o que ele salva, como configurar e como a auto-memory complementa o CLAUDE.md.</p>
-      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topicos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Intermediario</div><div class="text-xs text-neutral-400">Nivel</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Teoria + Pratica</div><div class="text-xs text-neutral-400">Tipo</div></div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-    <section id="topico-1" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold">&#128190; O que e Auto-Memory</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory e a capacidade do Claude Code de <strong class='text-blue-400'>salvar informacoes automaticamente</strong> entre sessoes. Quando ativada, o Claude detecta padroes, decisoes e preferencias durante a sessao e persiste essas informacoes para sessoes futuras.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Salvamento automatico:</strong> O Claude identifica e salva informacoes uteis sem que voce precise pedir</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Persistencia entre sessoes:</strong> Informacoes salvas ficam disponiveis na proxima vez que voce abrir o Claude Code</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Complementa CLAUDE.md:</strong> Auto-memory captura o que voce esqueceu de colocar no CLAUDE.md</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Aprendizado continuo:</strong> A cada sessao, o Claude aprende mais sobre seu projeto e suas preferencias</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Auto-memory e como ter um assistente que toma notas durante a reuniao. Voce nao precisa anotar tudo porque ele esta fazendo isso por voce. Mas e importante revisar as notas de vez em quando para garantir que estao corretas.</p>
-      </div>
-    </section>
-
-    <section id="topico-2" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">&#9881;&#65039; Como Configurar Auto-Memory</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">A configuracao de auto-memory e feita atraves das <strong class='text-blue-400'>settings do Claude Code</strong>. Voce pode ativar, desativar e configurar o que deve ser salvo.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Ativacao:</strong> Use /config ou settings.json para ativar auto-memory</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Diretorio de salvamento:</strong> As memorias sao salvas em .claude/memory/ por padrao</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Granularidade:</strong> Voce pode configurar o nivel de detalhe: tudo, apenas decisoes importantes, ou manual</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Escopo:</strong> Configuravel por projeto ou globalmente</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Ative auto-memory e use o Claude Code normalmente por uma semana. Depois revise o que foi salvo em .claude/memory/. Voce vai se surpreender com a quantidade de contexto util que ele captura automaticamente.</p>
-      </div>
-    </section>
-
-    <section id="topico-3" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold">&#128203; O que o Claude Salva Automaticamente</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Quando auto-memory esta ativa, o Claude salva diversos tipos de informacao que considera <strong class='text-blue-400'>uteis para sessoes futuras</strong>. Entender o que e salvo te ajuda a confiar (ou nao) no que foi persistido.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Decisoes arquiteturais:</strong> Quando voce decide por um pattern, o Claude registra a decisao e o motivo</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Preferencias de codigo:</strong> Estilo de nomeacao, patterns preferidos, imports habituais</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Bugs encontrados:</strong> Problemas que foram diagnosticados e como foram resolvidos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Contexto de negocio:</strong> Informacoes sobre o dominio que surgiram durante conversas</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Nem tudo que o Claude salva e util ou correto. Faca revisoes periodicas em .claude/memory/ e delete o que nao faz sentido. E melhor ter menos memorias corretas do que muitas memorias com informacoes erradas.</p>
-      </div>
-    </section>
-
-    <section id="topico-4" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold">&#128193; Diretorio .claude/memory/</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">O diretorio <code class='bg-dark-700 px-2 py-1 rounded text-blue-400'>.claude/memory/</code> e onde as memorias automaticas sao armazenadas. Entender sua <strong class='text-blue-400'>estrutura e organizacao</strong> te permite gerenciar eficientemente o que foi salvo.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Estrutura de arquivos:</strong> Cada memoria e um arquivo .md com data, contexto e conteudo</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Organizacao cronologica:</strong> Memorias sao salvas com timestamp para facil rastreamento</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Editavel:</strong> Voce pode editar, mover ou deletar qualquer arquivo de memoria</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Git:</strong> Decida se quer versionar .claude/memory/ ou adicionar ao .gitignore</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Adicione .claude/memory/ ao .gitignore se as memorias contem informacoes sensiveis ou especificas da sua maquina. Versione se o time todo se beneficia das memorias compartilhadas.</p>
-      </div>
-    </section>
-
-    <section id="topico-5" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">&#128270; Quando Confiar e Quando Editar</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory nao e infalivel. O Claude pode salvar <strong class='text-blue-400'>informacoes imprecisas ou desatualizadas</strong>. Saber quando confiar e quando intervir e essencial.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Confie em:</strong> Decisoes explicitas que voce confirmou durante a sessao, comandos que funcionaram</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Verifique:</strong> Inferencias sobre arquitetura, suposicoes sobre intencoes, generalizacoes</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Edite:</strong> Memorias com informacoes desatualizadas apos refactoring ou mudancas de stack</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Delete:</strong> Memorias de sessoes experimentais que nao refletem o estado atual do projeto</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Reserve 5 minutos no final de cada semana para revisar .claude/memory/. Pense nisso como 'code review das memorias'. Delete o lixo, corrija imprecisoes e mantenha so o que e util.</p>
-      </div>
-    </section>
-
-    <section id="topico-6" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-        <h2 class="text-2xl font-bold">&#128279; Integracao com CLAUDE.md</h2>
-      </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory e CLAUDE.md sao <strong class='text-blue-400'>complementares</strong>, nao concorrentes. CLAUDE.md sao instrucoes que voce define deliberadamente. Auto-memory sao informacoes que o Claude captura organicamente.</p>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">&#127919;</span> Conceito Principal</h3>
-        <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">CLAUDE.md = intencional:</strong> Voce escreve as regras que quer que o Claude siga sempre</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Auto-memory = organica:</strong> O Claude salva o que aprende durante as sessoes de trabalho</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Promocao:</strong> Se uma memoria automatica e muito util, promova-a para o CLAUDE.md</span></li>
-          <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong class="text-white">Ciclo virtuoso:</strong> Auto-memory te mostra o que esta faltando no CLAUDE.md</span></li>
-        </ul>
-      </div>
-      <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">&#128161;</span> Dica Pratica</h3>
-        <p class="text-neutral-300">Use auto-memory como 'rascunho' para o CLAUDE.md. Se voce nota que o Claude salvou uma regra importante automaticamente, copie-a para o CLAUDE.md. Isso transforma uma memoria fragil em uma instrucao permanente.</p>
-      </div>
-    </section>
-
-    <section id="exercicio" class="mb-16">
-      <div class="flex items-center space-x-4 mb-6">
-        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">&#127947;&#65039;</span>
-        <h2 class="text-2xl font-bold">Exercicio Pratico</h2>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border-2 border-blue-500/40 p-8 mb-6">
-        <div class="flex items-center space-x-3 mb-6">
-          <span class="text-3xl">&#127947;&#65039;</span>
-          <div><h3 class="text-xl font-bold text-blue-400">Exercicio: Configurar Auto-Memory e Verificar Resultados</h3><p class="text-neutral-400 text-sm">Tempo estimado: 15-20 minutos</p></div>
-        </div>
-        <div class="space-y-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">1</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Ativar auto-memory</h4><p class="text-neutral-300 text-sm">Configure auto-memory no seu Claude Code usando /config ou settings.json.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">2</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Usar o Claude Code normalmente</h4><p class="text-neutral-300 text-sm">Trabalhe no seu projeto por 3-5 sessoes fazendo tarefas variadas: criar codigo, corrigir bugs, refatorar.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">3</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Verificar memorias salvas</h4><p class="text-neutral-300 text-sm">Abra .claude/memory/ e leia todas as memorias que foram salvas automaticamente.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">4</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Auditar e limpar</h4><p class="text-neutral-300 text-sm">Delete memorias incorretas ou irrelevantes. Edite as que precisam de ajuste.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">5</span></div>
-            <div class="flex-1"><h4 class="font-semibold text-white mb-2">Promover para CLAUDE.md</h4><p class="text-neutral-300 text-sm">Identifique 2-3 memorias que sao tao uteis que merecem ir para o CLAUDE.md e mova-as.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">&#128203;</span> Resumo do Modulo</h2>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Auto-memory salva informacoes automaticamente</strong><span class="text-neutral-400"> - Claude captura padroes, decisoes e preferencias entre sessoes.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Configuravel via settings</strong><span class="text-neutral-400"> - Ative, desative e ajuste o nivel de detalhe conforme sua necessidade.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Revisao periodica e essencial</strong><span class="text-neutral-400"> - Nem tudo que o Claude salva e correto. Revise semanalmente.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">.claude/memory/ e editavel</strong><span class="text-neutral-400"> - Voce tem controle total sobre as memorias salvas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Complementa CLAUDE.md</strong><span class="text-neutral-400"> - Memorias organicas + instrucoes intencionais = contexto completo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">&#10003;</span><div><strong class="text-white">Promova memorias uteis</strong><span class="text-neutral-400"> - Transforme memorias boas em instrucoes permanentes no CLAUDE.md.</span></div></div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Proximo Modulo:</h3><p class="text-neutral-300">2.6 - /init - Geracao Automatica</p></div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="modulo-2-4.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">&larr; Modulo Anterior</a>
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">Voltar para Trilha</a>
-          <a href="modulo-2-6.html" class="flex-1 text-center px-6 py-3 bg-blue-600/40 text-blue-100 rounded-lg font-semibold hover:bg-blue-600/60 transition-colors">Proximo Modulo &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>6 Pilares do Claude Code Full - 2026 | <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <script>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">6 Full CC Pillars</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Shortcuts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">CLAUDE.md</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Workflows</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Prompts</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-teal-400 hover:bg-teal-500/10 transition-colors" href="../trilha5/index.html"><span class="sm:hidden">T5</span><span class="hidden sm:inline">Skills</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors" href="../trilha6/index.html"><span class="sm:hidden">T6</span><span class="hidden sm:inline">MCPs</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center space-x-2 text-sm text-neutral-400">
+<a class="hover:text-blue-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span>
+<span class="text-blue-400">Module 2.5</span>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.5</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧠 Auto-Memory and Persistence</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Discover how Claude Code can automatically save information between sessions, what it saves, how to configure it and how auto-memory complements CLAUDE.md.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Intermediary</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Theory + Practice</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
+<h2 class="text-2xl font-bold">💾 What is Auto-Memory</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory and Claude Code's ability to<strong class="text-blue-400">save information automatically</strong>between sessions. When enabled, Claude detects patterns, decisions and preferences during the session and persists this information for future sessions.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Autosave:</strong>Claude identifies and saves useful information without you having to ask</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Persistence between sessions:</strong>Saved information becomes available the next time you open Claude Code</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Complements CLAUDE.md:</strong>Auto-memory captures what you forgot to put in CLAUDE.md</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Continuous learning:</strong>With each session, Claude learns more about your project and your preferences</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Auto-memory is like having an assistant take notes during the meeting. You don't need to write everything down because he is doing it for you. But it's important to review your notes every now and then to make sure they're correct.</p>
+</div>
+</section>
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
+<h2 class="text-2xl font-bold">⚙️ How to Configure Auto-Memory</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The auto-memory configuration is done through the<strong class="text-blue-400">Claude Code settings</strong>. You can activate, deactivate and configure what should be saved.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Activation:</strong>Use /config or settings.json to enable auto-memory</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Rescue directory:</strong>Memories are saved in .claude/memory/ by default</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Granularity:</strong>You can configure the level of detail: everything, only important decisions, or manual</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Scope:</strong>Configurable per project or globally</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Activate auto-memory and use Claude Code normally for a week. Then review what was saved in .claude/memory/. You'll be surprised at how much useful context it automatically captures.</p>
+</div>
+</section>
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
+<h2 class="text-2xl font-bold">📋 What Claude Auto-Saves</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">When auto-memory is active, Claude saves different types of information that he considers<strong class="text-blue-400">useful for future sessions</strong>. Understanding what is saved helps you trust (or not) what was persisted.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Architectural decisions:</strong>When you decide on a pattern, Claude records the decision and the reason</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Code preferences:</strong>Naming style, preferred patterns, usual imports</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Bugs found:</strong>Problems that were diagnosed and how they were resolved</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Business context:</strong>Information about the domain that came up during conversations</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Not everything Claude saves is useful or correct. Make periodic reviews in .claude/memory/ and delete what doesn't make sense. It is better to have fewer correct memories than many memories with incorrect information.</p>
+</div>
+</section>
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
+<h2 class="text-2xl font-bold">📁 Directory .claude/memory/</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The directory<code class="bg-dark-700 px-2 py-1 rounded text-blue-400" data-notranslate="True">.claude/memory/</code>and where automatic memories are stored. Understand your<strong class="text-blue-400">structure and organization</strong>allows you to efficiently manage what has been saved.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">File structure:</strong>Each memory is a .md file with date, context and content</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Chronological organization:</strong>Memories are saved with timestamp for easy tracking</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Editable:</strong>You can edit, move or delete any memory file</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Git:</strong>Decide whether to version .claude/memory/ or add to .gitignore</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Add .claude/memory/ to .gitignore if the memories contain sensitive or machine-specific information. Version whether the whole team benefits from shared memories.</p>
+</div>
+</section>
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
+<h2 class="text-2xl font-bold">🔎 When to Trust and When to Edit</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory is not infallible. Claude can save<strong class="text-blue-400">inaccurate or outdated information</strong>. Knowing when to trust and when to intervene is essential.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Trust:</strong>Explicit decisions you confirmed during the session, commands that worked</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Check:</strong>Inferences about architecture, assumptions about intentions, generalizations</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Edit:</strong>Memories with outdated information after refactoring or stack changes</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Delete:</strong>Memories of experimental sessions that do not reflect the current state of the project</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Take 5 minutes at the end of each week to review .claude/memory/. Think of it as 'code review of memories'. Delete trash, correct inaccuracies and keep only what is useful.</p>
+</div>
+</section>
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
+<h2 class="text-2xl font-bold">🔗 Integration with CLAUDE.md</h2>
+</div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Auto-memory and CLAUDE.md are<strong class="text-blue-400">complementary</strong>, not competitors. CLAUDE.md are instructions that you define deliberately. Auto-memory is information that Claude captures organically.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎯</span>Main Concept</h3>
+<ul class="space-y-2 text-neutral-300">
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">CLAUDE.md = intentional:</strong>You write the rules you want Claude to always follow</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Auto-memory = organic:</strong>Claude saves what he learns during work sessions</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Promotion:</strong>If an automatic memory is very useful, promote it to CLAUDE.md</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Virtuous cycle:</strong>Auto-memory shows you what's missing from CLAUDE.md</span></li>
+</ul>
+</div>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span>Practical Tip</h3>
+<p class="text-neutral-300">Use auto-memory as 'draft' for CLAUDE.md. If you notice that Claude has saved an important rule automatically, copy it to CLAUDE.md. This transforms a fragile memory into a permanent instruction.</p>
+</div>
+</section>
+<section class="mb-16" id="exercicio">
+<div class="flex items-center space-x-4 mb-6">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">🏋️</span>
+<h2 class="text-2xl font-bold">Practical Exercise</h2>
+</div>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border-2 border-blue-500/40 p-8 mb-6">
+<div class="flex items-center space-x-3 mb-6">
+<span class="text-3xl">🏋️</span>
+<div><h3 class="text-xl font-bold text-blue-400">Exercise: Configure Auto-Memory and Check Results</h3><p class="text-neutral-400 text-sm">Estimated time: 15-20 minutes</p></div>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">1</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Enable auto-memory</h4><p class="text-neutral-300 text-sm">Configure auto-memory on your Claude Code using /config or settings.json.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">2</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Use Claude Code normally</h4><p class="text-neutral-300 text-sm">Work on your project for 3-5 sessions doing varied tasks: creating code, fixing bugs, refactoring.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">3</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Check saved memories</h4><p class="text-neutral-300 text-sm">Open .claude/memory/ and read all the memories that were automatically saved.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">4</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Audit and clean</h4><p class="text-neutral-300 text-sm">Delete incorrect or irrelevant memories. Edit the ones that need adjustment.</p></div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center border border-blue-500/40"><span class="text-blue-400 font-bold">5</span></div>
+<div class="flex-1"><h4 class="font-semibold text-white mb-2">Promote to CLAUDE.md</h4><p class="text-neutral-300 text-sm">Identify 2-3 memories that are so useful that they deserve to go to CLAUDE.md and move them.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span>Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Auto-memory automatically saves information</strong><span class="text-neutral-400">- Claude captures patterns, decisions and preferences between sessions.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Configurable via settings</strong><span class="text-neutral-400">- Activate, deactivate and adjust the level of detail according to your needs.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Periodic and essential review</strong><span class="text-neutral-400">- Not everything Claude saves is correct. Review weekly.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">.claude/memory/ is editable</strong><span class="text-neutral-400">- You have full control over the saved memories.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Complements CLAUDE.md</strong><span class="text-neutral-400">- Organic memories + intentional instructions = full context.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Promote useful memories</strong><span class="text-neutral-400">- Transform good memories into permanent instructions on CLAUDE.md.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Next Module:</h3><p class="text-neutral-300">2.6 - /init - Automatic Generation</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-4.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">Return to Trail</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600/40 text-blue-100 rounded-lg font-semibold hover:bg-blue-600/60 transition-colors" href="modulo-2-6.html">Next Module →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>6 Pillars of Claude Code Full - 2026 |<a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+<script data-notranslate="True">
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
